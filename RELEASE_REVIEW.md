@@ -46,7 +46,7 @@ eecee69d421f713ae1341f26b9fe18780d49b0cf4d0dad79c44925f48a68dc74  FIRST_ACTION.m
 
 If these hashes differ from the files in your checkout, regenerate this guide with `PYTHONPATH=src python3 scripts/build/build_release_review.py --write` and review the changes. The generated packet records file hashes rather than a Git commit because exports can omit Git history. The JSON version of this guide is `receipts/code_lens/release_review_contract.json`; the builder's `--check` command compares both generated files with a fresh rendering.
 
-Plectis has [published GitHub releases](https://github.com/wcook04/plectis/releases). This review packet has no external signature or attestation. Its legacy field value `external_signature_status: absent_public_release_not_yet_attested` describes that unsigned packet; it is not a statement that no GitHub release exists.
+Plectis has [published GitHub releases](https://github.com/wcook04/practical-formal-verification/releases). This review packet has no external signature or attestation. Its legacy field value `external_signature_status: absent_public_release_not_yet_attested` describes that unsigned packet; it is not a statement that no GitHub release exists.
 
 ## Expectation policy
 
