@@ -125,7 +125,11 @@ def candidate_paths(root: Path) -> list[str]:
             check=True, capture_output=True,
         )
         return sorted(set(result.stdout.decode().split("\0")) - {""})
-    shipped = _export_inventory_paths(root)
+    # Python source archives have their own standard top-level metadata. A
+    # retained release receipt inside one describes a historical export, not
+    # this archive's file inventory. Standalone exports lack this marker and
+    # must still validate every row of their current export inventory.
+    shipped = None if (root / "PKG-INFO").is_file() else _export_inventory_paths(root)
     present = {p.relative_to(root).as_posix() for p in root.rglob("*") if p.is_file()}
     if shipped is None:
         return sorted(present)

@@ -231,7 +231,15 @@ JSON references and public API. Update these owners as applicable:
 - **Export:** `release_export.py` owns `DEFAULT_INCLUDE_REFS`,
   `STANDALONE_REQUIRED_PUBLIC_REFS` and `LICENSE_NOTICE_REQUIRED_REFS`.
   [`MANIFEST.in`](../../MANIFEST.in) and [`pyproject.toml`](../../pyproject.toml)
-  own installed package destinations. The package and export tests check both.
+  own source-distribution and installed package destinations respectively. The
+  browser explorer stays in `frontend/`: `MANIFEST.in` includes its source,
+  fonts and assets in source archives, while excluding generated `frontend/dist/`.
+  The standalone exporter includes the same maintained directory. It is not a
+  second Python package or installed console command. The package and export
+  tests check their respective boundaries. A Python source archive has a
+  top-level `PKG-INFO`; its layout is checked from the files actually shipped,
+  without promoting a retained historical export receipt into a current
+  attestation. Standalone exports continue to check their inventory receipt.
 - **Generated links:** change output constants and relative links in each
   generator, then regenerate. A writer's new path does not update a separate
   reader: `build_release_review.py::FIRST_ACTION_DOC_REL`, for example, reads

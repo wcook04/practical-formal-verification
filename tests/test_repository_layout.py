@@ -255,3 +255,34 @@ def test_build_ignore_does_not_hide_maintained_builders(tmp_path):
             capture_output=True,
         )
         assert result.returncode == expected, (relative, result.stdout, result.stderr)
+
+
+@pytest.mark.parametrize('missing', [
+    'frontend/index.html', 'frontend/serve.py', 'frontend/export_static.py',
+    'frontend/src/main.js', 'frontend/assets/app.css',
+])
+def test_missing_shipped_explorer_entry_is_rejected(missing):
+    paths = [path for path in POLICY['required_paths'] if path != missing]
+    assert any(error.startswith(missing + ': missing')
+               for error in layout.violations(paths, POLICY))
+
+
+def test_source_archive_checks_actual_files_not_historical_export_inventory(tmp_path):
+    (tmp_path / 'PKG-INFO').write_text('Metadata-Version: 2.4\nName: plectis\nVersion: 0.6.2\n')
+    _write_release_receipt(tmp_path, ['src/historic.py'])
+    misplaced = tmp_path / 'docs/bad.py'
+    misplaced.parent.mkdir()
+    misplaced.write_text('pass\n')
+    paths = layout.candidate_paths(tmp_path)
+    assert 'docs/bad.py' in paths
+    assert any(error.startswith('docs/bad.py:')
+               for error in layout.violations(POLICY['required_paths'] + paths, POLICY))
+
+
+def test_nested_package_metadata_does_not_disable_export_inventory(tmp_path):
+    nested = tmp_path / 'src/plectis.egg-info/PKG-INFO'
+    nested.parent.mkdir(parents=True)
+    nested.write_text('Name: plectis\n')
+    _write_release_receipt(tmp_path, ['src/historic.py'])
+    with pytest.raises(ValueError, match='listed files missing'):
+        layout.candidate_paths(tmp_path)
