@@ -551,6 +551,7 @@ def test_blocks_stale_front_door_component_count(tmp_path: Path) -> None:
 @pytest.mark.parametrize('target', [
     '<a id="explicit-entry"></a>', "<a name='explicit-entry'></a>",
     '<span id="explicit-entry">Example</span>',
+    '<template><code>hidden</code></template><a id="explicit-entry"></a>',
 ])
 def test_real_html_anchor_resolves(tmp_path: Path, target: str) -> None:
     root = _front_door_tree(tmp_path)
@@ -576,6 +577,7 @@ def test_missing_explicit_alias_still_fails(tmp_path: Path) -> None:
     '<!-- <a id="absent-target"></a> -->',
     '<code><a id="absent-target"></a></code>',
     '<template><a id="absent-target"></a></template>',
+    '<template></code><a id="absent-target"></a></template>',
     '&lt;a id="absent-target"&gt;&lt;/a&gt;',
 ])
 def test_displayed_or_hidden_html_does_not_create_target(tmp_path: Path, shown_code: str) -> None:
@@ -635,3 +637,32 @@ def test_commented_command_does_not_end_opening_explanation(tmp_path: Path) -> N
     _mutate(root, 'A workflow is', '<!--\n```bash\npython3 unused.py\n```\n-->\n\nThe evidence_class field leads here.\n\nA workflow is')
     receipt = validate_readme_front_door(root)
     assert 'evidence-taxonomy-token' in receipt['findings']['hero_banned_terms']
+
+
+@pytest.mark.parametrize('sample', [
+    '# python3 unused.py',
+    '    # python3 unused.py',
+    '# plectis tour --format text .',
+    'echo "python3 unused.py"',
+    "printf 'plectis tour --format text .'",
+    "EXAMPLE='python3 unused.py'",
+])
+def test_comment_or_printed_command_does_not_end_opening(tmp_path: Path, sample: str) -> None:
+    root = _front_door_tree(tmp_path)
+    _mutate(root, 'A workflow is', '```bash\n' + sample + '\n```\n\nThe evidence_class field leads here.\n\nA workflow is')
+    receipt = validate_readme_front_door(root)
+    assert 'evidence-taxonomy-token' in receipt['findings']['hero_banned_terms']
+
+
+@pytest.mark.parametrize('command', [
+    'PYTHONPATH=src python3 examples/operations/evaluation.py --format text # run it',
+    'env PYTHONPATH=src python3 examples/operations/evaluation.py --format text',
+    '.venv/bin/python examples/operations/evaluation.py --format text',
+    'python3 -m plectis tour --format text .',
+])
+def test_executable_example_still_ends_opening(tmp_path: Path, command: str) -> None:
+    root = _front_door_tree(tmp_path)
+    _mutate(root, 'PYTHONPATH=src python3 examples/operations/evaluation.py --format text', command)
+    _mutate(root, 'The program prints', 'The output files go under .microcosm/, a local results folder.\n\nThe program prints')
+    receipt = validate_readme_front_door(root)
+    assert receipt['status'] == 'pass', receipt['blocking_codes']

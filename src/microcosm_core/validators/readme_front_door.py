@@ -18,6 +18,7 @@ from __future__ import annotations
 import argparse
 from html.parser import HTMLParser
 import re
+import shlex
 from pathlib import Path
 from typing import Any
 
@@ -257,18 +258,18 @@ def _html_anchors(text: str) -> set[str]:
         def __init__(self):
             super().__init__()
             self.anchors: set[str] = set()
-            self.hidden_depth = 0
+            self.hidden_tags: list[str] = []
 
         def handle_starttag(self, tag, attrs):
             if tag in {"pre", "code", "script", "style", "template"}:
-                self.hidden_depth += 1
-            if not self.hidden_depth:
+                self.hidden_tags.append(tag)
+            if not self.hidden_tags:
                 self.anchors.update(value for key, value in attrs if value and
                                     (key == "id" or (tag == "a" and key == "name")))
 
         def handle_endtag(self, tag):
-            if tag in {"pre", "code", "script", "style", "template"}:
-                self.hidden_depth = max(0, self.hidden_depth - 1)
+            if self.hidden_tags and tag == self.hidden_tags[-1]:
+                self.hidden_tags.pop()
 
     parser = Targets()
     parser.feed(visible)
@@ -304,6 +305,29 @@ def _fenced_blocks(text: str) -> list[str]:
 _RUN_COMMAND = re.compile(r"(?:^|\s)(?:\S*/)?plectis\s+[a-z]|-m\s+plectis\s+[a-z]", re.M)
 
 
+def _example_command_line(line: str) -> bool:
+    """Recognize literal CLI/script invocations, not comments or quoted output."""
+    try:
+        words = shlex.split(line, comments=True)
+    except ValueError:
+        return False
+    if words and words[0] == "env":
+        words = words[1:]
+    while words and re.fullmatch(r"[A-Za-z_]\w*=.*", words[0]):
+        words = words[1:]
+    if not words:
+        return False
+    executable = Path(words[0]).name
+    if executable == "plectis":
+        return len(words) > 1 and bool(re.fullmatch(r"[a-z][\w-]*", words[1]))
+    if re.fullmatch(r"python(?:3(?:\.\d+)?)?", executable):
+        return (len(words) > 1 and words[1].endswith(".py")) or (
+            len(words) > 3 and words[1:3] == ["-m", "plectis"]
+            and bool(re.fullmatch(r"[a-z][\w-]*", words[3]))
+        )
+    return False
+
+
 def _opening_explanation(text: str) -> str:
     """Stop terminology review where the first runnable example begins.
 
@@ -314,7 +338,7 @@ def _opening_explanation(text: str) -> str:
     visible = re.sub(r"<!--.*?-->", lambda match: " " * len(match[0]), text, flags=re.DOTALL)
     for match in re.finditer(r"```[^\n]*\n(.*?)```", visible, flags=re.DOTALL):
         block = match[1]
-        if _RUN_COMMAND.search(block) or re.search(r"\bpython(?:3(?:\.\d+)?)?\s+[^\s]+\.py(?:\s|$)", block):
+        if any(_example_command_line(line) for line in block.splitlines()):
             return text[:match.start()]
     return _hero_region(text)
 
