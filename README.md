@@ -14,9 +14,10 @@ computations also have [their own specifications and proofs](formal/components/R
 [Run the workflow example](#formally-checked-workflow-operations) ·
 [Check component replays](#checking-a-component-result) ·
 [Inspect the proofs](formal/README.md) ·
-[Build a frontend](docs/guides/frontend-implementation.md) ·
+[Explore the components](https://wcook04.github.io/practical-formal-verification/explorer/) ·
 [Browse the reference toolkit](#try-the-repository-tour) ·
-[Documentation](docs/README.md) · [Source map](#repository-layout)
+[Documentation](docs/README.md) · [Source map](#repository-layout) ·
+[Will Cook’s projects](https://wcook04.github.io/)
 
 ### Formally checked workflow operations
 
@@ -144,8 +145,8 @@ contribute a correction or direction without operating the AI themselves.
 
 This toolkit publishes selected parts of that effort. The
 [mathematics repository](https://github.com/wcook04/plectis-erdos) contains the
-papers, proofs and open questions; the [website](https://wcook04.github.io/practical-formal-verification/)
-explains both. The [project overview](docs/overview.md) relates these parts to
+papers, proofs and open questions; the [project home](https://wcook04.github.io/)
+links the public projects and films. The [project overview](docs/overview.md) relates these parts to
 other research tools.
 
 <a id="choose-a-route"></a>
@@ -217,22 +218,22 @@ files, and the runner reports unavailable requirements.
 | [Source and generated files](ORGANS.md#import-projection--drift) | Comparing file fingerprints and checking that declared outputs exist. |
 | [Work and continuity](ORGANS.md#work-landing--continuity) | Checking that a work record names its changes, validation results and commits. |
 
-<a href="https://wcook04.github.io/practical-formal-verification/docs/system-map.html">
-  <img src="assets/system-map-dark.png" alt="Plectis system map: seven families of software components surround the axioms, principles and failure modes they cite." width="100%">
+<a href="https://wcook04.github.io/practical-formal-verification/explorer/">
+  <img src="assets/system-map-dark.png" alt="Practical Formal Verification component explorer: proof dials at the centre and on component stems, with rings of recorded checks and the rules each component cites." width="100%">
 </a>
 
-[**Explore the system map →**](https://wcook04.github.io/practical-formal-verification/docs/system-map.html)
+[**Explore the component map →**](https://wcook04.github.io/practical-formal-verification/explorer/)
 <br>
-<sub>Select a component or rule on the website to follow its connections.</sub>
+<sub>Select a component, proof or rule to inspect its source, recorded checks and limits. The map does not execute components or recheck proofs.</sub>
 
-Browse the live [component pages](https://wcook04.github.io/practical-formal-verification/docs/components.html),
-[papers](https://wcook04.github.io/practical-formal-verification/#papers) and
-[films](https://wcook04.github.io/practical-formal-verification/#videos) on the
-[Plectis website](https://wcook04.github.io/practical-formal-verification/). For text indexes and
-source links, use the [agent navigation guide](https://wcook04.github.io/practical-formal-verification/llms.txt).
-For mathematical papers, Lean proofs and open questions, follow the
-[Plectis Erdős reader's guide](https://github.com/wcook04/plectis-erdos/blob/main/docs/READING_GUIDE.md)
-or the [mathematics map](https://wcook04.github.io/practical-formal-verification/maths/universe.html).
+Browse the [component catalogue](https://wcook04.github.io/practical-formal-verification/explorer/catalogue.html)
+and [coverage table](https://wcook04.github.io/practical-formal-verification/explorer/coverage.html).
+The [project home](https://wcook04.github.io/) links the films and related projects;
+the [agent navigation guide](https://wcook04.github.io/practical-formal-verification/llms.txt)
+provides text indexes and source links. For mathematics, follow the separate
+[Plectis Mathematics website](https://wcook04.github.io/practical-formal-verification/map/),
+[mathematics map](https://wcook04.github.io/practical-formal-verification/maths/universe.html)
+or [Erdős reader’s guide](https://github.com/wcook04/plectis-erdos/blob/main/docs/READING_GUIDE.md).
 
 To search component descriptions from the terminal:
 
@@ -315,7 +316,25 @@ installation commands and other options, see [Quickstart](QUICKSTART.md),
 [Contributing](CONTRIBUTING.md) and [troubleshooting](docs/README.md#troubleshooting).
 The older `microcosm` command remains an alias.
 
-## Build a frontend against the component backend
+<a id="build-a-frontend-against-the-component-backend"></a>
+
+## Explore the components locally
+
+The [component explorer](frontend/README.md) shows the sixteen computations
+proved with Dafny, the components that call them and the recorded checks for
+each component. Select an item to read its description, source and limits.
+With Python 3.11+, run from this clone:
+
+```sh
+python3 frontend/serve.py --start-backend
+```
+
+Open <http://127.0.0.1:8767/>. `make explorer` starts the same servers. No
+installation or model API key is needed. The explorer reads a validated
+snapshot; it does not run components or recheck proofs. For a hosted copy,
+[open the public explorer](https://wcook04.github.io/practical-formal-verification/explorer/).
+
+### Build another client
 
 The local API lets a client search components, read their claims and guides,
 inspect modeled proofs and saved results, and follow typed relationships.
@@ -339,13 +358,6 @@ loading states and acceptance checks. The API reads a validated snapshot;
 it does not run components, recheck proofs or serve arbitrary files. Retained
 verification and current execution are displayed as separate facts.
 
-An explorer built to that brief is in [frontend/](frontend/README.md).
-`make explorer` starts the API and the explorer. Its map shows the sixteen
-computations proved with Dafny, the components that call them and, in eight
-rings round the outside, every other check each component has; each
-component's write-up opens with a plain-language summary. It is a draft for
-review.
-
 ## Repository layout
 
 Component descriptions are read from capsule compression through
@@ -358,11 +370,12 @@ recorded experiments remain available separately; they are not prerequisites
 for using these APIs.
 
 ```text
-plectis/
+practical-formal-verification/
 ├── formal/               Workflow, replay and component proofs with negative mutants
 ├── src/
 │   ├── plectis/           Operation APIs, component kernels and CLI entry points
 │   └── microcosm_core/    Python implementation; components in organs/
+├── frontend/             Browser explorer, local server and static exporter
 ├── docs/                 Guides, reference, maintainer notes and paper guide
 ├── examples/             Runnable examples and checked source bundles
 ├── fixtures/             Prepared inputs and expected results
@@ -471,7 +484,7 @@ The [release review](RELEASE_REVIEW.md) records the candidate’s checks;
 
 ## Videos and related projects
 
-The [project videos page](https://wcook04.github.io/practical-formal-verification/#videos) describes the
+The [project videos page](https://wcook04.github.io/#videos) describes the
 recordings and their subjects. In the introduction, Will explains the wider
 programme: AI produces much of the research and code, and he uses it to prepare
 papers, maps and explanations that other people can inspect. The toolkit in
@@ -493,7 +506,7 @@ and evidence. Follow the project that matches what you want to read or run.
 
 | Related project | Start there for |
 |---|---|
-| [Plectis Erdős](https://github.com/wcook04/plectis-erdos) · [research website](https://wcook04.github.io/practical-formal-verification/maths/) | The current mathematical papers, Lean proofs and open questions. |
+| [Plectis Erdős](https://github.com/wcook04/plectis-erdos) · [research website](https://wcook04.github.io/practical-formal-verification/map/) | The current mathematical papers, Lean proofs and open questions. |
 | [Plectis Erdős Lean](https://github.com/wcook04/plectis-erdos-lean) | Selected checking entries that pair a separately written statement with its proof. |
 | [Plectis Atlas](https://github.com/wcook04/plectis-atlas) · [website](https://wcook04.github.io/plectis-atlas/) | Read OpenAI's maths papers alongside attributed outside assessments and proof-checking reports. |
 | [Safety Core](https://github.com/wcook04/safety-core) | Editable agent rules, hooks and a local map of where checks apply. |
@@ -501,7 +514,7 @@ and evidence. Follow the project that matches what you want to read or run.
 | [Plectis Zenith](https://github.com/wcook04/plectis-zenith) | Experiments on AI testers, earlier mistakes and code repair, with saved results and replay instructions. |
 
 Code Map and Demo Take, also shown in the films, are private tools. The
-[Plectis website](https://wcook04.github.io/practical-formal-verification/) links the public projects
+[project home](https://wcook04.github.io/) links the public projects
 and demonstrations; this clone does not install the private workbench.
 
 ## Name and history

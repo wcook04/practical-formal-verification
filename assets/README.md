@@ -1,17 +1,20 @@
 # Repository images
 
-`system-map-dark.png` is a screenshot of the public
-[Plectis system map](https://wcook04.github.io/practical-formal-verification/docs/system-map.html),
-captured in dark mode on 9 October 2026. It is the README preview; the linked
-website is interactive. The image is a capture of the actual website, not an
-illustration of inferred relationships.
+`system-map-dark.png` is the README preview of the
+[Practical Formal Verification component explorer](https://wcook04.github.io/practical-formal-verification/explorer/),
+captured from this repository’s local explorer in dark mode on 31 October 2026
+at 1440 × 790. The filename is retained for existing README and validation
+consumers. It shows the actual interface, not an illustration of inferred
+relationships. The linked public copy may carry a different snapshot revision.
 
-Agents can navigate the website and its map data through the
-[agent navigation guide](https://wcook04.github.io/practical-formal-verification/llms.txt).
+To refresh it, run `python3 frontend/serve.py --start-backend` from the repository
+root and open <http://127.0.0.1:8767/>. Select dark mode and use **Fit** to show
+the map. Capture the header, overview panel, complete map and legend. Check the
+README at desktop and phone widths before publishing. The explorer’s
+[README](../frontend/README.md) documents its source and static export.
 
-To refresh it, open that page, select dark mode, use **Fit** to show the whole
-map and capture the page. Preserve the map title, family labels, centre and
-legend. Check the README at desktop and phone widths before publishing.
+The [agent navigation guide](https://wcook04.github.io/practical-formal-verification/llms.txt)
+provides text routes to the wider documentation and map data.
 
-`plectis-social-card.png` is the repository's separate social preview asset.
-Both images are included under the repository's [license](../LICENSE).
+`plectis-social-card.png` is the repository’s separate social preview asset.
+Both images are included under the repository’s [license](../LICENSE).
