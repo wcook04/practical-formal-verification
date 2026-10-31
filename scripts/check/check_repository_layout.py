@@ -114,9 +114,9 @@ def _export_inventory_paths(root: Path) -> set[str] | None:
 def candidate_paths(root: Path) -> list[str]:
     """Include staged additions, omit staged deletions and ignored local output.
 
-    A source distribution has no Git index. The release receipt records the
-    shipped inventory; it is not authenticated against deliberate modification.
-    Unlisted cache bytecode is treated as generated after export.
+    Without Git, use the source archive's setuptools inventory or the
+    standalone export's release inventory. Neither authenticates deliberate
+    modification. Unlisted cache bytecode is treated as generated at runtime.
     Never fall back after a Git failure in a checkout, which could hide a failure.
     """
     if (root / ".git").exists():
@@ -125,13 +125,24 @@ def candidate_paths(root: Path) -> list[str]:
             check=True, capture_output=True,
         )
         return sorted(set(result.stdout.decode().split("\0")) - {""})
-    shipped = _export_inventory_paths(root)
+    # Source archives carry setuptools' own inventory. A retained export
+    # receipt is historical here. Keep the source inventory so runtime caches
+    # are ignored without hiding bytecode that was actually shipped.
+    inventory_ref = RELEASE_RECEIPT
+    if (root / "PKG-INFO").is_file():
+        inventory_ref = "src/plectis.egg-info/SOURCES.txt"
+        source_inventory = root / inventory_ref
+        if not source_inventory.is_file():
+            raise ValueError(f"PKG-INFO source archive is missing {inventory_ref}")
+        shipped = set(source_inventory.read_text(encoding="utf-8").splitlines())
+    else:
+        shipped = _export_inventory_paths(root)
     present = {p.relative_to(root).as_posix() for p in root.rglob("*") if p.is_file()}
     if shipped is None:
         return sorted(present)
     missing = shipped - present
     if missing:
-        raise ValueError(f"{RELEASE_RECEIPT}: listed files missing: {sorted(missing)[:5]}")
+        raise ValueError(f"{inventory_ref}: listed files missing: {sorted(missing)[:5]}")
     return sorted(
         raw for raw in present
         if raw in shipped

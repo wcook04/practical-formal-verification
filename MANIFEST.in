@@ -41,6 +41,7 @@ graft docs
 graft examples
 graft fixtures
 graft formal
+graft frontend
 graft paper
 graft paper_modules
 graft receipts
@@ -54,6 +55,7 @@ prune .pytest_cache
 prune .venv
 prune build
 prune dist
+prune frontend/dist
 prune examples/*/.microcosm
 prune examples/*/*/.microcosm
 prune microcosm-substrate

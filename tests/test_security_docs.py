@@ -47,12 +47,15 @@ def test_security_runbook_conserves_release_authority_receipt_boundary() -> None
         "tests/test_secret_exclusion_scan.py tests/test_private_state_scan.py tests/test_public_entry_docs.py",
         "make standalone-export EXPORT_OUT=/tmp/plectis-security-boundary-export",
         "receipts/release/release_export_receipt.json",
-        "receipt id, artifact hash, blocking codes, and release gate fields",
+        "`receipt_id`",
+        "`artifact.artifact_payload_hash_sha256`",
+        "`blocking_codes`",
         "authority_receipt.release_authorized=false",
         "authority_receipt.publish_authorized=false",
         "release_candidate_packet.authority_state.release_authorization_gate.invoked=false",
         "release_candidate_packet.release_authorization_gate_decision.release_authorization_allowed_now=false",
-        "must name the separate operator authorization receipt",
-        "The release receipt path is the evidence handle",
+        "The export command accepts no operator authorization receipt and does not change these fields to approve publication.",
+        "identify the separate operator authorization record and the action it covers.",
+        "Do not treat export `status: pass` as that approval.",
     ):
         assert phrase in normalized, phrase
