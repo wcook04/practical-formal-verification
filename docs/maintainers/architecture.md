@@ -237,9 +237,11 @@ JSON references and public API. Update these owners as applicable:
   The standalone exporter includes the same maintained directory. It is not a
   second Python package or installed console command. The package and export
   tests check their respective boundaries. A Python source archive has a
-  top-level `PKG-INFO`; its layout is checked from the files actually shipped,
-  without promoting a retained historical export receipt into a current
-  attestation. Standalone exports continue to check their inventory receipt.
+  top-level `PKG-INFO` and setuptools’ `src/plectis.egg-info/SOURCES.txt`.
+  The layout check uses that inventory to distinguish shipped files from runtime
+  bytecode, without promoting a historical export receipt into a current
+  attestation. Other unlisted files remain visible to the placement checks.
+  Standalone exports continue to check their inventory receipt.
 - **Generated links:** change output constants and relative links in each
   generator, then regenerate. A writer's new path does not update a separate
   reader: `build_release_review.py::FIRST_ACTION_DOC_REL`, for example, reads
