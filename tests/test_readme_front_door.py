@@ -546,3 +546,92 @@ def test_blocks_stale_front_door_component_count(tmp_path: Path) -> None:
     _mutate(root, "88 components", "87 components")
     receipt = validate_readme_front_door(root)
     assert "README_FRONT_DOOR_COMPONENT_COUNT_UNBOUND" in receipt["blocking_codes"]
+
+
+@pytest.mark.parametrize('target', [
+    '<a id="explicit-entry"></a>', "<a name='explicit-entry'></a>",
+    '<span id="explicit-entry">Example</span>',
+])
+def test_real_html_anchor_resolves(tmp_path: Path, target: str) -> None:
+    root = _front_door_tree(tmp_path)
+    readme = root / 'README.md'
+    readme.write_text(readme.read_text() + '\n' + target + '\n[Example](#explicit-entry)\n')
+    receipt = validate_readme_front_door(root)
+    assert receipt['status'] == 'pass', receipt['blocking_codes']
+
+
+def test_missing_explicit_alias_still_fails(tmp_path: Path) -> None:
+    root = _front_door_tree(tmp_path)
+    _mutate(root, '<a id="formally-checked-workflow-operations"></a>', '')
+    receipt = validate_readme_front_door(root)
+    assert '#formally-checked-workflow-operations' in receipt['findings']['broken_links']
+
+
+@pytest.mark.parametrize('shown_code', [
+    '```html\n<a id="absent-target"></a>\n```',
+    '~~~html\n<a id="absent-target"></a>\n~~~',
+    '````html\n<a id="absent-target"></a>\n`````',
+    '`<a id="absent-target"></a>`',
+    '    <a id="absent-target"></a>',
+    '<!-- <a id="absent-target"></a> -->',
+    '<code><a id="absent-target"></a></code>',
+    '<template><a id="absent-target"></a></template>',
+    '&lt;a id="absent-target"&gt;&lt;/a&gt;',
+])
+def test_displayed_or_hidden_html_does_not_create_target(tmp_path: Path, shown_code: str) -> None:
+    root = _front_door_tree(tmp_path)
+    readme = root / 'README.md'
+    readme.write_text(readme.read_text() + '\n' + shown_code + '\n[Missing](#absent-target)\n')
+    receipt = validate_readme_front_door(root)
+    assert '#absent-target' in receipt['findings']['broken_links']
+
+
+@pytest.mark.parametrize('identity', [
+    '**Python programs for checking saved results.**',
+    '**Plectis is a collection of small Python programs for checking results.**',
+    '**A collection of Python tools for checking results.**',
+    '**Programs written in Python for checking results.**',
+])
+def test_literal_python_identity_is_supported(tmp_path: Path, identity: str) -> None:
+    root = _front_door_tree(tmp_path)
+    _replace_hero_promise(root, identity)
+    receipt = validate_readme_front_door(root)
+    assert receipt['status'] == 'pass', receipt['blocking_codes']
+
+
+def test_missing_software_identity_is_not_supplied_by_later_mention(tmp_path: Path) -> None:
+    root = _front_door_tree(tmp_path)
+    _replace_hero_promise(root, '**Research notes, pictures and future plans.**')
+    _mutate(root, 'Plectis contains small programs', 'Plectis contains research notes')
+    readme = root / 'README.md'
+    readme.write_text(readme.read_text() + '\nPython programs are discussed in a later guide.\n')
+    receipt = validate_readme_front_door(root)
+    assert 'public-executable-identity' in receipt['findings']['front_door_required_context_missing']
+
+
+def test_explained_result_directory_after_first_example_is_allowed(tmp_path: Path) -> None:
+    root = _front_door_tree(tmp_path)
+    _mutate(root, 'The program prints', 'The output files go in `.microcosm/`, a local results directory.\n\nThe program prints')
+    receipt = validate_readme_front_door(root)
+    assert receipt['status'] == 'pass', receipt['blocking_codes']
+
+
+def test_subheading_does_not_hide_jargon_before_first_example(tmp_path: Path) -> None:
+    root = _front_door_tree(tmp_path)
+    _mutate(root, 'A workflow is', 'The internal evidence_class and accepted_current_authority fields lead here.\n\nA workflow is')
+    receipt = validate_readme_front_door(root)
+    assert 'README_HERO_ONTOLOGY_LEAK' in receipt['blocking_codes']
+
+
+def test_inert_code_sample_does_not_end_opening_explanation(tmp_path: Path) -> None:
+    root = _front_door_tree(tmp_path)
+    _mutate(root, 'A workflow is', '```text\nA sample result, not a command.\n```\n\nThe evidence_class field leads here.\n\nA workflow is')
+    receipt = validate_readme_front_door(root)
+    assert 'evidence-taxonomy-token' in receipt['findings']['hero_banned_terms']
+
+
+def test_commented_command_does_not_end_opening_explanation(tmp_path: Path) -> None:
+    root = _front_door_tree(tmp_path)
+    _mutate(root, 'A workflow is', '<!--\n```bash\npython3 unused.py\n```\n-->\n\nThe evidence_class field leads here.\n\nA workflow is')
+    receipt = validate_readme_front_door(root)
+    assert 'evidence-taxonomy-token' in receipt['findings']['hero_banned_terms']

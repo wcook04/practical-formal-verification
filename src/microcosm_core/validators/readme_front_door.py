@@ -7,9 +7,8 @@ FRONT_DOOR_* pattern tables pin the contract; dependencies include `argparse`, `
 `pathlib`, `typing`, and 1 more. Validator outputs stay structured so release checks
 can consume findings without scraping prose.
 
-Contract shape (stranger-first migration, 2026-07-11): the HERO (everything
-before the first H2) must be plain English with an install-and-run block and no
-internal ontology. Component coverage, runnable commands, result types and
+Contract shape: the opening explanation must use plain language. The wider
+first-use section (before the first H2) must include a runnable example. Component coverage, runnable commands, result types and
 stated limitations are whole-document requirements. Prose may explain these
 in ordinary language; the validator does not prescribe internal labels.
 """
@@ -17,6 +16,7 @@ in ordinary language; the validator does not prescribe internal labels.
 from __future__ import annotations
 
 import argparse
+from html.parser import HTMLParser
 import re
 from pathlib import Path
 from typing import Any
@@ -30,8 +30,9 @@ from microcosm_core.validators.public_entry_docs import (
 
 CHECKER_ID = "checker.microcosm.validators.readme_front_door"
 
-# Terms that must not appear in the HERO (banner + H1 + promise + link rail,
-# i.e. everything before the first H2). They are technically true lower down,
+# Terms that must not lead the opening explanation, before a runnable example.
+# These may be needed to explain a command's output later on the same page.
+# They are technically true lower down,
 # but in the first impression they are internal ontology or jargon that costs a
 # cold reader recognition. Progressive disclosure, not deception.
 HERO_BANNED_PATTERNS: tuple[tuple[str, str], ...] = (
@@ -235,6 +236,46 @@ def _anchor_slug(heading: str) -> str:
     return slug
 
 
+def _html_anchors(text: str) -> set[str]:
+    """Read actual HTML targets, excluding comments and displayed code."""
+    lines = []
+    fence = None
+    for line in text.splitlines():
+        if fence is not None:
+            char, length = fence
+            if re.fullmatch(r" {0,3}" + re.escape(char) + "{" + str(length) + r",}[ \t]*", line):
+                fence = None
+            continue
+        match = re.match(r" {0,3}(`{3,}|~{3,})", line)
+        if match:
+            fence = (match[1][0], len(match[1]))
+        elif not line.startswith(("    ", "\t")):
+            lines.append(line)
+    visible = re.sub(r"(`+).*?\1", "", "\n".join(lines), flags=re.DOTALL)
+
+    class Targets(HTMLParser):
+        def __init__(self):
+            super().__init__()
+            self.anchors: set[str] = set()
+            self.hidden_depth = 0
+
+        def handle_starttag(self, tag, attrs):
+            if tag in {"pre", "code", "script", "style", "template"}:
+                self.hidden_depth += 1
+            if not self.hidden_depth:
+                self.anchors.update(value for key, value in attrs if value and
+                                    (key == "id" or (tag == "a" and key == "name")))
+
+        def handle_endtag(self, tag):
+            if tag in {"pre", "code", "script", "style", "template"}:
+                self.hidden_depth = max(0, self.hidden_depth - 1)
+
+    parser = Targets()
+    parser.feed(visible)
+    parser.close()
+    return parser.anchors
+
+
 def _markdown_links(text: str) -> list[tuple[str, str]]:
     # [label](dest) but not images ![alt](src)
     """
@@ -261,6 +302,36 @@ def _fenced_blocks(text: str) -> list[str]:
 # absolute or venv-relative path to it, or the source form that needs no
 # install at all.
 _RUN_COMMAND = re.compile(r"(?:^|\s)(?:\S*/)?plectis\s+[a-z]|-m\s+plectis\s+[a-z]", re.M)
+
+
+def _opening_explanation(text: str) -> str:
+    """Stop terminology review where the first runnable example begins.
+
+    Keep first-run, install and witness checks separate: they still inspect
+    the example blocks. A prose subheading or an inert code sample alone
+    must not hide jargon before the reader reaches an executable example.
+    """
+    visible = re.sub(r"<!--.*?-->", lambda match: " " * len(match[0]), text, flags=re.DOTALL)
+    for match in re.finditer(r"```[^\n]*\n(.*?)```", visible, flags=re.DOTALL):
+        block = match[1]
+        if _RUN_COMMAND.search(block) or re.search(r"\bpython(?:3(?:\.\d+)?)?\s+[^\s]+\.py(?:\s|$)", block):
+            return text[:match.start()]
+    return _hero_region(text)
+
+
+def _literal_python_identity(opening: str) -> bool:
+    """Accept direct descriptions of runnable Python software in the opener."""
+    direct = re.search(
+        r"\bpython programs?\b"
+        r"|\b(?:collection|set|toolkit) of (?:small )?python tools?\b"
+        r"|\bprograms? (?:written )?in python\b",
+        opening, flags=re.IGNORECASE,
+    )
+    named_programs = re.search(
+        r"\bplectis (?:contains|provides|publishes) (?:small )?programs?\b",
+        opening, flags=re.IGNORECASE,
+    )
+    return bool(direct or (named_programs and re.search(r"\bpython\b", opening, re.IGNORECASE)))
 
 
 def _unisolated_install(block: str) -> bool:
@@ -451,8 +522,9 @@ def validate_readme_front_door(
     if len(hero_links) < 3:
         blocking.append("README_ROUTE_RAIL_MISSING")
 
-    # --- 5. no internal ontology / jargon in the hero ---
-    hero_lower = hero.lower()
+    # --- 5. no unexplained internal terminology before the first example ---
+    opening = _opening_explanation(text)
+    hero_lower = opening.lower()
     hero_leaks = sorted(
         {
             label
@@ -472,6 +544,7 @@ def validate_readme_front_door(
         label
         for pattern, label in FRONT_DOOR_REQUIRED_PATTERNS
         if not re.search(pattern, front_lower, flags=re.DOTALL)
+        and not (label == "public-executable-identity" and _literal_python_identity(opening))
     )
     destinations = {dest for _, dest in _markdown_links(text)}
     missing_family_routes = [
@@ -568,7 +641,7 @@ def validate_readme_front_door(
         blocking.append("README_WITNESS_COMMAND_UNBOUND")
 
     # --- 8. all relative links resolve (files + same-doc anchors) ---
-    slugs = {_anchor_slug(h) for _, h in _headings(text)}
+    slugs = {_anchor_slug(h) for _, h in _headings(text)} | _html_anchors(text)
     broken: list[str] = []
     for _label, dest in _markdown_links(text):
         if dest.startswith(("http://", "https://", "mailto:")):
