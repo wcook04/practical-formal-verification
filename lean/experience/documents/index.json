@@ -17,12 +17,12 @@
         "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/README.md"
       },
       "render_contract": {
-        "navigation_fingerprint": "1129004b22f943472dd2bb701cce27e6a9e4d34a2d0ad14945399db9133359f7",
+        "navigation_fingerprint": "7a61692d75d40e2cd1229604adfefd6ed54bd352415ed2657b5afdb5eee60e19",
         "preferred": "html_mathml",
         "fallback": "html_exact_tex",
         "fallback_renderer": "MathJax or a TeX-compatible KaTeX configuration",
         "frontend_math_dependency": null,
-        "source_sha256": "7117efff6a622541ba561a9101716429f2372ba3cf3723b1073a274719c8cce6",
+        "source_sha256": "15f8ebfc1eb4e1699b64e43e3164369fee236dc0b9b8cd6a2849661c334428d4",
         "pandoc": "pandoc 3.9.0.2",
         "renderer_contract_version": 35,
         "renderer_fingerprint": "d264019ae46e5b6f",
@@ -37,29 +37,29 @@
           "mathjax": []
         },
         "executable_scripts_embedded": false,
-        "html_mathml_sha256": "63c4bf68eb741605d8c3b8cfde994d80ff9355230770eb176fd7edf1f1be429c",
-        "html_exact_tex_sha256": "ab17bcfd95864530c61cfe6f9ad20f93a84711a0e0c3b07c43ce637423efc582"
+        "html_mathml_sha256": "43a4a1843658e484efbd044049e5aaf4ddeaf537d32d2969694e47ef6bf2e859",
+        "html_exact_tex_sha256": "dbfbd1885494f3ea34cde6bc445bb33922b5477754836b1c2a208e2cb2968d78"
       },
       "sections": [
         {
           "level": 2,
-          "anchor": "papers-tools-and-explanations",
-          "label": "Papers, tools and explanations"
+          "anchor": "use-it",
+          "label": "Use it"
         },
         {
           "level": 2,
-          "anchor": "for-a-first-look-257",
-          "label": "For a first look: #257"
+          "anchor": "inspect-one-result",
+          "label": "Inspect one result"
         },
         {
           "level": 2,
-          "anchor": "results-and-their-limits",
-          "label": "Results and their limits"
+          "anchor": "status-and-the-use-of-ai",
+          "label": "Status and the use of AI"
         },
         {
           "level": 2,
-          "anchor": "why-keep-the-whole-research-record",
-          "label": "Why keep the whole research record?"
+          "anchor": "formal-conjectures-contributions",
+          "label": "Formal Conjectures contributions"
         },
         {
           "level": 2,
@@ -67,9 +67,9 @@
           "label": "Problem papers"
         },
         {
-          "level": 3,
-          "anchor": "reading-across-the-problems",
-          "label": "Reading across the problems"
+          "level": 2,
+          "anchor": "corpus-at-a-glance",
+          "label": "Corpus at a glance"
         },
         {
           "level": 2,
@@ -87,14 +87,9 @@
           "label": "Read or verify locally"
         },
         {
-          "level": 3,
+          "level": 2,
           "anchor": "repository-map",
           "label": "Repository map"
-        },
-        {
-          "level": 2,
-          "anchor": "corpus-at-a-glance",
-          "label": "Corpus at a glance"
         },
         {
           "level": 2,
@@ -103,18 +98,13 @@
         },
         {
           "level": 2,
-          "anchor": "watch-the-videos",
-          "label": "Watch the videos"
+          "anchor": "videos",
+          "label": "Videos"
         },
         {
           "level": 2,
-          "anchor": "formal-conjectures-contributions",
-          "label": "Formal Conjectures contributions"
-        },
-        {
-          "level": 2,
-          "anchor": "reading-routes",
-          "label": "Reading routes"
+          "anchor": "other-records",
+          "label": "Other records"
         },
         {
           "level": 2,
@@ -142,7 +132,7 @@
         "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/docs/READING_GUIDE.md"
       },
       "render_contract": {
-        "navigation_fingerprint": "1129004b22f943472dd2bb701cce27e6a9e4d34a2d0ad14945399db9133359f7",
+        "navigation_fingerprint": "7a61692d75d40e2cd1229604adfefd6ed54bd352415ed2657b5afdb5eee60e19",
         "preferred": "html_mathml",
         "fallback": "html_exact_tex",
         "fallback_renderer": "MathJax or a TeX-compatible KaTeX configuration",
@@ -222,7 +212,7 @@
         "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/README.md"
       },
       "render_contract": {
-        "navigation_fingerprint": "1129004b22f943472dd2bb701cce27e6a9e4d34a2d0ad14945399db9133359f7",
+        "navigation_fingerprint": "7a61692d75d40e2cd1229604adfefd6ed54bd352415ed2657b5afdb5eee60e19",
         "preferred": "html_mathml",
         "fallback": "html_exact_tex",
         "fallback_renderer": "MathJax or a TeX-compatible KaTeX configuration",
@@ -342,7 +332,7 @@
         "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/docs/reading-edition/weighted-257-task.md"
       },
       "render_contract": {
-        "navigation_fingerprint": "1129004b22f943472dd2bb701cce27e6a9e4d34a2d0ad14945399db9133359f7",
+        "navigation_fingerprint": "7a61692d75d40e2cd1229604adfefd6ed54bd352415ed2657b5afdb5eee60e19",
         "preferred": "html_mathml",
         "fallback": "html_exact_tex",
         "fallback_renderer": "MathJax or a TeX-compatible KaTeX configuration",
@@ -407,7 +397,7 @@
         "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/docs/README.md"
       },
       "render_contract": {
-        "navigation_fingerprint": "1129004b22f943472dd2bb701cce27e6a9e4d34a2d0ad14945399db9133359f7",
+        "navigation_fingerprint": "7a61692d75d40e2cd1229604adfefd6ed54bd352415ed2657b5afdb5eee60e19",
         "preferred": "html_mathml",
         "fallback": "html_exact_tex",
         "fallback_renderer": "MathJax or a TeX-compatible KaTeX configuration",
@@ -487,7 +477,7 @@
         "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/docs/RESULTS.md"
       },
       "render_contract": {
-        "navigation_fingerprint": "1129004b22f943472dd2bb701cce27e6a9e4d34a2d0ad14945399db9133359f7",
+        "navigation_fingerprint": "7a61692d75d40e2cd1229604adfefd6ed54bd352415ed2657b5afdb5eee60e19",
         "preferred": "html_mathml",
         "fallback": "html_exact_tex",
         "fallback_renderer": "MathJax or a TeX-compatible KaTeX configuration",
@@ -693,7 +683,7 @@
         "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/docs/SOURCE_MAP.md"
       },
       "render_contract": {
-        "navigation_fingerprint": "1129004b22f943472dd2bb701cce27e6a9e4d34a2d0ad14945399db9133359f7",
+        "navigation_fingerprint": "7a61692d75d40e2cd1229604adfefd6ed54bd352415ed2657b5afdb5eee60e19",
         "preferred": "html_mathml",
         "fallback": "html_exact_tex",
         "fallback_renderer": "MathJax or a TeX-compatible KaTeX configuration",
@@ -819,7 +809,7 @@
         "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/docs/RELATED_PROBLEMS.md"
       },
       "render_contract": {
-        "navigation_fingerprint": "1129004b22f943472dd2bb701cce27e6a9e4d34a2d0ad14945399db9133359f7",
+        "navigation_fingerprint": "7a61692d75d40e2cd1229604adfefd6ed54bd352415ed2657b5afdb5eee60e19",
         "preferred": "html_mathml",
         "fallback": "html_exact_tex",
         "fallback_renderer": "MathJax or a TeX-compatible KaTeX configuration",
@@ -874,7 +864,7 @@
         "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/docs/PRIOR_ART.md"
       },
       "render_contract": {
-        "navigation_fingerprint": "1129004b22f943472dd2bb701cce27e6a9e4d34a2d0ad14945399db9133359f7",
+        "navigation_fingerprint": "7a61692d75d40e2cd1229604adfefd6ed54bd352415ed2657b5afdb5eee60e19",
         "preferred": "html_mathml",
         "fallback": "html_exact_tex",
         "fallback_renderer": "MathJax or a TeX-compatible KaTeX configuration",
@@ -986,7 +976,7 @@
         "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/docs/METHODOLOGY.md"
       },
       "render_contract": {
-        "navigation_fingerprint": "1129004b22f943472dd2bb701cce27e6a9e4d34a2d0ad14945399db9133359f7",
+        "navigation_fingerprint": "7a61692d75d40e2cd1229604adfefd6ed54bd352415ed2657b5afdb5eee60e19",
         "preferred": "html_mathml",
         "fallback": "html_exact_tex",
         "fallback_renderer": "MathJax or a TeX-compatible KaTeX configuration",
@@ -1163,7 +1153,7 @@
         "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/docs/SCOPE.md"
       },
       "render_contract": {
-        "navigation_fingerprint": "1129004b22f943472dd2bb701cce27e6a9e4d34a2d0ad14945399db9133359f7",
+        "navigation_fingerprint": "7a61692d75d40e2cd1229604adfefd6ed54bd352415ed2657b5afdb5eee60e19",
         "preferred": "html_mathml",
         "fallback": "html_exact_tex",
         "fallback_renderer": "MathJax or a TeX-compatible KaTeX configuration",
@@ -1213,12 +1203,12 @@
         "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/docs/verification/FORMAL_CONJECTURES_CROSSWALK.md"
       },
       "render_contract": {
-        "navigation_fingerprint": "1129004b22f943472dd2bb701cce27e6a9e4d34a2d0ad14945399db9133359f7",
+        "navigation_fingerprint": "7a61692d75d40e2cd1229604adfefd6ed54bd352415ed2657b5afdb5eee60e19",
         "preferred": "html_mathml",
         "fallback": "html_exact_tex",
         "fallback_renderer": "MathJax or a TeX-compatible KaTeX configuration",
         "frontend_math_dependency": null,
-        "source_sha256": "21cac7ae6445abf8a384456889f546269880fa78a2babaa2c1ed6644c5737281",
+        "source_sha256": "03b87158bd0942a100e4d0acd162d082c9c5b6253b6d58e48cb3f1f915244ecf",
         "pandoc": "pandoc 3.9.0.2",
         "renderer_contract_version": 35,
         "renderer_fingerprint": "d264019ae46e5b6f",
@@ -1233,8 +1223,8 @@
           "mathjax": []
         },
         "executable_scripts_embedded": false,
-        "html_mathml_sha256": "8f8c60dda467f93428f3554cda4ff494811e2c998e33176bd442f5c29f84a4d9",
-        "html_exact_tex_sha256": "aa87795d8c49525cf003065976b6c0885c2b7804230d8a121bc5b1539478928e"
+        "html_mathml_sha256": "7749e9785eba84a97451de4eee824a518e2abefde656a9e556f7e25ce9ae1026",
+        "html_exact_tex_sha256": "eaa4b4183d2b34c6b50fc871140d2bcc79646e805314a85bd2f0b9b150474e0f"
       },
       "sections": [
         {
@@ -1344,8 +1334,8 @@
         },
         {
           "level": 2,
-          "anchor": "reproduction",
-          "label": "Reproduction"
+          "anchor": "rerun-this-comparison",
+          "label": "Rerun this comparison"
         }
       ],
       "source_heading_translations": {
@@ -1367,7 +1357,7 @@
         "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/docs/EXTERNAL_VERIFICATION.md"
       },
       "render_contract": {
-        "navigation_fingerprint": "1129004b22f943472dd2bb701cce27e6a9e4d34a2d0ad14945399db9133359f7",
+        "navigation_fingerprint": "7a61692d75d40e2cd1229604adfefd6ed54bd352415ed2657b5afdb5eee60e19",
         "preferred": "html_mathml",
         "fallback": "html_exact_tex",
         "fallback_renderer": "MathJax or a TeX-compatible KaTeX configuration",
@@ -1487,7 +1477,7 @@
         "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/docs/verification/COMPARATOR_1049_NUMERICAL_HEIGHT.md"
       },
       "render_contract": {
-        "navigation_fingerprint": "1129004b22f943472dd2bb701cce27e6a9e4d34a2d0ad14945399db9133359f7",
+        "navigation_fingerprint": "7a61692d75d40e2cd1229604adfefd6ed54bd352415ed2657b5afdb5eee60e19",
         "preferred": "html_mathml",
         "fallback": "html_exact_tex",
         "fallback_renderer": "MathJax or a TeX-compatible KaTeX configuration",
@@ -1552,7 +1542,7 @@
         "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/docs/ARCHITECTURE.md"
       },
       "render_contract": {
-        "navigation_fingerprint": "1129004b22f943472dd2bb701cce27e6a9e4d34a2d0ad14945399db9133359f7",
+        "navigation_fingerprint": "7a61692d75d40e2cd1229604adfefd6ed54bd352415ed2657b5afdb5eee60e19",
         "preferred": "html_mathml",
         "fallback": "html_exact_tex",
         "fallback_renderer": "MathJax or a TeX-compatible KaTeX configuration",
@@ -1652,7 +1642,7 @@
         "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/docs/reference/RESIDUAL_PROGRESS.md"
       },
       "render_contract": {
-        "navigation_fingerprint": "1129004b22f943472dd2bb701cce27e6a9e4d34a2d0ad14945399db9133359f7",
+        "navigation_fingerprint": "7a61692d75d40e2cd1229604adfefd6ed54bd352415ed2657b5afdb5eee60e19",
         "preferred": "html_mathml",
         "fallback": "html_exact_tex",
         "fallback_renderer": "MathJax or a TeX-compatible KaTeX configuration",
@@ -1727,7 +1717,7 @@
         "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/docs/reference/WAVE_INDEX.md"
       },
       "render_contract": {
-        "navigation_fingerprint": "1129004b22f943472dd2bb701cce27e6a9e4d34a2d0ad14945399db9133359f7",
+        "navigation_fingerprint": "7a61692d75d40e2cd1229604adfefd6ed54bd352415ed2657b5afdb5eee60e19",
         "preferred": "html_mathml",
         "fallback": "html_exact_tex",
         "fallback_renderer": "MathJax or a TeX-compatible KaTeX configuration",
@@ -1887,7 +1877,7 @@
         "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/docs/ORIENTATION.md"
       },
       "render_contract": {
-        "navigation_fingerprint": "1129004b22f943472dd2bb701cce27e6a9e4d34a2d0ad14945399db9133359f7",
+        "navigation_fingerprint": "7a61692d75d40e2cd1229604adfefd6ed54bd352415ed2657b5afdb5eee60e19",
         "preferred": "html_mathml",
         "fallback": "html_exact_tex",
         "fallback_renderer": "MathJax or a TeX-compatible KaTeX configuration",

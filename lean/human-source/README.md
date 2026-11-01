@@ -5,63 +5,67 @@
 
 <a id="mathematical-research-and-the-system-behind-it"></a>
 
-**Mathematical research and the system behind it**
+Plectis is research on eight problems posed by Paul Erdős: a short paper and a
+longer record for each problem, Lean proofs of selected statements, experiments
+and failed approaches. On the public maths map, every result in the sixteen
+problem papers appears with its Lean statements and Comparator records.
 
-Plectis collects research on eight problems posed by Paul Erdős: papers,
-Lean proofs of selected statements, experiments and failed approaches.
-Inspect and continue the research.
-
-**[Explore the research](#problem-papers)** · **[Watch the maths tour](https://www.youtube.com/watch?v=u4f-fk1o13k)** · **[Read the system paper](paper/systems/claim-faithful-publication-systems-paper.pdf)** · **[Repository map](#repository-map)**
-
-[![Eight Erdős problem programmes: the interactive maths map connects papers, results and their formal evidence](.github/maths-map.png)](https://wcook04.github.io/practical-formal-verification/maths/universe.html)
-
-<sub>The maths map on 9 October 2026. Open the image to explore the current edition.</sub>
-
-Will Cook maintains this independent, AI-assisted prototype.
-Start without Lean: [A reader's way in](docs/READING_GUIDE.md). The [glossary](https://wcook04.github.io/practical-formal-verification/docs/glossary.html)
-explains project terminology.
-
----
+**[Open the maths map](https://wcook04.github.io/practical-formal-verification/map/#mathematics)** · **[Inspect one result](#inspect-one-result)** · **[Formal Conjectures](#formal-conjectures-contributions)** · **[Papers](#problem-papers)** · **[Repository map](#repository-map)**
 
 <a id="choose-a-way-in"></a>
 
-## Papers, tools and explanations
+## Use it
 
-- **Mathematics:** [eight short papers and longer research records](#problem-papers).
-- **Research system:** [A Repository-Based System for Research and Publication](paper/systems/claim-faithful-publication-systems-paper.pdf).
-- **Writing and revision:** [writing guide](paper/exposition/writing-a-good-mathematical-paper.pdf), [method](paper/exposition/writing-mathematics-from-reviewed-revisions.pdf) and [changes prompted by readers](docs/research-commons/CREDIT_LEDGER.md#credit-correspondence-004).
-- **Connections between problems:** [cross-problem paper](paper/synthesis/optimal-sparse-perturbations.pdf).
-- **Formal evidence:** [Lean source](docs/SOURCE_MAP.md) and [Comparator checks](docs/EXTERNAL_VERIFICATION.md).
+- **In a browser, with nothing to install:** open the [maths map](https://wcook04.github.io/practical-formal-verification/map/#mathematics), select
+  Expand map and search for a theorem or a Lean declaration. Selecting a result
+  shows its statement, its Lean statements and its Comparator record.
+- **As a reader, without Lean:** start with [A reader's way in](docs/READING_GUIDE.md).
+  The [glossary](https://wcook04.github.io/practical-formal-verification/docs/glossary.html) explains project terms.
+- **In a terminal, with Git and Python 3.11 or later:** clone this repository and
+  run `python3 scripts/verify_claims.py --claim finite_prime_weighted_support`.
+  This prints one claim's statement, Lean declarations, Comparator interface,
+  paper and limits. It finds the declarations in your checkout and does not run
+  Lean. [REPRODUCIBILITY](docs/REPRODUCIBILITY.md)
+  gives the clone command and the steps for rebuilding a proof in Lean.
 
-The [mathematics website](https://wcook04.github.io/practical-formal-verification/maths/) connects each
-problem's papers, results and sources. The films also show private interfaces.
-Do not infer results from private or unreleased work.
+[![Eight Erdős problem programmes: the interactive maths map connects papers, results and their formal evidence](.github/maths-map.png)](https://wcook04.github.io/practical-formal-verification/map/#mathematics)
 
-## For a first look: #257
+<sub>The maths map on 9 October 2026. Select the image to open the current map.</sub>
 
-Start with the [introductory paper](paper/257/erdos257-expository-sums-never-fractions.pdf)
-or [#257 video](https://www.youtube.com/watch?v=uWCqtRkJ8P0): examples followed by
-a proof for infinite choices of exponents whose reciprocals have a finite sum.
-Erdős stated this result in 1968.
+## Inspect one result
 
 [Problem 257](https://www.erdosproblems.com/257) asks whether the series
 
 $$\sum_{a\in A} \frac{1}{2^a-1}$$
 
-is irrational for **every infinite set $A$ of positive integers**. The universal
-question remains open.
+is irrational for **every infinite set $A$ of positive integers**. That question
+remains open. Theorem 1.2 of the [#257 short paper](paper/257/erdos-257-mersenne-support-subseries.pdf)
+proves irrationality at every integer base at least two for infinite sets that
+meet a finite-prime weighted condition. The records for this theorem are:
 
-The [short paper](paper/257/erdos-257-mersenne-support-subseries.pdf) proves sufficient conditions for particular infinite sets, including a
-Lean-checked prime-weighted criterion that works at every integer base at
-least two. The proof cancels finitely many terms, then uses averaging to find a
-small positive remainder that rules out rationality.
+- **Statement:** [Theorem 1.2 on the map](https://wcook04.github.io/practical-formal-verification/maths/universe.html#o=statement%3Aerdos-257-mersenne-support-subseries%23res%3Aweighted-support).
+- **Lean proof:** [`divisibilityWeightedClaim`](lean/ErdosProblems/Erdos257/PaperCompleteR8/WeightedReturn.lean#L120).
+  The [evidence record](evidence/erdos-257-mersenne-support-subseries.md#res-weighted-support)
+  sets the printed theorem beside the Lean statements.
+- **What Lean establishes:** that the exact formal statement in that file is proved.
+- **What Comparator states:** [run 35935225572 passed](evidence/erdos-257-mersenne-support-subseries.md#res-weighted-support-comparator),
+  comparing the proof with the same statement written separately from Mathlib,
+  with only the axioms `propext`, `Quot.sound` and `Classical.choice` allowed.
+- **What neither tool establishes:** whether the formal statement matches the
+  intended mathematics, and novelty, priority or significance.
+- **Who has reviewed it:** Bo Cowgill approved commit `40f7826a` of
+  [Formal Conjectures request #6528](https://github.com/google-deepmind/formal-conjectures/pull/6528) on 10 October 2026. Later
+  commits followed, and the request is open with review required. Palomar
+  [registered](https://palomar-registry.org/entry?id=PALOMAR-2026-09-25-000009&version=1)
+  a Lean selection containing this theorem. The paper has not been peer reviewed.
 
-[Try three changed hypotheses](docs/reading-edition/weighted-257-task.md), or
-[follow the Lean declaration](lean/ErdosProblems/Erdos257/PaperCompleteR8/WeightedReturn.lean#L120).
+[Try three changed hypotheses](docs/reading-edition/weighted-257-task.md).
 
-## Results and their limits
+<a id="about-the-project"></a>
 
-Using the degree-seven polynomial constructed by the erdosproblems.com
+## Status and the use of AI
+
+The one formal answer among the eight problems concerns #1041. Using the degree-seven polynomial constructed by the erdosproblems.com
 contributor ani, Lean proves that every preconnected strict-lemniscate set
 containing two distinct roots has one-dimensional Hausdorff measure greater
 than two. This refutes the exact Formal Conjectures path-image-length
@@ -73,31 +77,50 @@ historical correspondence.
 
 [ani's original counterexample](https://www.erdosproblems.com/forum/thread/1041#post-8861)
 is credited in the [#1041 case study](docs/case-studies/formal-conjectures-1041.md).
-[Results and limits](docs/RESULTS.md) keeps each programme's statements beside
-its assumptions, earlier work and remaining questions.
+[Results and limits](docs/RESULTS.md) gives each problem's statements with their
+assumptions, earlier work and remaining questions.
 
-<a id="about-the-project"></a>
+Will Cook directs this independent, AI-assisted prototype and is not a
+mathematician. AI agents did most of the research and drafting. He built and
+directed the infrastructure, reviewed claims when he could and has not
+independently verified every claim. He maintains the sources and corrects the
+public record. Novelty and significance need human judgement. The records include
+calculations and routes that stopped, so that other people can question, repair
+or reuse them. The [system paper](paper/systems/claim-faithful-publication-systems-paper.pdf)
+describes how results, corrections and credit are recorded.
 
-## Why keep the whole research record?
+## Formal Conjectures contributions
 
-I want other people to work on these questions with me. The records preserve
-calculations and routes that stopped, which you can question, repair or reuse.
+[Formal Conjectures](https://github.com/google-deepmind/formal-conjectures) is Google DeepMind's open repository of conjectures
+stated in Lean. [Five contributions](docs/verification/FORMAL_CONJECTURES_CROSSWALK.md#merged-mathematical-contributions)
+from this project have merged into it. The [crosswalk](docs/verification/FORMAL_CONJECTURES_CROSSWALK.md)
+lists each request with its reviews and compares the eight problems with the
+Formal Conjectures statements.
 
-AI agents did most of the research and drafting. I built and directed the
-infrastructure and reviewed claims when I could; I have not independently
-verified every claim. I maintain the sources and take responsibility for
-correcting the public record. Novelty and significance need human judgement.
-Selected contributions have [independent reviews](#formal-conjectures-contributions);
-review does not cover the whole corpus.
-The [system paper](paper/systems/claim-faithful-publication-systems-paper.pdf)
-explains how the repository records results and corrections and credits contributors.
+- [#6505](https://github.com/google-deepmind/formal-conjectures/pull/6505) answers the exact #1041 formal statement in the
+  negative, credited to ani, and corrects a hidden hypothesis in the file. The
+  [case study](docs/case-studies/formal-conjectures-1041.md) follows it from
+  statement to proof.
+- [#6529](https://github.com/google-deepmind/formal-conjectures/pull/6529) adds Erdős's classical result for infinite sets with
+  summable reciprocals, at integer bases at least two. Arbitrary infinite sets
+  remain open.
+- [#5034](https://github.com/google-deepmind/formal-conjectures/pull/5034), [#6506](https://github.com/google-deepmind/formal-conjectures/pull/6506) and
+  [#6507](https://github.com/google-deepmind/formal-conjectures/pull/6507) record Lean proofs of solved variants of #258, #257
+  and #1049. All three rest on one theorem, Erdős's result of 1948.
+
+A merge records that a maintainer accepted that exact change and covers no other
+claim here. [Fourteen more requests](docs/verification/FORMAL_CONJECTURES_CROSSWALK.md#open-requests) are open with
+review required. An individual approval or comment applies to that request at
+the commit the crosswalk names. These reviews cover selected contributions, and
+no review covers the whole corpus.
 
 ## Problem papers
 
-The short papers present results and arguments; longer records include
-calculations, failed approaches and unresolved steps. The
-[results guide](docs/RESULTS.md#problem-by-problem-guide) lists assumptions and sources.
-The [reading edition](docs/reading-edition/README.md) collects paper openings.
+Each longer record adds calculations, failed approaches and unresolved steps to
+its short paper. For a first look, read the
+[#257 introductory paper](paper/257/erdos257-expository-sums-never-fractions.pdf):
+examples, then a proof for infinite sets whose reciprocals have a finite sum, a
+result Erdős stated in 1968.
 
 | Problem | Topic | Papers |
 |---|---|---|
@@ -110,88 +133,9 @@ The [reading edition](docs/reading-edition/README.md) collects paper openings.
 | [#1041](https://www.erdosproblems.com/1041) | [Lemniscates and Newton flow](https://wcook04.github.io/practical-formal-verification/maths/problems/erdos_1041.html) | [short paper](paper/1041/erdos-1041-lemniscate-newton-flow.pdf) · [longer paper](paper/1041/erdos1041-lemniscate-reasoning-surface.pdf) |
 | [#1049](https://www.erdosproblems.com/1049) | [Rational-base Lambert series](https://wcook04.github.io/practical-formal-verification/maths/problems/erdos_1049.html) | [short paper](paper/1049/erdos-1049-rational-base-lambert.pdf) · [longer paper](paper/1049/erdos1049-rational-base-lambert-reasoning-surface.pdf) |
 
-
-### Reading across the problems
-
 [Reading Eight Erdős Problems Together](paper/synthesis/optimal-sparse-perturbations.pdf)
-develops connections and the limits of shared methods. Its main theorems are
-ordinary proofs; Lean checks specified ingredients. The [synthesis guide](paper/synthesis/README.md)
-identifies ways to continue the work.
-
-<a id="what-the-checks-establish"></a>
-
-## What Lean and Comparator verify
-
-Lean checks whether a proof establishes the exact formal statement written in
-its source. The [source map](docs/SOURCE_MAP.md) connects paper passages to
-those declarations. [Claim records](docs/claims.json) list their public status
-and limits; [prior art](docs/PRIOR_ART.md) identifies earlier results and their
-relationship to this work.
-
-Comparator checks a solution against a separately declared formal statement,
-with an explicit list of permitted axioms. [`formalization.yaml`](formalization.yaml)
-lists the selected statements. The [verification dossier](docs/EXTERNAL_VERIFICATION.md)
-records selected statements across all eight problems and their replay requirements;
-it does not cover every argument in the papers.
-
-Researchers judge correspondence with the intended mathematics, novelty and
-usefulness. A build or platform submission does not establish those judgements.
-[Methodology](docs/METHODOLOGY.md) explains the review required to change a claim.
-
-## Contribute
-
-Ideas, corrections, references, counterexamples and clearer explanations are
-welcome. You need not solve a problem or write Lean.
-
-- **Mathematics or exposition:** [work on a paper](docs/CONTRIBUTE_BY_PAPER.md)
-  or [develop a method across problems](paper/synthesis/README.md).
-- **Software:** improve navigation, checks or the contributor experience through
-  the [architecture contribution guide](docs/research-commons/ARCHITECTURE_CONTRIBUTIONS.md).
-- **A question or correction:** use the
-  [research-progress form](https://github.com/wcook04/plectis-erdos/issues/new?template=research_progress.yml)
-  or [email me](https://wcook04.github.io/practical-formal-verification/#contact).
-- **An investigation with your own agent:** the [frontier relay](docs/FRONTIER_RELAY.md)
-  explains how to return the argument, evidence, limits and next question.
-
-[CONTRIBUTING](CONTRIBUTING.md) explains returns without a clone.
-Accepted contributions receive a public evidence and credit record under the
-[credit policy](docs/research-commons/CREDIT_POLICY.md).
-
-<a id="read-inspect-or-continue"></a>
-
-## Read or verify locally
-
-[REPRODUCIBILITY](docs/REPRODUCIBILITY.md) starts with Git and Python 3.11+, then
-explains how to install Lean and check a proof. Its
-[claim check](docs/REPRODUCIBILITY.md#try-one-claim-without-lean) inspects
-source links without compiling the proof.
-For [research with an agent](docs/agents/README.md#start-with-current-public-work),
-see [AGENTS.md](AGENTS.md) and the
-[agent workbench](docs/agents/AGENT_WORKBENCH.md).
-
-### Repository map
-
-<details>
-<summary>Where the papers, proofs, experiments and tools live</summary>
-
-| Location | Contents |
-|---|---|
-| [paper/](paper/README.md) | PDFs and manuscript sources by problem. |
-| [lean/](lean/README.md) | Formal proofs in the `Erdos249257` and `ErdosProblems` libraries. |
-| [docs/](docs/README.md) | Guides, claim records and source maps. |
-| [research/](research/README.md) | Experiments, examples and investigations. |
-| [research_corpus/](research_corpus/README.md) | Dated research contributions and unresolved obligations. |
-| [computations/](computations/README.md) | Exact arithmetic certificates and scripts. |
-| [verification/](verification/README.md) | Selected formal interfaces, solutions and replay configuration. |
-| [evidence/](evidence/README.md) | Paper-to-proof records and stored Comparator reports. |
-| [scripts/](scripts/README.md) | Query tools, projection builders and validation programs. |
-| [skills/](skills/README.md) | Workflows for coding agents using this checkout. |
-
-</details>
-
-The [architecture guide](docs/ARCHITECTURE.md) explains how the folders fit together.
-The checkout is hundreds of megabytes; Lean builds download additional toolchains
-and dependencies. The [security policy](.github/SECURITY.md) covers code execution.
+connects the problems. Its main theorems are ordinary proofs; Lean checks
+specified ingredients.
 
 <!-- BEGIN generated_corpus_at_a_glance -->
 <!-- Generated by scripts/build_corpus_descriptor.py; do not edit this region. -->
@@ -219,6 +163,60 @@ These are navigation counts, not novelty claims. They still need expert validati
 </details>
 <!-- END generated_corpus_at_a_glance -->
 
+<a id="what-the-checks-establish"></a>
+
+## What Lean and Comparator verify
+
+Lean checks whether a proof establishes the exact formal statement in its source.
+The [source map](docs/SOURCE_MAP.md) connects paper passages to those declarations,
+[claim records](docs/claims.json) list their status and limits, and
+[prior art](docs/PRIOR_ART.md) identifies earlier results.
+
+Comparator checks a solution against a separately declared formal statement,
+with an explicit list of permitted axioms. [`formalization.yaml`](formalization.yaml)
+lists the selected statements. The [verification dossier](docs/EXTERNAL_VERIFICATION.md)
+records selected statements across all eight problems. Researchers judge
+correspondence with the intended mathematics, novelty and usefulness, and
+[methodology](docs/METHODOLOGY.md) explains the review required to change a claim.
+
+## Contribute
+
+Corrections, references, counterexamples and clearer explanations need no Lean.
+Use the
+[research-progress form](https://github.com/wcook04/plectis-erdos/issues/new?template=research_progress.yml),
+[email Will](https://wcook04.github.io/practical-formal-verification/#contact) or [work on a paper](docs/CONTRIBUTE_BY_PAPER.md).
+[CONTRIBUTING](CONTRIBUTING.md) covers the rest, and accepted contributions
+receive credit under the [credit policy](docs/research-commons/CREDIT_POLICY.md).
+
+<a id="read-inspect-or-continue"></a>
+
+## Read or verify locally
+
+[REPRODUCIBILITY](docs/REPRODUCIBILITY.md) starts with Git and Python 3.11+, then
+explains how to install Lean and check a proof. Its
+[claim check](docs/REPRODUCIBILITY.md#try-one-claim-without-lean) inspects source
+links without compiling the proof. For research with a coding agent, see
+[AGENTS.md](AGENTS.md) and the [agent workbench](docs/agents/AGENT_WORKBENCH.md).
+
+## Repository map
+
+| Location | Contents |
+|---|---|
+| [paper/](paper/README.md) | PDFs and manuscript sources by problem. |
+| [lean/](lean/README.md) | Formal proofs in the `Erdos249257` and `ErdosProblems` libraries. |
+| [docs/](docs/README.md) | Guides, claim records and source maps. |
+| [evidence/](evidence/README.md) | One record per paper linking each result to Lean and Comparator. |
+| [verification/](verification/README.md) | Selected formal statements, solutions and Comparator configuration. |
+| [computations/](computations/README.md) | Exact arithmetic certificates and scripts. |
+| [research/](research/README.md) | Experiments, examples and investigations. |
+| [research_corpus/](research_corpus/README.md) | Dated research contributions and unresolved obligations. |
+| [scripts/](scripts/README.md) | Query tools, generators of derived files and validation programs. |
+| [skills/](skills/README.md) | Workflows for coding agents using this checkout. |
+
+The [architecture guide](docs/ARCHITECTURE.md) explains how the folders fit
+together. The checkout is hundreds of megabytes, and Lean builds download more.
+The [security policy](.github/SECURITY.md) covers running code from it.
+
 <!-- BEGIN generated_principal_declaration_anchors -->
 <!-- Generated by scripts/build_corpus_descriptor.py; do not edit this region. -->
 ## Following a result into Lean
@@ -230,74 +228,51 @@ order without asking you to decode Lean declaration names first.
 
 <a id="videos"></a>
 
-## Watch the videos
+## Videos
 
-| Film | Read alongside it |
-|---|---|
-| [Maths map](https://www.youtube.com/watch?v=u4f-fk1o13k) | [Paper list](#problem-papers) · [Source map](docs/SOURCE_MAP.md) |
-| [Erdős #257](https://www.youtube.com/watch?v=uWCqtRkJ8P0) | [Introductory paper](paper/257/erdos257-expository-sums-never-fractions.pdf) · [Short paper](paper/257/erdos-257-mersenne-support-subseries.pdf) |
-| [Plectis introduction](https://www.youtube.com/watch?v=MBmVMMogXTA) | [System paper](paper/systems/claim-faithful-publication-systems-paper.pdf) |
+There are videos of the [maths map](https://www.youtube.com/watch?v=u4f-fk1o13k),
+[Erdős #257](https://www.youtube.com/watch?v=uWCqtRkJ8P0) and the
+[Plectis system](https://www.youtube.com/watch?v=MBmVMMogXTA). The videos also show private interfaces. Do not
+infer results from private or unreleased work.
 
-The #257 film covers reciprocal-summable supports; the unrestricted problem remains open.
-
-<a id="citation-and-prior-work"></a>
-
-## Formal Conjectures contributions
-
-[Five mathematical contributions](docs/verification/FORMAL_CONJECTURES_CROSSWALK.md#merged-mathematical-contributions)
-have merged into Formal Conjectures. [#6529](https://github.com/google-deepmind/formal-conjectures/pull/6529)
-covers reciprocal-summable supports for integer bases at least two;
-arbitrary infinite supports remain open.
-
-[#6971](https://github.com/google-deepmind/formal-conjectures/pull/6971) repaired four immutable proof links on 11 October.
-[Bo Cowgill's checks and Moritz Firsching's approval](docs/verification/FORMAL_CONJECTURES_CROSSWALK.md#proof-link-maintenance)
-concern maintenance, with proofs and statements unchanged and no new mathematics.
-[Trace #1041](docs/case-studies/formal-conjectures-1041.md).
-
-On 12 October, [Bo Cowgill approved #6579](docs/verification/FORMAL_CONJECTURES_CROSSWALK.md#open-requests)
-using author-hosted verification, without an independent rerun.
-The request remains open with review required; the unreduced-totient problem remains open.
-
-Nineteen [receiving checks](docs/verification/FORMAL_CONJECTURES_CROSSWALK.md#contribution-activity) pass.
-Bo approved [PR7260](docs/verification/FORMAL_CONJECTURES_CROSSWALK.md#proof-link-maintenance), [PR6780](docs/verification/FORMAL_CONJECTURES_CROSSWALK.md#open-requests) and [PR7290–7294](docs/verification/FORMAL_CONJECTURES_CROSSWALK.md#open-requests)
-using author-hosted checks without independent proof replay.
-All seven await required reviews.
-
-Other checks: [Prove2Me #243/#257 packets](docs/research-commons/README.md#native-prove2me-theorems)
-and [plectis-erdos-lean](https://github.com/wcook04/plectis-erdos-lean).
+## Other records
 
 [Palomar](https://palomar-registry.org/) checks Lean proofs and publishes
-registered results with their review comments. Our [submission record](https://github.com/wcook04/plectis-erdos-lean#palomar-publication-surface)
-distinguishes verification, editorial review and registration. The
+registered results with their review comments. The [submission record](https://github.com/wcook04/plectis-erdos-lean#palomar-publication-surface)
+separates verification, editorial review and registration. The
 [Palomar guide](docs/verification/PALOMAR_QUALIFICATION.md) explains the local
 preparation checks; passing those checks alone does not establish acceptance.
 
-The [paper catalogue](docs/papers/README.md) links versioned aiXiv editions;
-the [verification guides](docs/verification/README.md) explain submission and
-registry records. An archived edition may differ from the current paper.
+[plectis-erdos-lean](https://github.com/wcook04/plectis-erdos-lean)
+holds the Comparator and Palomar packages, and the
+[Prove2Me records](docs/research-commons/README.md#native-prove2me-theorems) cover
+#243 and #257. The [paper catalogue](docs/papers/README.md) links versioned aiXiv
+editions, which may differ from the current papers.
 
-## Reading routes
+<details>
+<summary>How a reader moves from the website to the research record</summary>
 
 [![Website → papers → research records and open questions](.github/system-map.png)](.github/system-map.svg)
 
+</details>
+
 ## Credit
 
-Some of the biggest changes here came from people telling me what was wrong.
 One mathematician's comments on the #243 note led to all sixteen problem papers
 being rewritten for a first-time reader. The [credit ledger](docs/research-commons/CREDIT_LEDGER.md)
-lists each piece of advice, what it changed and the lines where you can see the
-change. Names stay withheld until each person confirms they want to be named.
+lists each piece of advice and what it changed. Names stay withheld until each
+person confirms they want to be named.
+
+<a id="citation-and-prior-work"></a>
 
 ## Citation and licence
 
-Use [CITATION.cff](CITATION.cff) and record the commit used. For a tagged
-release, use that tag’s citation file. For mathematics, cite the relevant
-[problem paper](paper/README.md) and the original sources it uses. A repository
-citation does not replace the original author's credit:
+Use [CITATION.cff](CITATION.cff) and record the commit used. For mathematics, cite the relevant
+[problem paper](paper/README.md) and the original sources it uses:
 [prior art](docs/PRIOR_ART.md) and [source attributions](docs/research-commons/SOURCE_ATTRIBUTIONS.md)
-distinguish earlier results, formalisation and local use.
+separate earlier results, formalisation and local use.
 
-Code, scripts and documentation are Apache-2.0; manuscript sources and PDFs
-are CC-BY-4.0. [REUSE.toml](REUSE.toml) records exceptions. See also
+Code, scripts and documentation are Apache-2.0; manuscript sources and PDFs are
+CC-BY-4.0. [REUSE.toml](REUSE.toml) records exceptions. See also
 [scope](docs/SCOPE.md), [privacy](docs/PRIVACY.md) and the
 [code of conduct](.github/CODE_OF_CONDUCT.md).
