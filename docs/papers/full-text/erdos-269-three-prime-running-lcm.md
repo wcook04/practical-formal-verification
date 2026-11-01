@@ -2,6 +2,8 @@
 
 # No Finite Separable Representation at Three Prime Generators
 
+*Authorship and AI use.* Will Cook built and directed the research infrastructure and reviewed the claims when he could. AI agents did most of the research and drafting. Cook did not independently verify every claim.
+
 <div class="center">
 
 <span class="smallcaps">Abstract</span>

@@ -2,6 +2,8 @@
 
 # Two Incomparable Denominator Exclusions for \sum\_{n\ge2}(n!-1)^{-1}
 
+*Authorship and AI use.* Will Cook built and directed the research infrastructure and reviewed the claims when he could. AI agents did most of the research and drafting. Cook did not independently verify every claim.
+
 <div id="res:problem" class="problem">
 
 **Problem 1** (Erdős \#68). Is

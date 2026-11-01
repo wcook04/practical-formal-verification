@@ -11,6 +11,7 @@ import json
 import posixpath
 import re
 import subprocess
+import tempfile
 from pathlib import Path
 from typing import Any
 from urllib.parse import quote, unquote, urlsplit
@@ -662,11 +663,13 @@ def _preserve_path_macros(tex: str) -> str:
 
 
 def _preserve_layout_adjustbox(tex: str) -> str:
-    """Keep the contents of the demonstrated layout-only ``\\adjustbox``.
+    """Keep contents of demonstrated width and page-breaking layout wrappers.
 
     Pandoc silently discards both arguments outside math. Only the paper's
     ``max width=\\linewidth`` option is removed; other options may carry
-    semantics. Comments, literal code and existing math bodies stay untouched.
+    semantics. ``samepage`` only constrains page breaks in the PDF; Pandoc
+    otherwise drops its sections and paragraphs. Comments, literal code and
+    existing math bodies stay untouched.
     """
     protected_environments = {
         "verbatim", "verbatim*", "Verbatim", "BVerbatim", "LVerbatim",
@@ -728,9 +731,13 @@ def _preserve_layout_adjustbox(tex: str) -> str:
             index = len(tex) if end < 0 else end + 1
             continue
         argument = skip_space(argument)
-        if name in {"begin", "texttt", "url", "path"} and tex[argument:argument + 1] == "{":
+        if name in {"begin", "end", "texttt", "url", "path"} and tex[argument:argument + 1] == "{":
             close = (_path_argument_end(tex, argument) if name in {"url", "path"}
                      else _matching_brace(tex, argument))
+            if name in {"begin", "end"} and tex[argument + 1:close] == "samepage":
+                chunks.append(tex[cursor:index])
+                cursor = index = close + 1
+                continue
             if name != "begin":
                 index = close + 1
                 continue
@@ -781,6 +788,241 @@ def _preserve_declaration_macros(tex: str) -> str:
     )
 
 
+PROVENANCE_NOTE_LABELS = (
+    "Authorship and AI use.", "Authorship and generative-system use.", "AI assistance.",
+)
+_PROVENANCE_NAMES = {"noteprovenance", "paperprovenance"}
+_PROVENANCE_CALL = re.compile(r"\\(provenancenote|noteprovenance|paperprovenance)(?![A-Za-z])")
+_PROVENANCE_DEFINITION = re.compile(
+    r"\\(newcommand|renewcommand|providecommand)\*?\s*\{\\([A-Za-z]+)\}\s*(?:\[(\d+)\])?\s*\{"
+)
+_PROVENANCE_CONTEXT_FILES = {"paper-house-style.sty", "problem-note-preamble.tex"}
+
+
+def _provenance_visible(tex: str, *, definitions: bool = False) -> str:
+    """Mask comments and literal regions in source order, preserving offsets.
+
+    This follows the existing layout scanner: percent is a comment outside a
+    URL/literal, while commented example tokens never open a literal region.
+    """
+    chars = list(tex)
+    environments = {
+        "verbatim", "verbatim*", "Verbatim", "BVerbatim", "LVerbatim",
+        "lstlisting", "minted", "alltt", "comment", "math", "displaymath",
+        "equation", "equation*", "align", "align*", "alignat", "alignat*",
+        "flalign", "flalign*", "gather", "gather*", "multline", "multline*",
+    }
+    command_pattern = re.compile(r"\\([A-Za-z]+)\*?")
+
+    def blank(start: int, end: int) -> None:
+        chars[start:end] = ["\n" if c == "\n" else " " for c in chars[start:end]]
+
+    def comment_end(index: int) -> int:
+        end = tex.find("\n", index)
+        return len(tex) if end < 0 else end
+
+    def skip_space(index: int) -> int:
+        while index < len(tex):
+            if tex[index].isspace():
+                index += 1
+            elif tex[index] == "%":
+                index = comment_end(index)
+            else:
+                break
+        return index
+
+    def math_end(index: int, closing: str) -> int:
+        while index < len(tex):
+            if tex.startswith(closing, index):
+                return index + len(closing)
+            if tex[index] == "\\":
+                index += 2
+            elif tex[index] == "%":
+                index = comment_end(index)
+            else:
+                index += 1
+        return len(tex)
+
+    index = 0
+    while index < len(tex):
+        start = index
+        if tex[index] == "%":
+            index = comment_end(index)
+            blank(start, index)
+            continue
+        if tex[index] == "$" or tex.startswith((r"\(", r"\["), index):
+            opening = ("$$" if tex.startswith("$$", index) else "$"
+                       if tex[index] == "$" else tex[index:index + 2])
+            closing = {r"\(": r"\)", r"\[": r"\]"}.get(opening, opening)
+            index = math_end(index + len(opening), closing)
+            blank(start, index)
+            continue
+        if tex[index] != "\\":
+            index += 1
+            continue
+        command = command_pattern.match(tex, index)
+        if command is None:
+            index += 2
+            continue
+        name = command[1]
+        argument = command.end()
+        if name == "verb" and argument < len(tex):
+            end = tex.find(tex[argument], argument + 1)
+            index = len(tex) if end < 0 else end + 1
+            blank(start, index)
+            continue
+        if not definitions and (definition := _PROVENANCE_DEFINITION.match(tex, index)):
+            index = _matching_brace(tex, definition.end() - 1) + 1
+            blank(start, index)
+            continue
+        argument = skip_space(argument)
+        if name in {"begin", "texttt", "url", "path"} and tex[argument:argument + 1] == "{":
+            close = (_path_argument_end(tex, argument) if name in {"url", "path"}
+                     else _matching_brace(tex, argument))
+            if name != "begin":
+                index = close + 1
+                blank(start, index)
+                continue
+            if tex[argument + 1:close] in environments:
+                closing = rf"\end{{{tex[argument + 1:close]}}}"
+                end = tex.find(closing, close + 1)
+                index = len(tex) if end < 0 else end + len(closing)
+                blank(start, index)
+                continue
+        index = command.end()
+    return "".join(chars)
+
+
+def preserve_provenance_notes(tex: str, tex_path: Path, *,
+                              context_sources: dict[str, str] | None = None) -> str:
+    """Keep the existing source-defined AI note without executing TeX.
+
+    Only the reviewed zero-argument aliases and their declared shared inputs
+    are resolved. Explicit context replaces filesystem lookup, so a pinned
+    mirror cannot inherit a newer local house style. Conflicting declarations,
+    unsupported definitions, missing aliases and cycles fail closed.
+    """
+    original = tex
+    if not _PROVENANCE_CALL.search(_provenance_visible(tex)):
+        return tex
+    mirror = tex_path.parent.name == "mirror" and tex_path.parent.parent.name == "papers"
+    zero_calls = re.search(r"\\(?:noteprovenance|paperprovenance)(?![A-Za-z])", _provenance_visible(tex))
+    if mirror and zero_calls and context_sources is None:
+        raise RuntimeError("pinned mirror provenance requires explicit source context")
+    root = _manuscript_search_root(tex_path)
+    bindings: dict[str, str] = {}
+    packages: set[str] = set()
+
+    def context(name: str, origin: Path) -> tuple[str, Path] | None:
+        basename = Path(name).name
+        if basename not in _PROVENANCE_CONTEXT_FILES:
+            return None
+        if context_sources is not None:
+            body = context_sources.get(name)
+            return None if body is None else (body, Path(basename))
+        # Bare inputs use the manuscript's existing TeX build root; explicit
+        # relative inputs must name that same known file from their source.
+        path = root / basename if name == basename else origin.parent / name
+        if path.resolve() != (root / basename).resolve():
+            raise RuntimeError(f"unsupported provenance context path: {name}")
+        if path.is_symlink():
+            raise RuntimeError(f"symlink in provenance context: {path}")
+        return (path.read_text(encoding="utf-8"), path) if path.is_file() else None
+
+    def declarations(source: str, origin: Path, stack: tuple[str, ...] = ()) -> None:
+        visible = _provenance_visible(source, definitions=True)
+        if re.search(r"\\(?:[gex]?def|let)\s*\\(?:noteprovenance|paperprovenance)(?![A-Za-z])", visible):
+            raise RuntimeError("unsupported provenance definition; expected a declared zero-argument command")
+        events = []
+        definition_end = 0
+        for match in _PROVENANCE_DEFINITION.finditer(visible):
+            if match.start() < definition_end:
+                continue
+            definition_end = _matching_brace(source, match.end() - 1) + 1
+            events.append((match.start(), "definition", match))
+        for match in re.finditer(r"\\(?:input|include)\s*\{([^}]+)\}|\\(?:usepackage|RequirePackage)(?:\[[^]]*\])?\s*\{([^}]+)\}", _provenance_visible(source)):
+            events.append((match.start(), "input", match))
+        for _, kind, match in sorted(events, key=lambda event: event[0]):
+            if kind == "input":
+                is_package = match[2] is not None
+                for item in (match[2] or match[1]).split(","):
+                    name = item.strip()
+                    name += "" if Path(name).suffix else (".sty" if is_package else ".tex")
+                    if Path(name).name not in _PROVENANCE_CONTEXT_FILES:
+                        continue
+                    key = Path(name).name
+                    if key in stack:
+                        raise RuntimeError("cyclic provenance source inputs")
+                    if is_package and key in packages:
+                        continue
+                    resolved = context(name, origin)
+                    if resolved is not None:
+                        body, context_path = resolved
+                        if is_package:
+                            packages.add(key)
+                        declarations(body, context_path, (*stack, key))
+            else:
+                command, name, arguments = match[1], match[2], match[3]
+                if name not in _PROVENANCE_NAMES:
+                    continue
+                if arguments not in {None, "0"}:
+                    raise RuntimeError(f"unsupported argument count for \\{name}")
+                end = _matching_brace(source, match.end() - 1)
+                body = source[match.end():end]
+                if command == "newcommand" and name in bindings:
+                    raise RuntimeError(f"ambiguous provenance definition: \\{name}")
+                if command == "renewcommand" and name not in bindings:
+                    raise RuntimeError(f"missing provenance definition before renewal: \\{name}")
+                if command != "providecommand" or name not in bindings:
+                    bindings[name] = body
+
+    first_call = _PROVENANCE_CALL.search(_provenance_visible(original))
+    # This bounded resolver accepts preamble declarations, not temporal TeX
+    # programs. A later binding must never rewrite an earlier disclosure.
+    if first_call:
+        trailing = _provenance_visible(original[first_call.start():], definitions=True)
+        if any(m[2] in _PROVENANCE_NAMES for m in _PROVENANCE_DEFINITION.finditer(trailing)):
+            raise RuntimeError("provenance definitions after first use are unsupported")
+        for match in re.finditer(r"\\(?:input|include|usepackage|RequirePackage)(?:\[[^]]*\])?\s*\{([^}]+)\}", trailing):
+            if any(Path(item.strip()).stem in {"paper-house-style", "problem-note-preamble"}
+                   for item in match[1].split(",")):
+                raise RuntimeError("provenance context after first use is unsupported")
+    declarations(original, tex_path)
+
+    def expand(source: str, stack: tuple[str, ...] = ()) -> str:
+        visible = _provenance_visible(source)
+        chunks = []
+        cursor = 0
+        for match in _PROVENANCE_CALL.finditer(visible):
+            if match.start() < cursor:
+                continue
+            name = match[1]
+            if name == "provenancenote":
+                opening = match.end()
+                while opening < len(source) and visible[opening].isspace():
+                    opening += 1
+                if source[opening:opening + 1] != "{":
+                    raise RuntimeError("missing provenance note argument")
+                closing = _matching_brace(source, opening)
+                body, end = source[opening + 1:closing], closing + 1
+            else:
+                if name in stack:
+                    raise RuntimeError("cyclic provenance macro aliases")
+                if name not in bindings:
+                    raise RuntimeError(f"missing provenance definition: \\{name}")
+                body, end = bindings[name], match.end()
+            allowed = {"provenancenote", "noteprovenance", "paperprovenance", "emph", "textit", "textbf", "textsc", "textrm", "href", "url", "LaTeX", "TeX", "par", "smallskip", "noindent", "ref", "pageref", "eqref"}
+            unknown = set(re.findall(r"\\([A-Za-z]+)", _provenance_visible(body))) - allowed
+            if unknown:
+                raise RuntimeError(f"unsupported provenance content macros: {sorted(unknown)}")
+            chunks.extend((source[cursor:match.start()], "\n\n", expand(body, (*stack, name)), "\n\n"))
+            cursor = end
+        chunks.append(source[cursor:])
+        return "".join(chunks)
+
+    return expand(tex)
+
+
 _LEDGER_COMMIT_RE = re.compile(r"\\newcommand\{\\ledgercommit\}\{([0-9a-f]{40})\}")
 _LPROOF_RE = re.compile(r"\\lproof\{([^{}]+)\}\{(\d+)\}\{([^{}]+)\}")
 _LEANNOTE_RE = re.compile(r"\\leannote\{")
@@ -809,16 +1051,18 @@ def _ledger_commit(tex: str, tex_path: Path) -> str | None:
     return None
 
 
-def _preserve_generated_note_macros(tex: str, tex_path: Path) -> str:
+def _preserve_generated_note_macros(tex: str, tex_path: Path, *, provenance_context: dict[str, str] | None = None) -> str:
     """Expand the generated statement note into links Pandoc can read.
 
-    ``\\leannote`` and ``\\lproof`` are defined in a preamble Pandoc does not
+    ``\\leannote``, ``\\provenancenote`` and ``\\lproof`` are defined in a preamble Pandoc does not
     see, so without this the Markdown mirror would silently lose the line that
-    carries each statement's Lean proof.  The rendered text matches the PDF:
+    carries each statement's Lean proof or the manuscript's production disclosure.
+    The rendered text matches the PDF:
     monospace declaration names in the two reasoning records, and the shared
     spaced reading everywhere else.
     """
 
+    tex = preserve_provenance_notes(tex, tex_path, context_sources=provenance_context)
     commit = _ledger_commit(tex, tex_path)
     monospace = "\\texttt{#3}" in tex
 
@@ -1540,25 +1784,46 @@ def _place_evidence_marks(markdown: str, marks: dict[str, tuple[str, str, str]])
     return markdown
 
 
-def _convert(tex_path: Path, stem: str) -> dict[str, Any]:
+def _convert(tex_path: Path, stem: str, *, provenance_context: dict[str, str] | None = None) -> dict[str, Any]:
     """LaTeX -> markdown, section index with line numbers, and front matter."""
-    source = _preserve_path_macros(tex_path.read_text())
+    original_source = tex_path.read_text()
+    visible_source = _provenance_visible(original_source)
+    calls = list(_PROVENANCE_CALL.finditer(visible_source))
+    document = re.search(r"\\begin\{document\}", visible_source)
+    opening_source_note = bool(
+        len(calls) == 1 and document and document.end() <= calls[0].start()
+        and re.fullmatch(r"\s*(?:\\maketitle\s*)?", visible_source[document.end():calls[0].start()])
+    )
+    source = _preserve_path_macros(original_source)
     source = _fold_custom_verbatim_environments(source)
     source = _preserve_layout_adjustbox(source)
     source = _strip_description_list_options(source)
     source = _preserve_declaration_macros(source)
     source = _preserve_lean_citation_macros(source)
-    source = _preserve_generated_note_macros(source, tex_path)
+    source = _preserve_generated_note_macros(source, tex_path, provenance_context=provenance_context)
     marks, _record = _evidence_marks(source, tex_path)
     source = _preserve_evidence_macros(source, tex_path)
     source, inlined = _inline_long_defs(source)
-    ast = json.loads(
-        _pandoc(
-            ["-f", "latex", "-t", "json"],
-            stdin=source,
-            cwd=_manuscript_search_root(tex_path),
-        )
-    )
+    def parse(cwd: Path) -> dict:
+        return json.loads(_pandoc(["-f", "latex", "-t", "json"], stdin=source, cwd=cwd))
+
+    if provenance_context:
+        # Pandoc still reads known preamble inputs. Supply their verified
+        # edition in an ephemeral tree, never the mirror checkout's house style.
+        with tempfile.TemporaryDirectory(prefix="paper-source-context-") as temporary:
+            context_root = Path(temporary)
+            cwd = context_root / "source"
+            cwd.mkdir()
+            for name, body in provenance_context.items():
+                if Path(name).is_absolute() or Path(name).name not in _PROVENANCE_CONTEXT_FILES:
+                    raise RuntimeError(f"unsupported provenance context path: {name}")
+                destination = cwd / name
+                destination.resolve().relative_to(context_root.resolve())
+                destination.parent.mkdir(parents=True, exist_ok=True)
+                destination.write_text(body, encoding="utf-8")
+            ast = parse(cwd)
+    else:
+        ast = parse(_manuscript_search_root(tex_path))
     front, title, subtitle = _meta_blocks(ast.get("meta") or {}, stem)
     # This manuscript's section counter and tagged equations have been checked
     # against its PDF. Other paper families define counters differently and
@@ -1572,7 +1837,11 @@ def _convert(tex_path: Path, stem: str) -> dict[str, Any]:
         section_numbered_statements=preserve_pdf_numbers,
         front_title_id=stem,
     )
-    ast["blocks"] = walk.blocks(front + ast["blocks"])
+    # Keep the actual first source-body block identifiable: Pandoc may hoist
+    # a source abstract into metadata, which the reader places before the body.
+    front_blocks = walk.blocks(front)
+    body_blocks = walk.blocks(ast["blocks"])
+    ast["blocks"] = front_blocks + body_blocks
     _render_numbered_references(ast["blocks"],
                                 {**walk.statement_numbers, **tagged_equations},
                                 walk.equation_labels | walk.reference_labels)
@@ -1580,6 +1849,15 @@ def _convert(tex_path: Path, stem: str) -> dict[str, Any]:
     _remap_delivery_anchors(ast["blocks"], anchor_ids)
     for section in walk.sections:
         section["id"] = anchor_ids.get(section["id"], section["id"])
+    opening_provenance_note = None
+    first_body = body_blocks[0] if body_blocks else {}
+    first_inline = (first_body.get("c") or [{}])[0] if first_body.get("t") == "Para" else {}
+    if (opening_source_note and first_inline.get("t") == "Emph"
+            and _stringify(first_inline["c"]).strip() in PROVENANCE_NOTE_LABELS):
+        note_ast = {**ast, "meta": {}, "blocks": [first_body]}
+        opening_provenance_note = _pandoc(
+            ["-f", "json", "-t", "gfm", "--wrap=none"], stdin=json.dumps(note_ast)
+        ).strip()
     markdown = _pandoc(["-f", "json", "-t", "gfm", "--wrap=none"], stdin=json.dumps(ast))
     markdown = _remove_immediate_duplicate_gfm_table_headers(markdown)
     markdown = _externalize_long_gfm_table_source_notes(markdown)
@@ -1616,6 +1894,7 @@ def _convert(tex_path: Path, stem: str) -> dict[str, Any]:
         )
     return {
         "markdown": markdown,
+        "opening_provenance_note": opening_provenance_note,
         "sections": walk.sections,
         "citations_rendered": walk.citations_rendered,
         "title": title,
