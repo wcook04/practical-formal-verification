@@ -2211,8 +2211,8 @@ def compile_paper_guide(inputs: dict[str, Any]) -> dict[str, Any]:
         "understand_plectis": system_sequence,
         "understand_formal_mathematics": {
             "first": (
-                "In the companion Lean clone, read erdos249-257-main-paper.pdf "
-                "before selecting a problem-specific paper here."
+                "Choose a problem-specific paper from the list below. Follow its links "
+                "to the Lean source and the recorded proof status."
             ),
             "then_choose_one": problem_routes,
         },

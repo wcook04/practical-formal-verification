@@ -2,6 +2,8 @@
 
 # Plectis: Verifying Code and Recording Its Execution
 
+*AI assistance.* Will Cook set the objectives and directed the work. Large-language-model agents produced and revised the software and manuscript.
+
 <div class="center">
 
 <span class="smallcaps">Abstract</span>
