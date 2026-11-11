@@ -960,3 +960,66 @@ a.ref:hover { text-decoration: underline; }
 .ringkey__title { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 0.45rem; font-size: 0.78rem; color: var(--ink); }
 .ringkey__sub { font-weight: 400; color: var(--muted); }
 .ringkey__name { white-space: nowrap; }
+
+/* ---- Films as stills ------------------------------------------------------
+   The family's .vid block (wcook04.github.io maths.css, "Films as stills, and
+   a result's versions", 11 November 2026), with its tokens mapped onto this
+   explorer's: rule, muted, ink, serif and the ember accent. One film is a
+   still that opens it on YouTube; its title is the one link. */
+.films { display: grid; gap: 0.9rem; margin: 0.4rem 0 1.1rem; padding: 0.95rem 0 1.05rem; border-block: 1px solid var(--rule); container-type: inline-size; }
+.films--page { max-width: 640px; margin: 1.2rem 0 1.4rem; }
+.vid { margin: 0; display: grid; gap: 0.7rem; min-width: 0; }
+.vid--mid { grid-template-columns: 12.5rem minmax(0, 1fr); gap: 1rem; align-items: center; }
+.vid--small { grid-template-columns: 8.5rem minmax(0, 1fr); gap: 0.85rem; align-items: center; }
+.vid__frame {
+  position: relative; display: block; aspect-ratio: 16 / 9; overflow: hidden;
+  border-radius: 8px; background: #0d0a12;
+  box-shadow: 0 0 0 1px var(--rule-strong);
+  --play: 48px;
+}
+.vid--mid .vid__frame { --play: 36px; }
+.vid--small .vid__frame { --play: 28px; border-radius: 6px; }
+.vid__frame > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.vid__play {
+  position: absolute; left: 50%; top: 50%; translate: -50% -50%;
+  width: var(--play); height: var(--play); border-radius: 50%;
+  background: rgba(18, 12, 24, 0.82);
+  box-shadow: inset 0 0 0 1px rgba(248, 240, 226, 0.34), 0 6px 16px -8px rgba(8, 5, 12, 0.8);
+}
+.vid__play::after {
+  content: ""; position: absolute; left: 53.5%; top: 50%; translate: -50% -50%;
+  border-left: calc(var(--play) * 0.27) solid #f8f0e2;
+  border-top: calc(var(--play) * 0.165) solid transparent;
+  border-bottom: calc(var(--play) * 0.165) solid transparent;
+}
+.vid__time {
+  position: absolute; right: 0.5rem; bottom: 0.5rem;
+  padding: 0.12rem 0.42rem; border-radius: 5px;
+  font-size: 0.78rem; font-weight: 600; font-variant-numeric: tabular-nums; line-height: 1.3;
+  background: #15101b; color: #f8f0e2;
+  box-shadow: inset 0 0 0 1px rgba(248, 240, 226, 0.14);
+}
+.vid--small .vid__time { right: 0.3rem; bottom: 0.3rem; padding: 0.02rem 0.3rem; font-size: 0.7rem; }
+.vid .vid__cap { display: grid; gap: 0.15rem; min-width: 0; }
+.vid__kind { font-size: var(--fs-small); color: var(--muted); }
+.vid a.vid__title {
+  font-family: var(--font-serif); font-size: 1.14rem; line-height: 1.25; color: var(--ink);
+  text-decoration: none; text-wrap: balance; justify-self: start; overflow-wrap: anywhere;
+}
+.vid--mid a.vid__title { font-size: 1.08rem; }
+.vid--small a.vid__title { font-size: 1rem; }
+.vid a.vid__title:hover { text-decoration: underline; text-underline-offset: 0.18em; }
+.vid__text { font-size: var(--fs-meta); color: var(--ink-soft); line-height: 1.45; }
+.vid:has(.vid__title:hover) .vid__frame,
+.vid:has(.vid__title:focus-visible) .vid__frame { box-shadow: 0 0 0 1px var(--home-ember); }
+@media (hover: hover) and (pointer: fine) {
+  a.vid__frame:hover { box-shadow: 0 0 0 1px var(--home-ember); }
+  a.vid__frame:hover .vid__play { background: rgba(18, 12, 24, 0.94); }
+}
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  .vid__play { background: #15101b; }
+}
+/* The side panel and a phone column are narrower than a page column, so the
+   lead still steps down there, stays larger than the small one, and its
+   caption keeps a readable measure. */
+@container (max-width: 24rem) { .vid--mid { grid-template-columns: 10rem minmax(0, 1fr); gap: 0.85rem; } }
