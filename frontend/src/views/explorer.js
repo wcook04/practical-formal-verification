@@ -8,7 +8,7 @@
 import { ApiError, apiPath, getEnvelope, withQuery } from '../api.js';
 import { STATIC_EXPORT } from '../base.js';
 import { getModel } from '../data.js';
-import { announce, backingGlyph, clear, copyButton, dialGlyph, h, keyGlyph, ringStyle, ringSwatch, ruleGlyph, svg } from '../dom.js';
+import { announce, backingGlyph, clear, copyButton, dialGlyph, filmsBlock, h, keyGlyph, ringStyle, ringSwatch, ruleGlyph, svg } from '../dom.js';
 import {
   BACKING_ORDER, CITATION_WORDS, CLASS_OF_BACKING, DOCTRINE_KINDS, EXPOSURE_WORDS, FAMILY_ORDER, TRACKS, callerWords, classDescription, classWords, count, dayWords, familyName, moduleWords,
   obligationWords, proofShortName, ruleKindPlain, ruleKindWords, setLabels, sourceHref, stateWords, supportWords, CORE_NAMES, flowerWords, ordinal, ringState,
@@ -373,6 +373,7 @@ export async function mountExplorer(root, { url, navigate, signal }) {
     return h('div', { class: 'overview' },
       h('h1', { class: 'explorer__title' }, 'What’s proved, and what isn’t'),
       h('p', { class: 'overview__lead' }, `Plectis is a toolkit of ${t.components} software mechanisms for AI research and engineering. Only the proof dials are proofs: small computations a prover checked. Everything else is recorded evidence. Nothing runs on this page.`),
+      filmsBlock('films--panel'),
       layersGuide(),
       h('div', { class: 'section-head' }, h('h2', { class: 'section-title' }, 'The eight rings'),
         h('button', { type: 'button', class: 'textbtn', onclick: () => openExplainer() }, 'What do these mean?')),

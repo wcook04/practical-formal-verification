@@ -169,3 +169,48 @@ export function dialGlyph(n = 0, m = 0, size = 44, { numeral = size >= 36 } = {}
 }
 /** The old name, kept for any caller not yet moved. */
 export const flowerGlyph = dialGlyph;
+
+// The project's two films as stills that open them on YouTube, in the
+// family's .vid markup (wcook04.github.io maths.css, "Films as stills"). The
+// still is hidden from the Tab order and from assistive technology; the title
+// is the one link, and names the length in words for a screen reader.
+const FILMS = [
+  {
+    size: 'mid', kind: 'Short video', title: 'Formal verification in brief',
+    url: 'https://www.youtube.com/watch?v=8hRM2O9guyU', still: 'site-short-plectis-verification', seconds: 117,
+    text: 'What the rings and the flower-shaped marks on the map stand for.',
+  },
+  {
+    size: 'small', kind: 'Full video', title: 'What Dafny checked in the 88-component toolkit',
+    url: 'https://www.youtube.com/watch?v=u3dad1v-o8c', still: 'site-plectis-verification', seconds: 312,
+  },
+];
+
+const clock = (s) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
+const spoken = (s) => {
+  const m = Math.floor(s / 60); const r = s % 60;
+  return [m ? `${m} minute${m === 1 ? '' : 's'}` : '', r ? `${r} second${r === 1 ? '' : 's'}` : ''].filter(Boolean).join(' ');
+};
+
+export function filmFigure(film) {
+  const still = (w) => at(`/assets/films/${film.still}-${w}.webp`);
+  const link = { href: film.url, target: '_blank', rel: 'noopener noreferrer' };
+  return h('figure', { class: `vid vid--${film.size}` },
+    h('a', { class: 'vid__frame', ...link, 'aria-hidden': 'true', tabindex: '-1' },
+      h('img', {
+        src: still(640), srcset: `${still(640)} 640w, ${still(1280)} 1280w`,
+        sizes: film.size === 'mid' ? '12.5rem' : '8.5rem',
+        alt: '', width: 1280, height: 720, loading: 'lazy', decoding: 'async',
+      }),
+      h('span', { class: 'vid__play' }),
+      h('span', { class: 'vid__time' }, clock(film.seconds))),
+    h('figcaption', { class: 'vid__cap' },
+      h('span', { class: 'vid__kind' }, film.kind),
+      h('a', { class: 'vid__title', ...link }, film.title, h('span', { class: 'sr-only' }, `, video on YouTube, ${spoken(film.seconds)}`)),
+      film.text ? h('span', { class: 'vid__text' }, film.text) : null));
+}
+
+/** Both films, the short one first and larger. */
+export function filmsBlock(extraClass = '') {
+  return h('div', { class: `films ${extraClass}`.trim() }, FILMS.map(filmFigure));
+}
