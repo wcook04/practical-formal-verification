@@ -4,7 +4,7 @@
 // own count out of every component; the rows overlap and are never added.
 
 import { getModel } from '../data.js';
-import { backingGlyph, h, ringStyle, ringSwatch } from '../dom.js';
+import { backingGlyph, filmsBlock, h, ringStyle, ringSwatch } from '../dom.js';
 import { BACKING_ORDER, CLASS_OF_BACKING, FAMILY_ORDER, TRACKS, classDescription, classWords, count, familyName, setLabels } from '../evidence.js';
 import { failure } from './component.js';
 
@@ -63,6 +63,7 @@ export async function mountCoverage(root, { signal } = {}) {
     h('nav', { class: 'trail', 'aria-label': 'Breadcrumb' }, h('a', { href: '/', 'data-route': '' }, 'Map'), h('span', { 'aria-hidden': 'true' }, '/'), h('span', {}, 'Coverage')),
     h('h1', { class: 'page-title' }, 'What is checked, component by component'),
     h('p', { class: 'page-lede' }, `Each row below is one kind of check, and each square is one of the ${total} components, grouped by family. These are the same rings as on the map, laid out flat. The rows overlap, so they do not add up, and none of them is a score.`),
+    filmsBlock('films--page'),
     h('p', { class: 'note figures' }, `Read from snapshot ${model.revision.slice(0, 12)}. Click a square to open that component.`),
     h('div', { class: 'measures' }, rows),
     h('h2', {}, 'Where these results come from'),
