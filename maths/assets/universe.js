@@ -4495,6 +4495,13 @@
        carries the definitions once, in a template the builder writes; the
        resting panel shows them under the lede, always open (nothing in the
        panel folds). */
+    /* The map's two films and its one-line instruction (11 November 2026),
+       carried the same way: a template the builder writes, shown in the
+       resting panel between the scope and the key. */
+    function filmsHtml() {
+      var source = document.querySelector ? document.querySelector('template[data-universe-films]') : null;
+      return source && source.innerHTML ? source.innerHTML : '';
+    }
     function termsHtml() {
       var source = document.querySelector ? document.querySelector('template[data-universe-terms]') : null;
       return source && source.innerHTML ? source.innerHTML : '';
@@ -4517,7 +4524,7 @@
     function overviewHtml() {
       var shown = 0;
       for (var i = 0; i < nodes.length; i++) if (visible(nodes[i])) shown++;
-      var parts = [ledeHtml(), explorerRoot ? scopeLineHtml() : summaryHtml(), termsHtml()];
+      var parts = [ledeHtml(), explorerRoot ? scopeLineHtml() : summaryHtml(), filmsHtml(), termsHtml()];
       var evidence = evidenceCensusHtml(null);
       if (!evidence.total) {
         parts.push('<p class="universe-inspector__body">No paper results match these filters; ' + fmtCount(shown) +

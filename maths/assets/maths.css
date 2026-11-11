@@ -3667,3 +3667,117 @@ a.uidx-row[data-link-kind="exogenous"]::after { position: absolute; right: 0.5re
 .universe-terms dt .dot { display: inline-block; flex: none; width: 10px; height: 10px; border-radius: 50%; }
 .universe-terms dt .dot, .universe-terms dt .glyph, .universe-terms dt .paper-swatch { margin: 0; transform: none; }
 .universe-terms dd { margin: 0 0 0 calc(11px + 0.5rem); font-size: var(--fs-small); line-height: 1.5; color: var(--ink-soft); text-wrap: pretty; }
+
+/* ---- Films as stills, and a result's versions (11 November 2026) -----------
+   .vid is one film: a still that opens it on YouTube, its title the link. The
+   lead size stands over its caption; the small size sits beside it. The play
+   chip is the family's: plum ink, a cream mark, one look over every still. */
+.vid { margin: 0; display: grid; gap: 0.7rem; }
+.vid--small { grid-template-columns: 8.5rem minmax(0, 1fr); gap: 0.85rem; align-items: center; }
+.vid__frame {
+  position: relative; display: block; aspect-ratio: 16 / 9; overflow: hidden;
+  border-radius: 8px; background: #0d0a12;
+  box-shadow: 0 0 0 1px var(--rule-strong);
+  --play: 48px;
+}
+.vid--small .vid__frame { --play: 28px; border-radius: 6px; }
+.vid__frame > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.vid__play {
+  position: absolute; left: 50%; top: 50%; translate: -50% -50%;
+  width: var(--play); height: var(--play); border-radius: 50%;
+  background: rgba(18, 12, 24, 0.82);
+  box-shadow: inset 0 0 0 1px rgba(248, 240, 226, 0.34), 0 6px 16px -8px rgba(8, 5, 12, 0.8);
+}
+.vid__play::after {
+  content: ""; position: absolute; left: 53.5%; top: 50%; translate: -50% -50%;
+  border-left: calc(var(--play) * 0.27) solid #f8f0e2;
+  border-top: calc(var(--play) * 0.165) solid transparent;
+  border-bottom: calc(var(--play) * 0.165) solid transparent;
+}
+.vid__time {
+  position: absolute; right: 0.5rem; bottom: 0.5rem;
+  padding: 0.12rem 0.42rem; border-radius: 5px;
+  font-size: 0.78rem; font-weight: 600; font-variant-numeric: tabular-nums; line-height: 1.3;
+  background: #15101b; color: #f8f0e2;
+  box-shadow: inset 0 0 0 1px rgba(248, 240, 226, 0.14);
+}
+.vid--small .vid__time { right: 0.3rem; bottom: 0.3rem; padding: 0.02rem 0.3rem; font-size: 0.7rem; }
+.vid .vid__cap { display: grid; gap: 0.15rem; min-width: 0; }
+.vid__kind { font-size: var(--fs-small); color: var(--muted); }
+.vid a.vid__title {
+  font-family: var(--font-serif); font-size: 1.14rem; line-height: 1.25; color: var(--ink);
+  text-decoration: none; text-wrap: balance; justify-self: start;
+}
+.vid--small a.vid__title { font-size: 1rem; }
+.vid a.vid__title:hover { text-decoration: underline; text-underline-offset: 0.18em; }
+.vid__text { font-size: var(--fs-meta); color: var(--ink-soft); line-height: 1.45; }
+.vid:has(.vid__title:hover) .vid__frame,
+.vid:has(.vid__title:focus-visible) .vid__frame { box-shadow: 0 0 0 1px var(--home-ember); }
+@media (hover: hover) and (pointer: fine) {
+  a.vid__frame:hover { box-shadow: 0 0 0 1px var(--home-ember); }
+  a.vid__frame:hover .vid__play { background: rgba(18, 12, 24, 0.94); }
+}
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  .vid__play { background: #15101b; }
+}
+
+/* A problem's result at every length it is written, shortest first. The bar
+   under each name draws its pages against the longest version, in the paper
+   colours the map uses. */
+.versions {
+  margin: 0 0 var(--space-7);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--rule);
+}
+.versions > h2 {
+  font-family: var(--font-serif); font-weight: 500; font-size: 1.7rem; line-height: 1.15;
+  margin: 0 0 var(--space-2);
+}
+.versions__lede { margin: 0 0 var(--space-5); max-width: 62ch; color: var(--ink-soft); font-size: var(--fs-meta); line-height: 1.5; }
+.versions__grid { display: grid; gap: var(--space-5) var(--space-6); align-items: start; }
+.versions--film .versions__grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+.versions__films { display: grid; gap: var(--space-4); }
+.versions__ladder { list-style: none; margin: 0; padding: 0; display: grid; }
+.versions:not(.versions--film) .versions__ladder { grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 0 var(--space-6); }
+.version { padding: 0 0 var(--space-4); margin: 0 0 var(--space-4); border-bottom: 1px solid var(--rule); }
+.versions--film .version:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+.version p { margin: 0; }
+.version__head { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-3); }
+.version__name { font-family: var(--font-serif); font-size: 1.28rem; line-height: 1.2; color: var(--ink); }
+.version__pages { font-size: var(--fs-meta); color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.version__len { display: block; width: 100%; height: 3px; margin: 0.5rem 0 0.6rem; border-radius: 2px; overflow: hidden; }
+.version__len-track { fill: var(--rule); }
+.version__len-fill { fill: var(--muted); }
+.version--expository .version__len-fill { fill: var(--u-paper-expository); }
+.version--short .version__len-fill { fill: var(--u-paper-short); }
+.version--long .version__len-fill { fill: var(--u-paper-long); }
+.version .version__text { font-size: var(--fs-meta); color: var(--ink-soft); line-height: 1.5; max-width: 52ch; }
+.version .version__go { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; margin-top: 0.55rem; font-size: var(--fs-meta); }
+.version__go a { padding: 0.15rem 0; }
+.version__read { font-weight: 600; }
+.versions__made {
+  display: grid; grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-3) var(--space-5);
+  align-items: center; margin-top: var(--space-5); padding-top: var(--space-4); border-top: 1px solid var(--rule);
+}
+.versions__made-title { margin: 0; font-size: var(--fs-meta); color: var(--muted); max-width: 9rem; line-height: 1.35; }
+@media (max-width: 860px) {
+  .versions--film .versions__grid { grid-template-columns: minmax(0, 1fr); }
+  .versions__made { grid-template-columns: minmax(0, 1fr); }
+  .versions__made-title { max-width: none; }
+}
+/* The head's two routes ride on its status row, so the versions band starts
+   on the first screen. */
+.dossier-head__routes { display: inline-flex; flex-wrap: wrap; gap: var(--space-2); margin-left: auto; }
+.dossier-head__routes .btn { font-size: var(--fs-meta); padding: 0.4rem 0.8rem; color: var(--ink); }
+.dossier-head:has(+ .versions) { margin-bottom: var(--space-4); }
+@media (max-width: 640px) { .dossier-head__routes { margin-left: 0; flex-basis: 100%; } }
+.vid--mid { grid-template-columns: 12.5rem minmax(0, 1fr); gap: 1rem; align-items: center; }
+.vid--mid .vid__frame { --play: 36px; }
+.vid--mid a.vid__title { font-size: 1.08rem; }
+/* The map's two films and its one-line instruction, under the lede and out of
+   the way once a result is being read or another pane is open. */
+.universe-films { display: grid; gap: 0.9rem; margin: 0 0 1.2rem; padding: 0.95rem 0 1.05rem; border-block: 1px solid var(--rule); }
+.universe-films__how { margin: 0; font-size: var(--fs-meta); line-height: 1.5; color: var(--ink); }
+.universe-explorer.is-reading .universe-films,
+.universe-explorer.is-deep .universe-films { display: none; }
+@media (max-width: 420px) { .vid--mid { grid-template-columns: 8.5rem minmax(0, 1fr); } }
