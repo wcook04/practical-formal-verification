@@ -1,0 +1,246 @@
+/* The paper beside its Lean (12 November 2026): the versions row under a
+   reading page's trail, the chips on printed results and the Lean pane
+   (assets/reader.js). Site tokens only: flat ground, hairlines, no glow. */
+
+/* ---- Versions of this research ---------------------------------------- */
+.paper-versions {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--space-1) var(--space-3);
+  margin: var(--space-2) 0 var(--space-4);
+  padding: var(--space-2) 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  font-size: var(--fs-meta);
+  color: var(--muted);
+}
+.paper-versions__title { margin: 0; color: var(--ink-soft); font-weight: 600; }
+.paper-versions__list {
+  display: flex; flex-wrap: wrap; gap: var(--space-1) var(--space-4);
+  margin: 0; padding: 0; list-style: none;
+}
+.paper-versions__list li { margin: 0; }
+.paper-versions__list a { display: inline-block; min-height: 24px; color: var(--accent); }
+.paper-versions__current { color: var(--ink); font-weight: 600; }
+.paper-versions__pages { color: var(--muted); font-variant-numeric: tabular-nums; }
+.paper-versions__note {
+  margin: 0 0 var(--space-4);
+  max-width: 68ch;
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+}
+
+/* ---- Chips on printed results ------------------------------------------ */
+.lean-chip {
+  float: right;
+  margin: 0.1rem 0 var(--space-1) var(--space-3);
+  min-height: 24px;
+  padding: 0.1rem 0.55rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--ink-soft);
+  font: 600 var(--fs-meta)/1.3 var(--font-sans, inherit);
+  font-style: normal;
+  letter-spacing: 0;
+  cursor: pointer;
+  user-select: none;
+}
+.lean-chip::before {
+  content: ""; display: inline-block; width: 0.5rem; height: 0.5rem; margin-right: 0.4rem;
+  border-radius: 50%; vertical-align: 0.05em;
+  border: 1.5px solid var(--muted);
+}
+.lean-chip--exact::before,
+.lean-chip--exact_or_stronger::before { background: var(--u-statement, var(--ink)); border-color: var(--u-statement, var(--ink)); }
+.lean-chip--modulo_named_input::before { border-color: var(--u-statement, var(--ink)); background: transparent; }
+.lean-chip--none { color: var(--muted); }
+.lean-chip:hover { border-color: var(--ink-soft); color: var(--ink); }
+.lean-chip[aria-expanded="true"] { border-color: var(--ink); color: var(--ink); background: var(--surface-sunk); }
+.lean-chip:focus-visible,
+.lean-pane button:focus-visible,
+.lean-pane a:focus-visible,
+.lean-pane [tabindex]:focus-visible,
+.paper-versions a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ---- The pane ---------------------------------------------------------- */
+.lean-pane {
+  --lean-pane-w: clamp(22rem, 28vw, 28rem);
+  display: flex; flex-direction: column;
+  min-width: 0;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: var(--fs-small);
+  line-height: 1.5;
+}
+.lean-pane[hidden] { display: none; }
+.lean-pane__head {
+  display: flex; align-items: flex-start; gap: var(--space-2);
+  padding: var(--space-3) var(--space-4) var(--space-2);
+  border-bottom: 1px solid var(--rule);
+}
+.lean-pane__label {
+  flex: 1 1 auto; min-width: 0; min-height: 24px;
+  padding: 0; border: 0; background: none;
+  color: var(--ink); text-align: left;
+  font: 600 1rem/1.35 var(--font-serif);
+  cursor: pointer;
+  text-decoration: underline; text-decoration-color: var(--rule-strong);
+  text-decoration-thickness: 1px; text-underline-offset: 0.18em;
+}
+.lean-pane__label:hover { text-decoration-color: var(--ink-soft); }
+.lean-pane__close,
+.lean-pane__follow,
+.lean-pane__tabs [role="tab"] {
+  min-height: 28px;
+  padding: 0.15rem 0.6rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--ink-soft);
+  font: 500 var(--fs-meta)/1.3 var(--font-sans, inherit);
+  cursor: pointer;
+}
+.lean-pane__close { flex: none; }
+.lean-pane__close:hover,
+.lean-pane__follow:hover,
+.lean-pane__tabs [role="tab"]:hover { color: var(--ink); border-color: var(--ink-soft); }
+.lean-pane__controls {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border-bottom: 1px solid var(--rule);
+}
+.lean-pane__follow::before {
+  content: ""; display: inline-block; width: 0.7rem; height: 0.7rem; margin-right: 0.4rem;
+  border: 1.5px solid var(--muted); border-radius: 3px; vertical-align: -0.08em;
+}
+.lean-pane__follow[aria-pressed="true"] { color: var(--ink); }
+.lean-pane__follow[aria-pressed="true"]::before {
+  border-color: var(--ink);
+  background: var(--ink);
+}
+.lean-pane__tabs { display: inline-flex; gap: 0; }
+.lean-pane__tabs [role="tab"] { border-radius: 0; }
+.lean-pane__tabs [role="tab"]:first-child { border-radius: 6px 0 0 6px; }
+.lean-pane__tabs [role="tab"]:last-child { border-radius: 0 6px 6px 0; margin-left: -1px; }
+.lean-pane__tabs [role="tab"][aria-selected="true"] {
+  background: var(--surface-sunk); color: var(--ink); border-color: var(--ink-soft); position: relative;
+}
+.lean-pane__scroll {
+  flex: 1 1 auto; min-height: 0;
+  overflow-y: auto; overscroll-behavior: contain;
+  padding: var(--space-3) var(--space-4) var(--space-4);
+}
+.lean-pane__panel:focus-visible { outline-offset: -2px; }
+.lean-pane__panel > :first-child { margin-top: 0; }
+.lean-pane__relation { margin: 0 0 var(--space-3); color: var(--ink); font-size: 0.95rem; }
+.lean-pane__sub {
+  margin: var(--space-4) 0 var(--space-2);
+  font: 600 var(--fs-meta)/1.3 var(--font-sans, inherit);
+  color: var(--ink-soft);
+}
+.lean-pane__note { margin: 0 0 var(--space-2); color: var(--ink-soft); overflow-wrap: anywhere; }
+.lean-pane__note math { font-size: 1.05em; }
+.lean-pane__list { margin: 0; padding: 0; list-style: none; }
+.lean-pane__list > li { margin: 0 0 var(--space-3); }
+.lean-pane__decl { margin: 0 0 var(--space-1); overflow-wrap: anywhere; }
+/* Mono is kept for the Lean code blocks; names and notes read in the pane's face. */
+.lean-pane__name, .lean-pane__decl code, .lean-pane__note code, .lean-pane__list code {
+  font-family: inherit; font-size: inherit; font-weight: 600;
+  color: var(--ink); background: none; padding: 0; border: 0; overflow-wrap: anywhere;
+}
+.lean-pane__note code { font-weight: 500; }
+.lean-pane__kind { color: var(--muted); font-size: var(--fs-meta); }
+.lean-pane__code {
+  margin: var(--space-1) 0;
+  padding: var(--space-2) var(--space-3);
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: var(--surface-sunk);
+  color: var(--ink);
+  font: 0.8rem/1.45 var(--font-mono);
+  /* A signature wraps inside the pane, keeping its own indentation, so a long
+     statement is read without scrolling sideways. */
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  tab-size: 2;
+}
+.lean-pane__code code { font: inherit; background: none; padding: 0; color: inherit; white-space: inherit; }
+.lean-pane__source, .lean-pane__map { margin: 0; }
+.lean-pane a { color: var(--accent); }
+.lean-pane__source a, .lean-pane__map a { display: inline-block; min-height: 24px; }
+.lean-pane__comparator { margin: var(--space-4) 0 var(--space-3); color: var(--ink-soft); }
+.lean-pane__map { margin-top: var(--space-3); }
+.lean-pane__graph-note, .lean-pane__key { margin: 0 0 var(--space-2); color: var(--muted); font-size: var(--fs-meta); }
+.lean-pane__foot {
+  flex: none;
+  margin: 0;
+  padding: var(--space-2) var(--space-4) var(--space-3);
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+/* ---- The Graph tab ----------------------------------------------------- */
+.lean-graph__frame { margin: var(--space-3) 0 var(--space-2); overflow-x: auto; }
+.lean-graph { display: block; max-width: none; height: auto; font-family: var(--font-sans, inherit); }
+.lean-graph__edge { stroke: var(--muted); stroke-width: 1; }
+.lean-graph__head { fill: var(--muted); }
+.lean-graph__node rect { fill: var(--surface); stroke: var(--rule-strong); stroke-width: 1; }
+.lean-graph__node text { fill: var(--ink-soft); font-size: 11.5px; }
+.lean-graph__node--root rect { fill: var(--surface-sunk); stroke: var(--u-statement, var(--ink)); stroke-width: 2; }
+.lean-graph__node--root text { fill: var(--ink); font-weight: 600; }
+.lean-graph__node:hover rect { stroke: var(--ink); }
+.lean-graph__node:focus { outline: none; }
+.lean-graph__node:focus-visible rect { stroke: var(--accent); stroke-width: 2.5; }
+
+/* ---- Wide screens: the pane takes the margin contents' place ----------- */
+@media (min-width: 1100px) {
+  .maths-layout.has-lean-pane {
+    grid-template-columns: var(--maths-nav-w) minmax(0, 1fr) clamp(22rem, 28vw, 28rem);
+  }
+  .maths-layout.has-lean-pane > .docs-toc { display: none; }
+  .maths-layout.has-lean-pane > .docs-main { grid-column: 2; grid-row: 1; }
+  .maths-layout > .lean-pane {
+    grid-column: 3; grid-row: 1;
+    position: sticky; top: var(--topbar-h);
+    align-self: start;
+    height: calc(100dvh - var(--topbar-h));
+    border-left: 1px solid var(--rule);
+  }
+}
+/* Below 1380px the sidebar would leave the text too narrow beside the pane;
+   it steps aside while the pane is open and returns when it closes. */
+@media (min-width: 1100px) and (max-width: 1379px) {
+  .maths-layout.has-lean-pane { grid-template-columns: minmax(0, 1fr) clamp(22rem, 30vw, 26rem); }
+  .maths-layout.has-lean-pane > .docs-sidebar { display: none; }
+  .maths-layout.has-lean-pane > .docs-main { grid-column: 1; }
+  .maths-layout > .lean-pane { grid-column: 2; }
+}
+
+/* ---- Narrow screens: a sheet over the foot of the page ----------------- */
+@media (max-width: 1099px) {
+  .maths-layout > .lean-pane {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
+    max-height: 70vh; max-height: 70dvh;
+    border-top: 1px solid var(--rule-strong);
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.12);
+  }
+  html.has-lean-pane .docs-main { padding-bottom: 70vh; }
+  /* The shared return pill sits at the foot of a narrow screen; the sheet
+     holds that place while it is open, and the pill returns with the text. */
+  html.has-lean-pane .viewback { visibility: hidden; }
+  .lean-pane__foot { padding-bottom: max(var(--space-3), env(safe-area-inset-bottom)); }
+}
+
+@media print {
+  .lean-chip, .lean-pane { display: none !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lean-pane, .lean-chip { transition: none; animation: none; }
+}
