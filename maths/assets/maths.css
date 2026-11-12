@@ -3781,3 +3781,6 @@ a.uidx-row[data-link-kind="exogenous"]::after { position: absolute; right: 0.5re
 .universe-explorer.is-reading .universe-films,
 .universe-explorer.is-deep .universe-films { display: none; }
 @media (max-width: 420px) { .vid--mid { grid-template-columns: 8.5rem minmax(0, 1fr); } }
+/* A display formula in the problem's opening wider than a phone scrolls inside
+   its own box, so the page never scrolls sideways. */
+.problem-opening mjx-container[display="true"] { display: block; max-width: 100%; overflow-x: auto; overflow-y: hidden; }
