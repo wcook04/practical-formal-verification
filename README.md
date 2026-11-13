@@ -474,7 +474,7 @@ The [release review](RELEASE_REVIEW.md) records the candidate’s checks;
 
 ## Videos and related projects
 
-[Introduction to the projects](https://www.youtube.com/watch?v=Yk_kUQUCylc) explains how the projects fit together. Watch the [formal verification walkthrough](https://www.youtube.com/watch?v=u3dad1v-o8c) or [short overview](https://www.youtube.com/watch?v=8hRM2O9guyU) to see the component map and what the proofs cover. The [videos page](https://wcook04.github.io/#videos) also has walkthroughs
+[Introduction to the projects](https://www.youtube.com/watch?v=FwgaZYH2otY) explains how the projects fit together. Watch the [formal verification walkthrough](https://www.youtube.com/watch?v=u3dad1v-o8c) or [short overview](https://www.youtube.com/watch?v=pxpqpvvHNkQ) to see the component map and what the proofs cover. The [videos page](https://wcook04.github.io/#videos) also has walkthroughs
 of One Checkout, Safety Core and the private Code Map tool.
 
 ### Where this toolkit fits

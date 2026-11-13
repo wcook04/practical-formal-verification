@@ -177,7 +177,7 @@ export const flowerGlyph = dialGlyph;
 const FILMS = [
   {
     size: 'mid', kind: 'Short video', title: 'Formal verification in brief',
-    url: 'https://www.youtube.com/watch?v=8hRM2O9guyU', still: 'site-short-plectis-verification', seconds: 117,
+    url: 'https://www.youtube.com/watch?v=pxpqpvvHNkQ', still: 'site-short-plectis-verification', seconds: 117,
     text: 'What the rings and the flower-shaped marks on the map stand for.',
   },
   {
