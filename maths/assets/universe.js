@@ -4933,7 +4933,7 @@
           '<span class="universe-open__verb">Open on this site</span></a>');
       }
       var lean = n.lean || [];
-      var cap = pinned ? 6 : 1;
+      var cap = pinned ? lean.length : 1;
       for (var j = 0; j < lean.length && j < cap; j++) {
         var primary = !n.paper && !n.page && j === 0;
         // One label over the list; each row is a declaration and its line.
@@ -4942,7 +4942,9 @@
           '<span class="universe-open__where"><code>' + nameHtml(lean[j].name) + '</code>, line ' + lean[j].line + '</span></a>');
       }
       if (lean.length > cap) {
-        rows.push('<span class="universe-open__more">… and ' + (lean.length - cap) + ' more declarations' + (pinned ? '' : ' when pinned') + '</span>');
+        var remaining = lean.length - cap;
+        rows.push('<span class="universe-open__more">… and ' + remaining + ' more declaration' +
+          (remaining === 1 ? '' : 's') + ' when pinned</span>');
       }
       if (n.source_github && !lean.length) {
         rows.push('<a class="universe-open' + (n.paper || n.page ? '' : ' universe-open--primary') + '" href="' + escapeHtml(n.source_github) + externalAttrs() + '>' +

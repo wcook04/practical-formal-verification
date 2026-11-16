@@ -10,427 +10,37 @@
       "transform": "isolated-css-comments-v1"
     }
   },
-  "generator_commit": "dcccc75bbbb3b1dba8c2d6226785ea2573cc45ec",
+  "generator_commit": "ea1b4487c429fbb68c250b553b147ea00c16f0d7",
   "last_scoped_release": {
     "changed_paths": {
-      "lean/claims.json": {
+      "maths/assets/universe.js": {
         "after": {
           "mode": 420,
-          "sha256": "561f6e4dff5b353c1f33afbb47583f7b9e257b5985612ec7b95d1074054caf60"
+          "sha256": "f26adcad59f804fdb63ff70ab9a517f9fe5a6bccda3004188e805ff0d868e398"
         },
         "before": {
           "mode": 420,
-          "sha256": "ec0ba48918b153a985f3b9d9056c848b465a35e45a4e0af9890fb13adeae8233"
-        }
-      },
-      "lean/experience/documents/architecture.json": {
-        "after": {
-          "mode": 420,
-          "sha256": "e5b710bfcc866e2b4d0b9a9fdc7e6a70afb38976dde6c1778b37e5bd58b984a5"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "ac67e417d2e57c9ed86daaf8c271025b75b1ed0c5cce40094af2775f3265e8d9"
-        }
-      },
-      "lean/experience/documents/comparator-1049.json": {
-        "after": {
-          "mode": 420,
-          "sha256": "b383c7685d1215de136f76a1f63674fb2d3fd7f44b9f88c836b8927b0689e315"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "05f07dc80006ba64ba19915742ffd1e3fe431c639af52774fde581d9ba1b8a2f"
-        }
-      },
-      "lean/experience/documents/documentation.json": {
-        "after": {
-          "mode": 420,
-          "sha256": "6bd4953132079201d51de231e980300be0bfae11a02525446bf90cb915bfb90c"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "b5558e589a91addf644b45a520d1141857bc12f1b8c2f5da3dafe32383896a68"
-        }
-      },
-      "lean/experience/documents/external-verification.json": {
-        "after": {
-          "mode": 420,
-          "sha256": "304e3a39f1436d0da4fb0616d7377b3269ec9b03233e13bbc09d5220df5ead99"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "454390ca5e207bb58ae7d0d216eb5ba59d19009ae4a01f2036c1a827c6770351"
-        }
-      },
-      "lean/experience/documents/formal-conjectures.json": {
-        "after": {
-          "mode": 420,
-          "sha256": "5361c6d488306e6776e2dc33b36d0fd1e7d4975293f0ea66150e443e9af716de"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "7f5153008362ecdd22426ab7e5c7b313ace49a2907bc6fb7302445df10072aa5"
-        }
-      },
-      "lean/experience/documents/index.json": {
-        "after": {
-          "mode": 420,
-          "sha256": "070ca7287e32ef1596df4bd08a653167bc77614471ca2cb29cc2b4f23128a9c0"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "6a6b5dca543151441f2993f7f1bf58b973a02b12ff61a30ee82daa11accd38b8"
-        }
-      },
-      "lean/experience/documents/methodology.json": {
-        "after": {
-          "mode": 420,
-          "sha256": "141e6c057292faf7bc696e3e0923092525832ede7db2d2877d09e9682102e1c0"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "a5b5e5189177103eb0bc93e51d645d800f74749ba9cb5cb7d6aabde3bca278e0"
-        }
-      },
-      "lean/experience/documents/orientation.json": {
-        "after": {
-          "mode": 420,
-          "sha256": "f8afca5f3fe4db81290c7dbd59a197d65ac47b3feb6d151cff240f1fa8bb3981"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "30c498b5ec971e6ce09285e8da7ef70638d5cb9e5371ffeade0e2cc60a7f79f9"
-        }
-      },
-      "lean/experience/documents/paper-guide.json": {
-        "after": {
-          "mode": 420,
-          "sha256": "d270acddd1ae7c5d02d6ac8f943cffe74bab0f6887b681a48e6518c096296ee9"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "2e3c144c00a09bce1513514738df83b8b74f71505de5eb2485abab6681e34709"
-        }
-      },
-      "lean/experience/documents/prior-art.json": {
-        "after": {
-          "mode": 420,
-          "sha256": "dbe5580c6f28ae7717c2b369eb4bd877e747b098ab2871b742344e9b82647af0"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "2099f19ca3e36781ded3d0cacfaa34ed978a56fb2bb05a0379251fcef860ecd6"
-        }
-      },
-      "lean/experience/documents/reading-guide.json": {
-        "after": {
-          "mode": 420,
-          "sha256": "9bdcebce0716244d1bbcfef20ce7c059f8f83460d0ccee85482ce05cc85634ed"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "b740c77bb9fd1261de22b219799b84752150a1d9f61077555325eba0582396e3"
-        }
-      },
-      "lean/experience/documents/readme.html": {
-        "after": {
-          "mode": 420,
-          "sha256": "76768a70938fdedcf29a8736ffdd89d33fa37f7c0146cc4b95bf19820e0e0dab"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "937c72fb3cfd92b6bbad5fa87d37261924f20916655c7fddbc6ec841d812c4b0"
-        }
-      },
-      "lean/experience/documents/readme.json": {
-        "after": {
-          "mode": 420,
-          "sha256": "0735566d7335cadf3cdd1b05a732d947465179293cdc43e025d32efede4a96dd"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "a2a0e10efb0a3261a2c44d1dd65328618bfd62c2beff07733ab61797ce820da1"
-        }
-      },
-      "lean/experience/documents/readme.mathjax.html": {
-        "after": {
-          "mode": 420,
-          "sha256": "d751ff950b75474396e9d220f0cde9aaf08621256c5e26b9b0c6378a5394c888"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "93b834e7f704a304fed5b635d671177ee170df9f23952d2fdd8f6a520a9ca17b"
-        }
-      },
-      "lean/experience/documents/related-problems.json": {
-        "after": {
-          "mode": 420,
-          "sha256": "c2a1973e13aada39ed3a13d5afda4b16e1c743827791f06cf5b66b0ce289f845"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "e91b4397833c375a5a9ae735f1389487789a61db218b597560644ff525310343"
-        }
-      },
-      "lean/experience/documents/residual-progress.json": {
-        "after": {
-          "mode": 420,
-          "sha256": "7dd0546e1e7bddbc020b19fa98427bdfd967342b02bf3bb8ba867675256f0746"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "7768cf1076073311c84b1e8ec8605ff562a7317d28eae94b62e4c54154e3431c"
-        }
-      },
-      "lean/experience/documents/results.json": {
-        "after": {
-          "mode": 420,
-          "sha256": "be1156ee61f33c62a60ccff996f45be465b81e87b6e0227a378614d8ec78323c"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "361c489b32ee9d931b7368c2ec171b19d6c5438828f61eb28e86c4afae51f9ad"
-        }
-      },
-      "lean/experience/documents/scope.json": {
-        "after": {
-          "mode": 420,
-          "sha256": "25f66cf64f129526945db11f16aa0166653f091b095ce9423deee27cddfff489"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "79d896e7aee0e715d54350aacd1c11c05d6e4c83c0f8d5f6561150d491034057"
-        }
-      },
-      "lean/experience/documents/source-map.json": {
-        "after": {
-          "mode": 420,
-          "sha256": "7235f8e81571b9dd14836d47bb132fc51efa573860329cf2be0f505111f601dd"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "1fda81366304390f14d8040f05ba5957a202634c4dae108034aac3249e7cfb9c"
-        }
-      },
-      "lean/experience/documents/wave-index.json": {
-        "after": {
-          "mode": 420,
-          "sha256": "f638e33526e9b3ad84ac5661b547933a0743124ec174c5aa3f6fd9a74f61b0a7"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "dc80f70492051f6892a31568ffb2154354aa7f1e368453a70adface404ed26b0"
-        }
-      },
-      "lean/experience/documents/weighted-257-task.json": {
-        "after": {
-          "mode": 420,
-          "sha256": "83addea86164ae4d3f42b702db623aea58e872a6edbf77294eff31d62bb5a350"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "2c3eec02989bfcae04c2ec7d44bfa81e417d65379b0d85d4812a63f9464631a5"
-        }
-      },
-      "lean/experience/graph.json": {
-        "after": {
-          "mode": 420,
-          "sha256": "27d6c9efcb3a7da1331b3ee2b506e5316971bc5b0c550c59500768ae36ff5e4d"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "92394ee0f305684252c483fd9ac06cb30b2fcfb9a6a9889582cdb655a0b99342"
-        }
-      },
-      "lean/experience/graph/index.json": {
-        "after": {
-          "mode": 420,
-          "sha256": "ac8db3e6bca70c8b91b0be56436effb8a47a6561b66266d325dd65accd89cb3a"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "3297ca6897e1ad7fdb08f861a15cd3f325face844d71a73022cce4a56338c0b4"
-        }
-      },
-      "lean/experience/manifest.json": {
-        "after": {
-          "mode": 420,
-          "sha256": "221c20b9a8707b9e97736f6e4934cde00c62fb1868e517896534285a994882b2"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "effb55ee6593931fc6cfde9c5a5fa7553ff02210aba4f0c9a75ab3b2d5f991b5"
-        }
-      },
-      "lean/experience/render-receipt.json": {
-        "after": {
-          "mode": 420,
-          "sha256": "f135ffb16b0f117c42084ed38eeb5d863a9204073519f34b4a8a7fbb2f484a6d"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "ccb34eab4e2174b305c98ab20550e7f4a6c490a8404772a7629bd20fb8a996fd"
-        }
-      },
-      "lean/human-source/README.md": {
-        "after": {
-          "mode": 420,
-          "sha256": "7bb18a187dec0f5fc9e64a69c809dd31a8df000fcc0924563321596a24298a94"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "9412eaae6d2475192840694c3d505d75ca1b65df6e8224cd3fc98a115931eaa8"
-        }
-      },
-      "lean/lean-source-manifest.json": {
-        "after": {
-          "mode": 420,
-          "sha256": "cf68484cf7692d0b1011ce45ce7e20c13903ad6935e5fd480ed827e70e194635"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "47aa5ab3dbdf880d7e87d1de37584b010f0b014ed03d843402a14a978ac776a3"
-        }
-      },
-      "lean/problem-library.json": {
-        "after": {
-          "mode": 420,
-          "sha256": "17c878058ccc95b2d55f3740a1cc31c9c2b3aedcd52cc09f3133257b4178bb0c"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "f9246065bae73d27271e29729d1404ce0f886001be5b1e36eefa91ffca1b6425"
-        }
-      },
-      "maths/assets/universe-data.json": {
-        "after": {
-          "mode": 420,
-          "sha256": "63c74808b73ea9533f8ab29ce8d9811ae6e2fb56b57a38f837da7994f8663041"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "1ff463a5d1188cd308814dd4d2e9127e5ef95965c1ddfaa56d080e2ee9f377f9"
-        }
-      },
-      "maths/assets/universe-layout-full.json": {
-        "after": {
-          "mode": 420,
-          "sha256": "9bbdf945f92747e0775332027c3cd9350dcccbb9a5fca8f24eaa4d486c18473e"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "efc49425c0d4dddd356f519985e3709dde5d8a6a5b3dd8e58a5abcdec60e1720"
-        }
-      },
-      "maths/documents/readme.html": {
-        "after": {
-          "mode": 420,
-          "sha256": "7b3cd84b56e9336ba02eba4f6b6c82d3e9f54768ef1131cec2b4573d82185059"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "486c03ebc2aa64056428d0a5573ebcd5de0c22b6368d1afffbcaadf68c99fe92"
+          "sha256": "797c92eaaa393c930e32531dbf8c280f8496a4c9c4f0ace5b1b9d7290e5cb353"
         }
       },
       "maths/index.html": {
         "after": {
           "mode": 420,
+          "sha256": "84fc9784fda190c6beefe756f2916ebca3f3de2eba3d9f268f9e742203cefa06"
+        },
+        "before": {
+          "mode": 420,
           "sha256": "86996492c9424dfc1b4f44071cacc37b80b85ae70fd3dd35fd0762940fb99cdd"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "cdb8436bb49dd523ca45cc11ef6f57d31c640fe155956358559f96e514d55744"
-        }
-      },
-      "maths/problems/erdos_1041.html": {
-        "after": {
-          "mode": 420,
-          "sha256": "662eadebb3064b36a4bcad3fef9c61724fefec916e71cfeed742d4032166a4e5"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "8a08570a8c46bcf23ac2ac2af47d7baaa22ab09c8f10d5b9bcf99fe0c7cd006c"
-        }
-      },
-      "maths/problems/erdos_1049.html": {
-        "after": {
-          "mode": 420,
-          "sha256": "8820b681459954952df032ddd916778a4e40caf0c190eda37291b4ac9c7c5b81"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "4195ec75bc7e58c06ccd1e04ada2f451dace1df92f06640611794b46cbb97f2c"
-        }
-      },
-      "maths/problems/erdos_243.html": {
-        "after": {
-          "mode": 420,
-          "sha256": "6e0a558e7cadc56d6cbd769d07e8dead8917f7080fb9e5e96e20e55cb994ba99"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "cfcfdc9360d9bbbe52d934865fb7ad974c3cc93aac8d6868944d08f7054601e9"
-        }
-      },
-      "maths/problems/erdos_249.html": {
-        "after": {
-          "mode": 420,
-          "sha256": "66568a17d5071af43eded82b3f9d514957241af3d82d13ccc22aa035ba0afa15"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "b6694549b624e8d8a0768f8c1624c869e2d5ab2853e78e99e52aecff8152962c"
-        }
-      },
-      "maths/problems/erdos_251.html": {
-        "after": {
-          "mode": 420,
-          "sha256": "19bd14315e8a69a099f054ab4bca31fa301bfc39949f43849c873f52ba1ef058"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "b0acc160091e0654031595aa1e63fc7a4bb89b6be7af5992e1efbf13e18dedc4"
-        }
-      },
-      "maths/problems/erdos_257.html": {
-        "after": {
-          "mode": 420,
-          "sha256": "83a47501ea42a6e352a658405a6319b1e5ef2a1a809829bc7bd50dd41d930d00"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "a2d9446ea5059e964330230d952ba49a87845e3b88f40e4407339ab1fa56e0d7"
-        }
-      },
-      "maths/problems/erdos_269.html": {
-        "after": {
-          "mode": 420,
-          "sha256": "a97fb61e2074727726964ad646faa765c8e7a80f2d5e32a53cbb984544238643"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "014569205913437a6cff0d0eed7c3a7657afafdb784da3c67ea2351eadb9c62e"
-        }
-      },
-      "maths/problems/erdos_68.html": {
-        "after": {
-          "mode": 420,
-          "sha256": "5db554bf65f81179a21c52da03f6f905f7b9edaf0a9abde7c433e18b05f84788"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "abaf73ab097872cb68858514d8f8058510b1d158655a1f10d3f906b93f498af0"
         }
       },
       "maths/universe.html": {
         "after": {
           "mode": 420,
-          "sha256": "39efbf8dbecf1f11726a02900318ee56645f5eb36bb78561849fb8fde798c64e"
+          "sha256": "65d40520fc7887a618570692d07c8bbb0661a2ace78aebd668a500e2f6e77d79"
         },
         "before": {
           "mode": 420,
-          "sha256": "78aa58aba507fa51f02a578ca15740683e72f6d93202a9230c19e4c3945883b7"
+          "sha256": "39efbf8dbecf1f11726a02900318ee56645f5eb36bb78561849fb8fde798c64e"
         }
       }
     },
@@ -445,8 +55,8 @@
       "maths/assets/universe.js",
       "maths/universe.html"
     ],
-    "generator_commit": "dcccc75bbbb3b1dba8c2d6226785ea2573cc45ec",
-    "pages_base_commit": "d32ffb2dad13b1a324cec197239636a1958bafe9",
+    "generator_commit": "ea1b4487c429fbb68c250b553b147ea00c16f0d7",
+    "pages_base_commit": "e315cea5422f42cccbd3a8179ce25ee5f44c1059",
     "private_root_released": false,
     "protected_file_count": 1072,
     "protected_products": "preserved Pages baseline bytes/modes; historical generation, not relabeled current",
