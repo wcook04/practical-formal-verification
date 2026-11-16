@@ -11,7 +11,7 @@
     "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/docs/reference/WAVE_INDEX.md"
   },
   "render_contract": {
-    "navigation_fingerprint": "b67514dd1917c31cfb4988f01db95e58cf8b550db710ec5ab464a5111674eb22",
+    "navigation_fingerprint": "e6383569ce0e396943d5dfe5406016080d4f9989e6b19b692b1d71adf4c9e8b3",
     "preferred": "html_mathml",
     "fallback": "html_exact_tex",
     "fallback_renderer": "MathJax or a TeX-compatible KaTeX configuration",

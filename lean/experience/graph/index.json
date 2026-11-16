@@ -5,7 +5,7 @@
   "full_graph": "graph.json",
   "counts": {
     "nodes": 900,
-    "edges": 1636,
+    "edges": 1642,
     "deferred_node_kinds": {
       "lean_module": 1902,
       "mathematical_object": 105
@@ -6057,7 +6057,37 @@
     {
       "source": "claim:support_families",
       "relation": "same_lean_declaration",
+      "target": "statement:erdos257-mersenne-reasoning-surface#thm:eventually-periodic"
+    },
+    {
+      "source": "claim:support_families",
+      "relation": "same_lean_declaration",
+      "target": "statement:erdos257-mersenne-reasoning-surface#thm:eventually-periodic-support"
+    },
+    {
+      "source": "claim:support_families",
+      "relation": "same_lean_declaration",
+      "target": "statement:erdos257-mersenne-reasoning-surface#thm:factorial-twopow-support"
+    },
+    {
+      "source": "claim:support_families",
+      "relation": "same_lean_declaration",
+      "target": "statement:erdos257-mersenne-reasoning-surface#thm:multiples-support"
+    },
+    {
+      "source": "claim:support_families",
+      "relation": "same_lean_declaration",
+      "target": "statement:erdos257-mersenne-reasoning-surface#thm:odd-support"
+    },
+    {
+      "source": "claim:support_families",
+      "relation": "same_lean_declaration",
       "target": "statement:erdos257-mersenne-reasoning-surface#thm:pairwise-coprime"
+    },
+    {
+      "source": "claim:support_families",
+      "relation": "same_lean_declaration",
+      "target": "statement:erdos257-mersenne-reasoning-surface#thm:residue-odd"
     },
     {
       "source": "claim:tail_orbit_rigidity",

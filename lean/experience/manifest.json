@@ -2,7 +2,7 @@
   "schema": "plectis_lean_experience_manifest_v1",
   "experience_version": "plectis_lean_experience_v1",
   "generated_by": "tools/meta/dissemination/build_plectis_lean_experience.py",
-  "source_fingerprint": "1bbcaca3b0eb641fbd6c0ac64cbe6d3ae335ac50659bb1715a0afd8847a17dcb",
+  "source_fingerprint": "537f858b8b182d043b71e1de68eb4d2c85634b492154bbe4d4bf57987e7da9eb",
   "publication_state": "published_source",
   "public_parity": true,
   "authority_model": {
@@ -33,7 +33,7 @@
     "papers": 22,
     "human_documents": 18,
     "graph_nodes": 2907,
-    "graph_edges": 8536
+    "graph_edges": 8542
   },
   "paper_statements": {
     "source": "../paper-lean-coverage.json",
@@ -88,12 +88,12 @@
     ]
   },
   "source_identity": {
-    "human_document_navigation": "b67514dd1917c31cfb4988f01db95e58cf8b550db710ec5ab464a5111674eb22",
-    "lean_manifest": "47aa5ab3dbdf880d7e87d1de37584b010f0b014ed03d843402a14a978ac776a3",
+    "human_document_navigation": "e6383569ce0e396943d5dfe5406016080d4f9989e6b19b692b1d71adf4c9e8b3",
+    "lean_manifest": "cf68484cf7692d0b1011ce45ce7e20c13903ad6935e5fd480ed827e70e194635",
     "paper_manifest": "01385f1ee6fb9df64e7d140998bcb933abb76b32d6c0e7f1163886bc2bb2bd92",
-    "claims": "ec0ba48918b153a985f3b9d9056c848b465a35e45a4e0af9890fb13adeae8233",
+    "claims": "561f6e4dff5b353c1f33afbb47583f7b9e257b5985612ec7b95d1074054caf60",
     "problems": "131d897d99eb4de075e7e4c4269f3431005638e6028519a813944b13dcb8d904",
-    "problem_library": "f9246065bae73d27271e29729d1404ce0f886001be5b1e36eefa91ffca1b6425",
+    "problem_library": "17c878058ccc95b2d55f3740a1cc31c9c2b3aedcd52cc09f3133257b4178bb0c",
     "paper_lean_coverage": "132c36881b9d10304bcfecdbfb73b6ed4d60db90b645203667ae93eeeff50127",
     "paper_evidence": "8c7de6f8f5e082fa91698d0c8314620207603080c348a526aa31fa250042b423",
     "palomar_registry_status": "5c1228eb83f28adf3b74243c1f271650646b2d0391b72092fbb9c2c91209c514",

@@ -22231,6 +22231,11 @@
           "name": "erdos1041_ani_degree_seven",
           "module": "ErdosProblems/Erdos1041/Counterexample/CatalogueAdapter.lean",
           "line": 25
+        },
+        {
+          "name": "erdos1041_no_short_variation_path",
+          "module": "ErdosProblems/Erdos1041/Counterexample/CatalogueAdapter.lean",
+          "line": 39
         }
       ]
     },
@@ -22304,19 +22309,39 @@
       "readme_headline": true,
       "declarations": [
         {
-          "name": "erdos257_family_factorial_instance",
+          "name": "irrational_erdosSum_factorial_support",
           "module": "Erdos249257/CertificateKernel.lean",
-          "line": 6082
+          "line": 6035
         },
         {
-          "name": "erdos257_family_two_pow_instance",
+          "name": "irrational_erdosSum_two_pow_support",
           "module": "Erdos249257/CertificateKernel.lean",
-          "line": 6090
+          "line": 6059
+        },
+        {
+          "name": "irrational_erdosSupportSeries_multiples",
+          "module": "Erdos249257/CertificateKernel.lean",
+          "line": 9103
         },
         {
           "name": "irrational_erdosSupportSeries_pairwise_coprime",
           "module": "Erdos249257/CertificateKernel.lean",
           "line": 10776
+        },
+        {
+          "name": "irrational_erdosSupportSeries_eventuallyPeriodic",
+          "module": "Erdos249257/CertificateKernel.lean",
+          "line": 11604
+        },
+        {
+          "name": "irrational_erdosSupportSeries_residueClass",
+          "module": "Erdos249257/CertificateKernel.lean",
+          "line": 11672
+        },
+        {
+          "name": "irrational_erdosSupportSeries_odd",
+          "module": "Erdos249257/CertificateKernel.lean",
+          "line": 11686
         }
       ]
     },

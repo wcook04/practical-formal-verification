@@ -4,7 +4,7 @@
   "root_node_id": "universe:plectis-lean",
   "counts": {
     "nodes": 2907,
-    "edges": 8536,
+    "edges": 8542,
     "node_kinds": {
       "human_document": 18,
       "integration_surface": 2,
@@ -34,7 +34,7 @@
       "re_expresses_open_branch": 6,
       "registers_selected_editions_for": 7,
       "replayed": 616,
-      "same_lean_declaration": 92,
+      "same_lean_declaration": 98,
       "stated_in_lean": 765,
       "states": 689,
       "supported_by": 190
@@ -49795,11 +49795,16 @@
           "declaration": "erdos1041_ani_degree_seven",
           "line": 25,
           "href": "https://github.com/wcook04/plectis-erdos/blob/main/lean/ErdosProblems/Erdos1041/Counterexample/CatalogueAdapter.lean#L25"
+        },
+        {
+          "declaration": "erdos1041_no_short_variation_path",
+          "line": 39,
+          "href": "https://github.com/wcook04/plectis-erdos/blob/main/lean/ErdosProblems/Erdos1041/Counterexample/CatalogueAdapter.lean#L39"
         }
       ],
-      "declaration": "erdos1041_ani_degree_seven",
-      "line": 25,
-      "href": "https://github.com/wcook04/plectis-erdos/blob/main/lean/ErdosProblems/Erdos1041/Counterexample/CatalogueAdapter.lean#L25"
+      "declaration": "erdos1041_no_short_variation_path",
+      "line": 39,
+      "href": "https://github.com/wcook04/plectis-erdos/blob/main/lean/ErdosProblems/Erdos1041/Counterexample/CatalogueAdapter.lean#L39"
     },
     {
       "source": "claim:erdos_1041",
@@ -52873,6 +52878,83 @@
     {
       "source": "claim:support_families",
       "relation": "same_lean_declaration",
+      "target": "statement:erdos257-mersenne-reasoning-surface#thm:eventually-periodic",
+      "shared_declarations": [
+        {
+          "name": "Erdos249257.irrational_erdosSupportSeries_eventuallyPeriodic",
+          "file": "lean/Erdos249257/CertificateKernel.lean",
+          "href": "https://github.com/wcook04/plectis-erdos/blob/436f55ebdafa67e4af0fff79f621c13f2ded12bf/lean/Erdos249257/CertificateKernel.lean#L11604",
+          "line": 11604,
+          "kind": "theorem"
+        }
+      ]
+    },
+    {
+      "source": "claim:support_families",
+      "relation": "same_lean_declaration",
+      "target": "statement:erdos257-mersenne-reasoning-surface#thm:eventually-periodic-support",
+      "shared_declarations": [
+        {
+          "name": "Erdos249257.irrational_erdosSupportSeries_eventuallyPeriodic",
+          "file": "lean/Erdos249257/CertificateKernel.lean",
+          "href": "https://github.com/wcook04/plectis-erdos/blob/436f55ebdafa67e4af0fff79f621c13f2ded12bf/lean/Erdos249257/CertificateKernel.lean#L11604",
+          "line": 11604,
+          "kind": "theorem"
+        }
+      ]
+    },
+    {
+      "source": "claim:support_families",
+      "relation": "same_lean_declaration",
+      "target": "statement:erdos257-mersenne-reasoning-surface#thm:factorial-twopow-support",
+      "shared_declarations": [
+        {
+          "name": "Erdos249257.irrational_erdosSum_factorial_support",
+          "file": "lean/Erdos249257/CertificateKernel.lean",
+          "href": "https://github.com/wcook04/plectis-erdos/blob/436f55ebdafa67e4af0fff79f621c13f2ded12bf/lean/Erdos249257/CertificateKernel.lean#L6035",
+          "line": 6035,
+          "kind": "theorem"
+        },
+        {
+          "name": "Erdos249257.irrational_erdosSum_two_pow_support",
+          "file": "lean/Erdos249257/CertificateKernel.lean",
+          "href": "https://github.com/wcook04/plectis-erdos/blob/436f55ebdafa67e4af0fff79f621c13f2ded12bf/lean/Erdos249257/CertificateKernel.lean#L6059",
+          "line": 6059,
+          "kind": "theorem"
+        }
+      ]
+    },
+    {
+      "source": "claim:support_families",
+      "relation": "same_lean_declaration",
+      "target": "statement:erdos257-mersenne-reasoning-surface#thm:multiples-support",
+      "shared_declarations": [
+        {
+          "name": "Erdos249257.irrational_erdosSupportSeries_multiples",
+          "file": "lean/Erdos249257/CertificateKernel.lean",
+          "href": "https://github.com/wcook04/plectis-erdos/blob/436f55ebdafa67e4af0fff79f621c13f2ded12bf/lean/Erdos249257/CertificateKernel.lean#L9103",
+          "line": 9103,
+          "kind": "theorem"
+        }
+      ]
+    },
+    {
+      "source": "claim:support_families",
+      "relation": "same_lean_declaration",
+      "target": "statement:erdos257-mersenne-reasoning-surface#thm:odd-support",
+      "shared_declarations": [
+        {
+          "name": "Erdos249257.irrational_erdosSupportSeries_odd",
+          "file": "lean/Erdos249257/CertificateKernel.lean",
+          "href": "https://github.com/wcook04/plectis-erdos/blob/436f55ebdafa67e4af0fff79f621c13f2ded12bf/lean/Erdos249257/CertificateKernel.lean#L11686",
+          "line": 11686,
+          "kind": "theorem"
+        }
+      ]
+    },
+    {
+      "source": "claim:support_families",
+      "relation": "same_lean_declaration",
       "target": "statement:erdos257-mersenne-reasoning-surface#thm:pairwise-coprime",
       "shared_declarations": [
         {
@@ -52886,28 +52968,69 @@
     },
     {
       "source": "claim:support_families",
+      "relation": "same_lean_declaration",
+      "target": "statement:erdos257-mersenne-reasoning-surface#thm:residue-odd",
+      "shared_declarations": [
+        {
+          "name": "Erdos249257.irrational_erdosSupportSeries_odd",
+          "file": "lean/Erdos249257/CertificateKernel.lean",
+          "href": "https://github.com/wcook04/plectis-erdos/blob/436f55ebdafa67e4af0fff79f621c13f2ded12bf/lean/Erdos249257/CertificateKernel.lean#L11686",
+          "line": 11686,
+          "kind": "theorem"
+        },
+        {
+          "name": "Erdos249257.irrational_erdosSupportSeries_residueClass",
+          "file": "lean/Erdos249257/CertificateKernel.lean",
+          "href": "https://github.com/wcook04/plectis-erdos/blob/436f55ebdafa67e4af0fff79f621c13f2ded12bf/lean/Erdos249257/CertificateKernel.lean#L11672",
+          "line": 11672,
+          "kind": "theorem"
+        }
+      ]
+    },
+    {
+      "source": "claim:support_families",
       "relation": "supported_by",
       "target": "lean-module:Erdos249257.CertificateKernel",
       "declarations": [
         {
-          "declaration": "erdos257_family_factorial_instance",
-          "line": 6082,
-          "href": "https://github.com/wcook04/plectis-erdos/blob/main/lean/Erdos249257/CertificateKernel.lean#L6082"
+          "declaration": "irrational_erdosSum_factorial_support",
+          "line": 6035,
+          "href": "https://github.com/wcook04/plectis-erdos/blob/main/lean/Erdos249257/CertificateKernel.lean#L6035"
         },
         {
-          "declaration": "erdos257_family_two_pow_instance",
-          "line": 6090,
-          "href": "https://github.com/wcook04/plectis-erdos/blob/main/lean/Erdos249257/CertificateKernel.lean#L6090"
+          "declaration": "irrational_erdosSum_two_pow_support",
+          "line": 6059,
+          "href": "https://github.com/wcook04/plectis-erdos/blob/main/lean/Erdos249257/CertificateKernel.lean#L6059"
+        },
+        {
+          "declaration": "irrational_erdosSupportSeries_multiples",
+          "line": 9103,
+          "href": "https://github.com/wcook04/plectis-erdos/blob/main/lean/Erdos249257/CertificateKernel.lean#L9103"
         },
         {
           "declaration": "irrational_erdosSupportSeries_pairwise_coprime",
           "line": 10776,
           "href": "https://github.com/wcook04/plectis-erdos/blob/main/lean/Erdos249257/CertificateKernel.lean#L10776"
+        },
+        {
+          "declaration": "irrational_erdosSupportSeries_eventuallyPeriodic",
+          "line": 11604,
+          "href": "https://github.com/wcook04/plectis-erdos/blob/main/lean/Erdos249257/CertificateKernel.lean#L11604"
+        },
+        {
+          "declaration": "irrational_erdosSupportSeries_residueClass",
+          "line": 11672,
+          "href": "https://github.com/wcook04/plectis-erdos/blob/main/lean/Erdos249257/CertificateKernel.lean#L11672"
+        },
+        {
+          "declaration": "irrational_erdosSupportSeries_odd",
+          "line": 11686,
+          "href": "https://github.com/wcook04/plectis-erdos/blob/main/lean/Erdos249257/CertificateKernel.lean#L11686"
         }
       ],
-      "declaration": "irrational_erdosSupportSeries_pairwise_coprime",
-      "line": 10776,
-      "href": "https://github.com/wcook04/plectis-erdos/blob/main/lean/Erdos249257/CertificateKernel.lean#L10776"
+      "declaration": "irrational_erdosSupportSeries_odd",
+      "line": 11686,
+      "href": "https://github.com/wcook04/plectis-erdos/blob/main/lean/Erdos249257/CertificateKernel.lean#L11686"
     },
     {
       "source": "claim:tail_orbit_rigidity",
