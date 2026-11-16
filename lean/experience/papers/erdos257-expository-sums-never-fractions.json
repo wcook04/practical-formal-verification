@@ -28,18 +28,19 @@
     "executable_scripts_embedded": false,
     "pandoc": "pandoc 3.9.0.2",
     "renderer_contract_version": 35,
-    "renderer_fingerprint": "d264019ae46e5b6f",
-    "source_sha256": "5efdc16fe9917b634a2af0068bab9ce0e17127b58d5e82e6ab3e412c1e791352",
+    "renderer_fingerprint": "230fe3fbce70a9d0",
+    "source_sha256": "27275fec09eb84e1bd833411f9e30ed4e8bfae35ab711d373cc7395bd1845002",
     "source_manifest_match": true,
     "publication_manifest_match": true,
-    "mathml_node_count": 929,
+    "provenance_context_sha256": "330dd5955f74f6c138c9ff86a3db165fff3c8a22a607520ef471b29893aa6abc",
+    "mathml_node_count": 928,
     "raw_math_fallback_count": 0,
     "warnings": {
       "mathml": [],
       "mathjax": []
     },
-    "html_mathml_sha256": "4b4c8a3691ad6211bdb713e86df76f2acf10325b6e3ed57e4f6d234b39860ec6",
-    "html_exact_tex_sha256": "982813c77af4c46868a770ac751e0b1faf2bd1866677ea4b669f258c8fd2f97f"
+    "html_mathml_sha256": "96c80be9065a07470d3b556f118acbd14c7ff2e7e2e97fbd603e945ed44c6cfa",
+    "html_exact_tex_sha256": "b32b57705f67139bf2ff2f739b2f92e1b17890187b123abe06544635e2648b19"
   },
   "sections": [
     {
@@ -185,7 +186,7 @@
     {
       "level": 3,
       "anchor": "app:lean",
-      "label": "Formal verification and its scope"
+      "label": "The formal proof and how it differs"
     },
     {
       "level": 2,

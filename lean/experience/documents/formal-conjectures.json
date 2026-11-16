@@ -11,7 +11,7 @@
     "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/docs/verification/FORMAL_CONJECTURES_CROSSWALK.md"
   },
   "render_contract": {
-    "navigation_fingerprint": "7a61692d75d40e2cd1229604adfefd6ed54bd352415ed2657b5afdb5eee60e19",
+    "navigation_fingerprint": "b67514dd1917c31cfb4988f01db95e58cf8b550db710ec5ab464a5111674eb22",
     "preferred": "html_mathml",
     "fallback": "html_exact_tex",
     "fallback_renderer": "MathJax or a TeX-compatible KaTeX configuration",
@@ -19,7 +19,7 @@
     "source_sha256": "03b87158bd0942a100e4d0acd162d082c9c5b6253b6d58e48cb3f1f915244ecf",
     "pandoc": "pandoc 3.9.0.2",
     "renderer_contract_version": 35,
-    "renderer_fingerprint": "d264019ae46e5b6f",
+    "renderer_fingerprint": "230fe3fbce70a9d0",
     "source_manifest_match": true,
     "publication_manifest_match": true,
     "publication_state": "published_source",

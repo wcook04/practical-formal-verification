@@ -15,7 +15,7 @@
       "source_ref": "main",
       "source_path": "docs/claims.json",
       "source_url": "https://github.com/wcook04/plectis-erdos/blob/main/docs/claims.json",
-      "source_sha256": "b92af9f98a8743f48cf40c399d0c03eee322b7195e48c96eb14721ecb92fce9a",
+      "source_sha256": "ec0ba48918b153a985f3b9d9056c848b465a35e45a4e0af9890fb13adeae8233",
       "bytes": 1272712
     },
     {
@@ -33,7 +33,7 @@
       "source_ref": "main",
       "source_path": "docs/problem_library.json",
       "source_url": "https://github.com/wcook04/plectis-erdos/blob/main/docs/problem_library.json",
-      "source_sha256": "c5dfe78dfa4d5d1f478a458a55a4e65868d60fb827c8e5184aee32a0079f2b8f",
+      "source_sha256": "f9246065bae73d27271e29729d1404ce0f886001be5b1e36eefa91ffca1b6425",
       "bytes": 1277475
     },
     {
@@ -51,8 +51,8 @@
       "source_ref": "main",
       "source_path": "docs/paper_lean_coverage.json",
       "source_url": "https://github.com/wcook04/plectis-erdos/blob/main/docs/paper_lean_coverage.json",
-      "source_sha256": "633921ae2018e3e674609382150b4733ae6f071793a1589a1ab7f0b4985878a9",
-      "bytes": 1036826
+      "source_sha256": "132c36881b9d10304bcfecdbfb73b6ed4d60db90b645203667ae93eeeff50127",
+      "bytes": 1036827
     },
     {
       "hosted_path": "lean/paper-evidence.json",
@@ -78,8 +78,8 @@
       "source_ref": "main",
       "source_path": "README.md",
       "source_url": "https://github.com/wcook04/plectis-erdos/blob/main/README.md",
-      "source_sha256": "15f8ebfc1eb4e1699b64e43e3164369fee236dc0b9b8cd6a2849661c334428d4",
-      "bytes": 17600
+      "source_sha256": "9412eaae6d2475192840694c3d505d75ca1b65df6e8224cd3fc98a115931eaa8",
+      "bytes": 17705
     },
     {
       "hosted_path": "lean/human-source/docs/READING_GUIDE.md",
@@ -96,7 +96,7 @@
       "source_ref": "main",
       "source_path": "docs/reading-edition/weighted-257-task.md",
       "source_url": "https://github.com/wcook04/plectis-erdos/blob/main/docs/reading-edition/weighted-257-task.md",
-      "source_sha256": "aef833af3cce15890c08c2a96439fe835fe99f20f78beeea7c33129c1ef4e5cd",
+      "source_sha256": "9f35dd5d11e46a2bc13880f963f723f9124d4b29da43aa02bb76181d833d1364",
       "bytes": 7432
     },
     {
@@ -240,7 +240,7 @@
       "source_ref": "main",
       "source_path": "docs/research-commons/credit-ledger.json",
       "source_url": "https://github.com/wcook04/plectis-erdos/blob/main/docs/research-commons/credit-ledger.json",
-      "source_sha256": "97047441aeae1b886dae7260e1af7f79e833732be8d039aa646d80a3a03314d6",
+      "source_sha256": "cae324167fbcd75658f65d466a78bba6e57f3e33228ca7dd12334b431036151e",
       "bytes": 17033
     }
   ]

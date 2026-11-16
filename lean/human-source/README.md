@@ -230,10 +230,9 @@ order without asking you to decode Lean declaration names first.
 
 ## Videos
 
-There are videos of the [maths map](https://www.youtube.com/watch?v=u4f-fk1o13k),
-[Erdős #257](https://www.youtube.com/watch?v=uWCqtRkJ8P0) and the
-[Plectis system](https://www.youtube.com/watch?v=MBmVMMogXTA). The videos also show private interfaces. Do not
-infer results from private or unreleased work.
+[Introduction](https://youtu.be/FwgaZYH2otY) · Maths Map [short](https://youtu.be/Dc6ogk9QlBE) / [full](https://youtu.be/u4f-fk1o13k) · Erdős #257 [short](https://youtu.be/MrC-pboGZ2k) / [full](https://youtu.be/VUSHyYSf1Ak) · Maths funnel [short](https://youtu.be/QIMDizV8u_I) / [full](https://youtu.be/qxwZiW2ZYTQ).
+
+The videos show private interfaces. Do not infer results from private or unreleased work.
 
 ## Other records
 

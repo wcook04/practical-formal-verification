@@ -443,11 +443,12 @@
       "executable_scripts_embedded": false,
       "pandoc": "pandoc 3.9.0.2",
       "renderer_contract_version": 35,
-      "renderer_fingerprint": "d264019ae46e5b6f",
-      "source_sha256": "2676b3e9f6a5ba6f3ea8fceeed9684ff6ced0fa3bef9c3c0b6a3a878288af5d3",
+      "renderer_fingerprint": "230fe3fbce70a9d0",
+      "source_sha256": "dc3986fdadf0e875ef95894e7cab1eb36f42dddfcf2bceb1eea588e556a3fd0b",
       "source_manifest_match": true,
       "publication_manifest_match": true,
-      "mathml_node_count": 1062,
+      "provenance_context_sha256": "200c930991d571586e9dc4c7144650704b7de6ed022054fba01a2d44009b561b",
+      "mathml_node_count": 1088,
       "raw_math_fallback_count": 1,
       "warnings": {
         "mathml": [
@@ -459,8 +460,8 @@
         ],
         "mathjax": []
       },
-      "html_mathml_sha256": "29805383efe7bf7702648c128612b5d112b61e0f3df2bcbd70205fe3da22c05d",
-      "html_exact_tex_sha256": "c7bfe9c17b7704efb233469bd04fd99a25e1b74a9b26c98e608aefcb382b9fdd"
+      "html_mathml_sha256": "91e3264dfb1b88b1363b3bcf8efa169fc9db28cf748705c7cf9e59a2d90b699d",
+      "html_exact_tex_sha256": "3c917f5fae4aa81c2685a3e01868155155a1ee25984a48f1faed29a88c8f5c27"
     },
     "sections": [
       {
@@ -606,12 +607,7 @@
       {
         "level": 2,
         "anchor": "app:sources",
-        "label": "Sources, verification and reproducibility"
-      },
-      {
-        "level": 5,
-        "anchor": "reproducing-the-weighted-theorem.",
-        "label": "Reproducing the weighted theorem."
+        "label": "Sources and formal verification"
       },
       {
         "level": 2,
@@ -683,11 +679,12 @@
         "executable_scripts_embedded": false,
         "pandoc": "pandoc 3.9.0.2",
         "renderer_contract_version": 35,
-        "renderer_fingerprint": "d264019ae46e5b6f",
-        "source_sha256": "2676b3e9f6a5ba6f3ea8fceeed9684ff6ced0fa3bef9c3c0b6a3a878288af5d3",
+        "renderer_fingerprint": "230fe3fbce70a9d0",
+        "source_sha256": "dc3986fdadf0e875ef95894e7cab1eb36f42dddfcf2bceb1eea588e556a3fd0b",
         "source_manifest_match": true,
         "publication_manifest_match": true,
-        "mathml_node_count": 1062,
+        "provenance_context_sha256": "200c930991d571586e9dc4c7144650704b7de6ed022054fba01a2d44009b561b",
+        "mathml_node_count": 1088,
         "raw_math_fallback_count": 1,
         "warnings": {
           "mathml": [
@@ -699,8 +696,8 @@
           ],
           "mathjax": []
         },
-        "html_mathml_sha256": "29805383efe7bf7702648c128612b5d112b61e0f3df2bcbd70205fe3da22c05d",
-        "html_exact_tex_sha256": "c7bfe9c17b7704efb233469bd04fd99a25e1b74a9b26c98e608aefcb382b9fdd"
+        "html_mathml_sha256": "91e3264dfb1b88b1363b3bcf8efa169fc9db28cf748705c7cf9e59a2d90b699d",
+        "html_exact_tex_sha256": "3c917f5fae4aa81c2685a3e01868155155a1ee25984a48f1faed29a88c8f5c27"
       },
       "sections": [
         {
@@ -846,12 +843,7 @@
         {
           "level": 2,
           "anchor": "app:sources",
-          "label": "Sources, verification and reproducibility"
-        },
-        {
-          "level": 5,
-          "anchor": "reproducing-the-weighted-theorem.",
-          "label": "Reproducing the weighted theorem."
+          "label": "Sources and formal verification"
         },
         {
           "level": 2,
@@ -900,7 +892,7 @@
       "subject": "Erdős #257",
       "subject_kind": "problem",
       "form": "Reasoning surface",
-      "pages": 152,
+      "pages": 153,
       "question": "What weighted and cover criteria prove hereditary Mersenne irrationality for Erdős #257, and which targets remain open?",
       "precis": "A weighted summability criterion proves irrationality of reciprocal Mersenne subseries: if h is the part of a supported on a finite nonempty prime set P, every infinite A with ∑ h(a)/(a(b^{h(a)}−1)) finite has irrational ∑ (b^a−1)^{-1}. The base-two condition gives the conclusion at every integer base for every infinite subset, and permits an example with divergent reciprocal sum, while excluding full support and all odd exponents. The proof averages over a finite part of the support and over dyadic observation lengths. Erdős's weaker reciprocal-summable theorem is proved in full, and a common window extends both arguments to unions of weighted and positive-cover supports. Finite-denominator and achievement-set calculations formulate tests for the targets 1/2 and 1/21; those tests do not decide either target or the universal question. Prime support at base 2 and squarefree support at power-of-two bases are attributed as existing work.",
       "owns": "a claim-bounded problem-specific reasoning surface for Erdős #257: selected checked premises, finite computations, closed routes, surviving obligations, and their exact evidence bands",
@@ -923,11 +915,12 @@
         "executable_scripts_embedded": false,
         "pandoc": "pandoc 3.9.0.2",
         "renderer_contract_version": 35,
-        "renderer_fingerprint": "d264019ae46e5b6f",
-        "source_sha256": "47cf6a152738f17c6879bd5070adb73c34a1254775afd44dbf7b6ccd346aa100",
+        "renderer_fingerprint": "230fe3fbce70a9d0",
+        "source_sha256": "09285ac50fbb892b4a027489ccaf1e986fc72d502a761c343c6cb6334a321489",
         "source_manifest_match": true,
         "publication_manifest_match": true,
-        "mathml_node_count": 4776,
+        "provenance_context_sha256": "cd31256b30d297401a891b9eb40043133063379d8373b035f6bd179ec569fe6e",
+        "mathml_node_count": 4777,
         "raw_math_fallback_count": 4,
         "warnings": {
           "mathml": [
@@ -959,8 +952,8 @@
           ],
           "mathjax": []
         },
-        "html_mathml_sha256": "623cb94144b634ddede2acd737cd2ef2ae78262bd77bfef2ae3810ec2ab27d6f",
-        "html_exact_tex_sha256": "a2d18f805ebc94f5bb1f21170f3a0bced75e87f083df60b0bc40b1ab3c4883c2"
+        "html_mathml_sha256": "9922cf422c7c11834b9e46365fdfd0391a390e1e32fff1487ac4b47c81aee292",
+        "html_exact_tex_sha256": "9ce31e297ce0ed4ebedd1da14051615bbdb69e439e97db506aa167e01348c470"
       },
       "sections": [
         {
@@ -1778,18 +1771,19 @@
         "executable_scripts_embedded": false,
         "pandoc": "pandoc 3.9.0.2",
         "renderer_contract_version": 35,
-        "renderer_fingerprint": "d264019ae46e5b6f",
-        "source_sha256": "5efdc16fe9917b634a2af0068bab9ce0e17127b58d5e82e6ab3e412c1e791352",
+        "renderer_fingerprint": "230fe3fbce70a9d0",
+        "source_sha256": "27275fec09eb84e1bd833411f9e30ed4e8bfae35ab711d373cc7395bd1845002",
         "source_manifest_match": true,
         "publication_manifest_match": true,
-        "mathml_node_count": 929,
+        "provenance_context_sha256": "330dd5955f74f6c138c9ff86a3db165fff3c8a22a607520ef471b29893aa6abc",
+        "mathml_node_count": 928,
         "raw_math_fallback_count": 0,
         "warnings": {
           "mathml": [],
           "mathjax": []
         },
-        "html_mathml_sha256": "4b4c8a3691ad6211bdb713e86df76f2acf10325b6e3ed57e4f6d234b39860ec6",
-        "html_exact_tex_sha256": "982813c77af4c46868a770ac751e0b1faf2bd1866677ea4b669f258c8fd2f97f"
+        "html_mathml_sha256": "96c80be9065a07470d3b556f118acbd14c7ff2e7e2e97fbd603e945ed44c6cfa",
+        "html_exact_tex_sha256": "b32b57705f67139bf2ff2f739b2f92e1b17890187b123abe06544635e2648b19"
       },
       "sections": [
         {
@@ -1935,7 +1929,7 @@
         {
           "level": 3,
           "anchor": "app:lean",
-          "label": "Formal verification and its scope"
+          "label": "The formal proof and how it differs"
         },
         {
           "level": 2,

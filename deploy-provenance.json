@@ -10,8 +10,4330 @@
       "transform": "isolated-css-comments-v1"
     }
   },
-  "generator_commit": "6b5dc1cce8b00dbc6d1bc68fdf30b634724baf95",
-  "note": "Public source commits this deploy was generated from. The next deploy reads this file and refuses to publish a build whose sources do not contain these commits, unless it is run with --allow-older-than-live.",
+  "generator_commit": "dcccc75bbbb3b1dba8c2d6226785ea2573cc45ec",
+  "last_scoped_release": {
+    "changed_paths": {
+      "lean/claims.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "ec0ba48918b153a985f3b9d9056c848b465a35e45a4e0af9890fb13adeae8233"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "b92af9f98a8743f48cf40c399d0c03eee322b7195e48c96eb14721ecb92fce9a"
+        }
+      },
+      "lean/credit-ledger.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "cae324167fbcd75658f65d466a78bba6e57f3e33228ca7dd12334b431036151e"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "97047441aeae1b886dae7260e1af7f79e833732be8d039aa646d80a3a03314d6"
+        }
+      },
+      "lean/experience/documents/architecture.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "ac67e417d2e57c9ed86daaf8c271025b75b1ed0c5cce40094af2775f3265e8d9"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "0ad29f90f18b7df06a90d1ed19e31d19203449e09e5cd28540d8d8fb4a147c84"
+        }
+      },
+      "lean/experience/documents/comparator-1049.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "05f07dc80006ba64ba19915742ffd1e3fe431c639af52774fde581d9ba1b8a2f"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "e9f4e7af434b540881f1d504fe450eea9a04c003faea9d5bb99ba8052d4f077e"
+        }
+      },
+      "lean/experience/documents/documentation.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "b5558e589a91addf644b45a520d1141857bc12f1b8c2f5da3dafe32383896a68"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "201bb0e9412efa63dafbd85e6a2621af1cc657436fcb3cfd9c017a75a8af5669"
+        }
+      },
+      "lean/experience/documents/external-verification.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "454390ca5e207bb58ae7d0d216eb5ba59d19009ae4a01f2036c1a827c6770351"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "890898665dddb857b579509addf9d9a581df908216c6c4cad8592986c1e0b499"
+        }
+      },
+      "lean/experience/documents/formal-conjectures.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "7f5153008362ecdd22426ab7e5c7b313ace49a2907bc6fb7302445df10072aa5"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "b3cbe48b360ffc933b0365e81e7a32065bc3fda1f238bbf821a17416415cf1da"
+        }
+      },
+      "lean/experience/documents/index.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "6a6b5dca543151441f2993f7f1bf58b973a02b12ff61a30ee82daa11accd38b8"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "d1e09283b82e3fc0a942ae096cd7cd4baebba8a0c870926ab30c76770d9ba4a4"
+        }
+      },
+      "lean/experience/documents/methodology.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "a5b5e5189177103eb0bc93e51d645d800f74749ba9cb5cb7d6aabde3bca278e0"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "397406606590e93473535ded267944abbd3932ecf820b8b9fec963ef476d6437"
+        }
+      },
+      "lean/experience/documents/orientation.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "30c498b5ec971e6ce09285e8da7ef70638d5cb9e5371ffeade0e2cc60a7f79f9"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "c75e52813f143e002d3ba40ae3bc2f83b85729d15f243f841939624bc0fb8237"
+        }
+      },
+      "lean/experience/documents/paper-guide.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "2e3c144c00a09bce1513514738df83b8b74f71505de5eb2485abab6681e34709"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "ef7674811283d850684eb9f295773af944e26ed4d886faf1786aa4d1b1f1c923"
+        }
+      },
+      "lean/experience/documents/prior-art.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "2099f19ca3e36781ded3d0cacfaa34ed978a56fb2bb05a0379251fcef860ecd6"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "b6c3979bf281798c0455afb5215f5e7f39b554fe7e4669751bff72ed21a37981"
+        }
+      },
+      "lean/experience/documents/reading-guide.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "b740c77bb9fd1261de22b219799b84752150a1d9f61077555325eba0582396e3"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "6dadcb5e9e9fa8fd320fc9d5668e5ebbf747ae3361071a0df79a7a9904c44e0b"
+        }
+      },
+      "lean/experience/documents/readme.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "937c72fb3cfd92b6bbad5fa87d37261924f20916655c7fddbc6ec841d812c4b0"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "43a4a1843658e484efbd044049e5aaf4ddeaf537d32d2969694e47ef6bf2e859"
+        }
+      },
+      "lean/experience/documents/readme.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "a2a0e10efb0a3261a2c44d1dd65328618bfd62c2beff07733ab61797ce820da1"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "d3a76a6e38666a8b86c602cc536d165af1bcb3d4f9e0aa41729434e6357ab874"
+        }
+      },
+      "lean/experience/documents/readme.mathjax.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "93b834e7f704a304fed5b635d671177ee170df9f23952d2fdd8f6a520a9ca17b"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "dbfbd1885494f3ea34cde6bc445bb33922b5477754836b1c2a208e2cb2968d78"
+        }
+      },
+      "lean/experience/documents/related-problems.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "e91b4397833c375a5a9ae735f1389487789a61db218b597560644ff525310343"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "6dd80bc31c6b56b7d4eced32199ad5a35108dce4715dc36e6774d4c08ce256c7"
+        }
+      },
+      "lean/experience/documents/residual-progress.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "7768cf1076073311c84b1e8ec8605ff562a7317d28eae94b62e4c54154e3431c"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "87ec6ab6f86a2aac8babde676b9d0c3699fd94bc40465b047e0aa2184bdd339e"
+        }
+      },
+      "lean/experience/documents/results.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "361c489b32ee9d931b7368c2ec171b19d6c5438828f61eb28e86c4afae51f9ad"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "e61eec4994162365bd79b039fa4a5f209860133c8201455d0667a9f6e1d9130d"
+        }
+      },
+      "lean/experience/documents/scope.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "79d896e7aee0e715d54350aacd1c11c05d6e4c83c0f8d5f6561150d491034057"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "b6e305faf68799c805e9348e50d8e834c7561cce037e9c2c5d8cd36d1e926611"
+        }
+      },
+      "lean/experience/documents/source-map.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "1fda81366304390f14d8040f05ba5957a202634c4dae108034aac3249e7cfb9c"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "93b46f166654ad00dc4b78cfda388fc01119f1dbc45bf2efbc8a956668be3547"
+        }
+      },
+      "lean/experience/documents/wave-index.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "dc80f70492051f6892a31568ffb2154354aa7f1e368453a70adface404ed26b0"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "070375eaf4b4ad482fca75a61417a82133e8861261f14b4a5a86e4d72455acd7"
+        }
+      },
+      "lean/experience/documents/weighted-257-task.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "53a4c023f0f0a4ab18119d80ffd12a18a96e61cc08e6ce121b7727b91152e267"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "9ab4a5080cfe8a37e74d05180065f3282f3257e1e6f246e9199bd5d12de68d95"
+        }
+      },
+      "lean/experience/documents/weighted-257-task.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "2c3eec02989bfcae04c2ec7d44bfa81e417d65379b0d85d4812a63f9464631a5"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "8b45eb75e40dd3c0f7883038e411a261011ad3ef83a8b3418cf16094142d5d23"
+        }
+      },
+      "lean/experience/documents/weighted-257-task.mathjax.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "915e5f58384ede4b458194c24a570a3ece338dfdb46d85e527f0bcb7ace3ada0"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "791e1c884f368d11821ae498f69c6a7e19f34dc34d50a848a5170237d2b4ac20"
+        }
+      },
+      "lean/experience/graph.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "92394ee0f305684252c483fd9ac06cb30b2fcfb9a6a9889582cdb655a0b99342"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "0a430b0c9378c27eace43582c1d429d1c7aae477b39666b999ce5c8478b92359"
+        }
+      },
+      "lean/experience/graph/index.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "3297ca6897e1ad7fdb08f861a15cd3f325face844d71a73022cce4a56338c0b4"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "0835d90665ccae2a5355979cb1f4c093e7391aa0c27907385c7d9bda610187de"
+        }
+      },
+      "lean/experience/manifest.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "effb55ee6593931fc6cfde9c5a5fa7553ff02210aba4f0c9a75ab3b2d5f991b5"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "1a56f28069153c88195016cb47c3068c356bf8c5fb95f14f7bf387705a9cadb8"
+        }
+      },
+      "lean/experience/papers/claim-faithful-publication-systems.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "332fe652e81f8fe9a46fdc3c1caf96e1a0177059d359a7e910fbbbf1a78667bb"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "d779ba319b2876767294e6016ba101fb5847d4a0d39a425859c9885a59704b88"
+        }
+      },
+      "lean/experience/papers/claim-faithful-publication-systems.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "aea57c4c3c03fcc6020f337c48a2970b9c16c71d85796eb6c477f4e3b1a1718b"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "d0025a1d4a61f8a7a6337e2d28a2882a47878910d874d280fc323367aed48f5a"
+        }
+      },
+      "lean/experience/papers/claim-faithful-publication-systems.mathjax.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "dc6b0ed0a2d556057ace6f40a7650f90027e2465db57fb3dbf3f66681add5258"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "20ac117fbe9d5791c1455115594ab31520f2c691c8352e7a95d0385fa0b63b90"
+        }
+      },
+      "lean/experience/papers/erdos-1041-lemniscate-newton-flow.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "7dfb885375e5f1baaa307cfdff02d7c77c2db014d2d006d1c4af3bb1c8c3669e"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "b70922976ffbdc53f487f201399ee8e60b9ea19226323c4e06609f8fc7164121"
+        }
+      },
+      "lean/experience/papers/erdos-1041-lemniscate-newton-flow.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "d63d3d77b0f1e6d5c5af701e4b5ab3bab4fa8a84de62ee197791ec2f1ea1f958"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "e57b2f95e86d140a2392b59a71748a4fd5561b7ab31e9f41cc2caa56a5ebdd82"
+        }
+      },
+      "lean/experience/papers/erdos-1041-lemniscate-newton-flow.mathjax.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "695c11d02e42d2686068b64c6f6bdbbb4c4c370798263767d9cba3c91627ec3a"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "bfd92ace1dccfe33134514f159c3443df01de8c0fc321792e9ebb5db75cc0576"
+        }
+      },
+      "lean/experience/papers/erdos-1049-rational-base-lambert.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "42fedc52e80cccab0bb3c2a498f3e970adfad503f87b44927da8533326f4f31c"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "ea9dad6818b0365768ca99a94f75fa0595502f335c3b81761ecdeeeff13929d3"
+        }
+      },
+      "lean/experience/papers/erdos-1049-rational-base-lambert.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "eff1fd7233b9709637a89046eba165601f98111e6276a08ccf67b71095ddf32b"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "55bfbecbfd708ab3f0e092229fc817044bfb47e7d44d48a5bbc5e1289d307e6b"
+        }
+      },
+      "lean/experience/papers/erdos-1049-rational-base-lambert.mathjax.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "1d2b8bc72d0bacb5c1a1eaf969c798e9e3e0fdcb6ee71ab6df707badc437dd7f"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "810528cdb2aeabfec623927551ccf08f0d5068140e34d260a20c885bb2ef3f0b"
+        }
+      },
+      "lean/experience/papers/erdos-243-reciprocal-tail-rigidity.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "df1fb106bd89078ab752f19c00a7e30df8f410b9406a97795015b4bcae55c5e4"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "009ad823ee42fef03b096a77e60f445a3fc5aa6bc7c0f0278f16402c3022b608"
+        }
+      },
+      "lean/experience/papers/erdos-243-reciprocal-tail-rigidity.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "bc8b6c1a7653d0bce156bfa1a402578cf4d617018f5731f1f98ff01ed6b1f5b5"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "26304aaff907d0f75431edb3304ca846b546f4a1a3c56d41a65ddf47e2561ecd"
+        }
+      },
+      "lean/experience/papers/erdos-243-reciprocal-tail-rigidity.mathjax.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "ec3f81f02e07015cd8dde3ef2e2cda852af2de690db1dc8688a9f8d4afe4cb49"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "4a32fca02c7f203668f151e67132dfa8e2e3181102096bfa1abdd68cef539bdc"
+        }
+      },
+      "lean/experience/papers/erdos-249-binary-totient-series.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "ac943da10b323065a104c749a576cf07ed3d599a30acbdd3664d47361ad8eff6"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "1f438cc4e7d50766e1e96525a741ef3eb4ee1c515eb2c4f302dc0633d50a4dd0"
+        }
+      },
+      "lean/experience/papers/erdos-249-binary-totient-series.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "5b20e97818759c136be1c0ca398da25f1e6408cbc654f45d366231af777a80ca"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "a33c4e1d8647ce7efbb28ddc571ca046c4674dc447698802b687860fe69c07a4"
+        }
+      },
+      "lean/experience/papers/erdos-249-binary-totient-series.mathjax.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "5de883154e34647c847dcace638546d5fce4e1b70f381435a15bf13d18ebd944"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "1d994d9b4921967d90a8b8e8356d80bc1743f597b952e1692b49b5c167d530cc"
+        }
+      },
+      "lean/experience/papers/erdos-251-prime-gap-dyadic-series.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "32d4d9e72216ed52a014eac937e0854b64a24af647b811fdd6d42327fe61575a"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "c4017cdda7d9257b3cb1f77a515485aacbaa6de147a6488e87049162a05b9de5"
+        }
+      },
+      "lean/experience/papers/erdos-251-prime-gap-dyadic-series.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "fd348aa72f581df7e93ce27366fe151600b53ec848e3ed32e36a44a1ccefd13d"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "f46e86b4061e5dea13426a31d0c59a406d09cf5c85da3b9836839ff1925db56b"
+        }
+      },
+      "lean/experience/papers/erdos-251-prime-gap-dyadic-series.mathjax.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "950d703b3cdb5ba234b176c53b19ddb94dd66c102b02c7e4515fd4b3766584a8"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "e826e35b88cf31bdc42f31f1cad7a89ed558090dc276cee6204d475aff9a4378"
+        }
+      },
+      "lean/experience/papers/erdos-257-mersenne-support-subseries.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "91e3264dfb1b88b1363b3bcf8efa169fc9db28cf748705c7cf9e59a2d90b699d"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "29805383efe7bf7702648c128612b5d112b61e0f3df2bcbd70205fe3da22c05d"
+        }
+      },
+      "lean/experience/papers/erdos-257-mersenne-support-subseries.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "725b7f5318dfd37ad148979b5ddc7ee9af9ea0d8dcce6742ad65321790421dd4"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "618cba1f5e0c48ed7daddb312ba91877d32ba7929152448858af85f361c301bf"
+        }
+      },
+      "lean/experience/papers/erdos-257-mersenne-support-subseries.mathjax.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "3c917f5fae4aa81c2685a3e01868155155a1ee25984a48f1faed29a88c8f5c27"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "c7bfe9c17b7704efb233469bd04fd99a25e1b74a9b26c98e608aefcb382b9fdd"
+        }
+      },
+      "lean/experience/papers/erdos-269-three-prime-running-lcm.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "272666b98113b3019fa3c46983d75a55fc27613f8ac275f7bb73ca8db70390ee"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "e079fd3e78d7c3eb9abac3a7a4470881a2624097f433655bda93b614cec2f68f"
+        }
+      },
+      "lean/experience/papers/erdos-269-three-prime-running-lcm.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "bdc28d2af5f96765e1e288ebcd524f98d0653c8d637ca9ad768b8bf53193f365"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "83cea0dae37f89aed538b870e983ccc9a64e164de97e7e4cca42e76aadfd41a6"
+        }
+      },
+      "lean/experience/papers/erdos-269-three-prime-running-lcm.mathjax.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "eb091e5e6f381f50db7cf69a1c186c5e47ee1a06893ee5585e652db736b4cc6c"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "2e447af0033ea1be4b2acfdd673bcff20864338afdd33b83753b18795c9c7188"
+        }
+      },
+      "lean/experience/papers/erdos-68-factorial-denominator-irrationality.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "8b235df45a07bc26e51c53ef19994c69e6e3e9c0edd1e317891c603aff20cf28"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "407706547efae9265f559e52d43912e229451eef87b2e6c61064045db84d67f6"
+        }
+      },
+      "lean/experience/papers/erdos-68-factorial-denominator-irrationality.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "40c4b7b37558be3d770c67f5d57cfc6f35fec116af9087cbabe7b5d2d8af5f22"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "c59b251f27714c2bfe902ec56c35d05d24bd78eab9c64f0737d5784155b9d8b0"
+        }
+      },
+      "lean/experience/papers/erdos-68-factorial-denominator-irrationality.mathjax.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "57141ee267073b706ea89054f3811280cbc9e2ea4c41ecb9f269b9414e067771"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "fea7a498d4de31c03298e9b71533599220ff1d8c73090072de53e15c93094dff"
+        }
+      },
+      "lean/experience/papers/erdos1041-lemniscate-reasoning-surface.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "34aa4da84f27b9902f3c98826c1d37b6b4bbb9a4dd48c02d697d18adc9d1aac0"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "b3ae8442175b6f2c9896e0720f2b232f075f3dc8abf5e1883763130433b54be1"
+        }
+      },
+      "lean/experience/papers/erdos1041-lemniscate-reasoning-surface.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "a324e5a1e4dad53d9a5c8e99533db47398046212a1d6ca48770947cc826eee3b"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "d6c27b691520f4cd649d530d2d1e8e9989477d5305bbd0ebb8071aaf19819d1e"
+        }
+      },
+      "lean/experience/papers/erdos1041-lemniscate-reasoning-surface.mathjax.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "64800d1ba1af1f8375e1a4a181db4c39fb00024eec4349b9015249edcae9c2ac"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "d125aadbb557014eeb1c79eec7789a3eda3bc25803ad6bf9668974643d08ce2d"
+        }
+      },
+      "lean/experience/papers/erdos1049-rational-base-lambert-reasoning-surface.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "349f85dcf1c28a01f4995d19eab19b421c2d33b6780710042dbebac70159ec09"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "2d2e10915152ed700f90765e92912128664fd0c23cfa04eafaf877353e177797"
+        }
+      },
+      "lean/experience/papers/erdos1049-rational-base-lambert-reasoning-surface.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "9ecba7ffd9c6034b8800acb9e38cd8de195f73ccc95b4e4909ed58dbc75afe87"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "1f812b3b92104ed85fdf7adbe39ebdf38137f99b5272f0a7907ef2f3b31df4b9"
+        }
+      },
+      "lean/experience/papers/erdos1049-rational-base-lambert-reasoning-surface.mathjax.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "3dae403601fc8542cc34d2e25dcb47e1f9d41a820436668f66dd9d501a6ce4f2"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "14aee32ee166e65e7efe4f1ea8ca48d116f5e8ed8b34ee66583b5336c1a5f756"
+        }
+      },
+      "lean/experience/papers/erdos243-reciprocal-tail-reasoning-surface.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "a2b176666ea8e0510c5cdecf1c10aa69c1446d9cb874c6fb6f9a272757dc2087"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "69ef6e158a4415dfe6eea70d68923702b22e9025ac38f75e25b8024487ca3d96"
+        }
+      },
+      "lean/experience/papers/erdos243-reciprocal-tail-reasoning-surface.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "21c80db69df772890988c13ad86204ed5bbc8dfcda305fac1503732609eb713b"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "6aed0b74c6c1d4302bef4029dfb7f7a29ec307e10be98608bfda80976bd08d45"
+        }
+      },
+      "lean/experience/papers/erdos243-reciprocal-tail-reasoning-surface.mathjax.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "8f481580ccf1fa6fe13f698ba63d211bcdd7d8e604bb44bb83bab9cd8c203693"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "c325a1282fdc3b8512a9fb322d7b4c76b1d99815067a35ee4f8b765205c0092c"
+        }
+      },
+      "lean/experience/papers/erdos249-totient-reasoning-surface.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "8226001f504689c1496be25e6b656d32b8ad4614da4747ded90ae20f62e3bcb8"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "d964e975ceb308bf698ad5a90f9a2b5d164ff1e1e998ccaf03eea5eb795e8cf0"
+        }
+      },
+      "lean/experience/papers/erdos249-totient-reasoning-surface.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "71766b2a4f5e7dc86d384c1724e676df7d9911b115779e4ef30e51a4a95ee5d0"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "c228b282e16c5e5400062be2343a149b57ce1f7c97c06246a2ed8cb77d78d92d"
+        }
+      },
+      "lean/experience/papers/erdos249-totient-reasoning-surface.mathjax.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "0efc67f312df789d48de38d53ddad338dbff62c86dc4e9d0c28ecda307365d53"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "f19af5b92cdf8693ee41a7b3050b99412740442aa9f5226a0d1c2652eb370a1e"
+        }
+      },
+      "lean/experience/papers/erdos251-prime-gap-reasoning-surface.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "f373f4299996693893b991f7b4884e4ef4db486d1fa214cdc6d6e39d8ae448ca"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "e4e13564ff77a6f6fd9da3330c2dd3bcf24f2969b902a888192d096d908c9075"
+        }
+      },
+      "lean/experience/papers/erdos251-prime-gap-reasoning-surface.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "7384044fab710a3e8d90e64d385832597945979ae3490f3c77c92f23a5daf8f3"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "5d0115e5ddb8fccc779c0bf39cfee36c5c5b350661d5199dc049deb338b820fc"
+        }
+      },
+      "lean/experience/papers/erdos251-prime-gap-reasoning-surface.mathjax.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "1632298cbded50f816aa10139dfefd0482d74b25d864c8612dbcdca257514e1d"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "4ff0c0a6992403f4569e8dae4441f107586d4e90d8d1d17ee99877d7adccd38d"
+        }
+      },
+      "lean/experience/papers/erdos257-expository-sums-never-fractions.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "96c80be9065a07470d3b556f118acbd14c7ff2e7e2e97fbd603e945ed44c6cfa"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "4b4c8a3691ad6211bdb713e86df76f2acf10325b6e3ed57e4f6d234b39860ec6"
+        }
+      },
+      "lean/experience/papers/erdos257-expository-sums-never-fractions.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "72fbde765cfc76734adf6d4db4f98e226f7b372ee9db25e40625183e8608ab10"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "1fd0190fdd9d16339196e351b7b01ded6b778055eff83a141d2ba1c528aa6aec"
+        }
+      },
+      "lean/experience/papers/erdos257-expository-sums-never-fractions.mathjax.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "b32b57705f67139bf2ff2f739b2f92e1b17890187b123abe06544635e2648b19"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "982813c77af4c46868a770ac751e0b1faf2bd1866677ea4b669f258c8fd2f97f"
+        }
+      },
+      "lean/experience/papers/erdos257-mersenne-reasoning-surface.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "9922cf422c7c11834b9e46365fdfd0391a390e1e32fff1487ac4b47c81aee292"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "623cb94144b634ddede2acd737cd2ef2ae78262bd77bfef2ae3810ec2ab27d6f"
+        }
+      },
+      "lean/experience/papers/erdos257-mersenne-reasoning-surface.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "72593d2e5d916ffa2c0161a0355c953428849d9bf02ee08f8759049752c6c745"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "926f09e210efe3470b8ea56bacf24b5c8cbc911337381d16ce35213f7c149988"
+        }
+      },
+      "lean/experience/papers/erdos257-mersenne-reasoning-surface.mathjax.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "9ce31e297ce0ed4ebedd1da14051615bbdb69e439e97db506aa167e01348c470"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "a2d18f805ebc94f5bb1f21170f3a0bced75e87f083df60b0bc40b1ab3c4883c2"
+        }
+      },
+      "lean/experience/papers/erdos269-running-lcm-reasoning-surface.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "8da9a92cda542ccf71132a7917f3817ddf08be0ae049585f78c63ff7521e5bbe"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "320f2b352f22bce8dc7940fc18aeed689ae9cf5d6e56b8318438b64fcf29dcc4"
+        }
+      },
+      "lean/experience/papers/erdos269-running-lcm-reasoning-surface.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "b8fe67448034e5b2e7197038399689e8415bea8138602962500dd07cc2c8b81b"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "53334a8ba91d9480d5c3f879f87114ab5eb4fc52f3ddff6d056da39101e3ec2b"
+        }
+      },
+      "lean/experience/papers/erdos269-running-lcm-reasoning-surface.mathjax.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "3d01769dc126459753329e482dd881c672affc86080053ab543374a66856e212"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "e05715bb3dd61821094950cfb2a61b61de26bcc09c0df3bd9a93604a92732f6b"
+        }
+      },
+      "lean/experience/papers/erdos68-factorial-reasoning-surface.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "6d51be12dbd8161a46398f372905ee277c0c97c0eefae3cd8eb23f958536877a"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "331be000da3bf1197ffb04ee3892141e3b03cace83b5bd85fc076a86767df079"
+        }
+      },
+      "lean/experience/papers/erdos68-factorial-reasoning-surface.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "3da7c4138a908bf538e83624ef39097d6b30e988735b360a353c2a8a3f7170ce"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "2a492df12c87e92acd1c6e7532da5c7aa1f1d1031a2661f9ae9318470962017c"
+        }
+      },
+      "lean/experience/papers/erdos68-factorial-reasoning-surface.mathjax.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "1fb6067a424a740a186cf7e67cde628bd112b2f2f73968d0bfb4b2ef2469baee"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "8091342d21ca6ce1234ff463a6965e0ba6bdc3ed18b7b334cdac1501df23da25"
+        }
+      },
+      "lean/experience/papers/index.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "90d4de22e3d219e5b00fcd83f6def5b715075af21ae58b5444b5d5912bd6dcdb"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "33a0db8e540b319b73fdc7ea7ac05438f7b2d1ec11a6ccd4d0694a95d392b77c"
+        }
+      },
+      "lean/experience/papers/optimal-sparse-perturbations.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "059559e797950174ce5deb0f83c70f4d6d42bdccf2553883ef0eee3abb9d40cc"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "b855ddd5bb69fbaab1faf5515371c6200c2cbe438bb3e4e127934a4718cf1ccc"
+        }
+      },
+      "lean/experience/papers/optimal-sparse-perturbations.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "cfbc7c908d88931d53e5a0763ced11600dcaebe2f0625747a4da6904025d35ee"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "4f6b8a48c71f02bd0f3f3fc4bf197b1c44714456ff686e3c645f0d2fad5b0625"
+        }
+      },
+      "lean/experience/papers/optimal-sparse-perturbations.mathjax.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "86093887c09a90e42fbe3bce56c393ad69f51d719c537dda34e4338adaabad5e"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "31552b975f17fa35015eee1546966d1d88d462f94c64b951257ef89403d3205d"
+        }
+      },
+      "lean/experience/papers/writing-a-good-mathematical-paper.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "3823dcc754702344a6ec709a2e2417df89671becf24d1e61aff2f573a2754899"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "eb5b238854c3ec32a0249f09db05cf7adf0c1c6d33547ff124dc4899c2249421"
+        }
+      },
+      "lean/experience/papers/writing-a-good-mathematical-paper.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "c40a4540ae125b0321c1a0e6d29eba8bce56c2426a86659cd76b4e672a58ef38"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "c4eb27c386357a722008a2587ee8b41592e6aa8cbe804627a23e82672e4cc4b2"
+        }
+      },
+      "lean/experience/papers/writing-a-good-mathematical-paper.mathjax.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "18e49bb7dd52484e9c100c4686587971ba5fc425e55dcd0fa5e6f20a728843bd"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "e209aa27889c7b844a47bd65dd8ff51540e1ca44a68de1ae621ad15152542ec2"
+        }
+      },
+      "lean/experience/papers/writing-mathematics-from-reviewed-revisions.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "9a729c7e3c323febc2b9dc260ef701ec8950c2599809bc5937e4a5a138205b0f"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "18fd0129f79abb502eb81a5dac2aa7d83f4d7b45c291c6038d7eecbad7e3edf4"
+        }
+      },
+      "lean/experience/papers/writing-mathematics-from-reviewed-revisions.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "3a7bc428f8de5aa01ada879067dfe62af97b1f8e923bcb6b6dc3967183d7c4d4"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "fab40e1ae920f17d18f792eece1d568002dc231158c75d605d4def7c7aafba95"
+        }
+      },
+      "lean/experience/papers/writing-mathematics-from-reviewed-revisions.mathjax.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "fb55b6f8d19b06165ec72792913379e48a795f0bd3df443c0acb9af57561d3b3"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "f83ca9854e6fbbe1d1f68f663ebf631198bbe952e2b8b34d8a6db26c528641e2"
+        }
+      },
+      "lean/experience/problems/erdos_1041.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "727c601aa774c9ed28ee2eaf3f88f6fb79ae5e4b8a6b348dc02e7083d7f38449"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "fe647e0a5519c717bcf9d29b56b4e72ebf65867c34d6f60c59d1ba8f0e12d509"
+        }
+      },
+      "lean/experience/problems/erdos_1049.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "e9baf1264198efd199b73d43c41917d64260754974370d9c71793fa06c9b5922"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "34cc9fb0c0546a53aef31cc5a88c797282b9992ef8af3c4220eb62b207525f27"
+        }
+      },
+      "lean/experience/problems/erdos_243.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "1469da07ed8f189e99d7747796826b19f7523216830594e5bac36470eb5b737b"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "e747cae7127b898b8fc514fc9d838dba719e873be31438c7ad64e9caf613f91b"
+        }
+      },
+      "lean/experience/problems/erdos_249.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "9c9215cad168218cd1909fb4f3bb37a1da88709c332cf759cba3fb2bbc1428f2"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "3efcf86122dad62db5650949320cfe0f3bc683b93187d7a32970d51cb8df7d9e"
+        }
+      },
+      "lean/experience/problems/erdos_251.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "8d9e9a388deed38b55b20de30e71e876ccf154491e9a838100ad81dcdce0baf9"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "482458cadfca0698a77bfa6b143482db9facbb066e3c8a6b79e08f86cece056b"
+        }
+      },
+      "lean/experience/problems/erdos_257.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "ce528f8a713bca7a7ce1c748ca2fd6858362e61006194fd6dc7f8c3afd133e3f"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "55c24a163fb5b24e3c04faa0bcd6565c01fa88ffda1d689b6a411dda8b0692ba"
+        }
+      },
+      "lean/experience/problems/erdos_269.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "64b9febf9a548eb65b7f6c924c4c1ce5fbc01dc45e106da1e611413b8c758734"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "a7a0d89e1ba302fad43041304fa2c1764459572570daa8289ee4e523ea6a2127"
+        }
+      },
+      "lean/experience/problems/erdos_68.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "1f3c8cee182812cb05d859dcd205dd12ccbb687a7de235b124bb930c543b4d3a"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "28a653e38db1fa26cc470a387e5efec19c22b18300af4c7c9a41808d84a92678"
+        }
+      },
+      "lean/experience/render-receipt.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "ccb34eab4e2174b305c98ab20550e7f4a6c490a8404772a7629bd20fb8a996fd"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "a65f972e74b89b667859112c26e23365702e7199bc732d751737a8e6696ad70f"
+        }
+      },
+      "lean/human-source/README.md": {
+        "after": {
+          "mode": 420,
+          "sha256": "9412eaae6d2475192840694c3d505d75ca1b65df6e8224cd3fc98a115931eaa8"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "15f8ebfc1eb4e1699b64e43e3164369fee236dc0b9b8cd6a2849661c334428d4"
+        }
+      },
+      "lean/human-source/docs/reading-edition/weighted-257-task.md": {
+        "after": {
+          "mode": 420,
+          "sha256": "9f35dd5d11e46a2bc13880f963f723f9124d4b29da43aa02bb76181d833d1364"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "aef833af3cce15890c08c2a96439fe835fe99f20f78beeea7c33129c1ef4e5cd"
+        }
+      },
+      "lean/lean-source-manifest.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "47aa5ab3dbdf880d7e87d1de37584b010f0b014ed03d843402a14a978ac776a3"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "120aa92baaa23c7afc0dd9ec8393dde959789347904a53a8f2acee6ac5ff30bb"
+        }
+      },
+      "lean/paper-lean-coverage.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "132c36881b9d10304bcfecdbfb73b6ed4d60db90b645203667ae93eeeff50127"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "633921ae2018e3e674609382150b4733ae6f071793a1589a1ab7f0b4985878a9"
+        }
+      },
+      "lean/problem-library.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "f9246065bae73d27271e29729d1404ce0f886001be5b1e36eefa91ffca1b6425"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "c5dfe78dfa4d5d1f478a458a55a4e65868d60fb827c8e5184aee32a0079f2b8f"
+        }
+      },
+      "maths/assets/excerpts/erdos249-totient-reasoning-surface--batch-04829856326e.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "04829856326ef57da2fa9914862cdf66808c04fd9e6b35d57fb24de6bb9f39ba"
+        },
+        "before": null
+      },
+      "maths/assets/excerpts/erdos249-totient-reasoning-surface--batch-0a4b5b19482d.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "0a4b5b19482d5e7635fd16dd1e52a04e3d4f8dcddb7421d85b90f24e3427f748"
+        },
+        "before": null
+      },
+      "maths/assets/excerpts/erdos249-totient-reasoning-surface--batch-1c42b590067e.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "1c42b590067e29a82ba89f742eaf978ff0d0b7546bd3d48e9d30d65453fc1e5a"
+        },
+        "before": null
+      },
+      "maths/assets/excerpts/erdos249-totient-reasoning-surface--batch-4effa252f67f.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "4effa252f67f77f8d4242ef99ec710c406bd1aa6529c813402d9cd613ab57120"
+        },
+        "before": null
+      },
+      "maths/assets/excerpts/erdos249-totient-reasoning-surface--batch-6dde3433826b.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "6dde3433826b826b1e5638d8c2364165d9f328f681876dfe3e7f096c2d55b59e"
+        },
+        "before": null
+      },
+      "maths/assets/excerpts/erdos249-totient-reasoning-surface--batch-6e23bdf0cfc2.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "6e23bdf0cfc25ca8a38359a49b8934a3f556519974681aec32eacc8ab2756e99"
+        },
+        "before": null
+      },
+      "maths/assets/excerpts/erdos249-totient-reasoning-surface--batch-777184a6190a.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "777184a6190a107f0b4c0bcf55e15a84c12c0aef74b5ed26858b9c2bc76cbe9c"
+        },
+        "before": null
+      },
+      "maths/assets/excerpts/erdos249-totient-reasoning-surface--batch-7dd5247b3168.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "7dd5247b316889ec368b73ea5097f292f91fad76b8369e58c444008fb2efa016"
+        },
+        "before": null
+      },
+      "maths/assets/excerpts/erdos249-totient-reasoning-surface--batch-7eb240e70f88.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "7eb240e70f88f03ade0464dbb48e8a74bcd98397354a02f2e2b5fc75d02e484d"
+        },
+        "before": null
+      },
+      "maths/assets/excerpts/erdos249-totient-reasoning-surface--batch-c653ddd78782.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "c653ddd78782024db1059cfb568b0f70bb94a94f5815d89cc461e60e3e298bfa"
+        },
+        "before": null
+      },
+      "maths/assets/excerpts/erdos249-totient-reasoning-surface--batch-c77f88a6a384.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "c77f88a6a384f59a74c190f71a3fcf0c526d906d24c9f9ed303d2ccf17bfe348"
+        },
+        "before": null
+      },
+      "maths/assets/excerpts/erdos249-totient-reasoning-surface--batch-ecd763249645.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "ecd7632496456fe11cef7ea3b863c2f936e276fb06e78133a552454258df3a5e"
+        },
+        "before": null
+      },
+      "maths/assets/excerpts/erdos249-totient-reasoning-surface--batch-f0e7ae328168.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "f0e7ae3281681a3373a72f433b5323b96e66cc71c23b60be011c7a7c9a35dafd"
+        },
+        "before": null
+      },
+      "maths/assets/excerpts/erdos257-mersenne-reasoning-surface--batch-11f9fb4f2d0e.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "11f9fb4f2d0efeebcc0ab984bc2a27bcf8f8fefc5953df70e1aab465ca8df040"
+        },
+        "before": null
+      },
+      "maths/assets/excerpts/erdos257-mersenne-reasoning-surface--batch-43bb19782091.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "43bb197820914946d8b03d5f6d539d6385b82c74ab4f185b87ef97f9e95e41f0"
+        },
+        "before": null
+      },
+      "maths/assets/excerpts/erdos257-mersenne-reasoning-surface--batch-55199ecdb439.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "55199ecdb4393a37769a65dc789f5dae4ffca26d5d3ce6804cb2daf7869e2ecb"
+        },
+        "before": null
+      },
+      "maths/assets/excerpts/erdos257-mersenne-reasoning-surface--batch-571826424aff.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "571826424aff9ee18627dbaa922afa10c0af65efaa42394f4e14b67d70938dbf"
+        },
+        "before": null
+      },
+      "maths/assets/excerpts/erdos257-mersenne-reasoning-surface--batch-65654ac15b3d.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "65654ac15b3da61b8e0753eb73730a1e29a420b234b569ad25e0ad5ac52ac8db"
+        },
+        "before": null
+      },
+      "maths/assets/excerpts/erdos257-mersenne-reasoning-surface--batch-6d0d7a8bc975.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "6d0d7a8bc975c744c44b0662a8059bd0470a0a51f58ac433522915a5db9bbf4f"
+        },
+        "before": null
+      },
+      "maths/assets/excerpts/erdos257-mersenne-reasoning-surface--batch-9e79fbbf96da.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "9e79fbbf96da59a70fb7f245b28f8195d2a9a08a9aa4ba7f39c993dd64ab3d5e"
+        },
+        "before": null
+      },
+      "maths/assets/excerpts/erdos257-mersenne-reasoning-surface--batch-c32a59d500fa.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "c32a59d500fafb4b8805d4d286c9a226d4497b38b29d44c18b9b60c38cc0c532"
+        },
+        "before": null
+      },
+      "maths/assets/excerpts/erdos257-mersenne-reasoning-surface--batch-c5fd7ded1938.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "c5fd7ded19383b238045d9d882e361a5d634bc483c93d28e7254866872c89dad"
+        },
+        "before": null
+      },
+      "maths/assets/excerpts/erdos257-mersenne-reasoning-surface--batch-ce4fb79b9da2.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "ce4fb79b9da23212c5260607c562b4fea253986313a673ab6ab14c7493f63b28"
+        },
+        "before": null
+      },
+      "maths/assets/excerpts/erdos257-mersenne-reasoning-surface--batch-e714d951c0f9.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "e714d951c0f9f64c71fd103685118ec31720eb362b13cc1a314600c91d711b7c"
+        },
+        "before": null
+      },
+      "maths/assets/math/0157a2267340482f.css": {
+        "after": {
+          "mode": 420,
+          "sha256": "0157a2267340482f090ad3022e93b6b119929999707202bc99cdaad555acde2c"
+        },
+        "before": null
+      },
+      "maths/assets/math/06d89a15b04d9f5e.css": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "06d89a15b04d9f5e95d90340eda6c929270f3c1fe7d52408f86c50153057e73b"
+        }
+      },
+      "maths/assets/math/715942ca3ad34594.css": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "715942ca3ad34594b4f94d8a5e102a746ca4638a6cdc2320df0d39533470c498"
+        }
+      },
+      "maths/assets/math/abb87ddf1ab8fe19.css": {
+        "after": {
+          "mode": 420,
+          "sha256": "abb87ddf1ab8fe19e19f7c6fe9c32bf323d68b8903c4a1a2c72845ac1a7397ec"
+        },
+        "before": null
+      },
+      "maths/assets/math/ba75d92db1137f4b.css": {
+        "after": {
+          "mode": 420,
+          "sha256": "ba75d92db1137f4bc88b9711580d228c218a6fc14f68f17fec031d05c8e7c693"
+        },
+        "before": null
+      },
+      "maths/assets/math/e88b338e5df4bce1.css": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "e88b338e5df4bce1e22825397b6ff018b1d2c86b9b6fa5452087226df7766df6"
+        }
+      },
+      "maths/assets/universe-companion.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "4bbda8c60531602007d127a2bca00f93f4c2731881f6f93fce58c0379edeff16"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "0ec611cf27cd65081efeeae808592ecfc46cafda1b6c5387ae749592abac44e4"
+        }
+      },
+      "maths/assets/universe-data.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "1ff463a5d1188cd308814dd4d2e9127e5ef95965c1ddfaa56d080e2ee9f377f9"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "2f4cf89e55b7673bf37f0d3d734bada65e4b77314ba982cce709fe6564db8796"
+        }
+      },
+      "maths/assets/universe-layout-full.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "efc49425c0d4dddd356f519985e3709dde5d8a6a5b3dd8e58a5abcdec60e1720"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "3d23cabf28a0d63d84b67098cc9539d2b83137c646d3db451fc84a1ebe30edf2"
+        }
+      },
+      "maths/assets/universe.js": {
+        "after": {
+          "mode": 420,
+          "sha256": "797c92eaaa393c930e32531dbf8c280f8496a4c9c4f0ace5b1b9d7290e5cb353"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "b3bb39110ca16e7cba10ec24040c25399f0d895780e1351ee0a060bf9290afc2"
+        }
+      },
+      "maths/documents/readme.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "486c03ebc2aa64056428d0a5573ebcd5de0c22b6368d1afffbcaadf68c99fe92"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "a09bb2013b3c1ef5e6942f1e231826fe47bd5fce469666706008d956bde7a9e8"
+        }
+      },
+      "maths/documents/weighted-257-task.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "88db60e24aa7a499f80823778ce69504be9232802db2927bffe04e64461024df"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "df6a485bb54d313e5ea0f0dd4022f09919581a3ea1913faaa2c96967b4c20da1"
+        }
+      },
+      "maths/index.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "cdb8436bb49dd523ca45cc11ef6f57d31c640fe155956358559f96e514d55744"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "0b5b848df9db0680c4a93f76e2cfd4f03b415e27b3a8c0db4def3980c8696fce"
+        }
+      },
+      "maths/papers/claim-faithful-publication-systems.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "edc32482927d3a33ce5f6ff8dbc45f2183e7ee0f6eadf01c3e84864442974e3e"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "85ba3adb70c1fe5741009fd7bde23cf957866320807f618e2a4ca512a373f576"
+        }
+      },
+      "maths/papers/erdos-1041-lemniscate-newton-flow.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "3154ea95b2bbbba9e26ec2abf901f9c77799e23d92ceebfef47f33ec41e2068f"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "3a8eeb2e91cc57674621b8239cc5abd684d898bcc011a8916565002e7cd5e5e6"
+        }
+      },
+      "maths/papers/erdos-1049-rational-base-lambert--complete.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "68c799691d1a70d38b0d982784de7f50b5e85fc0320429f2a3ba662aec09b812"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "4378acf2999bf83dd78b848f8a884a77f47403764d1316900dc876cc86535bac"
+        }
+      },
+      "maths/papers/erdos-1049-rational-base-lambert.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "cfedb91a64a5ba273e55c82ded388a39fc195f0a2f0f3ef01a4e12fbb40f1aec"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "c758d38c6a17231f18428691a824cb48ba52101d1b6d1afb134636adfd2c85aa"
+        }
+      },
+      "maths/papers/erdos-243-reciprocal-tail-rigidity--complete.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "9263fabec60db4b51157300720d7a4124aca522dea3641c9f89f5655d2eb5182"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "e3e74faabe2a4201e02a7f73f8d4bb07a64403d16899967c008f9f85ee45b80e"
+        }
+      },
+      "maths/papers/erdos-243-reciprocal-tail-rigidity.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "bdc1b8e98290e95adceab863116e1efeeae1819ece0a39795ff177999758b8e7"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "0d606f4fa946d416e39ab23dfa249bff1514132a52ff36bfd25faf6e77a5a94f"
+        }
+      },
+      "maths/papers/erdos-249-binary-totient-series.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "9b72f041ab3d031f629fd230338c0d9d2893a50c1fb0939260914e6c93cb50c8"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "a84789c1631b6bcce159c1f83da9585c914e59566d3e2e68fc3167075b20a2cb"
+        }
+      },
+      "maths/papers/erdos-251-prime-gap-dyadic-series.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "cffbbef4ff6de3db592f0c8632e98d13295e6d2193413e782d266d76a7b1e579"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "35440063f8c4704f3310e608fe6d4aa131ef744aefbe91692bff82af49e5bb14"
+        }
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--chapter-01d2afddb35c.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "911904f1f3f623b4d2548c22f6b48de715b63404c9f98361da71e0fbc6abfb2e"
+        },
+        "before": null
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--chapter-08336145a41a.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "aaf0366c6d7c43e333eee48705f65c71d402d54ba7d45d266d7cf583484034ec"
+        },
+        "before": null
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--chapter-0a6d1f6fe45f.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "410633efd01e8978f3bd8fdcbbb98353546fdff96a59124d69a87d3721bc20bc"
+        }
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--chapter-1895e8af6851.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "1a20cbc8361779c08a55fe5bbb8d7ef2770053bdc0497d2561626fe99623f5d4"
+        }
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--chapter-1dd3d74d7c7f.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "12574b2b04afde492aceb1044e3ef7aa820559b99a4d85aa7669ada1cbfeabbf"
+        },
+        "before": null
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--chapter-21caadfc44ec.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "8008dfce611b4a6775d15f4b86467114053aba03ef27f27a24c7492f216b0d71"
+        },
+        "before": null
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--chapter-2939965cf104.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "416a1c038da934390aa3071952dfb36a2fde9532623115c514f0f6d9af4c302b"
+        },
+        "before": null
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--chapter-2ee80a888072.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "fda062e71d17bd2ebeee56783774a40f27452699287cd557fbb7d031a5a40e57"
+        }
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--chapter-43187e4bb6d4.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "04051a7c53fa4136f66ae65aeaf4ac9dc6bd72568f0c025f0b17802f5d7d13d4"
+        },
+        "before": null
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--chapter-4336e2be4ee6.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "3f6964bd34b761668d3fd5e5e71dcc4ef5938257ff95203f396dce87274bc309"
+        },
+        "before": null
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--chapter-4599a9a83ead.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "ef163d2d760e07b1fc44f8345725c7a49c133095c73495e0adc5b8a76c571820"
+        }
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--chapter-461fbfcfed15.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "2c30e902434eb25041973015a19250707419671a84271293829af505e97ec82c"
+        },
+        "before": null
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--chapter-506f7d5cc95a.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "7508aac2d9964ed5270a3b356fd4d8a70bf1c3369f90b8e252b5e015bccb8c47"
+        }
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--chapter-55145dabe6f1.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "e5b47be3355433c89dd59eadb3ed812ef9277326bcdc3d844a63745f2699f41a"
+        }
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--chapter-5fb2fb4eb4d2.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "5d8afeb26e66331206cef8c8bde22b6d1af0b46a3680f32729d7a08047f5ddf8"
+        }
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--chapter-73575e1e4a56.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "559c67263410b8b8158b7ba44c358c8f99bcb6068beaf48f0e971f9882abb082"
+        }
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--chapter-83350a11afc2.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "f430015225349b9961b3b8a63431161c31a888b203111681b509c33d8ae9f9bc"
+        }
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--chapter-9d32bb8f3119.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "747956a80b7da164813d146f8516a7e8b9c89646bc913cd1de52bb7f5f9e213a"
+        },
+        "before": null
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--chapter-b892695384f9.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "a107f6d14bb27e5964da6136bd647e1118760de6621471080bb745d9ab72125d"
+        },
+        "before": null
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--chapter-ba37876d4371.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "48abcc773083ca3949f9d417ee588230f9fff1c6a7a2f024e93b7d850d7be9c9"
+        }
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--chapter-cc22d364b555.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "fdebe566ce78d87cd8e2138ab5599c532224264fc8e303a076be8b5eeb599591"
+        },
+        "before": null
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--chapter-d4654e582a8e.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "a6062874a93f6b907d4c077a91fbfdb019347b451d1e4b5e33bfd2f571606c31"
+        },
+        "before": null
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--chapter-d66bbcf941eb.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "4256a29250f45d180df0a28fd549ff5b9f8b118e2bf444c238a486c6bc57a121"
+        },
+        "before": null
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--chapter-e9da5b2f6790.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "4e490a22839a904c47f8479594a1aa06705af8c1812bcc3d7041049f3bb7c39d"
+        }
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--chapter-f8718cdd9390.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "d8309ba25f063f18e826652280b42e470f44180488090e9d21257498455f66f3"
+        }
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--chapter-ffc61d21ac9d.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "08b44b6f6eb5ca6f599c3efbed710b2c9c86d0b2c37de20b70d86b248fbd41dd"
+        }
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--complete.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "37fc42e34ecaf9f8115b1904225d878d8bb7304d2e2f2f5a9190ebac0288c1dd"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "47891804b2398e403e56a1f58fcce0d6d5e9a4c8c2c3f0c3ed5facfbd9f85ae7"
+        }
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--section-011da4b55a49.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "7ee71361d92166f13213340de303a4bbe3fa5f8f64ab5c49c497de773a948601"
+        },
+        "before": null
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--section-01d2afddb35c.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "d96baf8d5a786815ef180594f9aa947bb0a89ea341eac8a458166d36bada451e"
+        },
+        "before": null
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--section-0a6d1f6fe45f.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "b07537fdec87cf338d6fd778075219359e852cb101cd56f151431d9180ed0532"
+        }
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--section-1895e8af6851.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "d75a09ab013c2045cd15bd7c9684d25148c3aeffac6181eedcf1f61ae90e7020"
+        }
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--section-1a2f519297a7.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "43696584040a8e11eaa73489d0306887e44515b664e811aa65c7990b7c4dbca5"
+        }
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--section-21caadfc44ec.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "8b58342faa828065da8ff23fe8bdc9fc71eb1c12d09ec06469f3626efc079936"
+        },
+        "before": null
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--section-43187e4bb6d4.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "2d3d55fe51aa626cbcac62128719128efcf47317bb14d32aba96bc42c30992eb"
+        },
+        "before": null
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--section-461fbfcfed15.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "127484a68cc0bb17d55ca44141a4e85a974c0545012f62f96ef1bc0aea97cd45"
+        },
+        "before": null
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--section-492a041ae967.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "ebf855c1821aa3d453581a349c8c810562503aa88c4663e66f3788fff4d158da"
+        },
+        "before": null
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--section-49601dbe0174.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "5c920fd94953e2c357beda61a6c80015054c35d25c8bd8c8d40a9e58c3d31117"
+        }
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--section-55145dabe6f1.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "f2f4c20eebc99b2b0aee1bc68635ff7b87fa5b4b7c953c33624088c9a0b7dbb5"
+        }
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--section-6dcf44d943e5.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "5bd14bcad7720175c0df9552f953b87a7615cb29e372bb83a7ccf833017ce2f3"
+        },
+        "before": null
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--section-853a6c3c28d0.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "4adc723213674ea68239d98d10cd6a73f31fee28a318eb640813d050133b1112"
+        }
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--section-9d32bb8f3119.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "d153d3d8cd2e85f972e96970f60636a736d6e1345f167bcbe1f9c3e7d8f73480"
+        },
+        "before": null
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--section-a34c1756787a.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "ced568acfefd5942896168741657ef9551adaec4e81c4cd77313b6943692f8a0"
+        },
+        "before": null
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--section-a998ed700afd.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "c4d00e206571f07a6cff6e4ea3fc55e9f6d4a19cc286180df5a21e562e06eadc"
+        }
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--section-c1cd0f1aea54.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "850a716bdb628e82ce046789c4c6dabf96f8d5290478537375d1d78a20b4aae0"
+        }
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--section-dc12e6c45a8b.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "931f64613d5689f824900d0832aaab6e6d8a06dfdb29110a0917b5228a79f2d1"
+        },
+        "before": null
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--section-e9da5b2f6790.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "7b5a1f5d74d249561b1461823382b86c22fa535eebfe02d10582a35b35a21bc4"
+        }
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--section-eec4b0545e04.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "59ef1dc963ff85262b3fffc48ac5ae50cb63b2f868227c9f0f90563865dfd922"
+        },
+        "before": null
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--section-f8718cdd9390.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "200797967c664433de6ff2e05bf66412606356cc5876ee6de29022969311c338"
+        }
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries--section-ff4174f22776.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "2277b9f1e411249226b116e62efde612216ee5da8741d2bfe99166e653bfa841"
+        }
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "6438f8dfc388349ba7c25a9649c83dbc2e11759dcde8f05a520325419dee68e8"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "7de2b3a482b909115ec44fab2f9101f87a6517f70d6effcfddd93956c3e6ee8a"
+        }
+      },
+      "maths/papers/erdos-257-mersenne-support-subseries.pdf": {
+        "after": {
+          "mode": 420,
+          "sha256": "1af62f16ead7d782bd5b5c8fe6caf162f513992827e5114b69c1a89676b39a69"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "56d5ab6d4115c2275bbdee90b95310f5a985dbc059ff06f93e63bc2f5ffe30f0"
+        }
+      },
+      "maths/papers/erdos-269-three-prime-running-lcm.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "2ba3f5bfb08f9037140492a4be6d12a93bd7cd2203de08943ed78530f109cc2a"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "9966f1cb4beab9bcf8097160172b1637f2adb7b96a4d4696d0b7a4bcc0019e86"
+        }
+      },
+      "maths/papers/erdos-68-factorial-denominator-irrationality.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "09ea0df9a681ba20b2a084f9422ea8d1fcf27a086180ab8567acf22848698ef2"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "9b04f782df1379fcf4bb7416d854a28f24c581025b71b6b93fbc68195d3d0703"
+        }
+      },
+      "maths/papers/erdos1041-lemniscate-reasoning-surface--complete.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "db0d14928038c5f92a26fa95e1b607509a56fd44b9372fe2570aed991faf49c3"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "594d76078f7cb22bb633cb9f6e73a9f9de0085023c4337febe1376d78fb3963c"
+        }
+      },
+      "maths/papers/erdos1041-lemniscate-reasoning-surface.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "440f2f5dc0b19eca0e821ee98c70dd903e6abd650083fff352b5e718ba183e4a"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "3e7cdf3d72e9ea49581fada933c0bdf47d99ed4e6999fa85cc8b27768dfec622"
+        }
+      },
+      "maths/papers/erdos1049-rational-base-lambert-reasoning-surface--complete.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "e9417f400e7f3291191cb6279c737012a5cadebfe5c36828fb4135337532077b"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "4af769c0c02b1ad4aba585c9f019cddaff284fe0d407ec82aaef577b26903342"
+        }
+      },
+      "maths/papers/erdos1049-rational-base-lambert-reasoning-surface.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "a8694d3eeb93bcad1863307bbb5e674e9806be217506c53077fd822cb22942ea"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "70f67df4e53db100a1622f538b0cc966a292ed82ad37a1a062bdee902d41ebbd"
+        }
+      },
+      "maths/papers/erdos243-reciprocal-tail-reasoning-surface--complete.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "2d4a421b2a9d9cc3604525fb47af443c442135b7daebb1d486a94e09ec10a61d"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "40c918942a12ca291d4c4cec4ab73fe36e9904ab5abde0642e775da7019043e7"
+        }
+      },
+      "maths/papers/erdos243-reciprocal-tail-reasoning-surface.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "bd69f3a315fde01dc3aadcf9f68c8e0a588f2f0d1e296f3b05a835273bb17e3d"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "fed715cc334e2e386c09d7bdfa89064cd022939a4cea6207adc3309e07f7a29d"
+        }
+      },
+      "maths/papers/erdos249-totient-reasoning-surface--complete.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "7bbe2a1e8e8a6bd7727f834982804fe4db2991aba115c770dff994536b7eca7b"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "4399212f4a90deb73200b4da034ba41ee87bd9335796ff8fdbfb53fc9f28e420"
+        }
+      },
+      "maths/papers/erdos249-totient-reasoning-surface.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "654c07b8047ed335ce8493ba5e4b676041e1b44236de9cf21453cad1dc3c52fa"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "2d8bf9f8c955c788ab193b0ea327765abfb6158e96f582f037a4746f6ee836fc"
+        }
+      },
+      "maths/papers/erdos251-prime-gap-reasoning-surface--complete.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "23cbb696963729baf19814af3821dcd73353f6695e8490991906bcecaf8ad795"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "a2e30507c69a5ad1338b41c6e50addc21e3ce3cdbf20a70188c13a7008aaf745"
+        }
+      },
+      "maths/papers/erdos251-prime-gap-reasoning-surface.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "8affdc473c29992f6eac176aa17641b77d135d145329013a6b639655b3608516"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "06a467ebc6287773bc3dfcd83fe6c77ae86de350a3f2ebf4a4c71c3824949f83"
+        }
+      },
+      "maths/papers/erdos257-expository-sums-never-fractions.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "08f4527d7b5bcb6bfd56004bd1b710666351d23e6801d266d95a0ed106c53f98"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "60ed1c1be48ded76155d6d7ed5007b49f4eb4415383985ccb8360e6b15bf9171"
+        }
+      },
+      "maths/papers/erdos257-expository-sums-never-fractions.pdf": {
+        "after": {
+          "mode": 420,
+          "sha256": "34e8bdfbe8ca43adff8e7e400cad8bf1e109cc76150f57fb98184d55d1944e0d"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "5ba7e503be74eb70e221696882eb7e8b3d71543a716903b2dfe8de97db10698d"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-01ee2280e215.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "283d87f5b98051dd725d63d6f9e29abbcebbb59c8aebaeb59a37183831c292b6"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-037b0f5d1ded.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "36f0f714e6fc2a8d37af7808169d740df472fe40e86e3b8c86153d08b5de2520"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "d2c6a09f2dfacef42af1786651d3c24b71a8414d6bf37094a1de93d8fe7ee3d4"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-09d4b62bc673.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "e924835f0223a64b8d9082fade8e62ef204081bf7ee97d5ec23a851400fc901c"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-09d76c2b9b22.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "ccd1eb7cc561351d269c4de238c0bbbc030535315e4f0fca44a0e7b9a36ee3c0"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-0a0882eb7944.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "62c5a7f7a5952b2e5142bc3e8740342147414cf122e57894ddb0fdaf02c47881"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "a7c25db2a2fb4ad0bb570cb98f4186a80e43c37b87a64dd68518fd9a0c4079b8"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-0a23e0ab29f5.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "f3c4a4e3382049ab59478dce8fc5fe0542749b4297c2091403d7b6d2c60cd79e"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-0a2485bc36ba.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "7c027d9399554862f1cb919e314d234133741b2789e5705aa3bf0e2c7662b813"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "ddde40b5e5baa35254bdecb939eda602de99fac14773205e668ab38c80cff44a"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-0b0b625f6ad1.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "4d26bea2e056e377678d97cc57f32dd2f0307dbd4576db146724f581be5d8455"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "7335372b34a7adb2bf93989dfe61d4709897b66d90c255f6054ab3d202f269b5"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-0d465e607013.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "c659d02e480c14d2afd31f34c99dab70ef37b646ebd8cacd13b8767028df4e90"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "097bbb0aa0f92f1014d2c095f287d4c05a1c58402e44d840be4e603ae385c769"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-0e6bcc942c09.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "91f357f65e2531a8009f4ca445dff8ec1639557f4d16fb46dd79fce6f1d611d5"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-0f0c6b982f67.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "445bb4e1d9bf6d81b3a59765ae4f276be83b8a2328dc8a8a3eb3ba000353d791"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-11454d4e0120.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "639dac1e3d0f003a5b587fe2e4365c53bbc523616de076caf7835c60e33399fe"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "f45e7dfdad17d4bf2df1cb275bc87f4d58760bdb7d71bae11df4aea184ff307d"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-136ae34498ed.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "38bffdb7e20da19fac90fa38df48d546c763d7294fca0fc4fcd3c02d8f2e4386"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-15d43894c73a.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "2d15275dfe3605dfa902674c2daa3b9c54074112dd457ac4d8d6db8572d47900"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-15d6d67bfc68.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "5d409f85b2ddc8d15c7df331e309ef2669d1b6cb428b97b5ea4237254756bda1"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-19b3fc124218.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "bc2166e2f50cf6ab42dd137e5c5eae509851b47b57faae9acb41e0d9206cdfe5"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "be22f73ff6f5c04ba4f018486a1cc09bc07ffb68bf8046ba47ca60d8057369a7"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-1ba711483d1b.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "544073e2da5f66c5a8c14c075099a477330676147a5f9bbbb74a9c1f72afc1e1"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "01eed85715c9592d8618b347391359cd0225ca42dd13a372cadf18eeb7a63044"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-1d2a073cbc0a.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "8497f087176e899e86b569e0e1aacedd0b92b76925094f6ce14066c015b7c1c4"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-1d484116ced3.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "893a8e40a70b1bd0dcf936c9f49cc0ee768c4a0ed62b74a0cb025a18354d00e9"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-1de8d2024bc4.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "64ffa56282bc9fa1f1b59944f5ac58f5674fa2376b3d03c21b8f93d8b6c3b556"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "452e63f65ef84b9e53658788ea6c903dbfadb480aca77aa57b4ecd3b3a7224be"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-1f903ae3e5d5.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "76028e8bdc4f6527fb07ae94bab7ec570f8329e5bff51bcc2e273b647947167e"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "4aeca7e87cd095a2046fbca09750f0c1cb396af499d8cf3c9219ee155254ab02"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-20862b1015d4.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "1a229124837b761166dc65307c10ae7825251c156966aea8c74163385575f115"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-280068dabdb4.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "4a99f59d05833bef031af2da2b540e9634cf637ed49b6c2c3cbac3df5b99ed2b"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-2b76736f95a3.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "658494a0c2ac661098c020ea098b7da2e60ad51fd6330cdc97d5aafed70a74e0"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-2df2ce20ac18.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "80a9a1805bc559eb751c24363f55bd5d64bf1edb3aaf51045fcc3a32c910bea8"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "e94a6e893bb644ea41fc491a49a2f2859b52c6726d694bc11dece170403f1697"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-2e3af5b2c5d7.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "b7d2f16ee3fdda957ab45ce645ec2f41ef289a94eeb84f068eea44eca899cfc9"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-2f14b6d05074.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "e15a31e53aa08e25887d2035c6851f06cbb7ef711de259299b7c401e6d8ab6e5"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-2f4dc814496b.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "b7786d6c8bea502b8ae109e659efb3d508019a4bee66c10941b8f07601de8461"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-2f7b49449f50.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "0a717e6681a865f5efd0b14616783b96810224b2e28eb339a43e6778a7f61da7"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "2a0664605200cd2d54742c7cfd0b3b2b9010610604b060931f6a0d434881b8c7"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-305d62565ac6.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "a0e3740468b2138249c336a2ccaf5032365e77ca0d046fe5244d01724f49532c"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-30849d57e91d.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "81f000badcab567c305574de12c11f5faf82acd6ad85ee6dbb0f154289e91dfb"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-33faa10d9445.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "5886d3e7ccad6f4bf4e6f3ab9066baf36f9f22e3d7eb2df2ec0b1b7f91e34526"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-3515ae15ebc4.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "bd4d515b46d8a454731227ef5391322a7c8296b9511cc64a8a7e886b20a31547"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-3686606cc887.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "33e133458a84cbfdb1fe7661832ba18ff41ef15e4b04696b336cf0f53bcb97ce"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-3891f275d7f3.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "e0333a7221e3f8e089f33f521fa2c2621372d4318544b9bc90af65cd657c04bf"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "bd05e9aefbdaab882cfaac3f61718aeee01eea3679703be050055ae73a435acf"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-3c51a8bef0cc.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "b52b64e871c43aa2bc0799056a8685ea14b4d9ad17baefae1c014165e69f3eb6"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "e238c1902501d4a838aff041edf0653b3ef430d2823b58c66ec23cf7904e0c7b"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-3d240fb08fca.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "badf1b67feecc4850f3d3c8f3d1789b44da25179f3b2343ad3d18a3f22c3ed2c"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "48617043f3262a0fb234052cf1c375c3be84ae9c9331244c12e0022cc1d7a34a"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-3d2d14c8cd43.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "2d818a2b1f7b976aada4a51807fa3d5054dc0fcceefda411d2b2f024c15a0759"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "8e31d7261b1322b518f625493afd62d26e011ce4aa1d453b53bf424086477932"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-3f171ad59419.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "3e8413041df3d42d1053ff57b000e699734515ca11a08736151f0d7650d24868"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "b2d758aeb7374343afe92d8a218682c49ba6f6a3038ffc8ab212e3fbcbee5784"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-41c6bbbdd254.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "736d39cd2c5b16f7758ec2080cf7ac7cfce7f9e771e033376b11e236394802f2"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "388f4a3e74724c7150ddf348e68aa48406162f084de7f5305e3d1fc696cb2013"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-45dc887abcac.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "77bdb872e989113aca6e8bd63d96e3c82f2660de4f7df826f0245cd4b9caeafb"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "e103b9216caede746495b98e19b981e3e2847db145f0fcc8d781ec13b87443e7"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-46afa66d9890.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "fe5c543f8707632be8ea04bc6ca139507e0922ca489132dc60327ef3a36e3612"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "ffc47fa44adfd89532da2a6c1e7302770394f19ed04ac0be82fc7bec4a7e705b"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-476fb790b1c2.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "fc4382da26ff528c67c902497f9c8e9bb34f279d4be80a815ac6028a95896138"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-483feb7b8c00.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "4de822140e4dc2aff7a258584fae8e61ec7b9ae6da08bfd3588487d4d07b6728"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-497b8b5d229e.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "066f7f61632f161170bbd983d349cdaff18f0ce806404f7b50c8a2251850db75"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-4a29f388e893.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "5fef25cbbf47ab0c2945c722c825d418bd3c5b71a83cfd1dce7410b077d537d7"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-4a2f14dc1367.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "43e4637ae4c0d8d216d5a08fce42462c24b4cc6d487d988c720d5b2f7d064546"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-4a7684482c6c.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "3fa7ff72fcb7dcc493e8712bfbc42e8bda38be49461dc7f77e702dee8f3d1348"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "a9d9596feb178b5ee2969f8ea7f9bd3caee343f780f2effcaf5b20e0ccb5a6e1"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-4aabaeaaaaac.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "cfa8c292f0fed9f346692f1e651a2ce31ff49fdd5ebea641d92aa91fb9a0d2cd"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "0f7caa7504a7258ea00a55097cdd6ffa2b44294ce8286abc5b7b4f97cdea217b"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-4b81a280ee6f.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "f05e0c84895e94835af17de74c4d4cfd0bd47b4c437ba41ce4b5ca425ee53242"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "0a5ee9105220ddaed7dbd999de186915f96aee588667f4db5cab122c518c65a3"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-4ea8c16dba67.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "d9fefb2b08b360afdc70d2e6957c8b7b0a9c9856e6d355429a47819ce88a3e9f"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-4f5cc386239a.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "b9eafaecdc5a3463bee2d0e9bada151d4e17277ce9893d12abe970ee7e11430f"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "47fcb027134fb6bd584c43594d811210ca7c10f5b930d5d92d04ba67fb26fea6"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-4f948618132d.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "ce316c187a8e4f783dc53e9a19e50c5785346c8272eea14c6c872493bfb16bb8"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "bdb5c27afde930db8489bfbd72f866bde154eca4fd7b197d156f799b072ca86f"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-4fcbc239df18.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "9b4c90863c8d0e14278435071afedd17e847a1717ce273a2ca9dcb10c59ee4e0"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "20a519fdefd78b4b5764aed71d369302e5a375d2387b001a77444a7a0a0fdf89"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-522e416bf2c8.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "b8b92a3a1c4fcece88b6c7850e77916c3625d35d7bed6b8e51904dca51849df7"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "e28118073a719512a01962ac742908608ad666b38ab925c72fb71f003b671c5a"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-5354e682cb40.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "444ca1e8eaae8d074369ffb6bbe886818dc1d4b8c3d249c520a3af274d2fde2f"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-539a710f75c8.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "c898c51d25c00847043e9b2649658e64658d5c78fc7e1c4aa6e2193899f1b9f3"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "afc6e5e957e9e5a6efc5588f58288447cef9040a6832f83e21f8a2f3e0ca9f3b"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-56621ed0823a.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "98b5e8414cd668fccd95c1afd99e6bcc8d0ee16273e81980c91641cbee78d48b"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "0bf81c49d8a055d87b12e90de1ba4003a443e2b198c9f01f9f39abbc69f48f4d"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-569f9223c036.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "992503172a44c879bebfea7e5465985942407d7fb56da1090c1e2bf3fac6811e"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "5bed405ee130624ea6f7f4a582af35ecb1ce08b7a66f8c9f862356240311701f"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-56b8bec14368.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "98e91c637880a38664e3c25a6663f2576996e7e75b502e47ec33a1c2816c0212"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "e17b8db0993efee7a661fad683e009246efe149b7b5d556929dee4e90141ecf7"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-585b26275faa.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "8481073dc09325797c80a75f6c305165d523180594c19797de805b2ea93ac626"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "8ff3473fe25ac10bd627a467653d12caa307414dffbd8eb715c6cc9050d3672e"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-587426390ca3.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "52bf69ea4c5cb7d5afcd3e919b10e9e719de965d33a504e5c9eb61cc87bfa8f7"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-5aedb4da2930.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "d2b5a232c87306d2872f4436ec37cd86f10710b78ad0397f7daffca9d85bef8f"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "6a97ab85f63bc940a38fceccecddc470f4862624df717cb181017c17cdddabed"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-5c8c322e1649.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "10adcbcf2daa2dd19002b41e937a0921b3fc10330a7e5322798b57269e577c09"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-6011f2aa40be.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "0dd93e20892f81e7810ef5200b378340c8bfe8210fbd024d792cbac144bfed18"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "bcfd5d457d49f8148bbf6afc0d322ad8bda3396a2eab6e8d26a0166d1d775eb1"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-604deb76d90f.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "dbc89d0877d2aa29caca920a39e7b5d2db0b7bfeb278828a45e14ed984a291fc"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "e024914b48b074a0eccda79190ef77b6b2215dfc93fff50c8c421ef20e64d079"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-60acbecd77e4.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "89f6e85bb2ca136155b2150382a875ed4fa6fa597349edf0808d465fd165f8f6"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "9f72028870afb3df7b78c8c58d313ba66be0fe6954bf0011e8ee8482a9e050db"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-632289b2126a.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "b65df18b32f9cd17e6a9b44e9e373f493fbbb907618ae3f6a1584966ba73f821"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "efcb87c6e0905a131f2e22fc927eb374dc6baa88bd86cb42f4de51c4dbc0a0fa"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-656feaa1e437.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "6c1cc4f0790d8cca447bfb0b9726f2b62feb3f59354c76a560e22673c14fe126"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "ba71e61d174f4df9ead13f2b1f4a71b6492a6a677d56029aaeeaf6a8f30fb0c8"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-65dab311a0a8.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "6623ddccca0e910209c1e6fbf120ab9230e29cbee5e7cbef0ffa4f464d25d6dd"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-676dbe81226d.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "0f9f86b4359fdc7e18baf91f1c993f816e7be1a2fff50ccf4dc50acae731e599"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-697922222c8e.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "181b09b134768774c6e4f399fadee21f2449a0aacc556c9d4392cb7e3ad2dab2"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-6a040f4e45e3.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "7229081cc20359f6186d89aea5fbae9fb52b79581405bfc838fadf588d4fab0e"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-6d4c254a5473.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "a1207657bdf8b9ff16439748f573f8c1d3a5fc60da9e421953f4f33069f89670"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "e7b823e4deab5229a8ccb141dcdd5653c7bdb1876f3cc059e5037bb87db17a7d"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-6e2df8101653.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "ca07f34f89df145918f6f00f4247cd77f9e44a58171954d809f154d5a5e5447d"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "a60ca5a8642eb3fea9e9ce2cacfaab502ab2f85fd979c8e5646d42238742fe4d"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-72e887a205e2.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "2bd29fc24dea526f107537631924f3f67b5ba42f52e649e8aa5d7fcad2bd604b"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-734b923302c2.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "b49d0104293c3f9e345d1b267d6cc3c9fc13b17e5c0cfcf4b7c2aafa1fe2ee50"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "10e9a94be1ef1da24d16f9a0e0cd30656da250e879d1b1c658dae9aba1a29637"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-744a92241b7e.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "4a6ba22dd7dbc39f35a524a4c7ad9afe5b7d89fc5a477a5469241b7e67b42765"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-763f77b4b651.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "36ebbf1045ba8112971fb2d06c378a0f90ba85882700b173554eecc1faa24903"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-77229e5a6ecb.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "14c33a9eb2ccf70333fe99227780fc97655247a41295c3e14891b30cbe9861db"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-777ac1fdda0c.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "a08ef1c7a141ed1f9e1e97f61c67ada81eecdc23cfe34201e869756aaec325a9"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-78636dc65ba0.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "7775a66370dc1b9c4aef9fb31796cc325a45f4d93a3ed2e8868b2aa0095ef708"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-7891250fb219.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "d6bf268cfcc5b988c582c0169ae0a002c60d3bbc633b2d0b7c1e7ee458e9ed9a"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "fb321567e50b746256be9c98d5ec47010be6e1d68612abbdf8d5e5400218a9e4"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-7d128e5f4e89.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "f39ef29916542a5ba6638ba3568ceff59916473de51384350b248fba26f26e9d"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "d3ef28c0fe36ca409e2f80c71063aa658320ebf0d0d9e7c336762c5200bf8407"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-7d8d38b45783.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "c38f9feb98981b425981b19aa1cbe6e9cb6910d4d96423f2002d86ca04e81ce3"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "4c6cf99386e4a73aabad5c95b3fb01f13030606153b853bb18937f482dd9ac08"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-7dd3820a6a93.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "b2f01207151104a6bc70c46e65d9840ac9a5e728dcaf3eebc2dbaea8743f017a"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-801ffb1e0c96.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "59afef6cba8dd70f4ba526d04ce9eb45b051103814970bc44446b31a2948569c"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-821189d4c568.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "0237ccd230f4bdc783c8dd3e41d1f03792a2a35676449f53d8b6dde6b7a1a106"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-8417b112470f.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "cb09040dfea8f8acd1734a79ce27fd286003acee8c6ae94197ef50f424f19941"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "3fb80811373131d269a5624846b4990e2890868e3086fa4840225aaf539d08ab"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-842eb8a56ecd.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "0a00c96a29373d8c6080b4aaabd862bdb79e343b407c3da900a55136769428be"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "88038a693c61b1616c5085f73153246ba294da20bc57eed3452e958276ac9a89"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-85d00dfd64ec.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "50e21a3662a41d3c919de85ccd5a7a2fba69b004bf163b4912268db1ae891906"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "952f262c226ef906ce62e28218091a9cc2498098a2ff2f3d95edc933ebb2be3c"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-86e9c9694c63.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "3ad0f5b32354e1fad03af3f85a03742f01443f356da445d3f1dd670f85a048b7"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "7cb2b090df2228ba323189f81e25ea2479f9aa490d6e1bc144d5a3fcf43cba50"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-881d2954d7a0.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "9983a57d818032964d39dd7badbd57e07c9f8ec372caee94848442dbe037bdd3"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "914efb34d54eb3dd70de398d793ef1059fa9385f8b9e3edbe2e5bf4a1ff6c2d7"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-88d219a3ce7e.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "89974ec94bc4c110f6eda29bea46ffeba89bc999e9c10c2fab39a4c196ff75d7"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "15d6f5727d6389d0dbc683f4d9d8893aa7c384b615dec448fde251cf9ef95745"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-89121f4e0d0e.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "e3fd04eb10541039894f0665ee72a4e451b43481c2b94a670a514fd361d6fd2b"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-899905800bc9.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "3fe6aac9d3f61452449b343a6e8ca2f486ede8e39b7d6d020b2fa56919bc7b79"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-8a3e0b0cc5a3.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "e31a37f82ebb9d7ae11bd759fa68e3da1c3eba8ebca6276806c453fd0bf97387"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-8aad251f22d1.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "bc775ebaba67fcda1acc4b5a4149ef3915debe6da78842e0a40d3884fca29a32"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-8b4c53531074.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "36a5156b4414916fc8536920e987def16c5db549fe3dcefc190e55ebb9cd81a2"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "b190c51516b7ffbf784056df132368493a46ee8d5ff67a1bcd10bc3956844014"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-8cd0561b87e6.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "0d15a7fade6b117a556a35b7bfab0d357eda71838bc3f1559a2b3cf2e8fbd624"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-90a374c74476.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "9cc09bc54d736713c4787663ea23c7d7c9e2e3829ff0688a07402c5908c5ba13"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-90f886bf819d.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "a7b1c43545b2047a8c33dd1249d1de940384be2e2a5698713318d252457d41ea"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "729483142ef3f55c6cd3706bb4d4a05156cd96b187c5b3187ff52b72b38da64b"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-921c22af06f2.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "607f3ef01559f454f975b7a309c3122f284a4366b0ae8dfd58c5247143727330"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-94b750643e15.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "ff7326b35ece5522425ae6a57d8e287b244f0286b46a5df52bbf7a66164dd8a9"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "2c6306ad0b74f3269f2e838e679b0e29c1cbfe74fa1c34cf039414b56eb5419d"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-962917f5f387.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "a05fbcd0815e24752af9690f089f8aff28269dd5b485bd13e84da0bb9a35e87f"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-9702daf7af08.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "fa188cd997aaaa27cac33cb94c3301c6b66d732a4e1a10050e47bc9233c6df61"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-97edcf60f68c.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "92818d76bb6dbb04e846015ba80e5e3a6f6097435d05818f63a6c4e898dba405"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "a00991ec28bea959460e260e7cc25cf535b5f03a6c361bccb69740478039318c"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-9835b759f9f5.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "42e0607986b4b3efae49ca0b06b1d73b0753a97b731fbc31c4ca71d617cb6c87"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-984aca64e82e.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "b7313c7c7f4c51909168b922f95946146bb5bcb0fec316184d169d8f9b7d7a0b"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-98cb204589fb.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "a65f40f77967a53d5f8ffda2140e43f132243bddf035fad69e7c1db173188374"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-9be36d55c07c.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "258655c7ab6c1a11404794557c30576fa95e64355779781a1f7ff0ef403edbea"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "9e1fda9d669526428ecea73fe44fad874c3d0ae85420ea23cc6c2ae688d7b1d0"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-9d87d1ee9271.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "e3f147254521b9c571a56cd80491aa375734e3111e933517f97e921800b303e2"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-9e6fcc354cbd.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "b0d11c44dbf0cc1a04380d3ee0af52ae35cffb92917e7e9ba23eda3664e63f8f"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-a5a718ebdb7e.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "86d9f8fcd6841b6cd7a2143c4d3373ef18f90b35531f03a849440794b1192e23"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-a65091a07f47.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "39e5a18a5ad7f9c5a43d23d121913698e517d349dac16fd03462916a2919b52a"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-a9d3752be883.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "c2d1e3e220d128c49b996cf317cdfc0217e40f905a8fa1b679674b8ba8b2f111"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "3109a2b94b53d41ccc530ef379b31e24aae22b2b29a2ba5d4c62dd61e7bd3636"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-aa54fa26921d.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "2b461b7e010674a336e418b7fb4b5a150599515f6391aaff66dca9976dfb5943"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-aaaaf4fdfca4.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "68024e72bb99656da435b3746e1e5cad26c453a429ce3d985d1678677b3a57f2"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-aaf4cbe1c7e4.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "427e01db3647dc6cdd2ac8bfc536d2a1ed3a7dd9cfcd3ce191f3e4c05b7e2c9c"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "a54eab1ea214d4da1623b6e8c7936006a3b6adfe532aa45dbc1e9824ab9fa55f"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-abb57ec8dfe7.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "c736b93b6b5e712e3d4b9af19b4b56342c9379e49cc9ae39adf0f5c27872c8f3"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-abda25ecd570.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "7e9ba1b49f65e68e00ce15960d8815cf20973989afd618d6b6dc70511bbf31a3"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-b066c7e0a967.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "d3444316113f75f0f248e0e8a970a8bed7cbf230b19abc2a5bdf725f591ef65a"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-b17874a8f6d9.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "d6f00cdcbebb7c18ed6c14acd1083ee02e320583c98ea5cb5ae58c864cf8dc27"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "422f8cddabd4313c053140499b5d9c680ffd95b7b13fd9e151c4989acabdb5ef"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-b3fda2f5d974.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "088ed9c836a4a5208b4ea19fa763c9449e8cee67d5102e48dacb6b713c9bfa91"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-b45d5713c468.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "b1043ee95a07b5f3087c046353000cc42940cffe903bde0afd660f10c1fda79b"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "ab452fa74e7831974b0374fa59c9dec99cad3fe86ad0dabcee0fa9d465f113b7"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-b640f67d3578.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "699f002cd05173dfa55adde47bcf08ec4c2c605dc5101b5fa69ba57c4c68e6b6"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-b6d2fb9bfcf5.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "89293ff3d7766324e221821dc850426e0f5d69f9cb8da763f993966100cea594"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "ce15282d66459c2362e203a664d9bec76a5c3b9365a09889c077031f08b762fc"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-ba2f9f80d9ae.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "c402e401077055e0a8ad8360d4742875b6a5d63c13e67c92f74bb96019dab711"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "acca948f1158a4f3310367bd1fa148146b924f17e3a86dd2fbed879bb7cff9c5"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-bb3ec3ff7012.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "54e6646d123517a895975ed03ca32027f05c6509eac62370d18c1a885ccf5662"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-bb54862801f1.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "99c479f72dc9a2e58d3b86082d19e670980d4450753b0e0622b1eec3fcf29348"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-bee18d119d1b.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "7cafb798ac403f807521e9f3ce5b14e617573a79d98f68152438e5ac5ca9120a"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "09ae88e034b10f98ea8a52745f46a083d932a8390f10bc269ec1e6696a9b9ca5"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-c0ec07940d43.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "345711a18ed0a12d85d4aa732c264b2ea94fa5b7990f81ae0cd25651b4398c57"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "6ea7888abbbf25dd5d72cf24bf465a51f0f0e5c12ca2a96da216efd0bb73940d"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-c120f93e2847.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "654fa34ff802a38fbaa1cb19a0de3a982d45e4f218b935b8eaa886e2cb202d34"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-c323b7c9dcb1.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "4e6246bcbb2fede29f259015abe90b2b2d4c329182c98b2abfad2ec3189b2dcd"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-c852daf916e4.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "4f385d351601ac3e556a104e85d606ea636736fb67e4b1e55b9d6499c8937f6b"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "86081a0f98038278420b7f5769caa14c1afabfcd2690fa7fc2c7fe7a8c6eaa8e"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-c95477938bb8.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "f21bb9a6c3892616e968e2f0e9d3d006a2b09ba1d14360a1efcfd5547a8a78cc"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "734c3cfcb9e982bf7920bd07fe5284f1065d36a428ad2f2f7ef87aeab7bd8032"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-ca2f3ec9a1d9.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "25dd8c6839b7a9b9683cad1cb4dad522c3b22626085dd3cf857f5c57da49f18c"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-cadbd6fd8885.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "4ba76a8f998e1bbfb14d81343beace2f2312a06964262cefcfa3f3f33c96ac01"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "937ffa6da651d8d60e4912970828ece623cf86863f3234d74a790b8f58676b10"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-cbc5d2409671.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "74af212babd82a124e664a7cdc7484a8115850df6a3de56ae654295ee93208a9"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "228e82f44922154994dc0f4dc5f49e34e959cbdb577a0db1f12fb4b44d78f848"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-cc37655fb01e.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "ca0ab8cde8d2b38629fb57c8d204868d4f5b2c59ae143b44d3180a613490ebfc"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "e035b6c606af31f454585a6385c5e0091f8edfaeef8244d57fa9be845ce530a6"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-cd2f8e57ad81.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "45b7e7764af67550d96620529234acc316d513853720c018f22626fb58d20154"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-cdc6ec6ed388.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "055755df4ede0828083df44f0f2c182901c9f74dff826c38b36d19ebf77c4fe9"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-d05c6f6aa949.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "9282365d84ca75913b96516c163e11ca9e4aa0b49e600786c6b4b6064a693739"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-d0b7f5032e34.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "c6b51fdb000791ea40e20436e31e081069ffacde20341ab3568ee08c665956df"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "af3c47adc410fd5e442765f718f8d54ae7fea2fbbd06ef1fbea9b3f26998dd7c"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-d29e86bb4f3e.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "dfc6025e92e7f4fa25e28cfb0fd63d8ff90495ad004be6af491ef5335168b6a7"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-d2a64ffbf503.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "93fa6016bdef68bd5770175cb824b24ca6ecedf861e9f86211e52081b4f0453c"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-d658720313d9.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "7e11b3d8cc18b1f89999f6d8c8db22fb53407641b94f852943bc72e75156172f"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-d7a99dd5a4ee.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "a2fb6b0175f2f49ee49890dba5933854a400ddf696c032b6bbc6977b557b3e12"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "b1980a6edcac56262ffd0d1c5aff0acec96146d2b7607e3a63baa12f73240be0"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-dc9f14b6d918.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "4dadd2912c90a8267e2b62718fc4f39ac99837e82f9260551df786874b4e0992"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-dcbc9f30f96b.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "4188dbac5a096d2f0aab573ae8bcb7f7d4b0ddb23666e3ab0a9ae7c4a696bd09"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "7c04b3e4181ea3eb0a0be2129fdd97e55673ae26d9e00899532588c308a4eaf5"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-e0bbe1b916ec.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "b1e57867b6334c135d77f92742484226471179553ccea496717a3fe1bb83a5a2"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-e2b821d61698.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "404a7a4aabfa12ce52d0b77bf320accadc7ce2da5042edf9621be522cc7b3734"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "adc0cea8ad0c69997c7f4b56dee155f72415c5d483748f692d0819ffa26580b0"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-e2d0910c8502.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "269f5eaca3255f97433dfbed78b13d318cbb2a3aa580d4729e2e64d9987f7941"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "c357b39c3afbf09e5c497162e1c71a9d02a7deca4fc020a637a9936a13616493"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-e32fe766308d.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "17cf348c78324e6d6d1872411b101325f4b6af43960c97a72399cc8e03d59667"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "f5ca65a9a239c744969d8f07df77035796ff9ce719b1b14128ee44c6b17f22de"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-e9829e41cb57.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "4ca20fd03ff295f0d56ab2756a57fb603b53cd63a5f8be35a62baab81705c09a"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-e9c0f5c464b9.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "d86c77f9adae66b0c211205e16732ef6c9a845c013ab72632611469c8c4c0646"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "5a296629c37f55c139bd0d6786012a01561e1af7a76dc658c1a2a0697c5a4308"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-ecab2885736f.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "b9a296bb5ea9d57115dc9e950a92835cc1c793a85345fe827ce2e46a617aceba"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-ed07d0144e10.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "264d2e3e903ca23a93a690ba107b975323688d93f7a1d364a6ea28143851223d"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-ef40b49f8490.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "8fc34789ab530626b1cd3a04508c4c27b9a410689f723a3d19f5167dabf85459"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-ef93d7822f1e.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "d1c55bca2498702bb1e28eeacf00b35cecf22dee4d6f7d8e16ec8fb07a7876cd"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-f23d24293b59.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "09b7565d7639159e40f5624bf5383260a574f7bf65bc5238721924f0903e0167"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-f38e70f4a73f.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "8371a72671c8eec8f64884b75f5867c03256f4d3e4eb5b5e6a681d78bba2ca0d"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "20c868cfa1caebc472378d3eab9cfcda9da65a3c8e462dc3b01b5cb6341f4860"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-f5c231145cfe.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "4853f02eeda97c4e3eedcf330033285ca56b5f02614e72a956dcca8d888e500a"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-f5fbf6c05199.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "75e823ef619d7aec3dcd83c4d7c2974b5daa2bb5ca5915f75c6f0b2c0e5df76f"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "dacb188a145a0a50e73307c06e7146e48e5fdb02f28e0825ab30f4e767018615"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-f7bed5b13d91.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "6d7de62113678d2b0c820e51de2cd35e6252e932d79378002f68f405bd3687e8"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "443c607d9a80430563602661c132721b61e8534a7be41646a84be7d33d9de86f"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-f7e14bff0759.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "312bd5160f7ddc3a9f487fd372186d9758188ba014c7d38cdb9dc8ed6d121bf8"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-f8dd18b0746a.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "3762d8a081b9d705558342eb3a29f7d9d5046c9f7cb0f7593f3ccbac45f84838"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-f97998fccbc0.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "974594ab41af578acbf2475aac58ab38bb56c14599ba9883900a5f63419a343e"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-faf28b2b42a9.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "b68fb28a40e8d9ecda527fc20cc2530d7244b68776a469f0818c0b21558cfc9c"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-fb90f4eea4f7.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "3aa7c95106619dfcf63199d24fca90c176a16c5bf0ee2ac4913410bd4bdae089"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-fca8badbfaac.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "eba29539a39c844f1c46182ff97cc09895e59fb7b2b47483fbf803f408639c6c"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--chapter-fcb3cbab9ea9.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "1067be962de1be45d5d1b7d47053168b69db692fd0cc65892d8f33acae9b28a7"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--complete.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "b9fd44f89c7584c89d7959cef49d3c53a303a7e9444173f7554818299c37977c"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "cffa30a246fc12fc382f1302eae2061ddcc5e7fbf44f38c66418c9be2adfe171"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-037b0f5d1ded.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "b04660f847faa982bb320958dc95dcf777c7002fa78a7f699948affa778ebfba"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "abd52df988805484f7b58eb77f7855bdd8341a39ef2f480e985fd415cd6865fb"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-09d4b62bc673.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "889cb6be200034dfb15f0f93d840002a8516b986706ba7472fc14ecc0fb4f5c4"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-0a0882eb7944.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "ae1c2a327e79ac15e93a7e7b509d1291e7fd40b3854845b6247a4f88284db80f"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "957deb9f842c9dc946eb0f30d5b68aedee8bcc865843c38a6c9d4461e1478bd0"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-0a2485bc36ba.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "644dacff821f6898cb4e41671b14db2fba5ddd82061d351eba16bc2df799ef3f"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "1e84f8d296745a4ce43fac72c0b40232e8bb24fb80798df68bfdda091b77de9c"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-0b0b625f6ad1.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "950f7fd88a4673e623790648a5c2f9683665f3cbc439652a9ff7651a7f6b363f"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "b2fb51c046bdf271d4833a0ea4fd5e63450b26dcc1ef89f320a3a98bc45f960a"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-0d465e607013.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "4aa0e650dc9eadeb27cd704a6df4ba59dc5ab02ca01cbee23c19b841ba9e8437"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "1dd1dfb172ccafdb49609dad652e4e95f0d8e6e450fd7cef29b3f98aeefad534"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-0f0c6b982f67.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "9142d42994189222304413031835e7d3b574661e571475f0f69c4d07927a82f3"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-10423f4fa318.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "e090462cf3f28438638a825ffbfb91ab317ddb73a2fd3799622d9fa617b7632a"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "bc699e8ff1495491b4e62c9bae00de7d6dba16143b906c5feec8b3834829066e"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-136ae34498ed.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "d87db27f5c4509a69c589e591fafa3a8cf66cdc2e55ee49144b3d01c718feb7d"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-15d6d67bfc68.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "9595fe6dccd59da3553b6ce36bb58889bc57e59d9d79d2c6216927cb46854495"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-1ba711483d1b.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "8d4fdcbd0efb067cc1d60eca184df37780034f0ee579b211b0652200bbcb46f0"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "290006282fb0f68e25e73a717bfddacdea72f1357a7b5dc73f2ead69163e1ccd"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-1e5dc2771530.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "c97fd15c9e51cad7a04fe28ee8ffb2e3c138fe9636a6ddea0b98b57c17ce1fa5"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-2df2ce20ac18.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "d84fb72038a65dec187c1117a29eba01aa6e344c42f27f425005a447a3e0c221"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "c4eb4172dc871bceb79d420f883dabe1907cebce088a936a0b0780b2f7c51863"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-2f7b49449f50.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "62d69771e7e17b4976c5123ce4446107014a599628d6749fde72cbd80246efac"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "382144e06b958d6973a0aed5b02c31d267072c6638fabc690fbd133433de6a66"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-30849d57e91d.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "4e4070c94782ef9400582d59d9102de64d1c317d0eac6c87b022bd60f4a453f2"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-3c51a8bef0cc.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "0ebdd2658bb3eec0532e18338ca5675223c5eb8a2ead1c403d7d04ce97628722"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "900e174732e475b0bdf016a72ad10d12e81af22227d8ee8a436e3430e0b5d7b7"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-46afa66d9890.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "6a5746ee806c79b4703944c9904706eeb2db02d978e960350672789786f015fa"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "5bd1a470153b3564c66b02e3c13dedb57eb980d2bc934d00ce453e2a14180178"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-476fb790b1c2.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "ad4940de59a7ac73c1283adef7a6f8270e458670cc4016ab718875a3d6afb90c"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-4a7684482c6c.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "beb33c90254bc9ee04c0ff28d81fd998c6284d757af58ed778b32b29b44489cb"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "a9bcc41343dabad8b4d636304fb473ea1234960f6b1d713e32407aa9d04865ec"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-4b81a280ee6f.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "34f16afcd5e56abe4c2dc02d4d325b518d055187e7617baf2e57ca2c4e2ec741"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "b711d1d094ebfdb8ee48b4001c36f839cfaf0f2ea0e8eff9fa66c87b625a582e"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-4fcbc239df18.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "4938e0bda8677854a8c13813fcb20ec9aba1f7c07d8445858b71a32326da6bb3"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "ee30cf5fba2a7f02427a59bad97425ddd6a191f16a02ca00396e000fca06b665"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-516c6e2f7304.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "8c8e5b62f06367ceab266a1971c0e9cec7a20ddc1c533f888e099578c048b5ba"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "28e2c7d091fdc91789527c906a6c98f9d15ca807fdd6c2aae0bbdb3c4e042f9f"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-522e416bf2c8.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "1819963fa54492a3f93c9a264c2449f93bdf4076bc7cb3d370d393069cd3f233"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "bd46b71deb82fba055b3ff60219ab3fd1eef46ffad5667e41c66826128cec6c1"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-539a710f75c8.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "7c8b5835631cd2daf40b5090698837877ea0cf4fc1217261a8f2b06341d87338"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "476d519bf32fa6090e92e5a8aaa3e2745d3025380415d224b70ea7e4cd5be116"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-5aedb4da2930.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "850bbfdbe4e613b5a728e2b41362eb36f09e6b6d9e4c6f437187718a428a0683"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "f33f7065f3ad2d37f4a711c4ec43d9a03f4b0ba8c7d6b0b30726aaf6e54c28ac"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-5f65e841ea79.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "5039193f4b32aec7d3c671754b897a9d3299f02c66fd8c1bdc523b9722885685"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "e40fa07c9dd20fa44a03234d175298fb905a1363df411ff9fe0f0ae5a972108e"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-604deb76d90f.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "5d822e0225787bf4d39a6615f3b2a75a72c4913da1f74d17d7be0b323873efb5"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "2f517518900e486b9fda4964e1bed440f4895eec436a2250bdf56d301262dba0"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-60acbecd77e4.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "7050e2a7abde1f2f7b6ccdbe0f4476d0fb1bb2f8efa1e17219af835e313b2e83"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "59345971be54f2a5b347a2d5d5898ab7c7f48649770d90e40ca861ebb46a30b5"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-632289b2126a.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "db824b865b938d14a57d4dced0af7d749919b65440a52a7a61470090d12f9e6e"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "67cdd9dab7afb9888e8aadcd797f0f03215b8fded6ad0a8defdde269016497b3"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-636508268b2b.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "7b7ef33084156c110a8b7de32d1119099caa98bba055ba9df367cc3a900f3e2e"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-67e95cd8a484.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "d929c79ddb01bd0c04c86370ae27bba0daee414158bf856dd3146c34394a8a70"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "322a117ed594f06fa65a0198a2e1c22357aaea305e104ca0b3ad31c8a8f4e9c8"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-744a92241b7e.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "1b327d7581ef1e8a81483c91afe7fd698ee71a6123376fb5a4dc470ce23eeb67"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-777ac1fdda0c.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "701300453743f22a3458422b3e20b6ffdedc69ac3d28248489fe716eb0b8cb7f"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-7891250fb219.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "da233f5fa3f948c5d07a043581541ff7dc1fb61686a7456bd247918587ee2a72"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "4aee34ef297d629e19b8c5947a5230f0786385a5bb823bd7874f0607c914e618"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-801ffb1e0c96.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "25600bee92a4512bf53e865cd5be5bb63fb600f803052251c1acd4d6379bf22f"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-85d00dfd64ec.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "8bd70ed242fbd248766144c78b1be16e7cf3628d780f07328100a9a356879e85"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "0b51ec0f9948403c8407c6a71d4b2a4c67dcd696bfa23e16573d7aff52403469"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-881d2954d7a0.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "5ac5debafea548bc7b28fd5982bb6fe946a55e4540d40ace363e85efe97ae900"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "25b9893525e07c84106b679dab5b1d0e39a52a80a3da09a6dc8f287bfbe5415b"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-88d219a3ce7e.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "f9b64740a0e2a685576416b19b21ed50624f468d75bf4e6fee32afa924fb750b"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "879fbfd430834dd509f9d5a944725628037f9830f63c3874ad963692498577dd"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-8b4c53531074.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "94300c139a9ff5354ff4df3dcfc81c21ea8180a073d04658fa90d08cba1d4353"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "c208649b7c9a2bc54afe8918fd8ee5ab33b82032f9f6d67875a38bc74f4e71d8"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-90f886bf819d.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "3d1ba12872027c6efb0eb27368220dfed6e4b1a440f463fbefb2acde1f247587"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "5ea93e57d11357a27cccbf33cdcc1798f839db4f43ecd10d9c11527bafe0aeb4"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-921c22af06f2.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "4e151618174e3d3fbbbb3d22058e684abb700a89edf9ffeceae7badc85104f90"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-94b750643e15.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "f1cdc8a3490d8eb663846cfd2593c10c814e79e94b39f0ab3b42030292a79995"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "152f8616b8cc97341e798f829947e6ac088931d8ee616ed8b84f62cee4d329b0"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-a57b33e4f74b.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "f43a0005723f9e3579cbc8e9e9a9882c51c9b9cbfa3abec2b02ec886606a238f"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "390b89c7f3f2a285fb363f13d0bb08e0149638d638a54d0674acf35ae213e93f"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-a5a718ebdb7e.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "e0035bdc3859c51b177c0717a346e7492c828221820b6194f6f593a6d3076fec"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-aaf4cbe1c7e4.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "28f8f2177dc3815c13a0a3392c001a7d91534cdf23090633fd80a1e72a683c93"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "1a3e4cf43606fc4dc73255c89f2f0ed26180a97c93c5f6ef9337ca9b110516e2"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-abda25ecd570.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "38aed0117c33e9c8afe44785ef432fa5abf108b0801141352a9d018961c8a963"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-b3fda2f5d974.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "2809a762449a69c80d75432f5a45e94d6c8ea04c4e6a42fa7cd29ada494f2b6e"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-b45d5713c468.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "69761617a2c65bca15f4cabfafe531a150108cf46fb5a373ba3fbc1f66128342"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "33d0f5268efdcce1aecc3c19232543a42a59ea151117f148fd60ae82409034db"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-b6d2fb9bfcf5.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "7a020e5d55ccf6c6dcd4056bf95a6b3678c5a0c7b9c2387a840bc13b04d163d5"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "3f1d1734d79c2c540e6707da1d68b4cb9cd93d1c96befba2c39d16e65b593c08"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-ba2f9f80d9ae.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "415e336d5936d5cdc36d8a260747fdacd2e07db597b89bba8e7715a133892f94"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "26f29842cc245b6419728a48358205204aa0fe7a1d5323cff8da03ce7dd7feba"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-bb3ec3ff7012.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "a024405bde7e480136e64ad159fc549506e2337007d35460d182104267382c28"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-bee18d119d1b.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "736a42ed72798dcbfc102e1d446b8c7486194cbaba1a90a407d7834f6d2b8e06"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "4a9cb7e6ac44421719113883db0e99fbb1b017ec7775a756e6883084616e817b"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-c0ec07940d43.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "c0a5b1428e5ee6b36702364bcecc66b06ad3e8f8b9caa570717dedc78d28271c"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "e7bd1d7bdb4ad29d2e3a0b3bfcb09d398a151f99fd4752c9da2ebab4827acd29"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-c120f93e2847.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "3b3905c851c0167af85d98e4bd3570baa0830ea50925df29d406ea6cbcb74268"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-c852daf916e4.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "ef3745aad579ae17dc6be42f7dd0796b9fcfd1c6049bf01121d06322c6ef0454"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "3b1417a81ed667e83f5b955be7f927c735000c3545efc2236dc49135e1c1be65"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-c95477938bb8.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "bf0b9c85a1d8159c54be9493850f0ae47b7a262b46ba0f677167a79edb1f9815"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "ca8ad60e5da77a78d1ceee0a4e6662b82b31e6c82a5451336e7dabbef0e23207"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-ca2f3ec9a1d9.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "c971a81def116b76cd50ffcfbbdc0e9bcb476b4963ff4c558c23ae0bd7173266"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-cadbd6fd8885.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "ebf41748ef64bb4d911e3754fc0234ca8cee6494f961bb139faaad4df3ec62cc"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "5b98829a7211f73d9914eb2cdb017ec54ab8e2b6b2ab995549c2c4fa5bbf8cd6"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-caec10b6c7aa.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "fc024d4cace909f3c93cbba97ede8afbe0f08f4a4d0fbebde591390a40d9f286"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-cc37655fb01e.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "ff5e5289fd0e41714582d6959588e9b16590f0301ce9fd61f9dda039b413b8d7"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "a48ad97ac67d1ff9d48eeed0c799952b18a257c4eef0ce69251a3c4853fa175f"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-cd2f8e57ad81.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "504ba1f73d7eef648c2a871112ba40b0c7efa4e5afa3fdafa608f2c01159d5e2"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-ce8fa056652e.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "7f68ac7500e9d33d4ce726bc26f475b10536e13dc2cf6e7671d19f290675f39d"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "33e7d59c5692b0914bfd8cfc57ccefedfa73e37718f26374b21e5b9a050f0fa2"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-d29e86bb4f3e.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "f05f6406d4ef46fb063801bf3f1ed428471df11c9f03d614ea3ada17222764ff"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-d7a99dd5a4ee.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "f37d9010296f484b592bc0e88211ca427c1a8a03ed97ab354a51030c0b1937cc"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "eebc535a362c225e2adc120775a18653677750de3ffe1fcbb336ec68de2207be"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-e1d1eeabb313.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "8876e6aee4a7da89d257e42890d0605e87f62ab55e34792fa0177f8b978cfbc9"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-e2b821d61698.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "c677c61e343ac2660436aeaa5439cf34f909c84970e1ce59a905991f87fd7f46"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "abc52a4d1d14a5cd942a6875a97fdcb651a3033f1f8762b918edc9988685cdb2"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-e2d0910c8502.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "b73e36995cb69907e00c199e3448d5ec3dfbc9929d9d4b78ad2e8b17617dc270"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "d6c609ba2dd59ceca18b4308fa44fd8c164aa318d69eb9b904812638ac460542"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-e9829e41cb57.html": {
+        "after": null,
+        "before": {
+          "mode": 420,
+          "sha256": "b90e0601bac587e915e5f505bceb02431b3be1357f964207d6ae49e5f0eb3272"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-e9c0f5c464b9.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "57f2e0e844eb5644c2f460a744b2c02c20964610da4b631c5bd08e3e406c3c6f"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "73001487ed1d6cd1d579402bee6c2ded7b14b6dc04c0c4b32b14c84a2ab82c72"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-f38e70f4a73f.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "2dd6a8904132377491135dbf58a033aa12bb06dd4d04a33962eb94acbc41bf09"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "d5903d7d81fb80575ea83dcfd49c9417dc34bbdadc9512a650af73bc9b24615e"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-f5ba780a2ca9.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "9776250397aaf56182f669df9458ed6505dd1978f18942eefe9b0f482f0e34f3"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "0557859f6ce68be3ba7d2fe75f7cb1310c1a82700132d2099719b4d677c92a27"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-f5fbf6c05199.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "2973e82ad4e1513c44dfae0e8386f312232377d0d797b5ec201ed786d4b7099e"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "4820924567148b7202e004ee0e3e21c01b1d108d56ee76fa7020a0668d7b6717"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface--section-f8dd18b0746a.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "e7337710e61bab06707781eeefc4068d75902e2904b7f8622dd9d03b27d4fea2"
+        },
+        "before": null
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "536d0adeadf4b52a9b28714650c15efe7e096f7d5a8d3454407fafca7740c49f"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "0d75fce10bc4ce34daee0f270e6c2ae2dfea65c85e4d7adc6164963771a3b11f"
+        }
+      },
+      "maths/papers/erdos257-mersenne-reasoning-surface.pdf": {
+        "after": {
+          "mode": 420,
+          "sha256": "59445e943ac9586d1bc2793a56e70704231ed2a9d679411a375ae24023b421bf"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "fec61fb31ab39bd676a83e3d718940a0f072dda2a9ee197cf2e65c942cd0d728"
+        }
+      },
+      "maths/papers/erdos269-running-lcm-reasoning-surface--complete.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "52fc8ba4d9dc501e8c5b1e818820f277d3423c485caa510d3959c671e0a2d4ea"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "eb7765c5ee5abe818d4c2f90716e0541f7f07744f453d526974ef9de220062b1"
+        }
+      },
+      "maths/papers/erdos269-running-lcm-reasoning-surface.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "d2097516f6c7ce1b5890d451555b50821bf5217e84fb9c114cd5f781d526b7f0"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "0834e0670e6e6facab9018b864d75333e871959fdafd21a38386808b45b97d09"
+        }
+      },
+      "maths/papers/erdos68-factorial-reasoning-surface--complete.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "1ab0e97f023388f589657140bb904330094d062681ad2893a29fc3ca679f4058"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "05ca619c40bb741c855b12c68f0552acc085d9ec10f41325376678a6d336a93b"
+        }
+      },
+      "maths/papers/erdos68-factorial-reasoning-surface.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "a861ecaa2c19da432556b8e9f9bd0a12295db744eba331deb63b97b296a5082a"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "ced38792c4050f2579121ebde120779e079dc2972abbcae27dd77dc2d2b50bfc"
+        }
+      },
+      "maths/papers/optimal-sparse-perturbations--complete.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "58fa618cd9d67b60a8549a81ada1cb9210d23d98697f5a695aab9e622c37e8e5"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "22a8ba64f79db75c508f5d3d97a1f04d5529565d053e1d621221164b7a66ea51"
+        }
+      },
+      "maths/papers/optimal-sparse-perturbations.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "79c27852ed59af5243324ec9a1fbac3a7b048364d20f2466339e6a30c792ce59"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "95fd9cf7e87085d6115bf4535cee10f025343b3328f4f479207c7a1c60341c72"
+        }
+      },
+      "maths/papers/writing-a-good-mathematical-paper.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "aea09efeb234b57e9531515148822891dcc355f14afb2aa6a83f762b927dcc7e"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "ba0dbcef52e5868f183d2e78e5ad145b97062f9abf3d605cdbd2eda4d64be419"
+        }
+      },
+      "maths/papers/writing-mathematics-from-reviewed-revisions.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "be5fafa97b7d1d40d325d435b50c5768b1537ea1d98521980ec1b6350fb29d65"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "08852b1418819584a7a390463faadc763217a8e6feed528fa49d684a9e11f88f"
+        }
+      },
+      "maths/problems/erdos_1041.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "8a08570a8c46bcf23ac2ac2af47d7baaa22ab09c8f10d5b9bcf99fe0c7cd006c"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "97846be1700fb845587ce0b58fd64f6e083ceef1c0c1c9c7fbb3dbff02e2688d"
+        }
+      },
+      "maths/problems/erdos_1049.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "4195ec75bc7e58c06ccd1e04ada2f451dace1df92f06640611794b46cbb97f2c"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "fb4caa395e378e09dff2060326fceb0c5d9ff0a86e4832d8204a337206fcb8a8"
+        }
+      },
+      "maths/problems/erdos_243.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "cfcfdc9360d9bbbe52d934865fb7ad974c3cc93aac8d6868944d08f7054601e9"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "750976607483db88b8bfa80c5efc55a4966613d72aa8bbfde0f8d86a5aaa73e5"
+        }
+      },
+      "maths/problems/erdos_249.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "b6694549b624e8d8a0768f8c1624c869e2d5ab2853e78e99e52aecff8152962c"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "dc39c30484eef0528286736113739d86474ae9007452ac5d1bf352eab3bb4eac"
+        }
+      },
+      "maths/problems/erdos_251.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "b0acc160091e0654031595aa1e63fc7a4bb89b6be7af5992e1efbf13e18dedc4"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "52e1dffe17225c4d8b78df465a1823cd62ed221af5170985f68d201cb82a63e8"
+        }
+      },
+      "maths/problems/erdos_257.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "a2d9446ea5059e964330230d952ba49a87845e3b88f40e4407339ab1fa56e0d7"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "33a7ea27979020514eba21b12d2cfc3ea6d3161294fc03bf477aaf5c30c11085"
+        }
+      },
+      "maths/problems/erdos_269.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "014569205913437a6cff0d0eed7c3a7657afafdb784da3c67ea2351eadb9c62e"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "b93fc96a59abd6f99226c049659fe7f06a04f6a4d47227970d732532fd091e06"
+        }
+      },
+      "maths/problems/erdos_68.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "abaf73ab097872cb68858514d8f8058510b1d158655a1f10d3f906b93f498af0"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "fbb8fb8ab4a970ab75c36c301921e6bc7979e3181aca7505a7aff9bd29ebeadd"
+        }
+      },
+      "maths/universe.html": {
+        "after": {
+          "mode": 420,
+          "sha256": "78aa58aba507fa51f02a578ca15740683e72f6d93202a9230c19e4c3945883b7"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "5512006e573251acf04cedd8987f811378dc93ae109ca4e18881900275d7c7e2"
+        }
+      },
+      "papers/erdos-257-mersenne-support-subseries.pdf": {
+        "after": {
+          "mode": 420,
+          "sha256": "1af62f16ead7d782bd5b5c8fe6caf162f513992827e5114b69c1a89676b39a69"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "56d5ab6d4115c2275bbdee90b95310f5a985dbc059ff06f93e63bc2f5ffe30f0"
+        }
+      },
+      "papers/erdos257-expository-sums-never-fractions.pdf": {
+        "after": {
+          "mode": 420,
+          "sha256": "34e8bdfbe8ca43adff8e7e400cad8bf1e109cc76150f57fb98184d55d1944e0d"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "5ba7e503be74eb70e221696882eb7e8b3d71543a716903b2dfe8de97db10698d"
+        }
+      },
+      "papers/erdos257-mersenne-reasoning-surface.pdf": {
+        "after": {
+          "mode": 420,
+          "sha256": "59445e943ac9586d1bc2793a56e70704231ed2a9d679411a375ae24023b421bf"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "fec61fb31ab39bd676a83e3d718940a0f072dda2a9ee197cf2e65c942cd0d728"
+        }
+      },
+      "papers/papers-source-manifest.json": {
+        "after": {
+          "mode": 420,
+          "sha256": "01385f1ee6fb9df64e7d140998bcb933abb76b32d6c0e7f1163886bc2bb2bd92"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "86cc0b268d041d97907c3c979416515a1d2fb80a324edf41443ad9a9cc6812d5"
+        }
+      },
+      "papers/source/plectis-erdos/paper/257/erdos-257-mersenne-support-subseries.tex": {
+        "after": {
+          "mode": 420,
+          "sha256": "dc3986fdadf0e875ef95894e7cab1eb36f42dddfcf2bceb1eea588e556a3fd0b"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "2676b3e9f6a5ba6f3ea8fceeed9684ff6ced0fa3bef9c3c0b6a3a878288af5d3"
+        }
+      },
+      "papers/source/plectis-erdos/paper/257/erdos257-expository-sums-never-fractions.tex": {
+        "after": {
+          "mode": 420,
+          "sha256": "27275fec09eb84e1bd833411f9e30ed4e8bfae35ab711d373cc7395bd1845002"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "5efdc16fe9917b634a2af0068bab9ce0e17127b58d5e82e6ab3e412c1e791352"
+        }
+      },
+      "papers/source/plectis-erdos/paper/257/erdos257-mersenne-reasoning-surface.tex": {
+        "after": {
+          "mode": 420,
+          "sha256": "09285ac50fbb892b4a027489ccaf1e986fc72d502a761c343c6cb6334a321489"
+        },
+        "before": {
+          "mode": 420,
+          "sha256": "47cf6a152738f17c6879bd5070adb73c34a1254775afd44dbf7b6ccd346aa100"
+        }
+      }
+    },
+    "current_universe_paths": [
+      "maths/assets/maths.css",
+      "maths/assets/maths.js",
+      "maths/assets/universe-companion.css",
+      "maths/assets/universe-companion.js",
+      "maths/assets/universe-companion.json",
+      "maths/assets/universe-data.json",
+      "maths/assets/universe-layout-full.json",
+      "maths/assets/universe.js",
+      "maths/universe.html"
+    ],
+    "generator_commit": "dcccc75bbbb3b1dba8c2d6226785ea2573cc45ec",
+    "pages_base_commit": "c534424f10f016e89a9451ddcd9fe8754dcdbceb",
+    "private_root_released": false,
+    "protected_file_count": 1072,
+    "protected_products": "preserved Pages baseline bytes/modes; historical generation, not relabeled current",
+    "protected_sha256": "fb1e8c7d5d351fbc85fbdb383e0871dabadc445b7c0680f441ca8d354b97cd92",
+    "retained_dependency_recovery": [],
+    "scope": "lean_math_reading_room",
+    "universe_parity": {
+      "full_edges": 8536,
+      "full_nodes": 2907,
+      "index_edges": 1636,
+      "index_nodes": 900,
+      "toolkit_fragment_preserved": true
+    }
+  },
+  "note": "Source frontiers that later releases must contain. Last scoped release updates only its declared paths; protected historical products were not regenerated or relabeled current.",
   "schema": "plectis_site_deploy_provenance_v1",
   "sources": {
     "plectis": {
@@ -20,7 +4342,7 @@
       "repository": "wcook04/plectis"
     },
     "plectis-erdos": {
-      "commit": "ba0d1e8bed6a6d84e80cc961f9f0c895966f723f",
+      "commit": "341850a1a1ca46221ffbb5ff188f06d47a4cba64",
       "ref": "main",
       "repository": "wcook04/plectis-erdos"
     }

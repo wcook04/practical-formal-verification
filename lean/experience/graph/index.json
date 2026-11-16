@@ -1854,67 +1854,67 @@
     {
       "id": "statement:erdos-257-mersenne-support-subseries#res:cylinderhalf",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/257/erdos-257-mersenne-support-subseries.tex#L1414",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/257/erdos-257-mersenne-support-subseries.tex#L1454",
       "label": "Theorem D.3 (unbounded shared-prefix families represent one half)"
     },
     {
       "id": "statement:erdos-257-mersenne-support-subseries#res:general-repair",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/257/erdos-257-mersenne-support-subseries.tex#L1148",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/257/erdos-257-mersenne-support-subseries.tex#L1185",
       "label": "Theorem C.1 (membership and nonincreasing integer remainders)"
     },
     {
       "id": "statement:erdos-257-mersenne-support-subseries#res:mixed-supports",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/257/erdos-257-mersenne-support-subseries.tex#L537",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/257/erdos-257-mersenne-support-subseries.tex#L558",
       "label": "Theorem 4.1 (mixed weighted and cover supports)"
     },
     {
       "id": "statement:erdos-257-mersenne-support-subseries#res:one-over-twenty-one-frontier",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/257/erdos-257-mersenne-support-subseries.tex#L1266",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/257/erdos-257-mersenne-support-subseries.tex#L1306",
       "label": "Theorem D.1 (integer-quotient tests for 1/21)"
     },
     {
       "id": "statement:erdos-257-mersenne-support-subseries#res:period",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/257/erdos-257-mersenne-support-subseries.tex#L995",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/257/erdos-257-mersenne-support-subseries.tex#L1027",
       "label": "Theorem B.1 (the exact denominator period)"
     },
     {
       "id": "statement:erdos-257-mersenne-support-subseries#res:reciprocal-support",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/257/erdos-257-mersenne-support-subseries.tex#L919",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/257/erdos-257-mersenne-support-subseries.tex#L945",
       "label": "Theorem A.1 (reciprocal-summable supports)"
     },
     {
       "id": "statement:erdos-257-mersenne-support-subseries#res:strict-mixed-supports",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/257/erdos-257-mersenne-support-subseries.tex#L763",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/257/erdos-257-mersenne-support-subseries.tex#L789",
       "label": "Corollary 5.2 (a support requiring the mixed criterion)"
     },
     {
       "id": "statement:erdos-257-mersenne-support-subseries#res:terminalhalf",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/257/erdos-257-mersenne-support-subseries.tex#L1350",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/257/erdos-257-mersenne-support-subseries.tex#L1390",
       "label": "Theorem D.2 (finite approximations with vanishing scaled error)"
     },
     {
       "id": "statement:erdos-257-mersenne-support-subseries#res:weighted-cover-incomparability",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/257/erdos-257-mersenne-support-subseries.tex#L613",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/257/erdos-257-mersenne-support-subseries.tex#L638",
       "label": "Proposition 5.1 (incomparable support criteria)"
     },
     {
       "id": "statement:erdos-257-mersenne-support-subseries#res:weighted-support",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/257/erdos-257-mersenne-support-subseries.tex#L74",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/257/erdos-257-mersenne-support-subseries.tex#L76",
       "label": "Theorem 1.2 (a weighted condition on the support)"
     },
     {
       "id": "statement:erdos-257-mersenne-support-subseries#thm:variable-fractional-cover",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/257/erdos-257-mersenne-support-subseries.tex#L364",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/257/erdos-257-mersenne-support-subseries.tex#L380",
       "label": "Theorem 3.1 (a summable divisor-cover criterion)"
     },
     {
@@ -4242,1051 +4242,1051 @@
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#cor:257-logarithmic-separation",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L9225",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L9259",
       "label": "Corollary 13.2 (finite-functional separation)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#cor:cd-remaining",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L7396",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L7424",
       "label": "Corollary 10.7 (Only C_D∈{-2,-1} remain among the exceptional dyadic cells)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#cor:mersenne-height",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L7588",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L7616",
       "label": "Corollary 10.14 (Mersenne specialisation)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#cor:negative-mobius-overshoot",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3096",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3123",
       "label": "Corollary 6.29 (Negative-Möbius Boolean support overshoots 1/2)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#cor:tr-half-lcm",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L5930",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L5958",
       "label": "Corollary 8.7 (Half-LCM horizon)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#lem:collapse-mech",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L1455",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L1480",
       "label": "Lemma 2.4 (Carry and residual value)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#lem:denominator-sandwich",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3595",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3622",
       "label": "Lemma 6.55 (The odd denominator survives dyadic subtraction)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#lem:denominator-survival",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3606",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3633",
       "label": "Lemma 6.56 (A guaranteed divisor of a reduced denominator)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#lem:dyadic-excess-reformulation",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3580",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3607",
       "label": "Lemma 6.54 (An integer test for the interval between the dyadic and Mersenne weights)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#lem:eventually-right-impossible",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3177",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3204",
       "label": "Lemma 6.33 (The values on either side of an eventual right continuation)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#lem:fatal-gap-exclusion",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3247",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3274",
       "label": "Lemma 6.37 (A greedy gap excludes every representation)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#lem:gap-mass-summability",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3528",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3555",
       "label": "Lemma 6.50 (Summability of one gap length per level)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#lem:half-divisor-unit-drop",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3543",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3570",
       "label": "Lemma 6.51 (The effect of adding one divisor)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#lem:half-endpoint-kills",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3263",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3290",
       "label": "Lemma 6.38 (No finite Mersenne sum equals one half)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#lem:largest-false-rank-algebra",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3323",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3350",
       "label": "Lemma 6.42 (The exact gap at the largest omitted rank)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#lem:linear-channel-nogo",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3455",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3482",
       "label": "Lemma 6.47 (Linear functionals factoring through one value)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#lem:mersenne-tail-weight",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3187",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3214",
       "label": "Lemma 6.34 (Each Mersenne weight exceeds its remaining tail)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#lem:mixed-prime-power-layer",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3624",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3651",
       "label": "Lemma 6.57 (Commuting prime-power differences)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#lem:no-ties",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L5810",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L5838",
       "label": "Lemma 8.2 (No-ties lemma)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#lem:odometer",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L7792",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L7820",
       "label": "Lemma 11.2 (Divisor-residue form of the short-window phase)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#lem:rank-step-trichotomy",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3225",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3252",
       "label": "Lemma 6.36 (The two next-prefix intervals and their gap)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#lem:reverse-carry-word",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3432",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3459",
       "label": "Lemma 6.46 (Spacing of reverse-carry words)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#lem:scalar-localization",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L7561",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L7589",
       "label": "Lemma 10.13 (Denominator complement survives scaling)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#lem:seam-upper-or-middle",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3306",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3333",
       "label": "Lemma 6.41 (Seam upper-or-middle classification)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#lem:skipped-endpoint-trichotomy",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3410",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3437",
       "label": "Lemma 6.45 (The signed position of a skipped greedy prefix)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#lem:sqrt-witness",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L1494",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L1519",
       "label": "Lemma 2.6 (The terminal bound at square depths)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#lem:sqwitness",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L8253",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L8281",
       "label": "Lemma 11.3 (The terminal bound at square depths)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#lem:straddle-agrees-greedy",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3273",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3300",
       "label": "Lemma 6.39 (Straddle words are canonical: they agree with the greedy prefix)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#lem:tail-transfer",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3572",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3599",
       "label": "Lemma 6.53 (Changing finitely many support elements)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#lem:tr-forced-greedy",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L5877",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L5905",
       "label": "Lemma 8.4 (Forced greedy)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#lem:tr-mod12",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L5953",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L5981",
       "label": "Lemma 8.8 (Mod-12 filter, J≥7)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#lem:tr-parity",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L5886",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L5914",
       "label": "Lemma 8.5 (Parity forces infinite support)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#prop:257-finite-witness-rule",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L541",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L554",
       "label": "Proposition 1.2 (realising finite monotone witness rules)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#prop:257-logarithmic-initial-interval",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L9270",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L9304",
       "label": "Proposition 13.3 (ordinary initial intervals)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#prop:2adic-nogo",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L7258",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L7286",
       "label": "Proposition 10.4 (Centred completion of fixed-precision 2-adic data)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#prop:achievement-set-topology",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3680",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3707",
       "label": "Proposition 6.59 (Achievement-set topology: compact, closed, perfect, measure exactly one)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#prop:canon",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L1363",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L1388",
       "label": "Proposition 2.2 (Uniqueness under the stated finite conditions)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#prop:carry-survivor-extinction",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L7529",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L7557",
       "label": "Proposition 10.12 (Period exclusion for the totient series)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#prop:collapse",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L1466",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L1491",
       "label": "Proposition 2.5 (A cofinal carry bound)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#prop:collapsed-list",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L1517",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L1542",
       "label": "Proposition 2.7 (Six equivalent membership conditions)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#prop:cpgs-equiv",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L8581",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L8614",
       "label": "Proposition 12.3 (Infinitely many positive skips are equivalent to half-membership)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#prop:critical-band-index",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L7625",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L7653",
       "label": "Proposition 10.16 (Quantifier collapse: one critical index suffices, not d{+}1)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#prop:exact-lebesgue-measure-dichotomy",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L5404",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L5431",
       "label": "Proposition 6.146 (Exact Lebesgue-measure dichotomy)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#prop:exponent-gap",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L1613",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L1638",
       "label": "Proposition 2.9 (A bound for the reduced denominator)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#prop:finite-approximations-without-compatibility",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L5265",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L5292",
       "label": "Proposition 6.142"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#prop:finite-boolSupport-and-onesided",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L7507",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L7535",
       "label": "Proposition 10.11 (Finite computation and half-membership)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#prop:finite-state-nogo",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L7471",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L7499",
       "label": "Proposition 10.9 (A finite-state restriction for the stated pulse family)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#prop:local-void",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L1576",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L1601",
       "label": "Proposition 2.8 (Limits of the specified local summaries)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#prop:mobius-nogo",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L7491",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L7519",
       "label": "Proposition 10.10 (Möbius-support countermodel: the natural negative-sign candidate overshoots)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#prop:one-orbit",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L5791",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L5819",
       "label": "Proposition 8.1 (Stability of each fixed greedy prefix)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#prop:squarefree",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L8370",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L8398",
       "label": "Proposition 11.4 (Squarefree support: a limit of the certificate method, not an open value)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#prop:strip-equiv",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L8601",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L8634",
       "label": "Proposition 12.4 (Terminal carry bounds are equivalent to half-membership)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#prop:unsafe-middle-range-exactly-three",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L5139",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L5166",
       "label": "Proposition 6.140 (The unsafe middle range is exactly three integers)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#prop:upper-unconditional",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L7331",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L7359",
       "label": "Proposition 10.5 (The upper (carries) successor needs no exceptional-cell exclusion)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-c1",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3877",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3904",
       "label": "Theorem 6.67 (Compactness from exact finite sums)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-c10",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4084",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4111",
       "label": "Theorem 6.78 (A finite sum from a skipped prefix)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-c11",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4105",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4132",
       "label": "Theorem 6.79 (Testing one nearest dyadic boundary)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-c12",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4136",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4163",
       "label": "Proposition 6.80 (An upper bound for the reset expression)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-c14",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4167",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4194",
       "label": "Theorem 6.82 (An equivalent vanishing condition)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-c15",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4185",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4212",
       "label": "Theorem 6.83 (A sufficient lower bound for the integer remainder)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-c19",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4256",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4283",
       "label": "Theorem 6.87 (An eventual nonnegative margin suffices)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-c2",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3893",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3920",
       "label": "Theorem 6.68 (Infinitely many greedy skips suffice)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-c20",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4287",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4314",
       "label": "Theorem 6.88 (Half-membership and infinitely many skips)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-c3",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3911",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3938",
       "label": "Theorem 6.69 (A compatible family of finite supports)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-c4",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3946",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3973",
       "label": "Theorem 6.70 (A sufficient quotient bound at a crossing)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-c5",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3963",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3990",
       "label": "Theorem 6.71 (Induction from the depth-six example)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-c6",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3974",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4001",
       "label": "Theorem 6.72 (The quotient condition on greedy prefixes)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-c6a",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3990",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4017",
       "label": "Theorem 6.73 (Two consecutive skips)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-c6b",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4022",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4049",
       "label": "Theorem 6.74 (A later skip after a selected block)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-c7",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4044",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4071",
       "label": "Theorem 6.75 (Filling the remaining binary positions)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-c8",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4059",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4086",
       "label": "Theorem 6.76 (An exact sum at depth 2c-2)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-c9",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4070",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4097",
       "label": "Proposition 6.77 (Quotients in the upper half of the index range)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-i-bridge",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4626",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4653",
       "label": "Theorem 6.107 (The support series as a coefficient series)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-i-cross2",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4713",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4740",
       "label": "Theorem 6.114 (Existence of a first crossing)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-i-mob",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4615",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4642",
       "label": "Theorem 6.106 (Möbius inversion of the divisor counts)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-i-rank2",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4452",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4479",
       "label": "Proposition 6.96 (Every exact sum contains exponent two)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-i-t7",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4584",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4611",
       "label": "Theorem 6.105 (Rationality through an integer recurrence)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-i10",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4485",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4512",
       "label": "Proposition 6.99 (No finite support has value one half)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-i11a",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4494",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4521",
       "label": "Theorem 6.100 (Small remainder forces the greedy word)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-i11b",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4518",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4545",
       "label": "Proposition 6.101 (Gap domination of the integer weights)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-i11c",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4532",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4559",
       "label": "Proposition 6.102 (Uniqueness of the finite greedy representation)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-i12",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4550",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4577",
       "label": "Theorem 6.103 (A division-free form of the binary bound)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-i13",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4844",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4871",
       "label": "Theorem 6.122 (Two-sided dyadic bounds)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-i14",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4860",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4887",
       "label": "Proposition 6.123 (A finite band check for 13≤ d≤30)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-i15",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4878",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4905",
       "label": "Theorem 6.124 (A general perturbed greedy recurrence)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-i16",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4897",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4924",
       "label": "Theorem 6.125 (Spacing of compatible reverse-carry words)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-i17",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4912",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4939",
       "label": "Proposition 6.126 (Changing one support bit at a doubled rank)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-i1a",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4305",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4332",
       "label": "Theorem 6.89 (The next floor quotient)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-i1b",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4318",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4345",
       "label": "Theorem 6.90 (The next quotient sum)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-i1c",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4330",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4357",
       "label": "Theorem 6.91 (The signed endpoint recurrence)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-i2",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4573",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4600",
       "label": "Theorem 6.104 (An upper bound for a binary coefficient tail)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-i5",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4356",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4383",
       "label": "Theorem 6.93 (Equivalent forms of the sharper bound)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-i6",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4392",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4419",
       "label": "Theorem 6.94 (An unconditional bound with one extra bit)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-i7",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4414",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4441",
       "label": "Theorem 6.95 (The binary bound after doubling)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-i9",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4479",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4506",
       "label": "Proposition 6.98 (Error in the finite subseries value)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-k-dich",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4949",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4976",
       "label": "Theorem 6.128 (Doubling or returning to an earlier depth)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-k1",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4931",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4958",
       "label": "Theorem 6.127 (A bounded model of the doubling-or-return alternative)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-k2",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4969",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4996",
       "label": "Proposition 6.129 (A sufficient fractional-mass bound need not hold)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-k4",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L5008",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L5035",
       "label": "Theorem 6.131 (The returning endpoint need not be larger)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257bm-k9",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L5078",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L5105",
       "label": "Theorem 6.136 (Vanishing of the specified linear-channel determinant)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257hg-i2",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4773",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4800",
       "label": "Theorem 6.118 (The unweighted sum of remaining gap lengths)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257hg-i4",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4805",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4832",
       "label": "Theorem 6.120 (A sufficient inequality for a safe skip)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257hg-i5",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4834",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4861",
       "label": "Proposition 6.121 (Two unconditional safety cases)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257hg-i6",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4731",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4758",
       "label": "Theorem 6.115 (Nonnegative centred carries below the half-value)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257hg-i7",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4750",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4777",
       "label": "Theorem 6.116 (Three possibilities at a skipped endpoint)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257hg-k12",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L5111",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L5138",
       "label": "Theorem 6.139 (Excluding the cell with value minus three)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257rig-c16",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4198",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4225",
       "label": "Theorem 6.84 (A square-root carry bound implies half-membership)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257rig-c17",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4211",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4238",
       "label": "Theorem 6.85 (Terminal bounds at unbounded depths)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257rig-c18",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4239",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4266",
       "label": "Theorem 6.86 (Cofinal returns of the greedy carry)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257rig-i2",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4644",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4671",
       "label": "Theorem 6.108 (A restriction on dyadic rational values)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257rig-i3",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4655",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4682",
       "label": "Theorem 6.109 (Unboundedness of a positive shifted recurrence)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257rig-i4a",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4669",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4696",
       "label": "Theorem 6.110 (Bounds for intervals with zero divisor counts)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257rig-i4b",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4682",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4709",
       "label": "Proposition 6.111 (A subpower bound for divisor counts)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257rig-i5",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4692",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L4719",
       "label": "Proposition 6.112 (Two distinct prime-power differences commute)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#record:257rig-k6",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L5035",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L5062",
       "label": "Theorem 6.133 (Uniqueness at a critical crossing)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:257-logarithmic-counterexample",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L9067",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L9101",
       "label": "Theorem 13.1 (arithmetic logarithmic counterexample)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:257-mixed-supports",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L801",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L818",
       "label": "Theorem 1.4 (mixed weighted and cover supports)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:257-variable-fractional-cover",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L705",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L719",
       "label": "Theorem 1.3 (A summable family of divisor majorants)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:257-weighted",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L222",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L229",
       "label": "Theorem 1.1 (A weighted summability criterion)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:cd-neg3-impossible",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L7346",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L7374",
       "label": "Theorem 10.6 (C_D=-3 is impossible at the final middle transition, D≥ 13)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:critical-dyadic-band",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3358",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3385",
       "label": "Theorem 6.43 (Reduction to the nearest dyadic boundary)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:dynamics",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2384",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2411",
       "label": "Theorem 5.16 (Exact recurrences for the three branches)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:eventually-periodic",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2937",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2964",
       "label": "Theorem 6.21 (Eventually-periodic support irrationality)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:eventually-periodic-support",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2167",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2194",
       "label": "Theorem 5.6 (Eventually periodic support)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:factorial-twopow-support",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2891",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2918",
       "label": "Theorem 6.18 (Factorial-support and 2^k-support instances)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:fatal-absorbing",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2556",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2583",
       "label": "Theorem 6.1 (Infinitely many greedy skips force membership)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:final-middle-cell",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3384",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3411",
       "label": "Theorem 6.44 (Excluding minus three at a final middle transition)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:frozen-margin",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2800",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2827",
       "label": "Theorem 6.13 (Equivalent sign and vanishing conditions)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:full-support",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2134",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2161",
       "label": "Theorem 5.4 (Full-support irrationality, unconditional, every base b ≥ 2)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:full-support-catalogue",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2823",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2850",
       "label": "Theorem 6.14 (Erdős–Borwein full-support irrationality, unconditional)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:geometry",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L1133",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L1156",
       "label": "Theorem 1.8 (Achievement-set geometry)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:greedy-survival",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L1219",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L1242",
       "label": "Theorem 1.11 (Membership equals greedy survival; the fatal-gap dichotomy)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:greedy-survival-catalogue",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3210",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3237",
       "label": "Theorem 6.35 (Greedy survival and membership)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:greedy-survival-record",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2214",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2241",
       "label": "Theorem 5.10 (Membership equals greedy survival at every level)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:half-skip-dichotomy",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3140",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3167",
       "label": "Theorem 6.31 (The half-skip dichotomy via Erdős–Borwein irrationality)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:largest-skip-late",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2664",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2691",
       "label": "Theorem 6.6 (Keeping the largest skipped rank beyond two thirds)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:last-skip-iff-fatal",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3289",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3316",
       "label": "Theorem 6.40 (Last-skip iff local fatality: a pointwise criterion)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:lcm-gap-engine",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2882",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2909",
       "label": "Theorem 6.17 (Irrationality from a gap beyond the preceding least common multiple)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:lower-bound-every-reset",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L7026",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L7054",
       "label": "Theorem 9.46 (A: a sufficient lower bound at every reset)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:master-dichotomy",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3697",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3724",
       "label": "Theorem 6.60 (Nonmembership of one half and a finite fatal gap)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:master-identity",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2316",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2343",
       "label": "Theorem 5.14 (Decomposition of the integer remainder)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:mersenne-channel-growth",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3002",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3029",
       "label": "Theorem 6.25 (Exponential growth of the reduced denominators)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:mersenne-channel-survival",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2986",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3013",
       "label": "Theorem 6.24 (Denominators of finite Mersenne sums)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:middle-allright-defect",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2701",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2728",
       "label": "Theorem 6.8 (The tail inequality at a final middle transition)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:middle-producer-escape",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2686",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2713",
       "label": "Theorem 6.7 (Two sufficient bounds at middle transitions)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:mobius-centred-nonneg",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2770",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2797",
       "label": "Theorem 6.11 (Möbius-centred carry nonnegativity below 1/2)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:mobius-lambert-identity",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3079",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3106",
       "label": "Theorem 6.28 (The Lambert-series identity for the Möbius function)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:multiples-support",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2906",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2933",
       "label": "Theorem 6.19 (Multiples-support irrationality via dilation)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:nine-way-hub",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3157",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3184",
       "label": "Theorem 6.32 (Equivalent descriptions of half-membership)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:odd-support",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2181",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2208",
       "label": "Theorem 5.8 (Odd support)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:one-sided",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L1658",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L1683",
       "label": "Theorem 2.11 (One-sidedness)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:one-sided-finite-decision-boundary",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L7059",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L7087",
       "label": "Theorem 9.48 (C: the one-sided finite decision boundary)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:pairwise-coprime",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2831",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2858",
       "label": "Theorem 6.15 (Pairwise-coprime support irrationality, Erdős 1968)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:periodic-support",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2922",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2949",
       "label": "Theorem 6.20 (Periodic-support irrationality)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:perturbed-family-maximality",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3747",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3774",
       "label": "Theorem 6.62 (Perturbed-family maximality and the three-branch recurrence)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:purely-periodic-support",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2160",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2187",
       "label": "Theorem 5.5 (Purely periodic support)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:real-form",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2349",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2376",
       "label": "Theorem 5.15 (Real (non-integer) form of the quotient identity)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:residue-class-support",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2176",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2203",
       "label": "Theorem 5.7 (Residue-class support)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:residue-odd",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2944",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2971",
       "label": "Theorem 6.22 (Residue-class and odd-support irrationality)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:seam-limit",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2571",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2598",
       "label": "Theorem 6.2 (The quotient remainders converge to the greedy deficit)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:second-channel",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2630",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2657",
       "label": "Theorem 6.4 (Second-channel phase separation sufficiency)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:sharp-fatal-gap",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3503",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3530",
       "label": "Theorem 6.49 (A weaker sufficient test against the remaining tail)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:signed-periodic",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2957",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2984",
       "label": "Theorem 6.23 (A formal dichotomy for signed periodic weights)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:sqrt-bound-route",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2784",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2811",
       "label": "Theorem 6.12 (A square-root bound on the greedy carry)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:straddle-closed-set",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2649",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2676",
       "label": "Theorem 6.5 (Straddle-prefix closed-set criterion)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:supported-dichotomy",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L1142",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L1165",
       "label": "Theorem 1.9 (Support-restricted refinement)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:tempered-orbit-rigidity",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3557",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3584",
       "label": "Theorem 6.52 (Uniqueness of an integer recurrence with a vanishing scaled limit)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:topology",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2196",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2223",
       "label": "Theorem 5.9 (Achievement-set topology and measure)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:tr-finite-decision",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L5968",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L5996",
       "label": "Theorem 8.9 (Finite decision procedure)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:tr-witness-exclusion",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L5898",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L5926",
       "label": "Theorem 8.6 (Witness exclusion)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:two-channel-cap",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2615",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2642",
       "label": "Theorem 6.3 (Two-channel and dyadic cap sufficiency)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:two-sided-dyadic",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2716",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2743",
       "label": "Theorem 6.9 (A conditional two-sided dyadic bound)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:two-thirds-band",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3470",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L3497",
       "label": "Theorem 6.48 (Two-thirds band: exact localisation of post-take skip-unsafety)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:upper-reset-band",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2756",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2783",
       "label": "Theorem 6.10 (Upper-reset dyadic-band escape, checked for 13≤ d≤30)"
     },
     {
       "id": "statement:erdos257-mersenne-reasoning-surface#thm:weighted-coeff-engine",
       "kind": "paper_statement",
-      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2837",
+      "source_github": "https://github.com/wcook04/plectis-erdos/blob/main/paper/reasoning-parts/erdos257/a257_front.tex#L2864",
       "label": "Theorem 6.16 (Irrationality from divisible coefficient blocks)"
     },
     {

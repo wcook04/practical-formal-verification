@@ -5183,7 +5183,7 @@
     /* The card reads in the order a reader asks. What does the paper say?
        Its own words, quoted, maths typeset. How far has that been checked?
        Lean, then Comparator, then Palomar, a sentence each. What is it tied
-       to? The claims and results on the same Lean theorems. The Lean code
+       to? The claims and results that cite a shared Lean declaration. The Lean code
        and the Comparator files wait one step down for whoever wants them,
        and every way out (the paper, the TeX, GitHub) is a button. */
 
@@ -5427,9 +5427,9 @@
         rows.push(checkHtml('done', 'Lean', 'It states this result or something stronger' + count + '.', leanMore));
       } else if (lean === 'modulo_named_input') {
         var names = (n.named_inputs || []).length;
-        rows.push(checkHtml('part', 'Lean', 'It states this result from ' +
+        rows.push(checkHtml('part', 'Lean', 'The Lean proof assumes ' +
           (names ? names + ' named input' + (names > 1 ? 's' : '') : 'named inputs') +
-          ' it has not proved yet' + count + '.', leanMore));
+          ' to establish this result.', leanMore));
       } else {
         rows.push(checkHtml('none', 'Lean', 'No Lean statement is recorded for it yet.', leanMore));
       }
@@ -5494,7 +5494,7 @@
       return html + after;
     }
 
-    // The claims and results that rest on the same Lean theorems; a click
+    // The claims and results that cite a shared Lean declaration; a click
     // selects one.
     function relatedHtml(i) {
       var n = nodes[i];
@@ -5503,6 +5503,7 @@
       (n.twins || []).forEach(function (t) { skip[t.at] = true; });
       var rows = [];
       (adj[i] || []).forEach(function (e) {
+        if (e.rel !== 'same_lean_declaration') return;
         var m = nodes[e.to];
         if (skip[e.to] || (m.kind !== 'paper_statement' && m.kind !== 'public_claim')) return;
         skip[e.to] = true;
@@ -5513,7 +5514,7 @@
         return kindOrder(nodes[a].kind) - kindOrder(nodes[b].kind) ||
           (nodes[a].label < nodes[b].label ? -1 : nodes[a].label > nodes[b].label ? 1 : 0);
       });
-      return '<h3 class="universe-inspector__sub">On the same Lean theorems</h3><ul class="universe-related">' +
+      return '<h3 class="universe-inspector__sub">Share at least one Lean declaration</h3><ul class="universe-related">' +
         rows.map(function (at) {
           var m = nodes[at];
           return '<li><button type="button" class="universe-goto" data-universe-go="' + at + '">' + dotHtml(m.kind) +

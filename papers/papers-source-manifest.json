@@ -115,39 +115,39 @@
       "source_repo": "plectis-erdos",
       "source_ref": "main",
       "source_url": "https://github.com/wcook04/plectis-erdos/blob/main/paper/257/erdos-257-mersenne-support-subseries.pdf",
-      "source_sha256": "56d5ab6d4115c2275bbdee90b95310f5a985dbc059ff06f93e63bc2f5ffe30f0",
-      "bytes": 192134,
+      "source_sha256": "1af62f16ead7d782bd5b5c8fe6caf162f513992827e5114b69c1a89676b39a69",
+      "bytes": 193916,
       "source_tex_path": "paper/257/erdos-257-mersenne-support-subseries.tex",
       "source_tex_url": "https://raw.githubusercontent.com/wcook04/plectis-erdos/main/paper/257/erdos-257-mersenne-support-subseries.tex",
       "hosted_tex_path": "papers/source/plectis-erdos/paper/257/erdos-257-mersenne-support-subseries.tex",
-      "hosted_tex_sha256": "2676b3e9f6a5ba6f3ea8fceeed9684ff6ced0fa3bef9c3c0b6a3a878288af5d3",
-      "tex_bytes": 79499
+      "hosted_tex_sha256": "dc3986fdadf0e875ef95894e7cab1eb36f42dddfcf2bceb1eea588e556a3fd0b",
+      "tex_bytes": 81933
     },
     {
       "hosted_path": "papers/erdos257-mersenne-reasoning-surface.pdf",
       "source_repo": "plectis-erdos",
       "source_ref": "main",
       "source_url": "https://github.com/wcook04/plectis-erdos/blob/main/paper/257/erdos257-mersenne-reasoning-surface.pdf",
-      "source_sha256": "fec61fb31ab39bd676a83e3d718940a0f072dda2a9ee197cf2e65c942cd0d728",
-      "bytes": 832017,
+      "source_sha256": "59445e943ac9586d1bc2793a56e70704231ed2a9d679411a375ae24023b421bf",
+      "bytes": 835067,
       "source_tex_path": "paper/257/erdos257-mersenne-reasoning-surface.tex",
       "source_tex_url": "https://raw.githubusercontent.com/wcook04/plectis-erdos/main/paper/257/erdos257-mersenne-reasoning-surface.tex",
       "hosted_tex_path": "papers/source/plectis-erdos/paper/257/erdos257-mersenne-reasoning-surface.tex",
-      "hosted_tex_sha256": "47cf6a152738f17c6879bd5070adb73c34a1254775afd44dbf7b6ccd346aa100",
-      "tex_bytes": 495052
+      "hosted_tex_sha256": "09285ac50fbb892b4a027489ccaf1e986fc72d502a761c343c6cb6334a321489",
+      "tex_bytes": 497417
     },
     {
       "hosted_path": "papers/erdos257-expository-sums-never-fractions.pdf",
       "source_repo": "plectis-erdos",
       "source_ref": "main",
       "source_url": "https://github.com/wcook04/plectis-erdos/blob/main/paper/257/erdos257-expository-sums-never-fractions.pdf",
-      "source_sha256": "5ba7e503be74eb70e221696882eb7e8b3d71543a716903b2dfe8de97db10698d",
-      "bytes": 133914,
+      "source_sha256": "34e8bdfbe8ca43adff8e7e400cad8bf1e109cc76150f57fb98184d55d1944e0d",
+      "bytes": 134013,
       "source_tex_path": "paper/257/erdos257-expository-sums-never-fractions.tex",
       "source_tex_url": "https://raw.githubusercontent.com/wcook04/plectis-erdos/main/paper/257/erdos257-expository-sums-never-fractions.tex",
       "hosted_tex_path": "papers/source/plectis-erdos/paper/257/erdos257-expository-sums-never-fractions.tex",
-      "hosted_tex_sha256": "5efdc16fe9917b634a2af0068bab9ce0e17127b58d5e82e6ab3e412c1e791352",
-      "tex_bytes": 53432
+      "hosted_tex_sha256": "27275fec09eb84e1bd833411f9e30ed4e8bfae35ab711d373cc7395bd1845002",
+      "tex_bytes": 53337
     },
     {
       "hosted_path": "papers/erdos269-running-lcm-reasoning-surface.pdf",
