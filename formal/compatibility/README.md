@@ -48,7 +48,7 @@ search, and `VerdictExists.dfy` proves that every valid pair of models has a
 result the checker accepts. [VERDICT.md](VERDICT.md) states what is proved.
 The script verifies `VerdictExists.dfy` with its included files (91 tasks) and
 requires the two verdict mutants to fail with 26 verified tasks and two errors,
-and 27 verified tasks and two errors.
+and 26 verified tasks and three errors.
 
 `metadata.json` binds the exact formal sources and generated Python files.
 `src/plectis/compatibility/_generated/GENERATED_SHA256.json` repeats the generated

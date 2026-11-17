@@ -17,7 +17,7 @@ SPECS = {
                                        "ReplayStaleInputMutant": (37, 9),
                                        "ReplayMissedDifferenceMutant": (40, 1),
                                        "VerdictMissedLaterDifferenceMutant": (26, 2),
-                                       "VerdictAnyShortestWordMutant": (27, 2)}),
+                                       "VerdictAnyShortestWordMutant": (26, 3)}),
     "views": ("Release", 30, {"IgnoreControl": (29, 1), "RetainPrivateRead": (29, 1)}),
     "replay": ("ReplayAdmission", 16, {"MissingCoverageMutant": (14, 2),
                                       "StaleInputMutant": (13, 3)}),
