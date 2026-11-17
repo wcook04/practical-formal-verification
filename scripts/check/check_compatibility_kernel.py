@@ -46,8 +46,8 @@ VERDICT_COUNTS = {"verdict_build_verified_tasks": 69,
                   "verdict_exists_verified_tasks": 91,
                   "verdict_negative_verified_tasks": 26,
                   "verdict_negative_errors": 2,
-                  "verdict_order_negative_verified_tasks": 27,
-                  "verdict_order_negative_errors": 2}
+                  "verdict_order_negative_verified_tasks": 26,
+                  "verdict_order_negative_errors": 3}
 
 
 def digest(path: Path) -> str:

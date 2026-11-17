@@ -28,7 +28,7 @@ FORMAL = ROOT / "formal/compatibility"
 SOURCE = "Verdict.dfy"
 # Each broken checker must fail with exactly these counts.
 MUTANTS = {"negative/VerdictMissedLaterDifferenceMutant.dfy": (26, 2),
-           "negative/VerdictAnyShortestWordMutant.dfy": (27, 2)}
+           "negative/VerdictAnyShortestWordMutant.dfy": (26, 3)}
 VERIFIED = 28
 EXISTS_VERIFIED = 22
 

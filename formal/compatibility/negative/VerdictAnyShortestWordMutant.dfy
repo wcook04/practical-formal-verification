@@ -298,6 +298,18 @@ module Verdict {
     ensures !Check(R.Model([[0, 1], [1, 1]], [[5, 5], [6, 5]], 0, 2),
                    R.Model([[0, 1], [1, 1]], [[5, 5], [9, 5]], 0, 2),
                    [[Never, Never], [Never, Never]], Compatible)
+    // Labels of 0 state nothing, so they cannot support Compatible either.
+    ensures !Check(R.Model([[0, 1], [1, 1]], [[5, 5], [6, 5]], 0, 2),
+                   R.Model([[0, 1], [1, 1]], [[5, 5], [9, 5]], 0, 2),
+                   [[0, 0], [0, 0]], Compatible)
+    // A tie. Both single inputs are differences, and only input 0 is accepted.
+    ensures Check(R.Model([[0, 0]], [[7, 7]], 0, 2), R.Model([[0, 0]], [[8, 8]], 0, 2),
+                  [[1]], Differs([0]))
+    ensures !Check(R.Model([[0, 0]], [[7, 7]], 0, 2), R.Model([[0, 0]], [[8, 8]], 0, 2),
+                   [[1]], Differs([1]))
+    // The candidate has no transition for the approved machine's only input.
+    ensures Check(R.Model([[0]], [[7]], 0, 1), R.Model([[-1]], [[0]], 0, 1),
+                  [[1]], Differs([0]))
   {
   }
 }

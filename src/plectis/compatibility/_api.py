@@ -326,7 +326,9 @@ def compare(approved, candidate):
     the two observation lists are tested, not formally proved.
     """
     approved, candidate = _machine(approved), _machine(candidate)
-    word, evidence = _search(approved, candidate)
+    # The search works on its own copies. Changing them cannot change the
+    # machines that the checkers are given below.
+    word, evidence = _search(_machine(approved), _machine(candidate))
     if word is None:
         certificate = _certificate(approved, candidate, evidence)
         if not check_certificate(approved, candidate, certificate):
