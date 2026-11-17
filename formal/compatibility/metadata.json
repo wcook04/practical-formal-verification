@@ -11,8 +11,9 @@
   "generated_python": {
     "Compatibility.py": "5b39607089e206ad9889526c828dc12a749eba75a735f7572a7da5e99b2bed1c",
     "Replay.py": "b86a2e240acbfcf5d399c405a810701b71fb22685e6371b80647088db89104f6",
-    "module_.py": "c262e12ec0d93fb6daef0330022a609ebb0b75d983f3e86ba7aec11c6ec4d67b",
-    "__main__.py": "8dc72fb5e85a8dc9b4560d8402f11196d47819a8807e25fbab7ee8ab81c3562c",
+    "Verdict.py": "42c27adf6bc0699eb79c34600e423838b27ef3fdd645294da1cd058f9321cc12",
+    "module_.py": "fdc1a5c5c2d9801b6828512321c8f7cab139d69082e60839f7097d25095d5c81",
+    "__main__.py": "501d136e55901b4e50c622fb0abbddab63a922776275570bb0bfeaaa4096a2fb",
     "System_/__init__.py": "96b6e33c036bc3aeab6d1810c7aef085184d09c407bdec032ea89d7a98843edf",
     "_dafny/__init__.py": "18d39decdedad0e188456e15d17f1dcd5113c4abc258ad6cb718e39534555e7a"
   },
@@ -80,5 +81,20 @@
   "completeness_negative_source": "negative/ReplayMissedDifferenceMutant.dfy",
   "completeness_negative_source_sha256": "4dc032b8fefe3a4c8901a5c0a6cba29c6581da97ba04d5273266dcce02367997",
   "completeness_negative_verified_tasks": 40,
-  "completeness_negative_errors": 1
+  "completeness_negative_errors": 1,
+  "verdict_source": "Verdict.dfy",
+  "verdict_source_sha256": "6ecb71166ca1267578a6ecbfc92686727eaff9078af18818ef4b8237c13d50d4",
+  "verdict_exists_source": "VerdictExists.dfy",
+  "verdict_exists_source_sha256": "8079374d752c98781da741030ed02de5f8db66ad8dffaf309205002256902e7b",
+  "verdict_negative_source": "negative/VerdictMissedLaterDifferenceMutant.dfy",
+  "verdict_negative_source_sha256": "75b0150a23db9aa760482bd70f97364920db728bfe1581812b4e8908a264d5b6",
+  "verdict_order_negative_source": "negative/VerdictAnyShortestWordMutant.dfy",
+  "verdict_order_negative_source_sha256": "16cc266c07af820d48ba2dee35fc634d1a20a398984eb24243cb1cbfa3c73efa",
+  "verdict_build_verified_tasks": 69,
+  "verdict_exists_verified_tasks": 91,
+  "verdict_negative_verified_tasks": 26,
+  "verdict_negative_errors": 2,
+  "verdict_order_negative_verified_tasks": 27,
+  "verdict_order_negative_errors": 2,
+  "verdict_origin": "Verdict checker added 17 November 2026. The technique is that of certifying algorithms (Alkassar, Boehme, Mehlhorn and Rizkallah, A Framework for the Verification of Certifying Computations); no claim of a new method. The generated Compatibility.py and Replay.py are byte-identical to the earlier build; Verdict.py is new, and module_.py and __main__.py changed only by naming the new module."
 }

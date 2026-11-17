@@ -81,7 +81,7 @@ def test_malformed_models_are_not_evidence():
 
 
 def test_an_incorrect_search_proposal_cannot_be_returned(monkeypatch):
-    monkeypatch.setattr(_api, "_continuation", lambda *args: ["unknown"])
+    monkeypatch.setattr(_api, "_search", lambda *args: (["unknown"], {}))
     with pytest.raises(RuntimeError, match="rejected the searched counterexample"):
         compare(machine(), machine("changed"))
 

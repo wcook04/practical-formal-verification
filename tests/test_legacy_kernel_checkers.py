@@ -13,13 +13,17 @@ import pytest
 ROOT = Path(__file__).resolve().parents[1]
 SPECS = {
     "repair": ("Repair", 21, {"RepairPropagationMutant": (19, 3)}),
-    "compatibility": ("Replay", 41, {"CompatibilityOutputMutant": (13, 1),
-                                      "ReplayStaleInputMutant": (37, 9),
-                                      "ReplayMissedDifferenceMutant": (40, 1)}),
+    "compatibility": ("Verdict", 69, {"CompatibilityOutputMutant": (13, 1),
+                                       "ReplayStaleInputMutant": (37, 9),
+                                       "ReplayMissedDifferenceMutant": (40, 1),
+                                       "VerdictMissedLaterDifferenceMutant": (26, 2),
+                                       "VerdictAnyShortestWordMutant": (27, 2)}),
     "views": ("Release", 30, {"IgnoreControl": (29, 1), "RetainPrivateRead": (29, 1)}),
     "replay": ("ReplayAdmission", 16, {"MissingCoverageMutant": (14, 2),
                                       "StaleInputMutant": (13, 3)}),
 }
+# Proofs that are verified without being compiled: file stem to verified tasks.
+VERIFIED_ONLY = {"compatibility": {"VerdictExists": 91}}
 
 
 @pytest.fixture(params=SPECS)
@@ -99,6 +103,9 @@ def _fake_dafny(specimen, monkeypatch, *, attack=None, mutate_after_snapshot=Fal
             elif attack == "clean_error":
                 output += "Error: generated source compilation failed\n"
             return subprocess.CompletedProcess(argv, 0, output)
+        if path.stem in VERIFIED_ONLY.get(slug, {}):
+            return subprocess.CompletedProcess(
+                argv, 0, _summary(VERIFIED_ONLY[slug][path.stem], 0))
         tasks, errors = negatives[path.stem]
         diagnostics = "".join(
             f"{path.name}(12,{index}): Error: a postcondition could not be proved\n"
@@ -123,7 +130,8 @@ def test_retained_sources_bind_and_replay_private_source_snapshot(specimen, monk
     _binding(specimen)
     calls = _fake_dafny(specimen, monkeypatch, mutate_after_snapshot=True)
     _reprove(specimen)
-    assert len(calls) == 2 + len(SPECS[specimen[0]][2])
+    slug = specimen[0]
+    assert len(calls) == 2 + len(SPECS[slug][2]) + len(VERIFIED_ONLY.get(slug, {}))
 
 
 @pytest.mark.parametrize("attack", ["substring", "duplicate", "clean_error",

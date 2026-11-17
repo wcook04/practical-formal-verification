@@ -1,4 +1,4 @@
-"""Strict isolated JSON adapter to generated relation and witness checkers."""
+"""Strict isolated JSON adapter to generated relation, witness and verdict checkers."""
 
 import json
 from pathlib import Path
@@ -25,7 +25,8 @@ def decode(text):
     fields = {"old_next", "old_output", "old_initial", "new_next",
               "new_output", "new_initial", "inputs"}
     if (type(value) is not dict
-            or set(value) not in (fields | {"relation"}, fields | {"word"})):
+            or set(value) not in (fields | {"relation"}, fields | {"word"},
+                                  fields | {"word", "labels"})):
         raise ValueError("wrong request fields")
     for key in ("old_initial", "new_initial", "inputs"):
         if type(value[key]) is not int:
@@ -33,6 +34,8 @@ def decode(text):
     matrices = ["old_next", "old_output", "new_next", "new_output"]
     if "relation" in value:
         matrices.append("relation")
+    if "labels" in value:
+        matrices.append("labels")
     for key in matrices:
         rows = value[key]
         kind = bool if key == "relation" else int
@@ -72,6 +75,14 @@ def main():
                                               request[prefix + "_initial"], request["inputs"])
 
                 approved, candidate = model("old"), model("new")
+            if "labels" in request:
+                # The proposed first shortest difference with its labels.
+                # Check tests model validity itself and trusts no label.
+                import Verdict
+                response = {"accepted": Verdict.default__.Check(
+                    approved, candidate, matrix("labels"),
+                    Verdict.Verdict_Differs(seq(request["word"])))}
+            elif "word" in request:
                 if not Replay.default__.ValidPair(approved, candidate):
                     raise ValueError("invalid finite models")
                 response = {"mismatch": Replay.default__.Mismatch(

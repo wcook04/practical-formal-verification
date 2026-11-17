@@ -32,7 +32,7 @@ MANIFEST_SHA256 = {
     "EvidenceDiff": "27826ace402ef7917a52083ce59ea955b24b493b981123f6db3a80b348a22fcc",
     "SandboxPolicy": "78c9c9907f05d70f55628398e1c123e2de6560f2fa1fce4024e87f99bdeecd3c",
     "Repair": "0326579506855699890187cc2d1bbd16033852078adb74e59c723063cb3e079f",
-    "Compatibility": "20d97d3b10cb23e52f41e71c63a15a5a9d135c1c6e4622e1c56a5ea29259c473",
+    "Compatibility": "c176f9e2b3557b5fbd403cf291f32768db61ed1059e6c5de530574ae201293b1",
     "Release": "0db832da07984ff777a3c113be472b05135ab8ee18818e19e6addaa1a0ec6b0b",
 }
 SUPPORT_FILES = frozenset({"module_.py", "__main__.py", "System_/__init__.py",
@@ -52,7 +52,7 @@ KERNEL_SOURCE_FILES = {
     "EvidenceDiff": SUPPORT_FILES | {"EvidenceDiff.py"},
     "SandboxPolicy": SUPPORT_FILES | {"SandboxPolicy.py"},
     "Repair": SUPPORT_FILES | {"Repair.py"},
-    "Compatibility": SUPPORT_FILES | {"Compatibility.py", "Replay.py"},
+    "Compatibility": SUPPORT_FILES | {"Compatibility.py", "Replay.py", "Verdict.py"},
     "Release": SUPPORT_FILES | {"Release.py"},
 }
 NONEXECUTED_FILES = frozenset({"__init__.py", "GENERATED_SHA256.json",

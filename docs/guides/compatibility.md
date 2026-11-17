@@ -85,6 +85,7 @@ such as a tuple in place of a list, are rejected. `compare` raises
   (`missing_input` or `output_mismatch`), and `approved_outputs` and
   `candidate_outputs`. A missing candidate transition leaves its output list
   one observation shorter. Equal-length alternatives use sorted input names.
+  The continuation has passed the generated verdict checker, described below.
 
 `check_certificate(approved, candidate, certificate)` returns a Boolean. It
 rejects malformed, stale, incomplete, or behaviourally false certificates.
@@ -98,9 +99,9 @@ input word exposes a missing candidate transition or a differing observation
 on an approved-admissible prefix. It rechecks against these current models;
 changing either model can make a retained word useless. Malformed models or
 words return `False`; a checker execution failure raises `RuntimeError`.
-`compare` independently confirms every negative search result this way before
-returning it. The generated replay checker, not a cached example, decides.
-The search's shortest-word choice remains tested Python behavior.
+`check_counterexample` accepts any word with a differing prefix, including a
+long one. `compare` applies a stronger test to its own result: the generated
+verdict checker must accept the continuation as the first shortest one.
 
 ## Exact proof boundary
 
@@ -112,16 +113,31 @@ trace result. Candidate-only inputs are allowed; the old contract supplies no
 guarantee after a caller takes such an input. Even an empty approved input
 domain is handled explicitly, rather than silently inferred from the candidate.
 
-The breadth-first search visits reachable pairs and returns a shortest failure
-without a depth cutoff. Its correctness is tested, not formally proved. The
-accepting path always passes its proposed relation to the generated checker.
-Search stores parent pointers and reconstructs a failed path once. For `n` old
-states, `m` candidate states and `k` input labels, exploration visits at most
-`n*m` pairs. Dense relation construction and the generated checker can require
-`O(n*m)` storage and `O(n*m*k)` work, in addition to parsing, sorting and hashing.
+The search visits every reachable pair of states without a depth cutoff and
+is not proved. It hands its result to a generated checker together with
+evidence, and `compare` returns the result only if the checker accepts it.
+For a compatible result the evidence is the relation, as before. For a
+continuation the evidence is one integer for every pair of states: a number
+of inputs that no difference from that pair can be shorter than, or -1 for a
+pair from which no difference is reachable.
+[`Verdict.dfy`](../../formal/compatibility/Verdict.dfy) proves that an
+accepted continuation is a real difference, that no difference is shorter,
+and that no difference of the same length comes earlier in sorted input
+order. It also proves that two accepted results for the same pair of models
+are equal, so the search can be replaced by any other without changing what
+`compare` returns. [The verdict note](../../formal/compatibility/VERDICT.md)
+gives the statements and an experiment with six searches. If the checker
+refuses what the search proposed, `compare` raises `RuntimeError`.
+
+For `n` old states, `m` candidate states and `k` input labels, exploration
+visits at most `n*m` pairs. Both generated checkers examine every pair, with
+`O(n*m)` storage and `O(n*m*k)` work, in addition to parsing, sorting and
+hashing. Before this checker a continuation cost only a replay of its own
+inputs, so a short continuation between two large models now takes longer.
 
 Dafny, Boogie, Z3, the Python compiler/runtime, JSON parsing and label encoding
-remain trusted. There is no proved bridge from arbitrary Python, SQLite or
+remain trusted. "Sorted input order" in the proof means integer positions; the
+adapter assigns them by sorting input names, and tests cover that step. There is no proved bridge from arbitrary Python, SQLite or
 another concrete implementation to these tables. Tests of such a bridge are
 finite observations. The model treats each transition as a completed
 synchronous step; it proves no concrete termination, scheduling, fairness,
@@ -134,7 +150,7 @@ Normal use needs only Python; the generated checker and its runtime are shipped
 with the package. From this repository:
 
 ```bash
-PYTHONPATH=src python3 -m pytest tests/test_compatibility.py
+PYTHONPATH=src python3 -m pytest tests/test_compatibility.py tests/test_compatibility_verdict.py
 python3 scripts/check/check_compatibility_kernel.py
 python3 scripts/check/check_compatibility_kernel.py --dafny /path/to/dafny
 ```

@@ -8,6 +8,7 @@ import _dafny as _dafny
 import System_ as System_
 import Compatibility as Compatibility
 import Replay as Replay
+import Verdict as Verdict
 
 # Module: module_
 
