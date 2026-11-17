@@ -25740,7 +25740,7 @@
           },
           {
             "ref": "formal/compatibility/metadata.json",
-            "sha256": "4c05632fbccdb8f5cfc9f27efae28d3dc2ac384c58954b031b027aaeb90706ab"
+            "sha256": "ef0a111efb65b3ec0dae0999e79830989c8360733d7cffc94f53d46c9d9feee6"
           },
           {
             "ref": "formal/compatibility/negative/CompatibilityOutputMutant.dfy",
@@ -25756,7 +25756,7 @@
           },
           {
             "ref": "src/plectis/compatibility/_api.py",
-            "sha256": "338cc239896b39c78320c024a356cb450d47e7953830eb77efd5583dbbe066ed"
+            "sha256": "20b2aed4c8570086374c3b4dbe2ccd7f29ffc23eabade7bd0c146c73ef66d21a"
           },
           {
             "ref": "src/plectis/compatibility/_generated/Compatibility.py",
@@ -37228,7 +37228,7 @@
     "requirements_reviews": [],
     "schema_version": "plectis_component_explorer_v1",
     "source_revision": {
-      "commit": "6dbdf669be1903ac741c6316add821d64c04c22c",
+      "commit": "cb77743045650f2d4f1675c32f8ef91f6075fd06",
       "dirty": true,
       "exact_source_links": false,
       "repository": "https://github.com/wcook04/practical-formal-verification",

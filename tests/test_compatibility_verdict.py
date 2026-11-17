@@ -92,6 +92,18 @@ def test_a_refused_proposal_never_becomes_another_answer(monkeypatch, word, labe
         compare(old, new)
 
 
+def test_a_search_that_edits_its_machines_does_not_change_what_is_checked(monkeypatch):
+    old, new = later_difference()
+
+    def edits_then_claims_compatible(approved, candidate):
+        candidate["states"]["later"]["a"]["output"] = "good"
+        return None, {("s", "s"), ("later", "later")}
+
+    monkeypatch.setattr(_api, "_search", edits_then_claims_compatible)
+    with pytest.raises(RuntimeError, match="rejected the searched relation"):
+        compare(old, new)
+
+
 def test_different_evidence_for_the_same_word_is_accepted(monkeypatch):
     old, new = later_difference()
     expected = compare(old, new)

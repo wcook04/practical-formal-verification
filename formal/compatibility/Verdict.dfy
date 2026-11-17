@@ -309,6 +309,9 @@ module Verdict {
                   [[1]], Differs([0]))
     ensures !Check(R.Model([[0, 0]], [[7, 7]], 0, 2), R.Model([[0, 0]], [[8, 8]], 0, 2),
                    [[1]], Differs([1]))
+    // The candidate has no transition for the approved machine's only input.
+    ensures Check(R.Model([[0]], [[7]], 0, 1), R.Model([[-1]], [[0]], 0, 1),
+                  [[1]], Differs([0]))
   {
   }
 }
