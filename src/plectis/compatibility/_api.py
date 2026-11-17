@@ -4,8 +4,9 @@ Adapted from supplied research return p12's artifacts/refinement/refine.py and
 check_certificate.py (23 October 2026); p15's artifact/review_transfer.py and
 SPECIFICATION.md informed strict input and non-vacuity checks. Round-two p14's
 Replay.dfy and preflight.py inform independent negative-witness checking.
-Both certificate acceptance and counterexample confirmation use generated
-Dafny checkers; Python search and explanation remain unproved.
+Certificate acceptance, counterexample confirmation and the admission of a
+first shortest difference use generated Dafny checkers; the Python search,
+encoding and explanation remain unproved.
 """
 
 from collections import deque
@@ -217,12 +218,81 @@ def check_counterexample(approved, candidate, word):
     return _generated_check(request, result_field="mismatch")
 
 
-def _continuation(parents, pair, action):
-    word = [action]
-    while parents[pair] is not None:
-        pair, previous = parents[pair]
-        word.append(previous)
-    return list(reversed(word))
+def _search(approved, candidate):
+    """Propose a verdict with the evidence its checker needs. Unproved.
+
+    Returns ``(None, pairs)`` when no difference is reachable, where ``pairs``
+    is the relation offered to ``check_certificate``. Otherwise returns
+    ``(word, labels)``: ``labels`` maps a pair of states to -1 when no input
+    sequence from the pair reaches a difference, or to a number of inputs
+    that no difference from the pair can be shorter than. Any search may
+    replace this one. ``compare`` returns nothing this function proposes
+    until a generated checker has accepted it.
+    """
+    start = (approved["initial"], candidate["initial"])
+    before, distance, order = {start: []}, {}, [start]
+    for pair in order:
+        old, new = approved["states"][pair[0]], candidate["states"][pair[1]]
+        for action in old:
+            if action not in new or old[action]["output"] != new[action]["output"]:
+                distance[pair] = 1
+                continue
+            following = (old[action]["next"], new[action]["next"])
+            if following not in before:
+                before[following] = []
+                order.append(following)
+            before[following].append(pair)
+    queue = deque(distance)
+    while queue:
+        pair = queue.popleft()
+        for earlier in before[pair]:
+            if earlier not in distance:
+                distance[earlier] = distance[pair] + 1
+                queue.append(earlier)
+    if start not in distance:
+        return None, set(before)
+    pair, word = start, []
+    while True:
+        old, new = approved["states"][pair[0]], candidate["states"][pair[1]]
+        remaining = distance[pair] - 1
+        for action in sorted(old):
+            differs = (action not in new
+                       or old[action]["output"] != new[action]["output"])
+            if remaining == 0 and differs:
+                return word + [action], {p: distance.get(p, -1) for p in before}
+            following = None if differs else (old[action]["next"], new[action]["next"])
+            if remaining and following and distance.get(following) == remaining:
+                word.append(action)
+                pair = following
+                break
+
+
+def _admits(approved, candidate, word, labels):
+    """Ask the generated verdict checker about a proposed difference.
+
+    True means ``word`` is the first shortest difference for these models.
+    A malformed proposal returns False. Tooling failure raises RuntimeError.
+    """
+    try:
+        if (type(word) is not list or type(labels) is not dict
+                or any(type(action) is not str for action in word)
+                or any(type(pair) is not tuple or len(pair) != 2
+                       or pair[0] not in approved["states"]
+                       or pair[1] not in candidate["states"]
+                       or type(bound) is not int
+                       for pair, bound in labels.items())):
+            return False
+        request = _encode(approved, candidate, set())
+        request.pop("relation")
+        alphabet = sorted(set(approved["inputs"]) | set(candidate["inputs"]))
+        indices = {action: index for index, action in enumerate(alphabet)}
+        request["word"] = [indices.get(action, -1) for action in word]
+        # A pair the search did not label gets 0, which claims nothing.
+        request["labels"] = [[labels.get((s, t), 0) for t in sorted(candidate["states"])]
+                             for s in sorted(approved["states"])]
+    except (ValueError, TypeError, KeyError, OverflowError):
+        return False
+    return _generated_check(request)
 
 
 def _observations(machine, word):
@@ -237,40 +307,36 @@ def _observations(machine, word):
 
 
 def compare(approved, candidate):
-    """Return an accepted relation or a shortest distinguishing continuation.
+    """Return an accepted relation or the first shortest differing continuation.
 
     Every approved-enabled transition is an obligation, including transitions
-    labelled error or unknown. Candidate additions are allowed. Search visits
-    the finite reachable product, with no user-supplied depth cutoff. Ties use
-    sorted input names. Every negative word is independently checked by the
-    generated replay kernel. Search, shortestness and explanatory observations
-    are tested, not formally proved.
+    labelled error or unknown. Candidate additions are allowed. The search
+    covers the finite reachable product, with no user-supplied depth cutoff.
+
+    The search is not proved, and nothing it proposes is returned unchecked.
+    A compatible result is returned only with a relation the generated
+    relation checker accepts. A continuation is returned only when the
+    generated verdict checker accepts it, which is proved to mean that it is
+    a real difference, that no difference is shorter, and that no difference
+    of the same length comes earlier when inputs are compared by sorted
+    position. For a given pair of models at most one result can pass these
+    checks. If the search proposes anything else, RuntimeError is raised.
+
+    Model parsing, the sorting of input names into positions, ``reason`` and
+    the two observation lists are tested, not formally proved.
     """
     approved, candidate = _machine(approved), _machine(candidate)
-    initial = (approved["initial"], candidate["initial"])
-    parents, queue = {initial: None}, deque([initial])
-    while queue:
-        pair = queue.popleft()
-        old = approved["states"][pair[0]]
-        new = candidate["states"][pair[1]]
-        for action in sorted(old):
-            reason = None
-            if action not in new:
-                reason = "missing_input"
-            elif old[action]["output"] != new[action]["output"]:
-                reason = "output_mismatch"
-            if reason:
-                word = _continuation(parents, pair, action)
-                if not check_counterexample(approved, candidate, word):
-                    raise RuntimeError("generated checker rejected the searched counterexample")
-                return {"accepted": False, "continuation": word, "reason": reason,
-                        "approved_outputs": _observations(approved, word),
-                        "candidate_outputs": _observations(candidate, word)}
-            following = (old[action]["next"], new[action]["next"])
-            if following not in parents:
-                parents[following] = (pair, action)
-                queue.append(following)
-    certificate = _certificate(approved, candidate, parents)
-    if not check_certificate(approved, candidate, certificate):
-        raise RuntimeError("generated checker rejected the searched relation")
-    return {"accepted": True, "certificate": certificate}
+    word, evidence = _search(approved, candidate)
+    if word is None:
+        certificate = _certificate(approved, candidate, evidence)
+        if not check_certificate(approved, candidate, certificate):
+            raise RuntimeError("generated checker rejected the searched relation")
+        return {"accepted": True, "certificate": certificate}
+    if not _admits(approved, candidate, word, evidence):
+        raise RuntimeError("generated checker rejected the searched counterexample")
+    word = list(word)
+    reached = _observations(candidate, word)
+    return {"accepted": False, "continuation": word,
+            "reason": "missing_input" if len(reached) < len(word) else "output_mismatch",
+            "approved_outputs": _observations(approved, word),
+            "candidate_outputs": reached}

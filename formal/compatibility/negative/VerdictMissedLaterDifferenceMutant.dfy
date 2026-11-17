@@ -52,6 +52,22 @@ module Verdict {
           labels[s][t] <= 1 + labels[approved.next[s][a]][candidate.next[t][a]]
   }
 
+  // No allowed input smaller than `first` differs at once, and none leads to
+  // a pair that can reach a difference in fewer than `remaining` inputs.
+  predicate SmallerInputsRuledOut(approved: R.Model, candidate: R.Model,
+                                  labels: seq<seq<int>>, s: int, t: int,
+                                  first: int, remaining: int)
+    requires R.ValidPair(approved, candidate)
+    requires Shape(approved, candidate, labels)
+    requires 0 <= s < |approved.next| && 0 <= t < |candidate.next|
+    requires 0 <= first < approved.inputs
+  {
+    forall a :: 0 <= a < first && 0 <= approved.next[s][a] ==>
+      !DiffersNow(approved, candidate, s, t, a) &&
+      (labels[approved.next[s][a]][candidate.next[t][a]] == Never ||
+       remaining <= labels[approved.next[s][a]][candidate.next[t][a]])
+  }
+
   // The word walks to a difference, and at every step each smaller allowed
   // input is shown unable to reach a difference in the inputs that remain.
   predicate FirstWord(approved: R.Model, candidate: R.Model, labels: seq<seq<int>>,
@@ -61,12 +77,15 @@ module Verdict {
     requires 0 <= s < |approved.next| && 0 <= t < |candidate.next|
     decreases |word|
   {
-    |word| > 0 && 0 <= word[0] < approved.inputs && 0 <= approved.next[s][word[0]] &&
-    (forall a :: 0 <= a < word[0] && 0 <= approved.next[s][a] ==>
-      !DiffersNow(approved, candidate, s, t, a) &&
-      (labels[approved.next[s][a]][candidate.next[t][a]] == Never ||
-       |word| <= labels[approved.next[s][a]][candidate.next[t][a]])) &&
-    if DiffersNow(approved, candidate, s, t, word[0]) then |word| == 1
+    // Written as a chain of tests so that the compiled checker loops over
+    // the word instead of recursing once per input.
+    if |word| == 0 || word[0] < 0 || approved.inputs <= word[0] ||
+       approved.next[s][word[0]] < 0
+      then false
+    else if !SmallerInputsRuledOut(approved, candidate, labels, s, t, word[0], |word|)
+      then false
+    else if DiffersNow(approved, candidate, s, t, word[0])
+      then |word| == 1
     else FirstWord(approved, candidate, labels, approved.next[s][word[0]],
                    candidate.next[t][word[0]], word[1..])
   }
@@ -223,6 +242,40 @@ module Verdict {
       DiffersMeansFirstShortest(approved, candidate, labels1, w1, w2);
       DiffersMeansFirstShortest(approved, candidate, labels2, w2, w1);
       SameLengthNeitherBeforeIsEqual(w1, w2);
+  }
+
+  // The relation certificate that Compatibility.Check accepts and the labels
+  // above carry the same evidence. Marking a relation's pairs -1 and every
+  // other pair 0 gives an accepted Compatible verdict, and the pairs marked
+  // -1 in an accepted Compatible verdict form an accepted relation.
+  ghost function LabelsOf(relation: seq<seq<bool>>): seq<seq<int>> {
+    seq(|relation|, s requires 0 <= s < |relation| =>
+      seq(|relation[s]|, t requires 0 <= t < |relation[s]| =>
+        if relation[s][t] then Never else 0))
+  }
+
+  ghost function RelationOf(labels: seq<seq<int>>): seq<seq<bool>> {
+    seq(|labels|, s requires 0 <= s < |labels| =>
+      seq(|labels[s]|, t requires 0 <= t < |labels[s]| => labels[s][t] == Never))
+  }
+
+  lemma AcceptedRelationIsCompatible(approved: R.Model, candidate: R.Model,
+                                     relation: seq<seq<bool>>)
+    requires approved.inputs == candidate.inputs
+    requires C.Check(approved.next, approved.output, approved.initial,
+                     candidate.next, candidate.output, candidate.initial,
+                     approved.inputs, relation)
+    ensures Check(approved, candidate, LabelsOf(relation), Compatible)
+  {
+  }
+
+  lemma CompatibleGivesAcceptedRelation(approved: R.Model, candidate: R.Model,
+                                        labels: seq<seq<int>>)
+    requires Check(approved, candidate, labels, Compatible)
+    ensures C.Check(approved.next, approved.output, approved.initial,
+                    candidate.next, candidate.output, candidate.initial,
+                    approved.inputs, RelationOf(labels))
+  {
   }
 
   // The checker is not vacuous. Each kind of verdict is accepted somewhere,

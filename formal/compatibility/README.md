@@ -14,9 +14,9 @@ The deployed checker is the unchanged output of official Dafny 4.11.0:
 python3 scripts/check/check_compatibility_kernel.py --dafny /path/to/dafny
 ```
 
-The script verifies 41 tasks in `Replay.dfy` including the unchanged
-`Compatibility.dfy`, and compares all six regenerated Python files byte-for-byte
-with the packaged implementation. The original output mutant must fail with
+The script verifies 69 tasks: 41 in `Replay.dfy` including the unchanged
+`Compatibility.dfy`, and 28 in `Verdict.dfy`. It compares all seven regenerated
+Python files byte-for-byte with the packaged implementation. The original output mutant must fail with
 13 verified tasks and one error. That negative source changes only the
 output-equality obligation in `Check`. Its failed assertion shows that the
 trace proof depends on matching outputs. Default invocation without `--dafny`
@@ -43,6 +43,13 @@ because the mutant misses later-state discrepancies. This mutant must fail with
 40 verified tasks and one error. Every negative fixture is checked to differ
 from the current source by exactly its declared decision change.
 
+`Verdict.dfy` adds the checker that `compare` applies to the result of its
+search, and `VerdictExists.dfy` proves that every valid pair of models has a
+result the checker accepts. [VERDICT.md](VERDICT.md) states what is proved.
+The script verifies `VerdictExists.dfy` with its included files (91 tasks) and
+requires the two verdict mutants to fail with 26 verified tasks and two errors,
+and 27 verified tasks and two errors.
+
 `metadata.json` binds the exact formal sources and generated Python files.
 `src/plectis/compatibility/_generated/GENERATED_SHA256.json` repeats the generated
 file identities for inspection, and the Dafny runtime's MIT licence is retained
@@ -50,7 +57,7 @@ in that directory. Run proofs with the pinned build named in metadata rather
 than assuming another version generates identical bytes.
 
 The Python model parser, label-to-integer encoding, certificate hashing,
-breadth-first search, subprocess adapter and correspondence to concrete programs
+search, subprocess adapter and correspondence to concrete programs
 are outside the proof. The generated code, compiler, runtime and
 Dafny/Boogie/Z3 verification stack remain trusted. The theorem makes no claim
 about Python or SQLite refinement, concrete termination, concurrency, fairness,

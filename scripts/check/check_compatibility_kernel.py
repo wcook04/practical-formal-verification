@@ -2,8 +2,8 @@
 """Check Compatibility's source binding; optionally rebuild its complete Dafny proof.
 
 The default checks retained source/generated hashes only. Supply --dafny to
-verify the relation and witness proofs, regenerate and compare the deployed
-Python, then reject all three negative proof fixtures. No prover is needed to use
+verify the relation, witness and verdict proofs, regenerate and compare the
+deployed Python, then reject all five negative proof fixtures. No prover is needed to use
 the installed Compatibility operation.
 """
 from __future__ import annotations
@@ -21,7 +21,7 @@ import tempfile
 ROOT = Path(__file__).resolve().parents[2]
 VERSION = "4.11.0+fcb2042d6d043a2634f0854338c08feeaaaf4ae2"
 GENERATED_FILES = frozenset({
-    "Compatibility.py", "Replay.py", "module_.py", "__main__.py",
+    "Compatibility.py", "Replay.py", "Verdict.py", "module_.py", "__main__.py",
     "System_/__init__.py", "_dafny/__init__.py",
 })
 PROOF = runpy.run_path(str(ROOT / "scripts/check/check_component_kernels.py"))
@@ -29,7 +29,25 @@ SOURCES = {"Replay.dfy": "source_sha256",
            "Compatibility.dfy": "dependency_source_sha256",
            "negative/CompatibilityOutputMutant.dfy": "negative_source_sha256",
            "negative/ReplayStaleInputMutant.dfy": "replay_negative_source_sha256",
-           "negative/ReplayMissedDifferenceMutant.dfy": "completeness_negative_source_sha256"}
+           "negative/ReplayMissedDifferenceMutant.dfy": "completeness_negative_source_sha256",
+           "Verdict.dfy": "verdict_source_sha256",
+           "VerdictExists.dfy": "verdict_exists_source_sha256",
+           "negative/VerdictMissedLaterDifferenceMutant.dfy": "verdict_negative_source_sha256",
+           "negative/VerdictAnyShortestWordMutant.dfy": "verdict_order_negative_source_sha256"}
+INCLUDES = {"Replay.dfy": ("Compatibility.dfy",),
+            "negative/ReplayStaleInputMutant.dfy": ("../Compatibility.dfy",),
+            "negative/ReplayMissedDifferenceMutant.dfy": ("../Compatibility.dfy",),
+            "Verdict.dfy": ("Replay.dfy",),
+            "VerdictExists.dfy": ("Verdict.dfy",),
+            "negative/VerdictMissedLaterDifferenceMutant.dfy": ("../Replay.dfy",),
+            "negative/VerdictAnyShortestWordMutant.dfy": ("../Replay.dfy",)}
+# Expected (verified, errors) for each Dafny run that the verdict checker adds.
+VERDICT_COUNTS = {"verdict_build_verified_tasks": 69,
+                  "verdict_exists_verified_tasks": 91,
+                  "verdict_negative_verified_tasks": 26,
+                  "verdict_negative_errors": 2,
+                  "verdict_order_negative_verified_tasks": 27,
+                  "verdict_order_negative_errors": 2}
 
 
 def digest(path: Path) -> str:
@@ -39,9 +57,8 @@ def digest(path: Path) -> str:
 def _source_snapshot(formal: Path, metadata: dict) -> dict[str, bytes]:
     snapshot = {}
     for name, key in SOURCES.items():
-        includes = (("Compatibility.dfy",) if name == "Replay.dfy" else
-                    ("../Compatibility.dfy",) if name.startswith("negative/Replay") else ())
-        source = PROOF["_source_text"](formal / name, includes=includes).encode("utf-8")
+        source = PROOF["_source_text"](formal / name,
+                                       includes=INCLUDES.get(name, ())).encode("utf-8")
         if hashlib.sha256(source).hexdigest() != metadata[key]:
             raise ValueError("formal source identity changed: " + name)
         snapshot[name] = source
@@ -66,6 +83,7 @@ def check_binding(root: Path, generated: Path) -> dict:
             or metadata["replay_negative_errors"] != 9
             or metadata["completeness_negative_verified_tasks"] != 40
             or metadata["completeness_negative_errors"] != 1
+            or any(metadata[key] != value for key, value in VERDICT_COUNTS.items())
             or set(manifest) != GENERATED_FILES
             or metadata["generated_python"] != manifest):
         raise ValueError("unexpected toolchain or generated-file manifest")
@@ -100,6 +118,18 @@ def check_binding(root: Path, generated: Path) -> dict:
     if (expected_completeness_mutant == replay or expected_completeness_mutant
             != sources["negative/ReplayMissedDifferenceMutant.dfy"].decode("utf-8")):
         raise ValueError("negative completeness fixture must change only the discrepancy decision")
+    verdict = sources["Verdict.dfy"].decode("utf-8")
+    never_closed = ("        else if labels[s][t] == Never then\n"
+                    "          labels[approved.next[s][a]][candidate.next[t][a]] == Never\n")
+    smaller_inputs = ("    else if !SmallerInputsRuledOut(approved, candidate, labels,"
+                      " s, t, word[0], |word|)\n      then false\n")
+    for name, before, after in (
+            ("negative/VerdictMissedLaterDifferenceMutant.dfy", never_closed,
+             "        else if labels[s][t] == Never then\n          true\n"),
+            ("negative/VerdictAnyShortestWordMutant.dfy", smaller_inputs, "")):
+        expected = verdict.replace('include "Replay.dfy"', 'include "../Replay.dfy"')
+        if verdict.count(before) != 1 or expected.replace(before, after, 1) != sources[name].decode("utf-8"):
+            raise ValueError("negative verdict fixture must change only its declared test: " + name)
     if not (generated / "Dafny-LICENSE.txt").is_file():
         raise ValueError("Dafny runtime licence is missing")
     # Check the whole importable inventory and the loader's reviewed byte pins.
@@ -111,6 +141,7 @@ def check_binding(root: Path, generated: Path) -> dict:
             "negative_source_sha256": metadata["negative_source_sha256"],
             "replay_negative_source_sha256": metadata["replay_negative_source_sha256"],
             "completeness_negative_source_sha256": metadata["completeness_negative_source_sha256"],
+            **{key: metadata[key] for key in SOURCES.values() if key.startswith("verdict")},
             "generated_python": manifest}
 
 
@@ -139,12 +170,14 @@ def reprove(root: Path, generated: Path, executable: str, *, expected_binding=No
             target = work / name
             target.parent.mkdir(parents=True, exist_ok=True)
             target.write_bytes(source)
+        # Verdict.dfy includes Replay.dfy and Compatibility.dfy: 41 tasks for
+        # those two files and 28 for the verdict checker.
         build = run([dafny, "build", "--target:py", "--verify-included-files",
-                     str(work / "Replay.dfy"),
-                     "--verification-time-limit", "30", "--cores", "1"],
+                     str(work / "Verdict.dfy"),
+                     "--verification-time-limit", "120", "--cores", "1"],
                     cwd=work, env=env)
-        PROOF["_proof_result"](build, 41, 0)
-        rebuilt = work / "Replay-py"
+        PROOF["_proof_result"](build, VERDICT_COUNTS["verdict_build_verified_tasks"], 0)
+        rebuilt = work / "Verdict-py"
         files = {p.relative_to(rebuilt).as_posix() for p in rebuilt.rglob("*.py")}
         if files != GENERATED_FILES:
             raise ValueError("compiler generated an unexpected file set")
@@ -166,12 +199,25 @@ def reprove(root: Path, generated: Path, executable: str, *, expected_binding=No
                                      "--verification-time-limit", "30", "--cores", "1"],
                                     cwd=work, env=env)
         PROOF["_proof_result"](completeness_mutation, 40, 1, negative=True)
+        exists = run([dafny, "verify", "--verify-included-files",
+                      str(work / "VerdictExists.dfy"),
+                      "--verification-time-limit", "120", "--cores", "1"],
+                     cwd=work, env=env)
+        PROOF["_proof_result"](exists, VERDICT_COUNTS["verdict_exists_verified_tasks"], 0)
+        for name, prefix in (("negative/VerdictMissedLaterDifferenceMutant.dfy", "verdict_negative"),
+                             ("negative/VerdictAnyShortestWordMutant.dfy", "verdict_order_negative")):
+            mutant = run([dafny, "verify", str(work / name),
+                          "--verification-time-limit", "120", "--cores", "1"],
+                         cwd=work, env=env)
+            PROOF["_proof_result"](mutant, VERDICT_COUNTS[prefix + "_verified_tasks"],
+                                   VERDICT_COUNTS[prefix + "_errors"], negative=True)
     return {"dafny_version": VERSION, "clean_verified_tasks": 41, "clean_errors": 0,
             "negative_verified_tasks": 13, "negative_errors": 1,
             "replay_negative_verified_tasks": 37,
             "replay_negative_errors": 9,
             "completeness_negative_verified_tasks": 40,
             "completeness_negative_errors": 1,
+            **VERDICT_COUNTS,
             "regenerated_python_byte_identical": True}
 
 
@@ -193,7 +239,7 @@ def main() -> int:
     print(json.dumps({"status": "pass", "mode": "formal_replay" if proof else "hash_binding_only",
                       **binding, **proof,
                       "authority_ceiling": "supplied finite deterministic partial Mealy tables",
-                      "anti_claim": "Accepted relations preserve all finite old-admissible traces; the replay checker detects exactly the words with a differing approved-admissible prefix. No proof of parser, search, shortestness, encoding, concrete-program correspondence, liveness or external effects.",
+                      "anti_claim": "Accepted relations preserve all finite old-admissible traces; the replay checker detects exactly the words with a differing approved-admissible prefix; an accepted verdict is the unique first shortest difference or the absence of any. No proof of parser, search, encoding, concrete-program correspondence, liveness or external effects.",
                       "secret_exclusion_scan": "not_performed_by_this_checker",
                       "receipt_paths": []}, indent=2))
     return 0

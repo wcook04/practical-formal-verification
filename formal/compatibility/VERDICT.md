@@ -1,7 +1,9 @@
 # Verdict checker: the search is replaceable
 
-Status: experiment. `plectis.compatibility.compare` does not call this checker
-yet, so the guarantees below do not apply to `compare` today.
+`plectis.compatibility.compare` runs a search that is not proved, then passes
+what the search proposes to a checker compiled from Dafny. It returns the
+proposal only if the checker accepts it. This note says what acceptance is
+proved to mean and why any other search could take the place of this one.
 
 ## What is compared
 
@@ -14,10 +16,14 @@ defines this as `Mismatch` and proves that definition exact.
 `compare` reports one of two results: the models are compatible, or here is a
 sequence of inputs on which they differ. Its documentation promises the
 shortest such sequence, with ties going to the input that comes first in sorted
-order. Until now a breadth-first search in Python produced that sequence, and
-only tests covered "shortest" and "first in sorted order".
+order. Before 17 November 2026 a breadth-first search in Python produced that
+sequence, and only tests covered "shortest" and "first in sorted order".
 
-## What the search must now hand over
+The comparison has a direction. An input that only the candidate allows is not
+a difference. Removing an input the approved model allows, or answering it
+with a different output, is one.
+
+## What the search must hand over
 
 Any search, written any way, returns two things:
 
@@ -41,19 +47,58 @@ Dafny 4.11.0 verifies these statements for all valid models of any size.
 | Lemma | Statement |
 |---|---|
 | `CompatibleMeansNoDifference` | If `Check` accepts `Compatible`, no sequence of inputs is a difference. |
-| `DiffersMeansFirstShortest` | If `Check` accepts `Differs(word)`, then `word` is a difference, no difference is shorter, and no difference of the same length comes earlier in input order. |
-| `AcceptedVerdictIsUnique` | If `Check` accepts two verdicts for the same pair of models, with any two sets of integers, the verdicts are equal. |
+| `DiffersMeansFirstShortest` | If `Check` accepts `Differs(word)`, `word` is the first shortest difference (see below). |
+| `AcceptedVerdictIsUnique` | Two verdicts that `Check` accepts for the same pair of models are equal. |
 | `EveryPairHasAVerdict` (`VerdictExists.dfy`) | For every valid pair of models there is a verdict and a set of integers that `Check` accepts. |
+| `AcceptedRelationIsCompatible` | A relation that `Compatibility.Check` accepts gives an accepted `Compatible` verdict. |
+| `CompatibleGivesAcceptedRelation` | The pairs marked `-1` in an accepted `Compatible` verdict form a relation that `Compatibility.Check` accepts. |
 
-The last two together say that the accepted verdict is a function of the two
-models. Two different searches cannot both be accepted with different answers,
+"First shortest" means three things: `word` is a difference, no difference is
+shorter, and no difference of the same length comes earlier in input order.
+Uniqueness holds whichever integers came with each verdict. For the fifth
+row, mark the relation's pairs `-1` and every other pair `0`.
+
+Uniqueness and existence together say that the accepted verdict is a function
+of the two models. Two different searches cannot both be accepted with different answers,
 and a correct search is never left without an answer that `Check` accepts. The
-integers themselves are not unique: the three searches below hand over
+integers themselves are not unique: the three honest searches below hand over
 different integers for the same models and are all accepted.
 
-Dafny reports 23 verified obligations for `Verdict.dfy`, 22 for
-`VerdictExists.dfy` and 86 when the two are verified together with the files
+Existence is a statement about the models. It does not say that a particular
+search finishes, or that the checker finishes within the worker's 30 seconds.
+
+The fifth and sixth rows connect this checker to the relation certificate that
+`compare` already returned for compatible models. That certificate keeps its
+format and its checker, and by `AcceptedRelationIsCompatible` it is also
+evidence for the `Compatible` verdict here.
+
+Dafny reports 28 verified obligations for `Verdict.dfy`, 22 for
+`VerdictExists.dfy` and 91 when the two are verified together with the files
 they include. `dafny audit` reports no assumptions.
+
+## What `compare` does with it
+
+| The search proposes | `compare` asks | If refused |
+|---|---|---|
+| No difference, with a relation | `Compatibility.Check` on the relation | `RuntimeError` |
+| A word, with integers | `Verdict.Check` on `Differs(word)` | `RuntimeError` |
+
+A refusal never turns into a different answer about the models, and there is
+no second checker to fall back on. The compiled `Verdict.py` is bound by hash
+in `metadata.json` and loaded by the isolated worker in the same way as the
+two older checkers. `scripts/check/check_compatibility_kernel.py --dafny`
+reproves the sources and requires the regenerated Python to equal the
+packaged files byte for byte.
+
+`tests/test_compatibility_verdict.py` replaces the search inside `compare`
+and calls `compare` itself. A proposal of "compatible" for two models that
+differ only in a later state is refused. So is a real shortest word that
+loses the tie on input order, a real but longer word, and the right word with
+integers that do not hold. The six searches below are also run through
+`compare` on 41 pairs of models: the honest three return what the built-in
+search returns, and each wrong one is refused at least once and never returns
+anything else. A difference 3,001 inputs from the start is accepted with
+Python's default recursion limit, because the compiled word check is a loop.
 
 ## Two checkers that are wrong on purpose
 
@@ -61,12 +106,17 @@ Each file in `negative/` changes one condition in `Check`. Dafny must reject bot
 
 | File | Change | Result |
 |---|---|---|
-| `VerdictMissedLaterDifferenceMutant.dfy` | A pair marked `-1` no longer has to lead to pairs marked `-1`. | 22 verified, 1 error: `CompatibleMeansNoDifference` fails. |
-| `VerdictAnyShortestWordMutant.dfy` | The smaller inputs at each step are no longer tested. | 22 verified, 2 errors: "first in input order" fails. |
+| `VerdictMissedLaterDifferenceMutant.dfy` | A pair marked `-1` no longer has to lead to pairs marked `-1`. | 26 verified, 2 errors. |
+| `VerdictAnyShortestWordMutant.dfy` | The smaller inputs at each step are no longer tested. | 27 verified, 2 errors. |
 
-## Six searches run against the compiled checker
+With the first change Dafny can no longer prove that an accepted `Compatible`
+verdict rules out every difference. With the second it can no longer prove
+"first in input order".
 
-`examples/operations/verdict_searches.py` contains six searches. None is proved.
+## Six other searches run against the compiled checker
+
+`examples/operations/verdict_searches.py` contains six searches, separate from
+the one inside `compare`. None is proved.
 
 - `backward` measures the distance from every pair of states to a difference,
   then walks from the start towards the nearest one.
@@ -109,11 +159,13 @@ the script stops.
 
 ## What is not proved
 
-- `compare` still runs its own breadth-first search and does not call `Check`.
-  Wiring it in needs the compiled checker added to the hash-bound generated
-  files and the isolated worker, as for the existing checkers.
 - The searches, the encoding of named states and inputs as integers, and the
-  explanation text that `compare` returns stay outside the proof.
+  `reason` and output lists that `compare` returns beside the word stay
+  outside the proof. Tests cover them.
+- The checker examines every pair of states. On the laptop used here a
+  difference between two models of 1,501 states each took about 11 seconds to
+  check, where replaying the word alone took well under one. Larger models
+  can exceed the worker's 30 seconds, and `compare` then raises `RuntimeError`.
 - "First in input order" refers to integer input indices. The Python adapter
   assigns those indices by sorting the input names, and that step is tested,
   not proved.

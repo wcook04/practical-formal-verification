@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-"""Reprove the verdict checker and run every search against its compiled form.
+"""Reprove the verdict checker and run six searches against its compiled form.
 
-Experiment, not yet wired into `plectis.compatibility.compare`. Requires the
-pinned Dafny build; there is no handwritten Python copy of the checker to
-fall back on.
+`plectis.compatibility.compare` calls the same checker on its own search. This
+script shows that other searches can take its place: three honest ones are
+always accepted, and three wrong ones are refused whenever their answer is
+wrong. Requires the pinned Dafny build; there is no handwritten Python copy
+of the checker to fall back on.
 """
 
 from __future__ import annotations
@@ -25,9 +27,9 @@ VERSION = "4.11.0+fcb2042d6d043a2634f0854338c08feeaaaf4ae2"
 FORMAL = ROOT / "formal/compatibility"
 SOURCE = "Verdict.dfy"
 # Each broken checker must fail with exactly these counts.
-MUTANTS = {"negative/VerdictMissedLaterDifferenceMutant.dfy": (22, 1),
-           "negative/VerdictAnyShortestWordMutant.dfy": (22, 2)}
-VERIFIED = 23
+MUTANTS = {"negative/VerdictMissedLaterDifferenceMutant.dfy": (26, 2),
+           "negative/VerdictAnyShortestWordMutant.dfy": (27, 2)}
+VERIFIED = 28
 EXISTS_VERIFIED = 22
 
 DRIVER = r'''
@@ -155,7 +157,7 @@ def main(argv=None) -> int:
         compiled = work / "formal" / "Verdict-py"
         checked = run([sys.executable, "-I", "-B", "-c",
                        "import sys; sys.path.insert(0, sys.argv[1]); "
-                       "sys.setrecursionlimit(100000); exec(sys.argv[2])",
+                       "exec(sys.argv[2])",
                        str(compiled), DRIVER], work, stdin=json.dumps(batch))
         try:
             answers = json.loads(checked.stdout)

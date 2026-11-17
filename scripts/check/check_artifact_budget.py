@@ -73,7 +73,11 @@ ARTIFACT_BUDGET = {
     # Explorer evidence adds six runtime modules (4,358 -> 4,364): three
     # build-time collectors, strict admission, explicit annotations and local
     # saved-run loading. Preserve one-file headroom and both byte ceilings.
-    "max_total_files": 4_365,
+    # The compatibility verdict checker adds eight shipped files (4,364 ->
+    # 4,372): two Dafny sources, two negative fixtures, the verdict note, the
+    # generated Verdict.py, six example searches in one module and the
+    # experiment script. Preserve one-file headroom and both byte ceilings.
+    "max_total_files": 4_373,
     "max_data_files_bytes": 120_000_000,  # ~114.4 MiB
 }
 

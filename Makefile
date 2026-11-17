@@ -60,7 +60,7 @@ PUBLIC_TESTS ?= \
 	tests/test_public_site_parity.py
 OPERATIONS_TESTS = tests/test_repair.py tests/test_repair_api.py tests/test_publish.py tests/test_compatibility.py tests/test_operations_integration.py tests/test_operations_boundaries.py tests/test_operations_portability.py
 OPERATIONS_TESTS += tests/test_operations_recovery.py tests/test_sealed_kernel.py tests/test_compatibility_witness.py tests/test_public_views.py tests/test_public_views_recipe_change.py
-OPERATIONS_TESTS += tests/test_replay_kernel.py
+OPERATIONS_TESTS += tests/test_replay_kernel.py tests/test_compatibility_verdict.py
 PUBLIC_TESTS += $(OPERATIONS_TESTS)
 PUBLIC_TESTS += tests/test_public_system_paper.py
 PUBLIC_TESTS += tests/test_hypothesis_handoff.py
@@ -254,6 +254,7 @@ verify-operations:
 	@"$(PYTHON)" scripts/check/check_compatibility_kernel.py --dafny "$(DAFNY)"
 	@"$(PYTHON)" scripts/check/check_views_kernel.py --dafny "$(DAFNY)"
 	@"$(PYTHON)" scripts/check/check_replay_kernel.py --dafny "$(DAFNY)"
+	@"$(PYTHON)" scripts/check/check_verdict_experiment.py --dafny "$(DAFNY)"
 
 .PHONY: verify-components
 verify-components:
