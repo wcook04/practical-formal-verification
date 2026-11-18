@@ -153,29 +153,39 @@
     'open': 'open',
     'cited only': 'open'
   };
-  /* The same status in the SZS ontology for automated reasoning software
-     (Sutcliffe 2008, szs.tptp.org), the mapping worked out with its author
-     in August 2026. A proved result and a known theorem proved in Lean are
-     both THM; the difference is where the mathematics came from. A
-     conditional reduction or a verified finite instance has finished work
-     with no success value for the problem, so STP. A formal statement
-     whose negation is proved is CTH (CounterTheorem). A claim cited only
-     records provenance and has no SZS status. */
+  /* A claim's status in the SZS ontology for automated reasoning software
+     (Sutcliffe 2008, szs.tptp.org), prompted by correspondence with its
+     author in August 2026. Only SZS's semantic statuses are used; its
+     process statuses (INP, STP, INC) describe a software run and never a
+     proved statement. Every proved claim is THM for the statement written
+     on its card, with any hypothesis or bound included: a conditional
+     reduction is THM for the implication, a verified finite instance is
+     THM for the bounded statement, and the larger problem it contributes
+     to stays open. The contribution label records that relationship and
+     the provenance label where the mathematics came from. An open claim is
+     OPN for the problem named in its title, and a refuted formal statement
+     is CTH for the statement named in its title. A claim cited only gets
+     no code, because provenance does not determine the status. */
   var SZS_STATUS = {
     'proved here': 'THM',
     'formalised here': 'THM',
-    'verified finite instance': 'STP',
-    'unconditional progress': 'INP',
-    'conditional reduction': 'STP',
+    'verified finite instance': 'THM',
+    'unconditional progress': 'THM',
+    'conditional reduction': 'THM',
     'open': 'OPN',
     'formal statement refuted': 'CTH'
   };
-  var SZS_NAME = { THM: 'Theorem', CTH: 'CounterTheorem', INP: 'InProgress', STP: 'Stopped', OPN: 'Open' };
+  var SZS_NAME = { THM: 'Theorem', CTH: 'CounterTheorem', OPN: 'Open' };
+  var SZS_SUBJECT = {
+    THM: 'of the statement on this card, including its hypotheses and bounds',
+    OPN: 'of the problem named in the title',
+    CTH: 'of the statement named in the title: its negation is proved'
+  };
   function szsChipHtml(status) {
     var code = SZS_STATUS[status];
     if (!code) return '';
     return '<a class="universe-chip universe-chip--szs" href="https://szs.tptp.org/" target="_blank" rel="noopener" ' +
-      'title="SZS status ' + SZS_NAME[code] + ' (' + code + ')">SZS ' + code + '</a>';
+      'title="SZS status ' + SZS_NAME[code] + ' (' + code + ') ' + SZS_SUBJECT[code] + '">SZS ' + code + '</a>';
   }
   var STATUS_ORDER = ['proved here', 'formalised here', 'verified finite instance',
     'unconditional progress', 'conditional reduction', 'open', 'cited only'];
