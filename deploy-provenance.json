@@ -10,72 +10,12 @@
       "transform": "isolated-css-comments-v1"
     }
   },
-  "generator_commit": "ea1b4487c429fbb68c250b553b147ea00c16f0d7",
-  "last_scoped_release": {
-    "changed_paths": {
-      "maths/assets/universe.js": {
-        "after": {
-          "mode": 420,
-          "sha256": "f26adcad59f804fdb63ff70ab9a517f9fe5a6bccda3004188e805ff0d868e398"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "797c92eaaa393c930e32531dbf8c280f8496a4c9c4f0ace5b1b9d7290e5cb353"
-        }
-      },
-      "maths/index.html": {
-        "after": {
-          "mode": 420,
-          "sha256": "84fc9784fda190c6beefe756f2916ebca3f3de2eba3d9f268f9e742203cefa06"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "86996492c9424dfc1b4f44071cacc37b80b85ae70fd3dd35fd0762940fb99cdd"
-        }
-      },
-      "maths/universe.html": {
-        "after": {
-          "mode": 420,
-          "sha256": "65d40520fc7887a618570692d07c8bbb0661a2ace78aebd668a500e2f6e77d79"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "39efbf8dbecf1f11726a02900318ee56645f5eb36bb78561849fb8fde798c64e"
-        }
-      }
-    },
-    "current_universe_paths": [
-      "maths/assets/maths.css",
-      "maths/assets/maths.js",
-      "maths/assets/universe-companion.css",
-      "maths/assets/universe-companion.js",
-      "maths/assets/universe-companion.json",
-      "maths/assets/universe-data.json",
-      "maths/assets/universe-layout-full.json",
-      "maths/assets/universe.js",
-      "maths/universe.html"
-    ],
-    "generator_commit": "ea1b4487c429fbb68c250b553b147ea00c16f0d7",
-    "pages_base_commit": "e315cea5422f42cccbd3a8179ce25ee5f44c1059",
-    "private_root_released": false,
-    "protected_file_count": 1072,
-    "protected_products": "preserved Pages baseline bytes/modes; historical generation, not relabeled current",
-    "protected_sha256": "fb1e8c7d5d351fbc85fbdb383e0871dabadc445b7c0680f441ca8d354b97cd92",
-    "retained_dependency_recovery": [],
-    "scope": "lean_math_reading_room",
-    "universe_parity": {
-      "full_edges": 8542,
-      "full_nodes": 2907,
-      "index_edges": 1642,
-      "index_nodes": 900,
-      "toolkit_fragment_preserved": true
-    }
-  },
-  "note": "Source frontiers that later releases must contain. Last scoped release updates only its declared paths; protected historical products were not regenerated or relabeled current.",
+  "generator_commit": "ab839278bd2424b985967afe9317d17a9ad3faf9",
+  "note": "Public source commits this deploy was generated from. The next deploy reads this file and refuses to publish a build whose sources do not contain these commits, unless it is run with --allow-older-than-live.",
   "schema": "plectis_site_deploy_provenance_v1",
   "sources": {
     "plectis": {
-      "commit": "8f6f11f0d739244b9685dad82b4ae18f592b83e6",
+      "commit": "552ec9a867cd72b59106099f1ef230203867b5a2",
       "ref": "main",
       "repository": "wcook04/plectis"
     },

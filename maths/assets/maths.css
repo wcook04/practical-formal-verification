@@ -2773,6 +2773,10 @@ html:not(.scripting) .maths-layout a.narrative-ref--term {
   font-size: clamp(1.6rem, 1.2rem + 0.75vw, 1.95rem); line-height: 1.1; letter-spacing: -0.012em; margin-bottom: 0.8rem;
 }
 .universe-chip--status { color: var(--home-ember); border-color: color-mix(in srgb, var(--home-ember) 45%, transparent); background: none; }
+/* A claim's SZS status is a three-letter code, set in monospace. */
+a.universe-chip--szs { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.82em; letter-spacing: 0.04em; text-decoration: none; background: none; color: inherit; }
+a.universe-chip--szs:hover { text-decoration: underline; }
+.universe-szs { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.8em; letter-spacing: 0.04em; opacity: 0.7; text-decoration: none; margin-left: 0.3em; }
 .universe-question {
   margin: 0 0 0.85rem; max-width: 54ch;
   font-size: 1.05rem; line-height: 1.6; color: var(--ink-soft); text-wrap: pretty;
@@ -3391,6 +3395,8 @@ body.maths-folio.has-viewback .reading-index.folio .folio-cover { padding-top: 4
 .universe-explorer.is-deep .explorer__title { display: inline; }
 .universe-where { display: inline; margin: 0; }
 .universe-where[hidden] { display: none; }
+.universe-made { margin: 4px 0 0; font-size: 12px; line-height: 1.4; color: var(--ink-soft); }
+.universe-made a { color: inherit; }
 .universe-where__seg, .universe-where__sep, .universe-where::before {
   font-family: var(--font-serif); font-size: 1.12rem; line-height: 1.4;
 }

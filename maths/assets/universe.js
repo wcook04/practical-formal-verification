@@ -153,6 +153,30 @@
     'open': 'open',
     'cited only': 'open'
   };
+  /* The same status in the SZS ontology for automated reasoning software
+     (Sutcliffe 2008, szs.tptp.org), the mapping worked out with its author
+     in August 2026. A proved result and a known theorem proved in Lean are
+     both THM; the difference is where the mathematics came from. A
+     conditional reduction or a verified finite instance has finished work
+     with no success value for the problem, so STP. A formal statement
+     whose negation is proved is CTH (CounterTheorem). A claim cited only
+     records provenance and has no SZS status. */
+  var SZS_STATUS = {
+    'proved here': 'THM',
+    'formalised here': 'THM',
+    'verified finite instance': 'STP',
+    'unconditional progress': 'INP',
+    'conditional reduction': 'STP',
+    'open': 'OPN',
+    'formal statement refuted': 'CTH'
+  };
+  var SZS_NAME = { THM: 'Theorem', CTH: 'CounterTheorem', INP: 'InProgress', STP: 'Stopped', OPN: 'Open' };
+  function szsChipHtml(status) {
+    var code = SZS_STATUS[status];
+    if (!code) return '';
+    return '<a class="universe-chip universe-chip--szs" href="https://szs.tptp.org/" target="_blank" rel="noopener" ' +
+      'title="SZS status ' + SZS_NAME[code] + ' (' + code + ')">SZS ' + code + '</a>';
+  }
   var STATUS_ORDER = ['proved here', 'formalised here', 'verified finite instance',
     'unconditional progress', 'conditional reduction', 'open', 'cited only'];
   var SERIF = '"Plectis Serif", "Plectis Math", "Iowan Old Style", Georgia, serif';
@@ -4408,7 +4432,9 @@
       var keys = Object.keys(counts).sort(function (a, b) { return statusOrder(a) - statusOrder(b); });
       var rows = '';
       for (var j = 0; j < keys.length; j++) {
+        var szs = SZS_STATUS[keys[j]];
         rows += '<li>' + glyphHtml(STATUS_TIER[keys[j]]) + '<span>' + escapeHtml(capitalFirst(keys[j])) +
+          (szs ? ' <abbr class="universe-szs" title="SZS status ' + SZS_NAME[szs] + '">' + szs + '</abbr>' : '') +
           '</span><b>' + counts[keys[j]] + '</b></li>';
       }
       return { html: '<ul class="universe-inspector__census universe-inspector__census--status">' + rows + '</ul>', total: total };
@@ -5690,6 +5716,7 @@
       var chips = '';
       if (n.status) {
         chips += '<span class="universe-chip">' + (n.tier ? glyphHtml(n.tier) : '') + escapeHtml(capitalFirst(n.status)) + '</span>';
+        if (n.kind === 'public_claim') chips += szsChipHtml(n.status);
       }
       if (n.disposition) chips += '<span class="universe-chip">' + escapeHtml(n.disposition) + '</span>';
       if (chips) parts.push('<p class="universe-inspector__meta">' + chips + '</p>');

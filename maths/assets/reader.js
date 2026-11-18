@@ -5,7 +5,9 @@
    pane beside the text: on a wide screen it takes the place of the margin
    contents, on a narrow one it is a sheet over the foot of the page. The pane
    has two tabs: the Lean statement with how it relates to the printed one,
-   and a drawing of the Lean files behind it.
+   and a drawing of what it depends on: the Lean declarations its proof and
+   statement use, as read from the compiled Lean at the pinned commit
+   (plectis_lean_decl_graph/), or the Lean files behind it.
 
    The data is assets/reader/<paper_id>.json, named with its content hash on
    the page's script tag (build_plectis_maths_site.reader_head_html). Without
@@ -130,10 +132,10 @@
   /* ---- Graph: the Lean files behind a result ------------------------------ */
 
   var SVG = 'http://www.w3.org/2000/svg';
-  function graphHtml(r, data, width) {
+  function filesGraphHtml(r, data, width) {
     var head = '<h3 class="lean-pane__sub">Lean files this statement depends on</h3>' +
-      '<p class="lean-pane__graph-note">The dependencies are between Lean files. Dependencies between individual ' +
-      'declarations are not recorded on this site.</p>';
+      '<p class="lean-pane__graph-note">The dependencies are between Lean files.' +
+      (r.dg ? '' : ' Dependencies between individual declarations are not recorded for this result.') + '</p>';
     var roots = (r.modules || []).slice();
     if (!roots.length) return head + '<p class="lean-pane__graph-note">No Lean file is recorded for this result.</p>';
     var out = {};
@@ -232,6 +234,134 @@
     return head + '<div class="lean-graph__frame">' + svg + '</div>' +
       (hidden ? '<p class="lean-pane__graph-note">and ' + hidden + ' more file' + (hidden > 1 ? 's' : '') + '</p>' : '') +
       '<p class="lean-pane__key">An arrow from A to B means the file A imports the file B.</p>';
+  }
+
+  /* ---- Graph: the Lean declarations behind a result ------------------------ */
+
+  // Break a name after dots and underscores and before a capital that follows
+  // a lower-case letter or digit, then pack the pieces into lines.
+  function wrapName(name, maxChars, maxLines) {
+    var pieces = String(name).split(/(?<=[._])|(?<=[a-z0-9])(?=[A-Z])/);
+    var lines = [], line = '';
+    pieces.forEach(function (piece) {
+      while (piece.length > maxChars) {
+        if (line) { lines.push(line); line = ''; }
+        lines.push(piece.slice(0, maxChars));
+        piece = piece.slice(maxChars);
+      }
+      if (line && (line + piece).length > maxChars) { lines.push(line); line = ''; }
+      line += piece;
+    });
+    if (line) lines.push(line);
+    if (lines.length > maxLines) {
+      lines = lines.slice(0, maxLines);
+      var last = lines[maxLines - 1];
+      lines[maxLines - 1] = (last.length >= maxChars ? last.slice(0, maxChars - 1) : last) + '…';
+    }
+    return lines;
+  }
+
+  function declGraphHtml(r, data, width) {
+    var head = '<h3 class="lean-pane__sub">Lean declarations this statement depends on</h3>' +
+      '<p class="lean-pane__graph-note">Each box is a Lean declaration from this project. The arrows are read from ' +
+      'Lean’s own record of the compiled proof at the pinned commit. Declarations from Mathlib and the Lean core ' +
+      'are left out.</p>';
+    var g = r.dg, nodes = data.decl_nodes || [];
+    var depthOf = g.n.map(function (n) { return n[1]; });
+    var rows = [];
+    g.n.forEach(function (n, k) { (rows[n[1]] = rows[n[1]] || []).push(k); });
+    rows = rows.filter(function (row) { return row && row.length; });
+    var parents = {};
+    g.e.forEach(function (e) { (parents[e[1]] = parents[e[1]] || []).push(e[0]); });
+    var x = {};
+    rows.forEach(function (row, depth) {
+      if (depth > 0) {
+        var bary = {};
+        row.forEach(function (k) {
+          var ps = (parents[k] || []).filter(function (p) { return x[p] !== undefined; });
+          bary[k] = ps.length ? ps.reduce(function (s, p) { return s + x[p]; }, 0) / ps.length : 0;
+        });
+        row.sort(function (a, b) { return bary[a] - bary[b] || a - b; });
+      }
+      row.forEach(function (k, i) { x[k] = i; });
+    });
+
+    var W = Math.max(240, Math.floor(width));
+    var GAP_X = 10, GAP_Y = 34, BAND_Y = 12, MIN_W = 130, LINE_H = 14, PAD_Y = 8, MAX_LINES = 3;
+    var widest = rows.reduce(function (n, row) { return Math.max(n, row.length); }, 1);
+    var perLine = Math.max(1, Math.min(widest, Math.floor((W + GAP_X) / (MIN_W + GAP_X))));
+    var NODE_W = Math.min(220, Math.floor((W - (perLine - 1) * GAP_X) / perLine));
+    var maxChars = Math.max(8, Math.floor((NODE_W - 14) / 6.6));
+    var label = {};
+    g.n.forEach(function (n, k) {
+      var full = String((nodes[n[0]] || [])[0] || '');
+      label[k] = wrapName(full.split('.').pop() || full, maxChars, MAX_LINES);
+    });
+    var pos = {}, y = 2;
+    rows.forEach(function (row) {
+      for (var start = 0; start < row.length; start += perLine) {
+        var line = row.slice(start, start + perLine);
+        var lineW = line.length * NODE_W + (line.length - 1) * GAP_X;
+        var left = (W - lineW) / 2;
+        var h = line.reduce(function (m, k) { return Math.max(m, label[k].length); }, 1) * LINE_H + 2 * PAD_Y;
+        line.forEach(function (k, i) {
+          pos[k] = { x: left + i * (NODE_W + GAP_X), y: y, h: h, depth: depthOf[k] };
+        });
+        y += h + (start + perLine < row.length ? BAND_Y : GAP_Y);
+      }
+    });
+    var H = y - GAP_Y + 6;
+    var uid = 'lean-arrow-' + Math.random().toString(36).slice(2, 8);
+    var svg = '<svg class="lean-graph lean-graph--decls" viewBox="0 0 ' + W + ' ' + Math.ceil(H) + '" width="' + W +
+      '" height="' + Math.ceil(H) + '" role="group" aria-label="Lean declarations this statement depends on" xmlns="' + SVG + '">' +
+      '<defs><marker id="' + uid + '" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">' +
+      '<path class="lean-graph__head" d="M0,0 L8,4 L0,8 z"/></marker></defs>';
+    g.e.forEach(function (e) {
+      var a = pos[e[0]], b = pos[e[1]];
+      if (!a || !b || b.depth <= a.depth) return;
+      var x1 = a.x + NODE_W / 2, y1 = a.y + a.h, x2 = b.x + NODE_W / 2, y2 = b.y - 1, mid = (y2 - y1) / 2;
+      svg += '<path class="lean-graph__edge' + (e[2] === 's' ? ' lean-graph__edge--statement' : '') + '" d="M' +
+        x1.toFixed(1) + ',' + y1.toFixed(1) + ' C' + x1.toFixed(1) + ',' + (y1 + mid).toFixed(1) + ' ' +
+        x2.toFixed(1) + ',' + (y2 - mid).toFixed(1) + ' ' + x2.toFixed(1) + ',' + y2.toFixed(1) +
+        '" marker-end="url(#' + uid + ')"/>';
+    });
+    Object.keys(pos).forEach(function (key) {
+      var k = Number(key), p = pos[key], node = nodes[g.n[k][0]] || [];
+      var full = String(node[0] || ''), kind = node[1] || '', file = (data.files || [])[node[2]];
+      var href = data.source && file ? data.source + file + (node[3] ? '#L' + node[3] : '') : '';
+      var root = p.depth === 0;
+      var lines = label[k];
+      var top = p.y + p.h / 2 - (lines.length - 1) * LINE_H / 2 + 4;
+      svg += '<a class="lean-graph__node' + (root ? ' lean-graph__node--root' : '') + '" href="' + escapeHtml(href) +
+        '" target="_blank" rel="external noopener" data-link-kind="exogenous" aria-label="' +
+        escapeHtml(full + (kind ? ', ' + kind : '') + (root ? ', the declaration this result is stated as' : '') +
+          ', on GitHub' + (node[3] ? ' at line ' + node[3] : '')) + '">' +
+        '<title>' + escapeHtml(full) + '</title>' +
+        '<rect x="' + p.x.toFixed(1) + '" y="' + p.y.toFixed(1) + '" width="' + NODE_W + '" height="' + p.h + '" rx="6"/>' +
+        '<text text-anchor="middle">' + lines.map(function (text, i) {
+          return '<tspan x="' + (p.x + NODE_W / 2).toFixed(1) + '" y="' + (top + i * LINE_H).toFixed(1) + '">' +
+            escapeHtml(text) + '</tspan>';
+        }).join('') + '</text></a>';
+    });
+    svg += '</svg>';
+    return head + '<div class="lean-graph__frame">' + svg + '</div>' +
+      (g.more ? '<p class="lean-pane__graph-note">' + g.more + ' further declaration' + (g.more > 1 ? 's are' : ' is') +
+        ' not drawn.</p>' : '') +
+      '<p class="lean-pane__key"><span class="lean-pane__key-line" aria-hidden="true"></span>' +
+      'A solid arrow from A to B: the proof of A uses B.</p>' +
+      '<p class="lean-pane__key"><span class="lean-pane__key-line lean-pane__key-line--statement" aria-hidden="true"></span>' +
+      'A dashed arrow from A to B: only the statement of A refers to B.</p>';
+  }
+
+  function graphHtml(r, data, width, view) {
+    if (!r.dg || !(r.dg.n || []).length) return filesGraphHtml(r, data, width);
+    var decls = view !== 'files';
+    var switcher = '<div class="lean-pane__tabs lean-pane__views" role="tablist" aria-label="Graph views">' +
+      '<button type="button" role="tab" data-lean-graph-view="decls" aria-selected="' + decls + '"' +
+      (decls ? '' : ' tabindex="-1"') + '>Declarations</button>' +
+      '<button type="button" role="tab" data-lean-graph-view="files" aria-selected="' + !decls + '"' +
+      (decls ? ' tabindex="-1"' : '') + '>Files</button></div>';
+    return switcher + (decls ? declGraphHtml(r, data, width) : filesGraphHtml(r, data, width));
   }
 
   /* ---- The reader --------------------------------------------------------- */
@@ -350,6 +480,7 @@
     var panels = { lean: pane.querySelector('#lean-panel-lean'), graph: pane.querySelector('#lean-panel-graph') };
     var scroller = pane.querySelector('.lean-pane__scroll');
     var tab = 'lean';
+    var graphView = 'decls';
 
     function setFollowing(on) {
       following = on;
@@ -366,8 +497,24 @@
     function renderGraph() {
       if (!current || tab !== 'graph') return;
       var width = panels.graph.clientWidth || scroller.clientWidth || 360;
-      panels.graph.innerHTML = graphHtml(current.result, current.data, width);
+      panels.graph.innerHTML = graphHtml(current.result, current.data, width, graphView);
     }
+    function selectView(name, focus) {
+      graphView = name;
+      renderGraph();
+      var on = panels.graph.querySelector('[data-lean-graph-view="' + name + '"]');
+      if (on && focus) on.focus();
+    }
+    panels.graph.addEventListener('click', function (ev) {
+      var btn = ev.target.closest && ev.target.closest('[data-lean-graph-view]');
+      if (btn) selectView(btn.getAttribute('data-lean-graph-view'), true);
+    });
+    panels.graph.addEventListener('keydown', function (ev) {
+      var btn = ev.target.closest && ev.target.closest('[data-lean-graph-view]');
+      if (!btn || (ev.key !== 'ArrowRight' && ev.key !== 'ArrowLeft')) return;
+      ev.preventDefault();
+      selectView(btn.getAttribute('data-lean-graph-view') === 'decls' ? 'files' : 'decls', true);
+    });
     function selectTab(name, focus) {
       tab = name;
       tabs.forEach(function (t) {

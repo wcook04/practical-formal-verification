@@ -197,6 +197,15 @@
 .lean-graph__node:hover rect { stroke: var(--ink); }
 .lean-graph__node:focus { outline: none; }
 .lean-graph__node:focus-visible rect { stroke: var(--accent); stroke-width: 2.5; }
+path.lean-graph__edge { fill: none; }
+.lean-graph__edge--statement { stroke-dasharray: 4 3; }
+/* The Declarations / Files switch sits above the drawing, in the tabs' grammar. */
+.lean-pane__views { margin: 0 0 var(--space-2); }
+.lean-pane__key-line {
+  display: inline-block; width: 1.6rem; margin-right: 0.45rem; vertical-align: 0.25em;
+  border-top: 1.5px solid var(--muted);
+}
+.lean-pane__key-line--statement { border-top-style: dashed; }
 
 /* ---- Wide screens: the pane takes the margin contents' place ----------- */
 @media (min-width: 1100px) {

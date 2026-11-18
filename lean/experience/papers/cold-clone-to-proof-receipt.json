@@ -20,26 +20,11 @@
     "source_raw": "https://raw.githubusercontent.com/wcook04/plectis-erdos/main/paper/systems/cold-clone-to-proof-receipt.tex"
   },
   "render_contract": {
-    "preferred": "html_exact_tex",
-    "fallback": "html_mathml",
-    "fallback_renderer": "native MathML",
-    "frontend_math_dependency": "MathJax or a TeX-compatible KaTeX configuration",
-    "fragment_not_document": true,
+    "fragment_not_document": false,
     "executable_scripts_embedded": false,
-    "pandoc": "pandoc 3.9.0.2",
-    "renderer_contract_version": 35,
-    "renderer_fingerprint": "f4d15df6dc782e78",
-    "source_sha256": "d4ba169276995836b7dc914342dd9ba9371fa22e98a45dcb53c95a85cb78f133",
-    "source_manifest_match": true,
-    "publication_manifest_match": true,
-    "mathml_node_count": 0,
-    "raw_math_fallback_count": 0,
-    "warnings": {
-      "mathml": [],
-      "mathjax": []
-    },
-    "html_mathml_sha256": "4d4c6da1370a9bd623bebc93dcf5afc1a167dd955281070e5537a96d77ef447e",
-    "html_exact_tex_sha256": "dcb0a51f19d55d2f585ddc176570d0f63921da79dd6f1e31a582f4aefd7c38ba"
+    "retired_pdf_redirect": "papers/cold-clone-to-proof-receipt.pdf",
+    "html_mathml_sha256": "6ef201af1ad70e39ff17bbc22f0cace18e63de753a7ae0f7afc47b403aa538eb",
+    "html_exact_tex_sha256": "6ef201af1ad70e39ff17bbc22f0cace18e63de753a7ae0f7afc47b403aa538eb"
   },
   "sections": [
     {
@@ -173,5 +158,29 @@
         "level": 2
       }
     ]
-  }
+  },
+  "historical_render_contract": {
+    "preferred": "html_exact_tex",
+    "fallback": "html_mathml",
+    "fallback_renderer": "native MathML",
+    "frontend_math_dependency": "MathJax or a TeX-compatible KaTeX configuration",
+    "fragment_not_document": true,
+    "executable_scripts_embedded": false,
+    "pandoc": "pandoc 3.9.0.2",
+    "renderer_contract_version": 35,
+    "renderer_fingerprint": "f4d15df6dc782e78",
+    "source_sha256": "d4ba169276995836b7dc914342dd9ba9371fa22e98a45dcb53c95a85cb78f133",
+    "source_manifest_match": true,
+    "publication_manifest_match": true,
+    "mathml_node_count": 0,
+    "raw_math_fallback_count": 0,
+    "warnings": {
+      "mathml": [],
+      "mathjax": []
+    },
+    "html_mathml_sha256": "4d4c6da1370a9bd623bebc93dcf5afc1a167dd955281070e5537a96d77ef447e",
+    "html_exact_tex_sha256": "dcb0a51f19d55d2f585ddc176570d0f63921da79dd6f1e31a582f4aefd7c38ba"
+  },
+  "publication_state": "retired",
+  "superseded_by": "claim-faithful-publication-systems"
 }
