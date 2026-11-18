@@ -181,11 +181,33 @@
     OPN: 'of the problem named in the title',
     CTH: 'of the statement named in the title: its negation is proved'
   };
+  /* On a claim's card the code sits beside the status chip, with a "?"
+     that opens one note under the chips (a click, as everything on the
+     map; no hover tooltip). Few readers know the ontology, so the note
+     says what SZS is and what this code says about this card. */
   function szsChipHtml(status) {
     var code = SZS_STATUS[status];
     if (!code) return '';
-    return '<a class="universe-chip universe-chip--szs" href="https://szs.tptp.org/" target="_blank" rel="noopener" ' +
-      'title="SZS status ' + SZS_NAME[code] + ' (' + code + ') ' + SZS_SUBJECT[code] + '">SZS ' + code + '</a>';
+    return '<span class="universe-szs-pill"><span class="universe-szs-pill__code" title="SZS status ' + SZS_NAME[code] + ' ' +
+      SZS_SUBJECT[code] + '"><span class="universe-szs__label">SZS</span>' + code + '</span>' +
+      '<button type="button" class="universe-szs-pill__ask" data-universe-szs-toggle aria-expanded="false" ' +
+      'aria-controls="universe-szs-note" aria-label="What the SZS status means">?</button></span>';
+  }
+  function szsNoteHtml(status) {
+    var code = SZS_STATUS[status];
+    if (!code) return '';
+    var what = code === 'THM'
+      ? '<b>THM</b> (Theorem) means the statement on this card is proved, together with any hypothesis or bound it states. ' +
+        'The label beside it, <i>' + status + '</i>, says ' +
+        (status === 'proved here' || status === 'formalised here'
+          ? 'where the mathematics came from.'
+          : 'how that proved statement bears on the larger problem, which may still be open.')
+      : code === 'OPN'
+        ? '<b>OPN</b> (Open) means the problem named in the title has not been proved or disproved. The text below says what has been proved towards it.'
+        : '<b>CTH</b> (CounterTheorem) means the negation of the statement named in the title is proved, so that statement is false.';
+    return '<p class="universe-szs-note" id="universe-szs-note" hidden>' +
+      '<a href="https://szs.tptp.org/" target="_blank" rel="noopener">SZS</a> is a standard set of status codes that ' +
+      'automated theorem provers use to report what they established (G. Sutcliffe, 2008). ' + what + '</p>';
   }
   var STATUS_ORDER = ['proved here', 'formalised here', 'verified finite instance',
     'unconditional progress', 'conditional reduction', 'open', 'cited only'];
@@ -5730,6 +5752,7 @@
       }
       if (n.disposition) chips += '<span class="universe-chip">' + escapeHtml(n.disposition) + '</span>';
       if (chips) parts.push('<p class="universe-inspector__meta">' + chips + '</p>');
+      if (n.kind === 'public_claim' && n.status) parts.push(szsNoteHtml(n.status));
       if (n.kind === 'paper') parts.push(paperAboutHtml(n));
       parts.push(proofHtml(n));
       var body = n.statement || n.question || null;
@@ -7455,6 +7478,17 @@
 
     if (inspector) {
       inspector.addEventListener('click', function (event) {
+        // A claim's "?" beside its SZS code opens or closes the note under the chips.
+        var ask = event.target.closest ? event.target.closest('[data-universe-szs-toggle]') : null;
+        if (ask) {
+          var note = inspector.querySelector('#universe-szs-note');
+          if (note) {
+            var open = note.hasAttribute('hidden');
+            if (open) note.removeAttribute('hidden'); else note.setAttribute('hidden', '');
+            ask.setAttribute('aria-expanded', open ? 'true' : 'false');
+          }
+          return;
+        }
         var go = event.target.closest ? event.target.closest('[data-universe-go]') : null;
         if (go) {
           var i = parseInt(go.getAttribute('data-universe-go'), 10);

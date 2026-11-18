@@ -2773,10 +2773,35 @@ html:not(.scripting) .maths-layout a.narrative-ref--term {
   font-size: clamp(1.6rem, 1.2rem + 0.75vw, 1.95rem); line-height: 1.1; letter-spacing: -0.012em; margin-bottom: 0.8rem;
 }
 .universe-chip--status { color: var(--home-ember); border-color: color-mix(in srgb, var(--home-ember) 45%, transparent); background: none; }
-/* A claim's SZS status is a three-letter code, set in monospace. */
-a.universe-chip--szs { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.82em; letter-spacing: 0.04em; text-decoration: none; background: none; color: inherit; }
-a.universe-chip--szs:hover { text-decoration: underline; }
-.universe-szs { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.8em; letter-spacing: 0.04em; opacity: 0.7; text-decoration: none; margin-left: 0.3em; }
+/* A claim's SZS status: a quiet chip in the status chip's type, its
+   three-letter code tracked a little, the word SZS fainter before it, and
+   a round "?" of the chip's height that opens the note under the chips. */
+.universe-szs-pill {
+  display: inline-flex; align-items: stretch; vertical-align: top;
+  margin: 0 0.35rem 0.25rem 0; font-size: var(--fs-micro); line-height: 1.5;
+  border: 1px solid var(--rule); border-radius: var(--r-pill); overflow: hidden;
+}
+.universe-szs-pill__code { display: inline-flex; align-items: baseline; gap: 0.38em; padding: 0.12rem 0.5rem 0.12rem 0.6rem; color: var(--ink-soft); font-weight: 600; letter-spacing: 0.06em; }
+.universe-szs__label { color: var(--faint); font-weight: 400; font-size: 0.84em; letter-spacing: 0.1em; }
+.universe-szs-pill__ask {
+  display: inline-flex; align-items: center; justify-content: center; min-width: 1.75em; padding: 0 0.45rem;
+  font: inherit; font-weight: 600; color: var(--muted); background: none;
+  border: 0; border-left: 1px solid var(--rule); cursor: pointer;
+  transition: color 120ms ease, background-color 120ms ease;
+}
+.universe-szs-pill__ask:hover { color: var(--ink); background: var(--surface-sunk); }
+.universe-szs-pill__ask[aria-expanded="true"] { color: var(--home-ember); background: color-mix(in srgb, var(--home-ember) 12%, transparent); }
+.universe-szs-pill__ask:focus-visible { outline: 2px solid var(--home-ember); outline-offset: -2px; }
+.universe-szs-note {
+  margin: calc(-1 * var(--space-2)) 0 var(--space-3); padding: 0.55rem 0.75rem; max-width: 56ch;
+  font-size: var(--fs-small); line-height: var(--lh-body); color: var(--ink-soft);
+  background: var(--surface-sunk); border: 1px solid var(--rule); border-radius: 6px; text-wrap: pretty;
+}
+.universe-szs-note[hidden] { display: none; }
+.universe-szs-note b { font-weight: 600; color: var(--ink); letter-spacing: 0.03em; }
+.universe-szs-note a { color: inherit; }
+/* In the status counts and the key the code is a quiet suffix in the same face. */
+.universe-szs { color: var(--faint); font-size: 0.86em; letter-spacing: 0.06em; text-decoration: none; margin-left: 0.3em; }
 .universe-question {
   margin: 0 0 0.85rem; max-width: 54ch;
   font-size: 1.05rem; line-height: 1.6; color: var(--ink-soft); text-wrap: pretty;
