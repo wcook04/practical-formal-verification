@@ -10,239 +10,87 @@
       "transform": "isolated-css-comments-v1"
     }
   },
-  "generator_commit": "2ac4de6060bbd30bec306f2600a2312e03638b18",
+  "generator_commit": "4944a099b13e27be2989cfc1a1d4b60467e86ca3",
   "last_scoped_release": {
     "changed_paths": {
-      "maths/assets/math/0d55aee7fd2101f2.css": {
-        "after": {
-          "mode": 420,
-          "sha256": "0d55aee7fd2101f27f0cdaaa57a291b3497a6335ee6117376f0cf69a6d136744"
-        },
-        "before": null
-      },
-      "maths/assets/math/2642d1ea59f62800.css": {
-        "after": null,
-        "before": {
-          "mode": 420,
-          "sha256": "2642d1ea59f62800ff4659ef429e2319c513b39d845c704054d42ec175e9e51f"
-        }
-      },
-      "maths/assets/math/4696186639939240.css": {
-        "after": {
-          "mode": 420,
-          "sha256": "4696186639939240438f150c04719af26bd329ce4dc41cff121ddb95f8ec0df4"
-        },
-        "before": null
-      },
-      "maths/assets/math/6520a0180c8f3555.css": {
-        "after": {
-          "mode": 420,
-          "sha256": "6520a0180c8f3555f807314ac40c4b770726c0023f6afb4bff4568fbc67af5a4"
-        },
-        "before": null
-      },
-      "maths/assets/math/65d4c380621b059c.css": {
-        "after": {
-          "mode": 420,
-          "sha256": "65d4c380621b059cc24e5141733d33182a4900c57f2135e43aa66c6c9c6e6a99"
-        },
-        "before": null
-      },
-      "maths/assets/math/6657bce52f5d9ed8.css": {
-        "after": null,
-        "before": {
-          "mode": 420,
-          "sha256": "6657bce52f5d9ed87055a6551d35217193e4854048bbed4f5719e3958198798c"
-        }
-      },
-      "maths/assets/math/6d0552986867401a.css": {
-        "after": {
-          "mode": 420,
-          "sha256": "6d0552986867401a7ccbb3795c632a29594f2915f474264d238e8aa94f787bd4"
-        },
-        "before": null
-      },
-      "maths/assets/math/808c718d0de7aeeb.css": {
-        "after": null,
-        "before": {
-          "mode": 420,
-          "sha256": "808c718d0de7aeebe97380cd5f145b50173fde300858aeaaaec51b5c34c727ff"
-        }
-      },
-      "maths/assets/math/933cc04caf45c53b.css": {
-        "after": null,
-        "before": {
-          "mode": 420,
-          "sha256": "933cc04caf45c53bed7256ff03fe198ee4a379f231cf4dc45ea76cd3f1e3748d"
-        }
-      },
-      "maths/assets/math/9e32848606fbec89.css": {
-        "after": {
-          "mode": 420,
-          "sha256": "9e32848606fbec8952d3cd0f00dc8eb8fa8a5edb22f0636311b46ce2bab7285d"
-        },
-        "before": null
-      },
-      "maths/assets/math/abf1f2a42fd4db7e.css": {
-        "after": {
-          "mode": 420,
-          "sha256": "abf1f2a42fd4db7e3d023d7c65e02ee0c543e8456b56f5baee43c86e7933dee6"
-        },
-        "before": null
-      },
-      "maths/assets/math/b5e81ad56d65fef4.css": {
-        "after": null,
-        "before": {
-          "mode": 420,
-          "sha256": "b5e81ad56d65fef4974b7296dc64b5241539e5d411f62fdc969d7ec2d3187efb"
-        }
-      },
-      "maths/assets/math/ba75d92db1137f4b.css": {
-        "after": null,
-        "before": {
-          "mode": 420,
-          "sha256": "ba75d92db1137f4bc88b9711580d228c218a6fc14f68f17fec031d05c8e7c693"
-        }
-      },
-      "maths/assets/math/e4352df57bda6ec4.css": {
-        "after": null,
-        "before": {
-          "mode": 420,
-          "sha256": "e4352df57bda6ec4fed08a0a6cee2adeb96c6cfcfa457d4cff29b855ae1e8061"
-        }
-      },
-      "maths/assets/math/ecba5b0509f63bac.css": {
-        "after": {
-          "mode": 420,
-          "sha256": "ecba5b0509f63bacb68c50451ee679f973c9bd345acc85775bec7275a7aa92a1"
-        },
-        "before": null
-      },
-      "maths/assets/math/f0ef1ecd428660b3.css": {
-        "after": null,
-        "before": {
-          "mode": 420,
-          "sha256": "f0ef1ecd428660b3f57e0e531d5758c5439e81759e828af76886c3710c667939"
-        }
-      },
-      "maths/assets/universe-data.json": {
-        "after": {
-          "mode": 420,
-          "sha256": "63c74808b73ea9533f8ab29ce8d9811ae6e2fb56b57a38f837da7994f8663041"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "299bf15aef1de4ee219c4a0baa389a5b98100f7400b98ba7e1e0578309a517de"
-        }
-      },
-      "maths/assets/universe-layout-full.json": {
-        "after": {
-          "mode": 420,
-          "sha256": "9bbdf945f92747e0775332027c3cd9350dcccbb9a5fca8f24eaa4d486c18473e"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "ee0fd972723c3772b8469ac07131e8c687dee2f9b356b894153cb1f45f8460f7"
-        }
-      },
-      "maths/index.html": {
-        "after": {
-          "mode": 420,
-          "sha256": "e5661139b5b079e371dc3d760e79ca183029344e775f42e25b7b34737ce0a5fb"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "9567297f7e28f5e9788284f77aba9b3b094496bce6a0706a376f204450850d6c"
-        }
-      },
       "maths/problems/erdos_1041.html": {
         "after": {
           "mode": 420,
-          "sha256": "9b99a2669b1d65ebbddd42009f7928166c29a9ec6b021375c236592ae821b169"
+          "sha256": "d64ae0452abab660dbac7663730ea41ad37388f770859137dce41ac7785d4079"
         },
         "before": {
           "mode": 420,
-          "sha256": "f557016bac90e6c4092261dac2a53d53cee3dc00b45d4dcf1304463dd461284a"
+          "sha256": "9b99a2669b1d65ebbddd42009f7928166c29a9ec6b021375c236592ae821b169"
         }
       },
       "maths/problems/erdos_1049.html": {
         "after": {
           "mode": 420,
-          "sha256": "7d6ecce85ab563cbe30183af11685e77d40ac81f5aa84a3b0f3b5ec1e5ba5f43"
+          "sha256": "699fc3376694e93aa7df05bd9ee4a7e07d4c0e63d57544e94e8a507bbb2e6569"
         },
         "before": {
           "mode": 420,
-          "sha256": "8b167f3d885a74a54de1f52711ef0db600ce7149d31f4dc33c8ca758f3dd58c8"
+          "sha256": "7d6ecce85ab563cbe30183af11685e77d40ac81f5aa84a3b0f3b5ec1e5ba5f43"
         }
       },
       "maths/problems/erdos_243.html": {
         "after": {
           "mode": 420,
-          "sha256": "8241c167f8eae18b8aa810b6d9d5ba7120ed26b6fdc6c8261f23548fb1c3c334"
+          "sha256": "d0239a1d0977e7332c85e253c0796b78249e1290f58c1774589ac2abbf4edbb8"
         },
         "before": {
           "mode": 420,
-          "sha256": "ed6b46c833b19406fd2d1a74c5c833456851dbd196560673f10a243e3d3359a7"
+          "sha256": "8241c167f8eae18b8aa810b6d9d5ba7120ed26b6fdc6c8261f23548fb1c3c334"
         }
       },
       "maths/problems/erdos_249.html": {
         "after": {
           "mode": 420,
-          "sha256": "27f4ac02be7549205e9a6b93a88bd08c58226d28a11aea3cd675b5a205305910"
+          "sha256": "a2bbfeaa329ae6ee8b10d38918248a123f2cdbb1618e93173828ca515ec4b0a5"
         },
         "before": {
           "mode": 420,
-          "sha256": "04caa2979819221fcb1c9dc33424b4548ac48ab2fc69cdf8db9a0c0f7a1f4edf"
+          "sha256": "27f4ac02be7549205e9a6b93a88bd08c58226d28a11aea3cd675b5a205305910"
         }
       },
       "maths/problems/erdos_251.html": {
         "after": {
           "mode": 420,
-          "sha256": "d1bb2bef8e34e46e9752453789c8227db985781b1d93730bb0ca42e1d8aa26e6"
+          "sha256": "6e6d818ea01215ae67f24e597e3ddfc165ef53c773914364ae495560dfc35881"
         },
         "before": {
           "mode": 420,
-          "sha256": "2aa0619730ac71c6f29520fbe1f9ac9734b427dd31c966caabecf3a54dab2c58"
+          "sha256": "d1bb2bef8e34e46e9752453789c8227db985781b1d93730bb0ca42e1d8aa26e6"
         }
       },
       "maths/problems/erdos_257.html": {
         "after": {
           "mode": 420,
-          "sha256": "21cb946552623ff4845a0ec72288ae1c08f5a267879edf115a3a0c751ef8e25f"
+          "sha256": "36ad8a4ae74b1fd6d46d46a8d4011017f635ba698f5641089d04f050e97530da"
         },
         "before": {
           "mode": 420,
-          "sha256": "960e597acff6aa51556f7b7a6db513c95efa329e54eeaed90a8c4fc5993c7448"
+          "sha256": "21cb946552623ff4845a0ec72288ae1c08f5a267879edf115a3a0c751ef8e25f"
         }
       },
       "maths/problems/erdos_269.html": {
         "after": {
           "mode": 420,
-          "sha256": "b72237157eaa6e8690468d1b8d9270c4ca2fa0f0978c8667c83e8c50a7081831"
+          "sha256": "313e08d1e66be376bdb420d17c05927b3a298fddb984c00d168a151305e83291"
         },
         "before": {
           "mode": 420,
-          "sha256": "b00610d9e1af8648c28bff14e54f866cb57afaacb517282b92fc52591c919379"
+          "sha256": "b72237157eaa6e8690468d1b8d9270c4ca2fa0f0978c8667c83e8c50a7081831"
         }
       },
       "maths/problems/erdos_68.html": {
         "after": {
           "mode": 420,
+          "sha256": "ae6f9869505d7a6980382b1fe92f81ac3e5916fe547652f84ba806735b808785"
+        },
+        "before": {
+          "mode": 420,
           "sha256": "88fb09324cf576e8c18a4bb1cc4d12cc6066d674c940426ee1cdb5835547801f"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "cd198f6be46c2f8f8b9f01caef1eaf983121074001f8abc7dfc22bfb8b31603a"
-        }
-      },
-      "maths/universe.html": {
-        "after": {
-          "mode": 420,
-          "sha256": "71df3072f25eaf9daad886b2a35776e6c95ec0e5b04fc626a0023b6f3554ae7f"
-        },
-        "before": {
-          "mode": 420,
-          "sha256": "77189ae298cec99ff7a784924c4ae1e2525eaa9e3d770eada72d3792139e8272"
         }
       }
     },
@@ -257,8 +105,8 @@
       "maths/assets/universe.js",
       "maths/universe.html"
     ],
-    "generator_commit": "2ac4de6060bbd30bec306f2600a2312e03638b18",
-    "pages_base_commit": "46bc6c7c208c25d205133207ad19d16ca274f0bb",
+    "generator_commit": "4944a099b13e27be2989cfc1a1d4b60467e86ca3",
+    "pages_base_commit": "29dd23671257787ad80310d80d0bc638c59802ab",
     "private_root_released": false,
     "protected_file_count": 1072,
     "protected_products": "preserved Pages baseline bytes/modes; historical generation, not relabeled current",
