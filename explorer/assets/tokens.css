@@ -83,6 +83,7 @@
   --fam-mark-warm: var(--weave-red-glow);
   --fam-mark-cool: var(--weave-azure-glow);
   --fam-serif: var(--font-serif);
+  --fam-sans: var(--font-sans);
   --fam-ease: var(--ease-out);
 
   /* Map inks (maths.css --u-* tokens, renamed for components). Every figure

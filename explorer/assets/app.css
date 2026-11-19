@@ -57,13 +57,21 @@ code, .code { font-family: var(--font-mono); font-size: 0.86em; }
    --fam-ink), so it follows the page's theme switch. */
 .fam-lockup { display: inline-flex; align-items: center; gap: 0.75rem; min-width: 0; }
 .fam-lockup__home {
-  position: relative; display: inline-grid; place-items: center; flex: none;
-  width: 2rem; height: 2rem; border-radius: 8px;
+  position: relative; display: inline-flex; align-items: center; gap: 0.5rem; flex: none;
+  height: 2.1rem; padding: 0 0.55rem 0 0.25rem; margin-left: -0.25rem; border-radius: 9px;
+  color: var(--fam-ink); text-decoration: none;
   transition: background-color 160ms var(--fam-ease);
 }
-.fam-lockup__home img { display: block; width: 1.6rem; height: 1.6rem; }
+.fam-lockup__home img { display: block; flex: none; width: 1.6rem; height: 1.6rem; }
+/* "Will Cook" beside the plait (19 November 2026): every site names whose it
+   is, as the home page's own header does. Sans, heavier than the site's serif
+   name, so the two links read as owner then site. */
+.fam-lockup__owner {
+  font-family: var(--fam-sans); font-size: 1.02rem; font-weight: 650; line-height: 1;
+  letter-spacing: 0.005em; white-space: nowrap; color: var(--fam-ink);
+}
 @media (hover: hover) and (pointer: fine) {
-  .fam-lockup__home:hover { background: color-mix(in srgb, var(--fam-ink) 8%, transparent); }
+  .fam-lockup__home:hover { background: color-mix(in srgb, var(--fam-ink) 8%, transparent); text-decoration: none; }
 }
 .fam-lockup__home:focus-visible { outline: 2px solid var(--fam-accent); outline-offset: 2px; }
 .fam-lockup__rule { flex: none; width: 1px; height: 1.35rem; background: var(--fam-rule-strong); }
@@ -85,8 +93,10 @@ code, .code { font-family: var(--font-mono); font-size: 0.86em; }
 .fam-mark__warm-fill { fill: var(--fam-mark-warm, var(--fam-ink)); }
 .fam-mark__cool-fill { fill: var(--fam-mark-cool, var(--fam-accent)); }
 .fam-mark__page-fill { fill: var(--fam-page); }
-/* A phone keeps both links; a long name gives way first. */
-@media (max-width: 420px) { .fam-lockup { gap: 0.55rem; } .fam-lockup__name { font-size: 1.05rem; } }
+/* A phone keeps both links and both names; the site's mark and a long site
+   name give way first. */
+@media (max-width: 520px) { .fam-lockup__site .fam-mark { display: none; } }
+@media (max-width: 420px) { .fam-lockup { gap: 0.5rem; } .fam-lockup__name { font-size: 1.05rem; } .fam-lockup__owner { font-size: 0.95rem; } }
 @media (forced-colors: active) { .fam-lockup__rule { background: CanvasText; } }
 .fam-lockup a:hover { text-decoration: none; }
 .topbar .fam-lockup { flex: 0 1 auto; }
