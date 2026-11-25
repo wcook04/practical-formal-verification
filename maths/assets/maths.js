@@ -579,6 +579,32 @@
         equation.removeAttribute('aria-description');
       }
     });
+    inlineItems.forEach(function (item) { measuredIn.set(item, generation); });
+    displayItems.forEach(function (equation) { measuredIn.set(equation, generation); });
+  }
+  // A block that scrolls back into view keeps the width it was measured at
+  // unless the window, the fonts or the paper column changed since. Measuring
+  // it again would only lift and restore its marks, and on a wide display
+  // that lift alone costs a style pass over its section. Each such change
+  // starts a new generation; an expression is measured once per generation.
+  var generation = 0, measuredIn = new WeakMap();
+  function stale(item) { return measuredIn.get(item) !== generation; }
+  if (window.ResizeObserver) {
+    var widths = new Map();
+    var columns = new ResizeObserver(function (entries) {
+      var changed = false;
+      entries.forEach(function (entry) {
+        var width = entry.contentRect.width;
+        changed = changed || (widths.has(entry.target) && widths.get(entry.target) !== width);
+        widths.set(entry.target, width);
+      });
+      if (changed) generation++;
+    });
+    document.querySelectorAll('.paper-stage').forEach(function (stage) {
+      columns.observe(stage);
+      var column = stage.closest('.docs-main');
+      if (column) columns.observe(column);
+    });
   }
   function schedule(measureAll) {
     if (measureAll !== false) fullMeasure = true;
@@ -586,12 +612,15 @@
     scheduled = true;
     requestAnimationFrame(function () {
       scheduled = false;
+      var inlineItems, displayItems;
       if (fullMeasure) {
         fullMeasure = false;
+        generation++;
         measure();
       } else {
-        measureItems(Array.from(pendingInline).filter(function (item) { return onScreen(item.math); }),
-          Array.from(pendingDisplay).filter(onScreen));
+        inlineItems = Array.from(pendingInline).filter(function (item) { return stale(item) && onScreen(item.math); });
+        displayItems = Array.from(pendingDisplay).filter(function (equation) { return stale(equation) && onScreen(equation); });
+        if (inlineItems.length || displayItems.length) measureItems(inlineItems, displayItems);
       }
       pendingInline.clear();
       pendingDisplay.clear();
@@ -599,6 +628,7 @@
   }
   window.addEventListener('resize', schedule);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(schedule);
+  document.fonts?.addEventListener('loadingdone', function () { generation++; });
   schedule();
 })();
 
